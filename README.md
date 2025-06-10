@@ -20,7 +20,7 @@ The key objective of this project is to assess the correctness of LLM responses 
 
 ### Related work 
 
-I will build on the contribution of the paper “Assessing correctness in LLM-based code generation via uncertainty estimation”, in being the first to explore estimating the uncertainty of LLM-based code generation to assess correctness. It adapted techniques from natural language generation research to find a strong negative correlation between uncertainty and correctness.
+This project will build on the contribution of the paper “Assessing correctness in LLM-based code generation via uncertainty estimation”, in being the first to explore estimating the uncertainty of LLM-based code generation to assess correctness. It adapted techniques from natural language generation research to find a strong negative correlation between uncertainty and correctness.
 
 Previous research has implemented a Neuro-symbolic tool and found that it offered an effective alternative to scaling model size. This research found that their ‘Xander’ tool outperformed its 4 times larger counterpart in SQL query generation. It also found that symbolic approaches can be more accurate at detecting errors in queries than neural approaches. 
 
@@ -44,13 +44,13 @@ Farquhar et al. proposed entropy as a marker for uncertainty to detect hallucina
 
 ### Implementation
 
-For the implementation of the project, I will run a suitable LLM and API to gather responses to a set of code generation tasks. The next step will be to implement symbolic clustering, to group responses according to their meaning, rather than their syntax. Once these clusters are obtained, their entropy will be computed to allow for evaluation on correctness.
+For the implementation of the project, a suitable LLM and API will be run to gather responses to a set of code generation tasks. The next step will be to implement symbolic clustering, to group responses according to their meaning, rather than their syntax. Once these clusters are obtained, their entropy will be computed to allow for evaluation on correctness.
 
 
 
 ### Evaluation
 
-My evaluation will utilise unit testing to act as a verification of my results and reaffirm high entropy as a strong indicator of incorrectness. If my hypothesis holds, I will demonstrate a statistical correlation between the correctness estimated by the level of entropy and the actual correctness revealed by unit testing. I plan to cross-check the levels of entropy with the results from unit testing to observe their correlation. This could lead to a further evaluation of the value in grouping responses by semantic equivalence. A possible limitation of this approach is that a response could display a high level of entropy and unit testing can fail due to different issues with the response. Therefore, it is important that I analyse both sets of results carefully and investigate the reasons for failed unit tests to mitigate this.
+Tge evaluation will utilise unit testing to act as a verification of my results and reaffirm high entropy as a strong indicator of incorrectness. If my hypothesis holds, I will demonstrate a statistical correlation between the correctness estimated by the level of entropy and the actual correctness revealed by unit testing. I plan to cross-check the levels of entropy with the results from unit testing to observe their correlation. This could lead to a further evaluation of the value in grouping responses by semantic equivalence. A possible limitation of this approach is that a response could display a high level of entropy and unit testing can fail due to different issues with the response. Therefore, it is important that both sets of results are analysed carefully and the specific reasons for failed unit tests are identified, to mitigate this.
 
 
 
