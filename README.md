@@ -20,11 +20,11 @@ The key objective of this project is to assess the correctness of LLM responses 
 
 ### Related work 
 
-This project will build on the contribution of the paper “Assessing correctness in LLM-based code generation via uncertainty estimation”, in being the first to explore estimating the uncertainty of LLM-based code generation to assess correctness. It adapted techniques from natural language generation research to find a strong negative correlation between uncertainty and correctness.
+This project will build on the contribution of the paper “Assessing correctness in LLM-based code generation via uncertainty estimation”, in being the first to explore estimating the uncertainty of LLM-based code generation to assess correctness (David & Sharma, 2025, p. 3). It adapted techniques from natural language generation research to find a strong negative correlation between uncertainty and correctness (David & Sharma, 2025, p. 18).
 
-Previous research has implemented a Neuro-symbolic tool and found that it offered an effective alternative to scaling model size. This research found that their ‘Xander’ tool outperformed its 4 times larger counterpart in SQL query generation. It also found that symbolic approaches can be more accurate at detecting errors in queries than neural approaches. 
+Previous research has implemented a Neuro-symbolic tool and found that it offered an effective alternative to scaling model size (Princis, David, & Mycroft, 2025, p. 10). This research found that their ‘Xander’ tool outperformed its 4 times larger counterpart in SQL query generation (Princis, David, & Mycroft, 2025, p. 1). It also found that symbolic approaches can be more accurate at detecting errors in queries than neural approaches (Princis, David, & Mycroft, 2025, p. 7). 
 
-Farquhar et al. proposed entropy as a marker for uncertainty to detect hallucinations in LLM natural language generation by detecting when prompts are most likely to produce confabulations. This research also considered semantic equivalence by computing uncertainty at the level of meaning.
+Farquhar et al. proposed entropy as a marker for uncertainty to detect hallucinations in LLM natural language generation by detecting when prompts are most likely to produce confabulations (Farquhar et al, 2024). This research also considered semantic equivalence by computing uncertainty at the level of meaning (Farquhar et al, 2024).
 
 
 
