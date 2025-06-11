@@ -8,7 +8,7 @@
 
 ### Abstract
 
-The objective of this project is to assess the correctness of Large Language Models (LLMs) in code generation tasks. Tools other than unit testing will be utilised to provide a method that can be integrated into existing LLM workflows. The implementation will use entropy as a metric to identify the level of uncertainty of a given set of responses. Symbolic clustering will then be implemented to group responses according to their meaning. Finally, this will be verified against the correctness revealed by unit tests to determine the validity of low entropy as an indicator of correctness.
+The objective of this project is to assess the correctness of Large Language Models (LLMs) in code generation tasks. Tools other than unit testing will be utilised to provide a method that can be integrated into existing LLM workflows. The implementation will use entropy as a metric to identify the level of uncertainty of a given set of responses. Symbolic clustering will be implemented to group responses according to their meaning. After the entropy of the grouped responses is computed this project will aim to identify a correlation between a high uncertainty and incorrect responses. Therefore, the LLM's responses will be verified against the correctness revealed by unit tests to determine the validity of low entropy as an indicator of correctness.
 
 
 
