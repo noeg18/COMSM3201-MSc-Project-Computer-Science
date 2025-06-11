@@ -8,7 +8,7 @@
 
 ### Abstract
 
-The objective of this project is to assess the correctness of Large Language Models (LLMs) in code generation tasks. Tools other than unit testing will be utilised to provide a method that can be integrated into existing LLM workflows. The implementation will use entropy as a metric to identify the level of uncertainty of a given set of responses. Symbolic clustering will be implemented to group responses according to their meaning. After the entropy of the grouped responses is computed this project will aim to identify a correlation between a high uncertainty and incorrect responses. Therefore, the LLM's responses will be verified against the correctness revealed by unit tests to determine the validity of low entropy as an indicator of correctness.
+The objective of this project is to assess the correctness of Large Language Models (LLMs) in code generation tasks. Tools other than unit testing will be utilised to provide a method that can be integrated into existing LLM workflows. The implementation will use entropy as a metric to identify the level of uncertainty of a given set of responses. Symbolic clustering will be implemented to group responses according to their meaning. After the entropy of the grouped responses is computed this project will aim to identify a correlation between a high uncertainty and incorrect responses. Therefore, the LLM's responses will be verified against the correctness revealed by unit tests to determine the validity of low entropy as an indicator of correctness. This project will distinguish itself from existing research by clustering responses based on semantic equivalence using another language model, rather than implementing symbolic execution.
 
 
 
@@ -20,11 +20,11 @@ The key objective of this project is to assess the correctness of LLM responses 
 
 ### Related work 
 
-This project will build on the contribution of the paper “Assessing correctness in LLM-based code generation via uncertainty estimation”, in being the first to explore estimating the uncertainty of LLM-based code generation to assess correctness (David & Sharma, 2025, p. 3). It adapted techniques from natural language generation research to find a strong negative correlation between uncertainty and correctness (David & Sharma, 2025, p. 18).
-
 Previous research has implemented a Neuro-symbolic tool and found that it offered an effective alternative to scaling model size (Princis, David, & Mycroft, 2025, p. 10). This research found that their ‘Xander’ tool outperformed its 4 times larger counterpart in SQL query generation (Princis, David, & Mycroft, 2025, p. 1). It also found that symbolic approaches can be more accurate at detecting errors in queries than neural approaches (Princis, David, & Mycroft, 2025, p. 7). 
 
 Farquhar et al. proposed entropy as a marker for uncertainty to detect hallucinations in LLM natural language generation by detecting when prompts are most likely to produce confabulations (Farquhar et al, 2024). This research also considered semantic equivalence by computing uncertainty at the level of meaning (Farquhar et al, 2024).
+
+This project will build on the contribution of the paper “Assessing correctness in LLM-based code generation via uncertainty estimation”, in being the first to explore estimating the uncertainty of LLM-based code generation to assess correctness (David & Sharma, 2025, p. 3). It adapted techniques from natural language generation research to find a strong negative correlation between uncertainty and correctness (David & Sharma, 2025, p. 18). This paper uses symbolic execution, meaning that symbolic variables are used to represent inputs, generating constraints that describe program behaviour (David & Sharma, 2025, p. 5). Therefore, this project's implementation will differ from this method by using a second language model to group responses into semantically equivalent cluster.
 
 
 
@@ -44,7 +44,7 @@ Farquhar et al. proposed entropy as a marker for uncertainty to detect hallucina
 
 ### Implementation
 
-For the implementation of the project, a suitable LLM and API will be run to gather responses to a set of code generation tasks. The next step will be to implement symbolic clustering, to group responses according to their meaning, rather than their syntax. Once these clusters are obtained, their entropy will be computed to allow for evaluation on correctness.
+For the implementation of the project, the DeepSeek R1 API will be run to gather responses to a set of code generation tasks. The next step will be to implement symbolic clustering, grouping responses according to their meaning, rather than their syntax. These clusters will be determined by running a Llama 3.2 model, a smaller language model that will be prompted with the initial sets of responses. Once these clusters are obtained, their entropy will be computed to allow for evaluation on the correctness of the DeepSeek LLM.
 
 
 
