@@ -44,7 +44,7 @@ This project will build on the contribution of the paper “Assessing correctnes
 
 ### Implementation
 
-For the implementation of the project, the DeepSeek R1 API will be run to gather responses to a set of code generation tasks. The next step will be to implement symbolic clustering, grouping responses according to their meaning, rather than their syntax. These clusters will be determined by running a Llama 3.2 model, a smaller language model that will be prompted with the initial sets of responses. Once these clusters are obtained, their entropy will be computed to allow for evaluation on the correctness of the DeepSeek LLM.
+For the implementation of the project, the GPT 3.5 API will be run to gather responses to a set of code generation tasks. The next step will be to implement symbolic clustering, grouping responses according to their meaning, rather than their syntax. These clusters will be determined by running a Llama 3.2 model, a smaller language model that will be prompted with the initial sets of responses. Once these clusters are obtained, their entropy will be computed to allow for evaluation on the correctness of the DeepSeek LLM.
 
 
 
