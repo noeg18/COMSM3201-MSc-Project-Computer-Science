@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_dicts):
+    return sorted(list_of_dicts, key=lambda dict: dict['key'])",1
+2,"
+
+def solve(list_of_dicts, key):
+    return sorted(list_of_dicts, key=lambda x: x[key])",2
+3,"
+
+def solve(list_of_dicts):
+    sorted_list = sorted(list_of_dicts, key=lambda x: x['key'])
+    return sorted_list",3
+4,"
+
+def solve(list_of_dicts):
+    list_of_dicts.sort(key = lambda x: x['key'])
+    return list_of_dicts",4
+5,"
+
+def solve(list_of_dicts, key):
+    return sorted(list_of_dicts, key=lambda x: x[key])",2

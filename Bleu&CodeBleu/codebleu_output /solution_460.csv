@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+def solve(lst):
+    return [sublist[0] for sublist in lst]",1
+2,"
+
+def solve(sublists):
+    first_elements = []
+    for sublist in sublists:
+        first_elements.append(sublist[0])
+    return first_elements",2
+3,"
+
+def solve(lst):
+    return [sublist[0] for sublist in lst]",1
+4,"
+
+def solve(lst):
+    result = []
+    for sublist in lst:
+        result.append(sublist[0])
+    return result",3
+5,"
+
+def solve(lst):
+    return [sublst[0] for sublst in lst]",4

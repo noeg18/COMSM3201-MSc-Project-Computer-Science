@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(nested_list1, nested_list2):
+    for sublist in nested_list1:
+        if sublist not in nested_list2:
+            return False
+    return True",1
+2,"
+
+def solve(list1, list2):
+    for item in list1:
+        if item not in list2:
+            return False
+    return True",2
+3,"
+
+def solve(nested_list, subset):
+    for item in subset:
+        if item not in nested_list:
+            return False
+    return True",3
+4,"
+
+def solve(list1, list2):
+    for sub_list in list1:
+        if sub_list not in list2:
+            return False
+    return True",4
+5,"
+
+def solve(list1, list2):
+    for item in list1:
+        if item not in list2:
+            return False
+    return True",2

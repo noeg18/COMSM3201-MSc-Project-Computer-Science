@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(tup, element):
+    count = 0
+    for item in tup:
+        if item == element:
+            count += 1
+    return count",1
+2,"
+
+def solve(tuple, element):
+    count = 0
+    for i in tuple:
+        if i == element:
+            count += 1
+    return count",2
+3,"
+
+def solve(tup, element):
+    count = 0
+    for i in tup:
+        if i == element:
+            count += 1
+    return count",3
+4,"
+
+def solve(tup, element):
+    count = 0
+    for item in tup:
+        if item == element:
+            count += 1
+    return count",1
+5,"
+
+def solve(tup, element):
+    count = 0
+    for x in tup:
+        if x == element:
+            count += 1
+    return count",4

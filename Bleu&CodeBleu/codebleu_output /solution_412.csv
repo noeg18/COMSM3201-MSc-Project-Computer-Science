@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return [x for x in lst if x % 2 == 0]",1
+2,"
+
+def solve(lst):
+    return [num for num in lst if num % 2 == 0]",2
+3,"
+
+def solve(lst):
+    return [num for num in lst if num % 2 == 0]",2
+4,"
+
+def solve(lst):
+    return [num for num in lst if num % 2 == 0]",2
+5,"
+
+def solve(lst):
+    return [num for num in lst if num % 2 == 0]",2

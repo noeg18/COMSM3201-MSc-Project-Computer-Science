@@ -1,0 +1,65 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    total = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)+1):
+            subarr = arr[i:j]
+            product = 1
+            for num in subarr:
+                product *= num
+            total += product
+    return total",1
+2,"
+
+def solve(arr):
+    #initialize sum variable
+    total = 0
+    
+    #loop through all possible subarrays
+    for i in range(len(arr)):
+        for j in range(i, len(arr)):
+            #calculate product of subarray
+            prod = 1
+            for k in range(i, j+1):
+                prod *= arr[k]
+            
+            #add product to sum
+            total += prod
+    
+    #return sum
+    return total",2
+3,"
+
+def solve(arr):
+    total = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)+1):
+            subarray = arr[i:j]
+            product = 1
+            for num in subarray:
+                product *= num
+            total += product
+    return total",1
+4,"
+
+def solve(arr):
+    total = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)+1):
+            total += sum(arr[i:j])*reduce(lambda x, y: x*y, arr[i:j])
+    return total",3
+5,"
+
+def solve(arr):
+    n = len(arr)
+    result = 0
+    for i in range(n):
+        for j in range(i+1, n+1):
+            subarray = arr[i:j]
+            product = 1
+            for num in subarray:
+                product *= num
+            result += product
+    return result",4

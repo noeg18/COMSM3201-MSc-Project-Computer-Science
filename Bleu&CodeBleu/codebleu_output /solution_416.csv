@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    else:
+        return max(n, solve(n//2) + solve(n//3) + solve(n//4))",1
+2,"
+
+def solve(n):
+    if n <= 0:
+        return 0
+    else:
+        max_sum = n
+        for i in range(1, n):
+            max_sum = max(max_sum, solve(i) + solve(n-i))
+        return max_sum",2
+3,"
+
+def solve(n):
+    if n < 2:
+        return n
+    else:
+        max_sum = n
+        for i in range(1, n):
+            max_sum = max(max_sum, solve(i) + solve(n - i))
+        return max_sum",3
+4,"
+
+def solve(n):
+    if n < 3:
+        return n
+    else:
+        first = n // 3
+        second = n // 2
+        third = n - first - second
+        return max(first + solve(first), second + solve(second), third + solve(third))",4
+5,"
+
+def solve(n):
+    if n <= 0:
+        return 0
+    elif n <= 2:
+        return n
+    else:
+        max_sum = 0
+        for i in range(1, n//2 + 1):
+            for j in range(i, n-i+1):
+                k = n - i - j
+                max_sum = max(max_sum, i + j + k, solve(i) + solve(j) + solve(k))
+        return max_sum",5

@@ -1,0 +1,69 @@
+response_num,response,cluster
+1,"
+
+import heapq
+def solve(list1, list2):
+    result = []
+    heapq.heapify(list1)
+    heapq.heapify(list2)
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            result.append(heapq.heappop(list1))
+        else:
+            result.append(heapq.heappop(list2))
+    result.extend(list1)
+    result.extend(list2)
+    return result",1
+2,"
+
+def solve(list1, list2):
+    import heapq
+
+    # combine both lists
+    combined_list = list1 + list2
+    
+    # use heapq module to heapify the combined list
+    heapq.heapify(combined_list)
+    
+    # create an empty list to store the sorted elements
+    sorted_list = []
+    
+    # loop until the combined list is empty
+    while combined_list:
+        
+        # remove the smallest element from the heap and append it to the sorted list
+        smallest = heapq.heappop(combined_list)
+        sorted_list.append(smallest)
+    
+    # return the sorted list
+    return sorted_list",2
+3,"
+
+from heapq import merge
+
+def solve(list1, list2):
+    return list(merge(list1, list2))
+    
+#Example:
+# solve([1,3,5,7], [2,4,6,8])  ==> [1,2,3,4,5,6,7,8]",3
+4,"
+
+import heapq
+
+def solve(list1, list2):
+    heap = []
+    for num in list1:
+        heapq.heappush(heap, num)
+    for num in list2:
+        heapq.heappush(heap, num)
+    combined_list = []
+    while heap:
+        combined_list.append(heapq.heappop(heap))
+    return combined_list",4
+5,"
+
+import heapq
+
+def solve(list1, list2):
+    heap = heapq.merge(list1, list2)
+    return list(heap)",5

@@ -1,0 +1,54 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary):
+    depth = 1
+    for key, value in dictionary.items():
+        if isinstance(value, dict):
+            depth = max(depth, 1 + solve(value))
+    return depth",1
+2,"
+
+def solve(dictionary):
+    if not isinstance(dictionary, dict):
+        return 0
+    depths = []
+    for key in dictionary:
+        depth = 1 + solve(dictionary[key])
+        depths.append(depth)
+    if len(depths) == 0:
+        return 1
+    return max(depths)",2
+3,"
+
+def solve(dictionary):
+    if type(dictionary) != dict:
+        return 0
+    else:
+        max_depth = 0
+        for key, value in dictionary.items():
+            if type(value) == dict:
+                depth = solve(value) + 1
+                if depth > max_depth:
+                    max_depth = depth
+        return max_depth",3
+4,"
+
+def solve(dictionary, depth=0):
+    if isinstance(dictionary, dict):
+        depth += 1
+        for key in dictionary:
+            depth = max(depth, solve(dictionary[key], depth))
+    return depth",4
+5,"
+
+def solve(dictionary):
+    max_depth = 0
+    if type(dictionary) != dict:
+        return max_depth
+    for key in dictionary:
+        if type(dictionary[key]) == dict:
+            depth = solve(dictionary[key])
+            if depth > max_depth:
+                max_depth = depth
+    return max_depth + 1",5

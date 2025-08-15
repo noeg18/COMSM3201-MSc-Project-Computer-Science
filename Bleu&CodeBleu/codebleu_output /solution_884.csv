@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(bits, range_start, range_end):
+    for bit in bits:
+        if bit < range_start or bit > range_end:
+            return False
+    return True",1
+2,"
+
+def solve(bits, lower, upper):
+    for bit in bits:
+        if bit < lower or bit > upper:
+            return False
+    return True",2
+3,"
+
+def solve(bits, lower, upper):
+    for bit in bits:
+        if bit < lower or bit > upper:
+            return False
+    return True",2
+4,"
+
+def solve(bits, start, end):
+    for bit in bits:
+        if bit < start or bit > end:
+            return False
+    return True",3
+5,"
+
+def solve(bits, lower_bound, upper_bound):
+    for bit in bits:
+        if bit < lower_bound or bit > upper_bound:
+            return False
+    return True",4

@@ -1,0 +1,58 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    count = {}
+    for char in string:
+        if char in count:
+            return char
+        else:
+            count[char] = 1
+    return None",1
+2,"
+
+def solve(string):
+    seen = set()
+    for char in string:
+        if char in seen:
+            return char
+        seen.add(char)
+    return None",2
+3,"
+
+def solve(input_str):
+    char_dict = {}
+    for char in input_str:
+        if char in char_dict:
+            return char
+        else:
+            char_dict[char] = 1
+    return ""No repeated character found.""",3
+4,"
+
+def solve(string):
+    # create an empty set to keep track of characters seen
+    seen = set()
+    
+    # loop through each character in the string
+    for char in string:
+        # check if the character has been seen before
+        if char in seen:
+            # if it has, return the character as the first repeated character
+            return char
+        else:
+            # if not, add the character to the set
+            seen.add(char)
+    
+    # if no repeated character is found, return None
+    return None",4
+5,"
+
+def solve(string):
+    char_count = {}
+    for char in string:
+        if char in char_count:
+            return char
+        else:
+            char_count[char] = 1
+    return ""No repeated characters in string.""",5

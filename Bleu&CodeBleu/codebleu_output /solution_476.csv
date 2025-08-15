@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    largest = arr[0]
+    smallest = arr[0]
+    for num in arr:
+        if num > largest:
+            largest = num
+        if num < smallest:
+            smallest = num
+    return largest + smallest",1
+2,"
+
+def solve(arr):
+   largest = arr[0]
+   smallest = arr[0]
+   for i in range(len(arr)):
+      if arr[i] > largest:
+         largest = arr[i]
+      if arr[i] < smallest:
+         smallest = arr[i]
+   return largest + smallest",2
+3,"
+
+def solve(arr):
+   smallest = arr[0]
+   largest = arr[0]
+   for num in arr:
+      if num < smallest:
+         smallest = num
+      if num > largest:
+         largest = num
+   return smallest + largest",3
+4,"
+
+def solve(arr):
+    # sort the array in ascending order
+    arr.sort()
+    # get the first element (smallest value) and last element (largest value)
+    smallest = arr[0]
+    largest = arr[-1]
+    # return the sum of the smallest and largest value
+    return smallest + largest",4
+5,"
+
+def solve(arr):
+    return max(arr) + min(arr)",5

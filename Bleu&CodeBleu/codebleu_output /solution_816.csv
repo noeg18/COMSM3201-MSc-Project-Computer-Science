@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    return [tuple() for _ in tuples]",1
+2,"
+
+def solve(tuples):
+    for t in tuples:
+        tuples[t] = None
+    return tuples",2
+3,"
+
+def solve(tup):
+    tup = ()
+    return tup",3
+4,"
+
+def solve(tuples):
+    return tuple(tuple() for _ in tuples)",4
+5,"
+
+def solve(tup):
+    tup = ()
+    return tup",3

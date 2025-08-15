@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(n, lst):
+  return list(map(lambda x: lst, range(n)))",1
+2,"
+
+def solve(lst, n):
+    return list(map(lambda x: lst, range(n)))",2
+3,"
+
+def solve(lst, n):
+    return list(map(lambda x: x * n, lst))",3
+4,"
+
+def solve(lst, n):
+    return list(map(lambda x: x*n, lst))",4
+5,"
+
+def solve(lst, n):
+    return list(map(lambda x: x*n, lst))",4

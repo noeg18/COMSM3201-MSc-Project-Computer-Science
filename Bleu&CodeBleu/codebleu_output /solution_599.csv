@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    avg = sum / n
+    return sum, avg",1
+2,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    avg = sum / n
+    return sum, avg",1
+3,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    average = sum / n
+    return sum, average",1
+4,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    avg = sum / n
+    return sum, avg",1
+5,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    avg = sum / n
+    return sum, avg",1

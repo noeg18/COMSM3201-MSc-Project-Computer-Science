@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    first_elem = lst[0]
+    lst.pop(0)
+    lst.append(first_elem)
+    return lst",1
+2,"
+
+def solve(lst):
+    lst.append(lst[0])
+    lst.pop(0)
+    return lst",2
+3,"
+
+def solve(lst):
+    first = lst[0]
+    lst.pop(0)
+    lst.append(first)
+    return lst",3
+4,"
+
+def solve(lst):
+    first_element = lst[0]
+    lst.pop(0)
+    lst.append(first_element)
+    return lst",4
+5,"
+
+def solve(lst):
+    lst.append(lst.pop(0))
+    return lst",5

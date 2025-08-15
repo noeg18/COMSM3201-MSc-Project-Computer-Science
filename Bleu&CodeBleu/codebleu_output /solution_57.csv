@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(digits):
+    digits.sort(reverse=True)
+    largest_num = ''
+    for digit in digits:
+        largest_num += str(digit)
+    return int(largest_num)",1
+2,"
+
+def solve(digits):
+    digits.sort(reverse=True)
+    num = """"
+    for digit in digits:
+        num += str(digit)
+    return int(num)",2
+3,"
+
+def solve(digits):
+    # convert digits to a list
+    digits_list = list(str(digits))
+    # sort the digits in descending order
+    digits_list.sort(reverse=True)
+    # join the digits to form the largest number
+    largest_num = int("""".join(digits_list))
+    return largest_num",3
+4,"
+
+def solve(digits):
+    digits.sort(reverse=True)
+    largest_num = """"
+    for digit in digits:
+        largest_num += str(digit)
+    return int(largest_num)",1
+5,"
+
+def solve(digits):
+    digits.sort(reverse=True)
+    return int("""".join(str(i) for i in digits))",4

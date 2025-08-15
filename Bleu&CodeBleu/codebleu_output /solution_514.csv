@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple_list):
+    sum = 0
+    for t in tuple_list:
+        for e in t:
+            sum += e
+    return sum",1
+2,"
+
+def solve(tuple_list):
+    total = 0
+    for tup in tuple_list:
+        total += sum(tup)
+    return total",2
+3,"
+
+def solve(tuple_list):
+    result = 0
+    for tup in tuple_list:
+        for num in tup:
+            result += num
+    return result",3
+4,"
+
+def solve(tuple_list):
+    sum = 0
+    for tup in tuple_list:
+        sum += sum(tup)
+    return sum",4
+5,"
+
+def solve(tuple_list):
+    summation = 0
+    for tup in tuple_list:
+        for num in tup:
+            summation += num
+    return summation",5

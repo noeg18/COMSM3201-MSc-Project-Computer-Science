@@ -1,0 +1,27 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return ''.join(str(e) for e in lst)",1
+2,"
+
+def solve(lst):
+    return ''.join(str(x) for x in lst)",2
+3,"
+
+def solve(lst):
+    return """".join(str(item) for item in lst)",3
+4,"
+
+def solve(lst):
+    string = """"
+    for elem in lst:
+        string += str(elem)
+    return string",4
+5,"
+
+def solve(lst):
+    string = """"
+    for element in lst:
+        string += str(element)
+    return string",5

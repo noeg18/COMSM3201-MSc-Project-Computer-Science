@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    return string.replace(' ', '%20')",1
+2,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char == "" "":
+            new_string += ""%20""
+        else:
+            new_string += char
+    return new_string",2
+3,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char == "" "":
+            new_string += ""%20""
+        else:
+            new_string += char
+    return new_string",2
+4,"
+
+def solve(string):
+    result = """"
+    for char in string:
+        if char == "" "":
+            result += ""%20""
+        else:
+            result += char
+    return result",3
+5,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char == "" "":
+            new_string += ""%20""
+        else:
+            new_string += char
+    return new_string",2

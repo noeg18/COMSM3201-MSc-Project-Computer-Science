@@ -1,0 +1,61 @@
+response_num,response,cluster
+1,"
+
+def solve(*lists):
+    result = {}
+    for i, lst in enumerate(lists):
+        temp = result
+        for item in lst:
+            if item not in temp:
+                temp[item] = {}
+            temp = temp[item]
+    return result",1
+2,"
+
+def solve(*args):
+    result = {}
+    for arg in args:
+        curr_dict = result
+        for i in range(len(arg) - 2):
+            if arg[i] not in curr_dict:
+                curr_dict[arg[i]] = {}
+            curr_dict = curr_dict[arg[i]]
+        curr_dict[arg[-2]] = arg[-1]
+    return result",2
+3,"
+
+def solve(keys, values):
+    result = {}
+    for i in range(len(keys)):
+        current_dict = result
+        for j in range(len(keys[i])):
+            if keys[i][j] not in current_dict:
+                current_dict[keys[i][j]] = {}
+            current_dict = current_dict[keys[i][j]]
+        current_dict = values[i]
+    return result",3
+4,"
+
+def solve(keys, values, nested_keys):
+    nested_dict = {}
+    for key in keys:
+        sub_dict = {}
+        for i in range(len(values)):
+            sub_dict[values[i]] = None
+        nested_dict[key] = sub_dict
+    for key in keys:
+        for i in range(len(values)):
+            nested_dict[key][values[i]] = {}
+            for j in range(len(nested_keys)):
+                nested_dict[key][values[i]][nested_keys[j]] = None
+    return nested_dict",4
+5,"
+
+def solve(lists, keys):
+    result = {}
+    for i in range(len(lists)):
+        temp = result
+        for key in keys[:-1]:
+            temp = temp.setdefault(key, {})
+        temp[keys[-1]] = lists[i]
+    return result",5

@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, min, max):
+    count = 0
+    for num in lst:
+        if num >= min and num <= max:
+            count += 1
+    return count",1
+2,"
+
+def solve(lst, start, end):
+    count = 0
+    for elem in lst:
+        if elem >= start and elem <= end:
+            count += 1
+    return count",2
+3,"
+
+def solve(lst, start, end):
+    count = 0
+    for num in lst:
+        if num >= start and num <= end:
+            count += 1
+    return count",3
+4,"
+
+def solve(lst, lower, upper):
+    count = 0
+    for element in lst:
+        if element >= lower and element <= upper:
+            count += 1
+    return count",4
+5,"
+
+def solve(lst, min, max):
+    count = 0
+    for element in lst:
+        if element >= min and element <= max:
+            count += 1
+    return count",5

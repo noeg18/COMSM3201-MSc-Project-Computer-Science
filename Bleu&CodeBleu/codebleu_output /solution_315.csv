@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    words = string.split()
+    max_len = 0
+    for word in words:
+        if len(word) % 2 == 0:
+            if len(word) > max_len:
+                max_len = len(word)
+    return max_len",1
+2,"
+
+def solve(words):
+    max_length = 0
+    for word in words:
+        if len(word) % 2 == 0 and len(word) > max_length:
+            max_length = len(word)
+    return max_length",2
+3,"
+
+def solve(words):
+    max_length = 0
+    for word in words:
+        if len(word) % 2 == 0 and len(word) > max_length:
+            max_length = len(word)
+    return max_length",2
+4,"
+
+def solve(text):
+    words = text.split()
+    max_length = 0
+    for word in words:
+        if len(word) > max_length and len(word) % 2 == 0:
+            max_length = len(word)
+    return max_length",3
+5,"
+
+def solve(string):
+    words = string.split()
+    max_len = 0
+    for word in words:
+        if len(word) % 2 == 0 and len(word) > max_len:
+            max_len = len(word)
+    return max_len",4

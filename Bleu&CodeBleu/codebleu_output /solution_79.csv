@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(word):
+    if len(word) % 2 == 0:
+        return False
+    else:
+        return True",1
+2,"
+
+def solve(word):
+    if len(word) % 2 == 1:
+        return ""Odd""
+    else:
+        return ""Not odd""",2
+3,"
+
+def solve(word):
+    if len(word) % 2 == 0:
+        return False
+    else:
+        return True",1
+4,"
+
+def solve(word):
+    return len(word) % 2 == 1",3
+5,"
+
+def solve(word):
+    if len(word) % 2 == 0:
+        return False
+    else:
+        return True",1

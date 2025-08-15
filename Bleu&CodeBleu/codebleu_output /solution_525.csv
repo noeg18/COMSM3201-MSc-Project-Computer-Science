@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(line1, line2):
+    slope1 = (line1[1][1] - line1[0][1]) / (line1[1][0] - line1[0][0])
+    slope2 = (line2[1][1] - line2[0][1]) / (line2[1][0] - line2[0][0])
+    if slope1 == slope2:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(line1, line2):
+    # line1 and line2 are lists of two points representing the start and end points of each line
+    # check if slopes are equal
+    slope1 = (line1[1][1] - line1[0][1]) / (line1[1][0] - line1[0][0])
+    slope2 = (line2[1][1] - line2[0][1]) / (line2[1][0] - line2[0][0])
+    
+    if slope1 == slope2: # parallel
+        return True
+    else:
+        return False",2
+3,"
+def solve(line1, line2):
+    if line1[0]/line1[1] == line2[0]/line2[1]:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(line1, line2):
+    slope1 = (line1[1][1] - line1[0][1]) / (line1[1][0] - line1[0][0])
+    slope2 = (line2[1][1] - line2[0][1]) / (line2[1][0] - line2[0][0])
+    if slope1 == slope2:
+        return True
+    else:
+        return False",1
+5,"
+
+def solve(line1, line2):
+    if line1[0]/line1[1] == line2[0]/line2[1]:
+        return True
+    else:
+        return False",3

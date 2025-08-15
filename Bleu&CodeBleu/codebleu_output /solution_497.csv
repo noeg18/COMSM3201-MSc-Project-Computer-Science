@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(radius, height):
+    base_area = math.pi * (radius ** 2)
+    side_area = math.pi * radius * math.sqrt((radius ** 2) + (height ** 2))
+    surface_area = base_area + side_area
+    return surface_area",1
+2,"
+
+import math
+
+def solve(radius, height):
+    base_area = math.pi * radius**2
+    side_area = math.pi * radius * math.sqrt(radius**2 + height**2)
+    surface_area = base_area + side_area
+    return surface_area",2
+3,"
+
+def solve(radius, height):
+    import math
+    return math.pi * radius * (radius + math.sqrt(height ** 2 + radius ** 2))",3
+4,"
+
+def solve(radius, height):
+    base_area = math.pi * radius ** 2
+    side_area = math.pi * radius * math.sqrt(radius ** 2 + height ** 2)
+    surface_area = base_area + side_area
+    return surface_area",4
+5,"
+
+def solve(radius, height):
+    from math import pi, sqrt
+    base_area = pi * (radius ** 2)
+    side_area = pi * radius * sqrt((height ** 2) + (radius ** 2))
+    surface_area = base_area + side_area
+    return surface_area",5

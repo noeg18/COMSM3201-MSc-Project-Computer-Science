@@ -1,0 +1,63 @@
+response_num,response,cluster
+1,"
+
+def solve(x, y):
+    if y == 0:
+        return 0
+    elif y > 0:
+        return x + solve(x, y-1)
+    else:
+        return -solve(x, -y)",1
+2,"
+
+def solve(x, y):
+    result = 0
+    if x == 0 or y == 0:
+        return 0
+    elif x < 0 and y < 0:
+        x = abs(x)
+        y = abs(y)
+    elif x < 0 or y < 0:
+        x = abs(x)
+        y = abs(y)
+        result = -1
+    
+    for _ in range(y):
+        result += x
+    
+    return result",2
+3,"
+
+def solve(x, y):
+    result = 0
+    if y < 0:
+        x = -x
+        y = -y
+    for i in range(y):
+        result += x
+    return result",3
+4,"
+
+def solve(x, y):
+    result = 0
+    if y < 0:
+        x = -x
+        y = -y
+    while y > 0:
+        if y % 2 == 1:
+            result += x
+        x = x << 1
+        y = y >> 1
+    return result",4
+5,"
+
+def solve(x, y):
+    result = 0
+    for i in range(abs(y)):
+        result += abs(x)
+    if x < 0 and y < 0:
+        return result
+    elif x < 0 or y < 0:
+        return -result
+    else:
+        return result",5

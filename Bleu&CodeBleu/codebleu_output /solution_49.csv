@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(two_d_list, index=0):
+    result = []
+    for lst in two_d_list:
+        if len(lst) > index:
+            result.append(lst[index])
+    return result",1
+2,"
+
+def solve(lst, index=0):
+    result = []
+    for i in range(len(lst)):
+        if type(lst[i]) == list:
+            result.append(lst[i][index])
+        else:
+            result.append(lst[i])
+    return result",2
+3,"
+
+def solve(lst, n=1):
+    result = []
+    for sub_lst in lst:
+        if len(sub_lst) >= n:
+            result.append(sub_lst[n-1])
+    return result",3
+4,"
+
+def solve(two_d_list, index=0):
+    result = []
+    for sublist in two_d_list:
+        result.append(sublist[index])
+    return result",4
+5,"
+
+def solve(lst, n=1):
+    lst2 = []
+    for i in range(len(lst)):
+        if isinstance(lst[i], list) and len(lst[i]) >= n:
+            lst2.append(lst[i][n-1])
+        else:
+            lst2.append(lst[i])
+    return lst2",5

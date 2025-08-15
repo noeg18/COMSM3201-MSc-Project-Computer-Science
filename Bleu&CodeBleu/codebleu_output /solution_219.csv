@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple, k):
+    sorted_tuple = sorted(tuple)
+    max_elements = sorted_tuple[-k:]
+    min_elements = sorted_tuple[:k]
+    return max_elements, min_elements",1
+2,"
+
+def solve(tup, k):
+    max_list = []
+    min_list = []
+    tup = list(tup)
+    for i in range(k):
+        max_list.append(max(tup))
+        min_list.append(min(tup))
+        tup.remove(max(tup))
+        tup.remove(min(tup))
+    return max_list, min_list",2
+3,"
+
+def solve(tuple, k):
+  sorted_tuple = sorted(tuple)
+  max_elements = sorted_tuple[-k:]
+  min_elements = sorted_tuple[:k]
+  return (max_elements, min_elements)",3
+4,"
+
+def solve(tup, k):
+    max_list = []
+    min_list = []
+    for i in range(k):
+        max_element = max(tup)
+        min_element = min(tup)
+        max_list.append(max_element)
+        min_list.append(min_element)
+        tup = list(tup)
+        tup.remove(max_element)
+        tup.remove(min_element)
+        tup = tuple(tup)
+    return max_list, min_list",4
+5,"
+
+def solve(tup, k):
+    tup = sorted(tup)
+    return tup[:k], tup[-k:]",5

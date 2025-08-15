@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(snake_case_string):
+    split_string = snake_case_string.split('_')
+    camel_case_string = split_string[0]
+    for i in range(1, len(split_string)):
+        camel_case_string += split_string[i].capitalize()
+    return camel_case_string",1
+2,"
+
+def solve(snake_case_str):
+    words = snake_case_str.split('_')
+    camel_case_str = words[0]
+    for word in words[1:]:
+        camel_case_str += word.capitalize()
+    return camel_case_str",2
+3,"
+
+def solve(snake_case):
+    words = snake_case.split('_')
+    camel_case = words[0]
+    for word in words[1:]:
+        camel_case += word.capitalize()
+    return camel_case",3
+4,"
+
+def solve(snake_case_string):
+    words = snake_case_string.split('_')
+    camel_case_string = words[0]
+    for word in words[1:]:
+        camel_case_string += word.capitalize()
+    return camel_case_string",4
+5,"
+
+def solve(s):
+    words = s.split('_')
+    camel_case = words[0]
+    for word in words[1:]:
+        camel_case += word.capitalize()
+    return camel_case",5

@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return n * (n + 1) / 2",1
+2,"
+
+def solve(n):
+    return n**2 + n + 1",2
+3,"
+
+def solve(n):
+    return n * (n + 1) / 2 + 1",3
+4,"
+
+def solve(n):
+    return (6*n*(n-1)+1)",4
+5,"
+
+def solve(n):
+    return n**2 + n + 1",2

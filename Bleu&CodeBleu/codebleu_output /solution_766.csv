@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    for i in range(len(lst)-1):
+        yield (lst[i], lst[i+1])",1
+2,"
+
+def solve(lst):
+    for i in range(len(lst)-1):
+        print(lst[i], lst[i+1])",2
+3,"
+
+def solve(lst):
+    for i in range(len(lst)-1):
+        print(lst[i], lst[i+1])",2
+4,"
+
+def solve(lst):
+    for i in range(len(lst)-1):
+        print(lst[i], lst[i+1])",2
+5,"
+
+def solve(lst):
+    for i in range(len(lst)-1):
+        print(lst[i], lst[i+1])",2

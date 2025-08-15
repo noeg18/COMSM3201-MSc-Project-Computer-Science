@@ -1,0 +1,55 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    pattern = r'a.*b$'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+2,"
+
+import re
+
+def solve(string):
+  pattern = r'a.*b$'
+  result = re.match(pattern, string)
+  if result:
+    return True
+  else:
+    return False",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = r'a.*b$'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+4,"
+
+import re
+
+def solve(string):
+    pattern = r'a.+b$'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+5,"
+
+import re
+
+def solve(string):
+    pattern = r'a.*b$'
+    if re.search(pattern, string):
+        return True
+    else:
+        return False",3

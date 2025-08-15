@@ -1,0 +1,61 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2):
+    # Convert the numbers to binary strings
+    bin1 = bin(num1)[2:]
+    bin2 = bin(num2)[2:]
+
+    # Pad the shorter string with leading zeros
+    if len(bin1) < len(bin2):
+        bin1 = '0' * (len(bin2) - len(bin1)) + bin1
+    elif len(bin2) < len(bin1):
+        bin2 = '0' * (len(bin1) - len(bin2)) + bin2
+    
+    # Compare the two strings character by character
+    diff_count = 0
+    for i in range(len(bin1)):
+        if bin1[i] != bin2[i]:
+            diff_count += 1
+    
+    # Return True if there is only one difference, False otherwise
+    return diff_count == 1",1
+2,"
+
+def solve(num1, num2):
+    xor = num1 ^ num2
+    if xor & (xor - 1) == 0:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(num1, num2):
+    diff = num1 ^ num2
+    return diff & (diff - 1) == 0",3
+4,"
+
+def solve(x,y):
+    xor = x ^ y
+    count = 0
+    while xor > 0:
+        if xor & 1:
+            count += 1
+        xor = xor >> 1
+    if count == 1:
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(num1, num2):
+    diff = num1 ^ num2
+    count = 0
+    while diff > 0:
+        if diff & 1:
+            count += 1
+        diff = diff >> 1
+    if count == 1:
+        return True
+    else:
+        return False",5

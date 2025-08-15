@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return len(list(filter(lambda x: x%2 != 0, lst)))",1
+2,"
+
+def solve(lst):
+    return len(list(filter(lambda x: x % 2 != 0, lst)))",2
+3,"
+
+def solve(lst):
+    count = 0
+    for num in lst:
+        if (lambda x: x%2 != 0)(num):
+            count += 1
+    return count",3
+4,"
+
+def solve(lst):
+    return len(list(filter(lambda x: x % 2 != 0, lst)))",2
+5,"
+
+def solve(lst):
+    return len(list(filter(lambda x: x % 2 == 1, lst)))",4

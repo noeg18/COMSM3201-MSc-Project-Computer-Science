@@ -1,0 +1,34 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary):
+    for key in dictionary:
+        dictionary[key].sort()
+    return dictionary",1
+2,"
+
+def solve(my_dict):
+    for key in my_dict:
+        my_dict[key].sort()
+    return my_dict",2
+3,"
+
+def solve(dictionary):
+    sorted_dict = {}
+    for key in sorted(dictionary):
+        sorted_dict[key] = sorted(dictionary[key])
+    
+    return sorted_dict",3
+4,"
+
+def solve(dictionary):
+    sorted_dict = {}
+    for key in sorted(dictionary.keys()):
+        sorted_dict[key] = sorted(dictionary[key])
+    return sorted_dict",4
+5,"
+
+def solve(dict_list):
+    for key in dict_list:
+        dict_list[key] = sorted(dict_list[key])
+    return dict_list",5

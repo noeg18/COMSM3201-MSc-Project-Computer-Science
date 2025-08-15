@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    for i in range(len(lst)):
+        lst[i] = lst[i][::-1]
+    return lst",1
+2,"
+
+def solve(list_of_lists):
+    for i in range(len(list_of_lists)):
+        list_of_lists[i] = list_of_lists[i][::-1]
+    return list_of_lists",2
+3,"
+
+def solve(list_of_lists):
+    for i in range(len(list_of_lists)):
+        list_of_lists[i] = list_of_lists[i][::-1]
+    return list_of_lists",2
+4,"
+
+def solve(lists):
+    for i in range(len(lists)):
+        lists[i] = lists[i][::-1]
+    return lists",3
+5,"
+
+def solve(lists):
+    new_lists = []
+    for lst in lists:
+        new_lst = []
+        for i in range(len(lst)-1, -1, -1):
+            new_lst.append(lst[i])
+        new_lists.append(new_lst)
+    return new_lists",4

@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count = 0
+    for num in lst:
+        if isinstance(num, int):
+            count += 1
+    return count",1
+2,"
+
+def solve(list):
+    count = 0
+    for num in list:
+        if isinstance(num, int):
+            count += 1
+    return count",2
+3,"
+
+def solve(lst):
+    count = 0
+    for num in lst:
+        if type(num) == int:
+            count += 1
+    return count",3
+4,"
+
+def solve(lst):
+    count = 0
+    for item in lst:
+        if type(item) == int:
+            count += 1
+    return count",4
+5,"
+
+def solve(lst):
+    count = 0
+    for num in lst:
+        if isinstance(num, int):
+            count += 1
+    return count",1

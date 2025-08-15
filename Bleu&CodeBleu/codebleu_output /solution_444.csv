@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples, k):
+    return [(t[0]+k, t[1]-k) for t in tuples]",1
+2,"
+
+def solve(tuple_list, k):
+    trimmed_tuple_list = []
+    for tup in tuple_list:
+        trimmed_tuple = tup[k:]
+        trimmed_tuple_list.append(trimmed_tuple)
+    return trimmed_tuple_list",2
+3,"
+
+def solve(tuples, k):
+    result = []
+    for tup in tuples:
+        trimmed_tup = tup[:-k]
+        result.append(trimmed_tup)
+    return result",3
+4,"
+
+def solve(tuples, k):
+    trimmed_tuples = []
+    for t in tuples:
+        trimmed_tuples.append(t[:k])
+    return trimmed_tuples",4
+5,"
+
+def solve(tuple_list, k):
+    trimmed_list = []
+    for tup in tuple_list:
+        trimmed_tup = tup[k:]
+        trimmed_list.append(trimmed_tup)
+    return trimmed_list",5

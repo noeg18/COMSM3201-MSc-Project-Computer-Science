@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    result = ()
+    for i in range(len(tup)):
+        if i % 2 == 0:
+            result += (tup[i], tup[i+1]),
+        else:
+            result += (tup[i-1], tup[i]),
+    return result",1
+2,"
+
+def solve(t):
+    result = []
+    for i in range(len(t)):
+        pair = (t[i], t[len(t)-1-i])
+        result.append(pair)
+    return result",2
+3,"
+
+def solve(tup):
+    result = []
+    for i in range(len(tup)):
+        pair = (tup[i], tup[i+1])
+        result.append(pair)
+    return result",3
+4,"
+
+def solve(tup):
+    result = ()
+    for i in range(len(tup)):
+        pair = (tup[i], tup[i+1])
+        result += pair
+    return result",4
+5,"
+
+def solve(tuple):
+    new_tuple = ()
+    for i in range(len(tuple)):
+        new_tuple += tuple[i], tuple[i+1]
+    return new_tuple",5

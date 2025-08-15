@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary):
+  first_value = list(dictionary.values())[0]
+  for value in dictionary.values():
+    if value != first_value:
+      return False
+  return True",1
+2,"
+
+def solve(dic):
+    values = list(dic.values())
+    if len(values) == 0:
+        return False
+    else:
+        return all(x == values[0] for x in values)",2
+3,"
+
+def solve(dictionary):
+    values = list(dictionary.values())
+    if len(values) > 0:
+        first_value = values[0]
+        for value in values:
+            if value != first_value:
+                return False
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(dictionary):
+    values = dictionary.values()
+    if len(set(values)) == 1:
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(dictionary):
+    values = list(dictionary.values())
+    first_value = values[0]
+    for value in values:
+        if value != first_value:
+            return False
+    return True",5

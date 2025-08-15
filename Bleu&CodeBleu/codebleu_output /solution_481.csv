@@ -1,0 +1,58 @@
+response_num,response,cluster
+1,"
+
+def solve(nums, target):
+    if not nums:
+        return False
+    n = len(nums)
+    dp = [[False for i in range(target+1)] for j in range(n+1)]
+    for i in range(n+1):
+        dp[i][0] = True
+    for i in range(1, n+1):
+        for j in range(1, target+1):
+            if j < nums[i-1]:
+                dp[i][j] = dp[i-1][j]
+            else:
+                dp[i][j] = dp[i-1][j] or dp[i-1][j-nums[i-1]]
+    return dp[n][target]",1
+2,"
+
+def solve(nums, target):
+    if target == 0:
+        return True
+    elif len(nums) == 0:
+        return False
+    elif nums[0] > target:
+        return solve(nums[1:], target)
+    else:
+        return solve(nums[1:], target - nums[0]) or solve(nums[1:], target)",2
+3,"
+
+def solve(set, sum):
+    if sum == 0:
+        return True
+    if len(set) == 0 and sum != 0:
+        return False
+    if set[0] > sum:
+        return solve(set[1:], sum)
+    return solve(set[1:], sum-set[0]) or solve(set[1:], sum)",3
+4,"
+
+def solve(nums, target):
+    dp = [False for _ in range(target+1)]
+    dp[0] = True
+    for num in nums:
+        for i in range(target, num-1, -1):
+            dp[i] = dp[i] or dp[i-num]
+    return dp[target]",4
+5,"
+
+def solve(nums, target):
+    dp = [False] * (target + 1)
+    dp[0] = True
+
+    for num in nums:
+        for j in range(target, num - 1, -1):
+            dp[j] = dp[j] or dp[j - num]
+
+    return dp[target]",5

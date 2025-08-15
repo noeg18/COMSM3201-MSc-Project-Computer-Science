@@ -1,0 +1,65 @@
+response_num,response,cluster
+1,"
+
+def solve(num_rows, num_cols, side_length, origin_x=0, origin_y=0):
+    grid = []
+    for row in range(num_rows):
+        row_coords = []
+        for col in range(num_cols):
+            x = origin_x + 3 * side_length * col
+            y = origin_y + 2 * side_length * row + side_length * col
+            row_coords.append((x, y))
+        grid.append(row_coords)
+    return grid",1
+2,"
+
+def solve(n):
+    grid = []
+    for i in range(n):
+        row = []
+        for j in range(n):
+            x = i*3 + j%3
+            y = j*2
+            if i%2 == 0:
+                y += 1
+            row.append((x,y))
+        grid.append(row)
+    return grid",2
+3,"
+
+def solve(n):
+    hex_grid = []
+    for i in range(n):
+        row = []
+        for j in range(n):
+            if i%2 == 0:
+                row.append((i, j*2))
+            else:
+                row.append((i, j*2+1))
+        hex_grid.append(row)
+    return hex_grid",3
+4,"
+
+def solve(rows, columns, size):
+    grid = []
+    for row in range(rows):
+        grid.append([])
+        for column in range(columns):
+            x = size * (3/2 * column)
+            y = size * (row * (3**0.5) + (3**0.5)/2 * column)
+            grid[row].append([(x, y + size/2), (x + size/2, y + (3**0.5)/2 * size), (x + size, y + size/2), (x + size, y - size/2), (x + size/2, y - (3**0.5)/2 * size), (x, y - size/2)])
+    return grid",4
+5,"
+
+def solve(num_rows, num_cols, side_length):
+    hex_grid = []
+    for i in range(num_rows):
+        row = []
+        for j in range(num_cols):
+            x = j * side_length * 1.5
+            y = i * side_length * (3 ** 0.5)
+            if i % 2 == 1:
+                x += side_length * 0.75
+            row.append([(x + side_length * k, y) for k in range(6)])
+        hex_grid.append(row)
+    return hex_grid",5

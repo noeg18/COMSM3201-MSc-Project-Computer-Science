@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(literals, string):
+    pattern = '|'.join(literals)
+    matches = re.findall(pattern, string)
+    return matches",1
+2,"
+
+import re
+
+def solve(string):
+    regex = r""literal1|literal2|literal3""
+    matches = re.findall(regex, string)
+    return matches",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = r'hello|world|python'
+    matches = re.findall(pattern, string)
+    return matches",3
+4,"
+
+import re
+
+def solve(text):
+    pattern = re.compile(r'literals|string|regex')
+    matches = pattern.findall(text)
+    return matches",4
+5,"
+
+import re
+
+def solve(string):
+    regex = r""literal1|literal2|literal3"" # replace with desired literals 
+    matches = re.findall(regex, string)
+    return matches",5

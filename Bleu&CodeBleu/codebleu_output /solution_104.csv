@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    for sublist in lst:
+        sublist.sort(key = lambda x: x.lower())
+    return lst",1
+2,"
+
+def solve(lists):
+    for sublist in lists:
+        sublist.sort(key=lambda x: x.lower())
+    return lists",2
+3,"
+
+def solve(lists):
+    for sublist in lists:
+        sublist.sort(key=lambda x: x.lower())
+    return lists",2
+4,"
+
+def solve(lists):
+    for sublist in lists:
+        sublist.sort(key = lambda x: x.lower())
+    return lists",3
+5,"
+
+def solve(list_of_lists):
+    for sublist in list_of_lists:
+        sublist.sort(key=lambda x: x.lower())
+    return list_of_lists",4

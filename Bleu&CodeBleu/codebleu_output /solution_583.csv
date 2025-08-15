@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    if n == 0:
+        return 1
+    else:
+        catalan = [0] * (n+1)
+        catalan[0] = 1
+        catalan[1] = 1
+
+        for i in range(2, n+1):
+            for j in range(i):
+                catalan[i] += catalan[j] * catalan[i-j-1]
+
+        return catalan[n]",1
+2,"
+
+def solve(n):
+    if n == 0:
+        return 1
+    else:
+        return (solve(n-1) * (4*n - 2)) / (n + 1)",2
+3,"
+
+def solve(n):
+    if n <= 1:
+        return 1
+    else:
+        result = 0
+        for i in range(n):
+            result += solve(i) * solve(n-1-i)
+        return result",3
+4,"
+
+def solve(n):
+    if n == 0 or n == 1:
+        return 1
+    catalan = [0] * (n+1)
+    catalan[0] = 1
+    catalan[1] = 1
+    for i in range(2, n+1):
+        for j in range(i):
+            catalan[i] += catalan[j] * catalan[i-j-1]
+    return catalan[n]",4
+5,"
+
+def solve(n):
+    if n <= 1:
+        return 1
+    catalan = [0] * (n+1)
+    catalan[0] = 1
+    catalan[1] = 1
+    for i in range(2, n+1):
+        for j in range(i):
+            catalan[i] += catalan[j] * catalan[i-j-1]
+    return catalan[n]",5

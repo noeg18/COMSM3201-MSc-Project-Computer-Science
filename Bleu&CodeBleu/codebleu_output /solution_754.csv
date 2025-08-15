@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2, list3):
+    common = []
+    for i in list1:
+        if i in list2 and i in list3:
+            common.append(i)
+    return common",1
+2,"
+
+def solve(list1, list2, list3):
+    common_indexes = []
+    for i in range(len(list1)):
+        if list1[i] in list2 and list1[i] in list3:
+            common_indexes.append(i)
+    return common_indexes",2
+3,"
+
+def solve(list1, list2, list3):
+    common_elements = []
+    for i in range(len(list1)):
+        if list1[i] in list2 and list1[i] in list3:
+            common_elements.append(list1[i])
+    return common_elements",3
+4,"
+
+def solve(list1, list2, list3):
+    common_elements = []
+    for element in list1:
+        if element in list2 and element in list3:
+            common_elements.append(element)
+    return common_elements",4
+5,"
+
+def solve(list1, list2, list3):
+  result = []
+  for i in range(len(list1)):
+    if list1[i] in list2 and list1[i] in list3:
+      result.append(i)
+  return result",5

@@ -1,0 +1,58 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    prime_sum = 0
+    for num in range(2, n+1):
+        prime = True
+        for i in range(2, num):
+            if num % i == 0:
+                prime = False
+                break
+        if prime:
+            prime_sum += num
+    return prime_sum",1
+2,"
+
+def solve(n):
+    sum = 0 
+    for num in range(2, n+1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                sum += num
+    return sum",2
+3,"
+
+def solve(n):
+    sum = 0
+    for num in range(2, n+1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                sum += num
+    return sum",2
+4,"
+
+def solve(n):
+    sum = 0
+    for num in range(2, n+1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                sum = sum + num
+    return sum",3
+5,"
+
+def solve(n):
+    sum = 0
+    for num in range(2, n+1):
+        if all(num%i!=0 for i in range(2, num)):
+            sum += num
+    return sum",4

@@ -1,0 +1,27 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple_list):
+    return [tup for tup in tuple_list if any(tup)]",1
+2,"
+
+def solve(tuple_list):
+    new_list = []
+    for tup in tuple_list:
+        if any(item is not None for item in tup):
+            new_list.append(tup)
+    return new_list",2
+3,"
+
+def solve(tuple_list):
+    cleaned_list = [t for t in tuple_list if any(v is not None for v in t)]
+    return cleaned_list",3
+4,"
+
+def solve(tuple_list):
+    filtered_list = [tup for tup in tuple_list if not all(item is None for item in tup)]
+    return filtered_list",4
+5,"
+
+def solve(tuple_list):
+    return [t for t in tuple_list if not all(x is None for x in t)]",5

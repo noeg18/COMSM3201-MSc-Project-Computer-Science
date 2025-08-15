@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    result = 1
+    for num in lst:
+        result *= num
+    return result ",1
+2,"
+
+def solve(lst):
+    result = 1
+    for num in lst:
+        result *= num
+    return result",1
+3,"
+
+def solve(lst):
+    result = 1
+    for num in lst:
+        result *= num
+    return result",1
+4,"
+
+def solve(lst):
+    result = 1
+    for num in lst:
+        result *= num
+    return result",1
+5,"
+
+def solve(lst):
+    prod = 1
+    for num in lst:
+        prod *= num
+    return prod",2

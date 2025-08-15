@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    sum = 0
+    while n >= 0:
+        sum += n
+        n -= 2
+    return sum",1
+2,"
+
+def solve(n):
+    total = 0
+    while n > 0:
+        total += n
+        n -= 2
+    return total",2
+3,"
+
+def solve(n):
+    if n <= 0:
+        return 0
+    else:
+        return n + solve(n-2)",3
+4,"
+
+def solve(n):
+    if n < 0:
+        return 0
+    else:
+        return n + solve(n-2)",4
+5,"
+
+def solve(n):
+  total = 0
+  while n > 0:
+    total += n
+    n -= 2
+  return total",2

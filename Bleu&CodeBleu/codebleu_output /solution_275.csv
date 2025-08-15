@@ -1,0 +1,27 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    removed = arr.pop()
+    return arr.index(removed) + 1",1
+2,"
+
+def solve(arr):
+  removed = arr.pop()
+  return arr.index(removed)",2
+3,"
+
+def solve(arr):
+    removed = arr.pop()
+    return arr.index(removed) + 1",1
+4,"
+
+def solve(arr):
+    arr_copy = arr.copy()
+    last_removed = arr_copy.pop()
+    return arr.index(last_removed)",3
+5,"
+
+def solve(arr):
+    last_removed = arr[len(arr)-1]
+    return arr.index(last_removed)",4

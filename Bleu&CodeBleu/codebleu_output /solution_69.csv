@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(list, sublist):
+    for i in range(len(list)-len(sublist)+1):
+        if sublist == list[i:i+len(sublist)]:
+            return True
+    return False",1
+2,"
+
+def solve(list, sublist):
+    if not sublist:
+        return True
+    if not list:
+        return False
+    for i in range(len(list)):
+        if list[i:i+len(sublist)] == sublist:
+            return True
+    return False",2
+3,"
+
+def solve(lst, sublist):
+    if len(sublist) > len(lst):
+        return False
+    for i in range(len(lst)):
+        if lst[i:i+len(sublist)] == sublist:
+            return True
+    return False",3
+4,"
+
+def solve(list1, sublist):
+    for i in range(len(list1)):
+        if list1[i:i+len(sublist)] == sublist:
+            return True
+    return False",4
+5,"
+
+def solve(list, sublist):
+    if len(sublist) > len(list):
+        return False
+    for i in range(len(list)-len(sublist)+1):
+        if list[i:i+len(sublist)] == sublist:
+            return True
+    return False",5

@@ -1,0 +1,78 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    prev_upper = False
+    sequences = []
+    
+    for char in string:
+        if char.isupper():
+            if prev_upper:
+                sequences[-1] += char
+            else:
+                sequences.append(char)
+            prev_upper = True
+        else:
+            prev_upper = False
+    
+    return sequences",1
+2,"
+
+def solve(string):
+    result = []
+    i = 0
+    while i < len(string):
+        if string[i].isupper() and i+1 < len(string) and string[i+1].islower():
+            sequence = string[i]
+            i += 1
+            while i < len(string) and string[i].islower():
+                sequence += string[i]
+                i += 1
+            result.append(sequence)
+        else:
+            i += 1
+    return result",2
+3,"
+
+def solve(string):
+    sequences = []
+    upper = False
+    for char in string:
+        if char.isupper() and not upper:
+            upper = True
+        elif char.islower() and upper:
+            sequences.append(string[string.index(char)-1:string.index(char)+1])
+            upper = False
+        else:
+            upper = False
+    return sequences",3
+4,"
+
+def solve(string):
+    sequences = []
+    i = 0
+    while i < len(string) - 1:
+        if string[i].isupper() and string[i+1].islower():
+            j = i + 1
+            while j < len(string) and string[j].islower():
+                j += 1
+            sequences.append(string[i:j])
+            i = j - 1
+        i += 1
+    return sequences",4
+5,"
+
+def solve(string):
+    result = []
+    i = 0
+    while i < len(string):
+        if string[i].isupper() and i < len(string) - 1 and string[i+1].islower():
+            seq = string[i]
+            i += 1
+            while i < len(string) and string[i].islower():
+                seq += string[i]
+                i += 1
+            result.append(seq)
+        else:
+            i += 1
+    return result",5

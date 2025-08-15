@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(two_d_list, elements):
+    result = []
+    for row in two_d_list:
+        for element in elements:
+            result.append(row[element])
+    return result",1
+2,"
+
+def solve(lst, indices):
+    result = []
+    for i in indices:
+        for j in range(len(lst)):
+            result.append(lst[j][i])
+    return result",2
+3,"
+
+def solve(list, elements):
+    result = []
+    for i in range(len(list)):
+        for j in range(len(list[i])):
+            if list[i][j] in elements:
+                result.append(list[i][j])
+    return result",3
+4,"
+
+def solve(lst, indices):
+    result = []
+    for i in range(len(lst)):
+        for j in range(len(lst[i])):
+            if (i,j) in indices:
+                result.append(lst[i][j])
+    return result",4
+5,"
+
+def solve(two_dim_list, indices):
+    result = []
+    for row in two_dim_list:
+        for i in indices:
+            result.append(row[i])
+    return result",5

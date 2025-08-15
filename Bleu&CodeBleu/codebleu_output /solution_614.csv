@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple_list):
+    cum_sum = 0
+    for tup in tuple_list:
+        for val in tup:
+            cum_sum += val
+    return cum_sum",1
+2,"
+
+def solve(tuple_list):
+    cumulative_sum = 0
+    for tuple in tuple_list:
+        for value in tuple:
+            cumulative_sum += value
+    return cumulative_sum",2
+3,"
+
+def solve(tuple_list):
+    cum_sum = 0
+    for tup in tuple_list:
+        cum_sum += sum(tup)
+    return cum_sum",3
+4,"
+
+def solve(tuple_list):
+    cumulative_sum = 0
+    for tup in tuple_list:
+        cumulative_sum += sum(tup)
+    return cumulative_sum",4
+5,"
+
+def solve(tuples):
+    cum_sum = 0
+    for tup in tuples:
+        for val in tup:
+            cum_sum += val
+    return cum_sum",5

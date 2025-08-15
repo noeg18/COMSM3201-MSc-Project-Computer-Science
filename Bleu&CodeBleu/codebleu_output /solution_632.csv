@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count = 0
+    for i in lst:
+        if i == 0:
+            count += 1
+    for i in range(count):
+        lst.remove(0)
+        lst.append(0)
+    return lst",1
+2,"
+
+def solve(lst):
+    zeros = []
+    non_zeros = []
+    for num in lst:
+        if num == 0:
+            zeros.append(num)
+        else:
+            non_zeros.append(num)
+    return non_zeros + zeros",2
+3,"
+
+def solve(lst):
+    non_zero = [x for x in lst if x != 0]
+    zero = [x for x in lst if x == 0]
+    return non_zero + zero",3
+4,"
+
+def solve(lst):
+    non_zero = [x for x in lst if x != 0]
+    zeros = [x for x in lst if x == 0]
+    return non_zero + zeros",3
+5,"
+
+def solve(nums):
+    zeroes = []
+    non_zeroes = []
+    for num in nums:
+        if num == 0:
+            zeroes.append(num)
+        else:
+            non_zeroes.append(num)
+    return non_zeroes + zeroes",4

@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    zipped = list(zip(list1, list2))
+    return zipped",1
+2,"
+
+def solve(list1, list2):
+    zipped = []
+    for i in range(min(len(list1), len(list2))):
+        zipped.append(list1[i] + list2[i])
+    return zipped",2
+3,"
+
+def solve(list1, list2):
+    zipped_lists = []
+    for i in range(len(list1)):
+        zipped_lists.append(list(zip(list1[i], list2[i])))
+    return zipped_lists",3
+4,"
+
+def solve(list1, list2):
+    result = []
+    for i in range(len(list1)):
+        result.append([list1[i], list2[i]])
+    return result",4
+5,"
+
+def solve(list1, list2):
+    result = []
+    for i in range(len(list1)):
+        temp = []
+        for j in range(len(list1[i])):
+            temp.append(list1[i][j])
+            temp.append(list2[i][j])
+        result.append(temp)
+    return result",5

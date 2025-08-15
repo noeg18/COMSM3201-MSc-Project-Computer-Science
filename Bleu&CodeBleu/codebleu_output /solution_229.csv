@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    neg = []
+    pos = []
+    for num in arr:
+        if num < 0:
+            neg.append(num)
+        else:
+            pos.append(num)
+    return neg + pos",1
+2,"
+
+def solve(arr):
+    neg_arr = []
+    pos_arr = []
+    for elem in arr:
+        if elem < 0:
+            neg_arr.append(elem)
+        else:
+            pos_arr.append(elem)
+    return neg_arr + pos_arr",2
+3,"
+
+def solve(arr):
+    pos = []
+    neg = []
+    for num in arr:
+        if num < 0:
+            neg.append(num)
+        else:
+            pos.append(num)
+    return neg + pos",1
+4,"
+
+def solve(arr):
+    neg = []
+    pos = []
+    for num in arr:
+        if num < 0:
+            neg.append(num)
+        else:
+            pos.append(num)
+    return neg + pos",1
+5,"
+
+def solve(arr):
+    i = 0
+    j = len(arr) - 1
+    while i < j:
+        if arr[i] < 0:
+            i += 1
+        elif arr[j] >= 0:
+            j -= 1
+        else:
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+            j -= 1
+    return arr",3

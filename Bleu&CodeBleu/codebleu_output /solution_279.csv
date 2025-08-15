@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return n * (9 * n - 7)",1
+2,"
+
+def solve(n):
+    return n*(7*n-5)//2",2
+3,"
+
+def solve(n):
+    return n * (7 * n - 5)",3
+4,"
+
+def solve(n):
+    return n * (7 * n - 5)",3
+5,"
+
+def solve(n):
+    return n*(9*n-7)",4

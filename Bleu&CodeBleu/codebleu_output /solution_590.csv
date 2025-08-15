@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(r, theta):
+    x = r * math.cos(math.radians(theta))
+    y = r * math.sin(math.radians(theta))
+    return (x, y)",1
+2,"
+
+def solve(r, theta):
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+    return (x, y)",2
+3,"
+
+def solve(r, theta):
+    x = r * cos(theta)
+    y = r * sin(theta)
+    return (x, y)",3
+4,"
+
+def solve(r, theta):
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+    return x, y",4
+5,"
+
+def solve(r, theta):
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+    return (x, y)",2

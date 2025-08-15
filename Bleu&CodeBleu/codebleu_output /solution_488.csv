@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(side):
+    area = (1/4) * (5 * (5 + 2 * (5**0.5))) * side**2
+    return area",1
+2,"
+
+def solve(side):
+    return (1/4) * math.sqrt(5 * (5 + 2 * math.sqrt(5))) * (side ** 2)",2
+3,"
+
+def solve(side_length):
+    return (1/4)*((5*(5+2*(5**(1/2))))**(1/2))*side_length**2",3
+4,"
+
+def solve(side):
+    import math
+    area = (1/4)*(math.sqrt(5*(5+2*math.sqrt(5))))*side**2
+    return area",4
+5,"
+
+def solve(side):
+    return (1/4) * (5 * (5 + 2 * (5**0.5))) * (side**2)",5

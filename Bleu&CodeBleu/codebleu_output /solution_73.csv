@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    delimiters = ""[,;.:]""
+    split_string = re.split(delimiters, string)
+    return split_string",1
+2,"
+
+def solve(string):
+    return re.split('[,;._-]', string)",2
+3,"
+
+def solve(string):
+    import re
+    delimiters = ""[,;.: -_]""
+    return re.split(delimiters, string)",3
+4,"
+
+import re
+
+def solve(string):
+    delimiters = '[,.;:?!]'
+    return re.split(delimiters, string)",4
+5,"
+
+def solve(string):
+    return re.split('[,.;:|]', string)",5

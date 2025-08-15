@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(tup_str):
+    tup_int = ()
+    for i in tup_str:
+        tup_int += (int(i),)
+    return tup_int",1
+2,"
+
+def solve(tuple_string):
+    integer_tuple = tuple(map(int, tuple_string.split(',')))
+    return integer_tuple",2
+3,"
+
+def solve(tuple_string):
+    integer_tuple = tuple(map(int, tuple_string.split("","")))
+    return integer_tuple",3
+4,"
+
+def solve(tuple_str):
+    int_tuple = tuple(int(i) for i in tuple_str)
+    return int_tuple",4
+5,"
+
+def solve(tuple_str):
+    tuple_int = tuple(map(int, tuple_str))
+    return tuple_int",5

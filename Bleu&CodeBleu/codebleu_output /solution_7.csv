@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    pattern = r'\b\w{4,}\b'
+    matches = re.findall(pattern, string)
+    return matches",1
+2,"
+
+def solve(string):
+    pattern = r'\b\w{4,}\b'
+    matches = re.findall(pattern, string)
+    return matches",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = r'\b\w{4,}\b'
+    match = re.findall(pattern, string)
+    return match",3
+4,"
+
+import re
+
+def solve(string):
+    return re.findall(r""[a-zA-Z]{4,}"", string)",4
+5,"
+
+import re 
+
+def solve(string):
+    pattern = r'\b\w{4,}\b'
+    return re.findall(pattern, string)",5

@@ -1,0 +1,80 @@
+response_num,response,cluster
+1,"
+
+def solve(nums, k):
+    nums.sort(reverse=True)
+    max_sum = 0
+    i = 0
+    while i < len(nums)-1 and k > 0:
+        if nums[i] > 1 and nums[i+1] > 1:
+            max_sum += nums[i] + nums[i+1]
+            i += 2
+            k -= 1
+        else:
+            max_sum += nums[i]
+            i += 1
+    return max_sum",1
+2,"
+
+def solve(arr, k):
+    max_sum = 0
+    n = len(arr)
+    for i in range(n):
+        for j in range(i+1, n):
+            if (arr[i] + arr[j]) % k != 0:
+                max_sum = max(max_sum, arr[i] + arr[j])
+    return max_sum",2
+3," 
+
+
+def solve(arr, k):
+    # sort the array in descending order
+    arr.sort(reverse=True)
+
+    # initialize a variable to store the maximum sum
+    max_sum = 0
+
+    # loop through the array
+    i = 0
+    while i < len(arr):
+        # if the current element is greater than k, skip it
+        if arr[i] > k:
+            i += 1
+            continue
+
+        # add the current element and the next element to the sum
+        max_sum += arr[i] + arr[i+1]
+
+        # update k by subtracting the current element from it
+        k -= arr[i]
+
+        # skip the next element as it has already been used
+        i += 2
+
+    # return the maximum sum
+    return max_sum",3
+4,"
+
+def solve(arr, k):
+    arr.sort(reverse=True)
+    pairs = []
+    for i in range(len(arr)):
+        if len(pairs) == k:
+            break
+        if arr[i] not in pairs:
+            pairs.append(arr[i])
+    return sum(pairs)",4
+5,"
+
+def solve(arr, k):
+    arr.sort()
+    n = len(arr)
+    result = 0
+    i = 0
+    while i < n:
+        if arr[i] + arr[i+1] <= k:
+            result += arr[i] + arr[i+1]
+            i += 2
+        else:
+            i += 1
+    return result",5

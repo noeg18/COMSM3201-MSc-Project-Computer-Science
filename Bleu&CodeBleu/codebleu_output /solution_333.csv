@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return sorted(lst, key=lambda x: x[1])",1
+2,"
+
+def solve(list):
+    return sorted(list, key=lambda x: x[1])",2
+3,"
+
+def solve(list):
+    list.sort(key=lambda x: x[1])
+    return list",3
+4,"
+
+def solve(lst):
+    lst.sort(key=lambda x: x[1])
+    return lst",4
+5,"
+
+def solve(lst):
+    lst.sort(key=lambda x: x[1])
+    return lst",4

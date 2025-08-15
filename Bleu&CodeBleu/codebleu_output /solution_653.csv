@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+from collections import defaultdict
+
+def solve(key_value_pairs):
+    result = defaultdict(list)
+    for key, value in key_value_pairs:
+        result[key].append(value)
+    return dict(result)",1
+2,"
+
+from collections import defaultdict
+
+def solve(seq):
+    result = defaultdict(list)
+    for key, value in seq:
+        result[key].append(value)
+    return dict(result)",2
+3,"
+
+from collections import defaultdict
+
+def solve(seq):
+    d = defaultdict(list)
+    for key, value in seq:
+        d[key].append(value)
+    return dict(d)",3
+4,"
+
+from collections import defaultdict
+
+def solve(sequence):
+    dictionary = defaultdict(list)
+    for key, value in sequence:
+        dictionary[key].append(value)
+    return dict(dictionary)",4
+5,"
+
+from collections import defaultdict
+
+def solve(sequence):
+    result = defaultdict(list)
+    
+    for key, value in sequence:
+        result[key].append(value)
+        
+    return dict(result)",5

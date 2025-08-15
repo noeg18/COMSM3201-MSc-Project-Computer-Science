@@ -1,0 +1,76 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    start = 0
+    end = len(arr) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] > arr[mid + 1]:
+            return arr[mid]
+        elif arr[mid] < arr[mid - 1]:
+            return arr[mid - 1]
+        elif arr[start] > arr[mid]:
+            end = mid - 1
+        else:
+            start = mid + 1",1
+2,"
+
+def solve(arr):
+    start = 0
+    end = len(arr) - 1
+    while start < end:
+        mid = (start + end) // 2
+        if arr[mid] > arr[mid+1]:
+            return arr[mid]
+        elif arr[mid] > arr[end]:
+            start = mid + 1
+        else:
+            end = mid
+    return arr[start]",2
+3,"
+
+def solve(arr):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        # If mid element is the maximum element
+        if arr[mid] > arr[mid + 1] and arr[mid] > arr[mid - 1]:
+            return arr[mid]
+        # If mid element is smaller than its previous element, then the maximum element must be on the left side
+        elif arr[mid] < arr[mid - 1]:
+            right = mid - 1
+        # If mid element is larger than its next element, then the maximum element must be on the right side
+        else:
+            left = mid + 1",3
+4,"
+
+def solve(arr):
+    start = 0
+    end = len(arr) - 1
+    while start < end:
+        mid = (start + end) // 2
+        if arr[mid] > arr[end]:
+            start = mid + 1
+        else:
+            end = mid
+    return arr[start]",4
+5,"
+
+def solve(arr):
+    if len(arr) == 0:
+        return None
+    
+    start = 0
+    end = len(arr) - 1
+    
+    while start < end:
+        mid = (start + end) // 2
+        if arr[mid] > arr[end]:
+            start = mid + 1
+        else:
+            end = mid
+            
+    return arr[start]",5

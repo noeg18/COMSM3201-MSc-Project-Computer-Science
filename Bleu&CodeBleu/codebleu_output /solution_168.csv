@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, num):
+    count = 0
+    for i in arr:
+        if i == num:
+            count += 1
+    return count",1
+2,"
+
+def solve(arr, num):
+    count = 0
+    for i in arr:
+        if i == num:
+            count += 1
+    return count
+ ",1
+3,"
+
+def solve(arr, num):
+    count = 0
+    for i in arr:
+        if i == num:
+            count += 1
+    return count",1
+4,"
+
+def solve(arr, num):
+    count = 0
+    for i in arr:
+        if i == num:
+            count += 1
+    return count",1
+5,"
+
+def solve(arr, num):
+    freq = 0
+    for i in arr:
+        if i == num:
+            freq += 1
+    return freq",2

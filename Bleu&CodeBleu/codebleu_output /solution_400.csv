@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    freq = {}
+    for tpl in lst:
+        if tpl in freq:
+            freq[tpl] += 1
+        else:
+            freq[tpl] = 1
+    return freq.values()",1
+2,"
+
+def solve(input_list):
+    frequencies = {}
+    for item in input_list:
+        if item in frequencies:
+            frequencies[item] += 1
+        else:
+            frequencies[item] = 1
+    return frequencies",2
+3,"
+
+def solve(lst):
+    freq = {}
+    for tup in lst:
+        if tup in freq:
+            freq[tup] += 1
+        else:
+            freq[tup] = 1
+    return freq",3
+4,"
+
+def solve(lst):
+    freq = {}
+    for tup in lst:
+        if tup in freq:
+            freq[tup] += 1
+        else:
+            freq[tup] = 1
+    return freq.values()",3
+5,"
+
+def solve(lst):
+    freq_dict = {}
+    for tup in lst:
+        if tup in freq_dict:
+            freq_dict[tup] += 1
+        else:
+            freq_dict[tup] = 1
+    return freq_dict",4

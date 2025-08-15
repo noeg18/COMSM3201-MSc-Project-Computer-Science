@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    sum = 0
+    count = 0
+    for x in tup:
+        for y in x:
+            sum += y
+            count += 1
+    return sum/count",1
+2,"
+
+def solve(tup):
+    total = 0
+    count = 0
+    for sub_tup in tup:
+        for num in sub_tup:
+            total += num
+            count += 1
+    return total/count",2
+3,"
+
+def solve(tup):
+    total = 0
+    count = 0
+    for t in tup:
+        for num in t:
+            total += num
+            count += 1
+    return total / count",3
+4,"
+
+def solve(tup):
+    total = 0
+    count = 0
+    for sub_tup in tup:
+        for num in sub_tup:
+            total += num
+            count += 1
+    return total / count",2
+5,"
+
+def solve(tuples):
+    sum = 0
+    count = 0
+    for t in tuples:
+        for num in t:
+            sum += num
+            count += 1
+    return sum / count",4

@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+  words = string.split()
+  reversed_words = [word[::-1] for word in words]
+  return "" "".join(reversed_words)",1
+2,"
+
+def solve(s):
+    words = s.split()
+    reversed_words = words[::-1]
+    return "" "".join(reversed_words)",2
+3,"
+
+def solve(string):
+    words = string.split()
+    words.reverse()
+    return "" "".join(words)",3
+4,"
+
+def solve(string):
+    words = string.split()
+    words.reverse()
+    return "" "".join(words)
+
+# Example:
+# Input: ""hello world""
+# Output: ""world hello""",4
+5,"
+
+def solve(string):
+    words = string.split(' ')
+    reversed_words = [word[::-1] for word in words]
+    return ' '.join(reversed_words)",5

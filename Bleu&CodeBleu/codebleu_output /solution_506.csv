@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+def solve(n, k):
+    if n < 0 or k < 0:
+        return ""Invalid input""
+    if k > n:
+        return ""Invalid input""
+    if k == 0:
+        return 1
+    return (n * solve(n-1, k-1))",1
+2,"
+
+def solve(n, k):
+    if k > n:
+        return 0
+    else:
+        perm = 1
+        for i in range(n, n-k, -1):
+            perm *= i
+        return perm",2
+3,"
+
+def solve(n, k):
+    if k > n:
+        return 0
+    else:
+        result = 1
+        for i in range(n, n-k, -1):
+            result *= i
+        return result",3
+4,"
+
+def solve(n, k):
+    result = 1
+    for i in range(n, n - k, -1):
+        result *= i
+    return result",4
+5,"
+
+def solve(n, k):
+    if k > n:
+        return 0
+    else:
+        p = 1
+        for i in range(k):
+            p = p * (n-i)
+        return p",5

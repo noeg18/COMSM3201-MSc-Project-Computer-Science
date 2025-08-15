@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    mask = 1
+    # toggle first bit
+    num = num ^ mask
+    # toggle last bit
+    num = num ^ (mask << (len(bin(num))-3))
+    return num",1
+2,"
+
+def solve(n):
+    mask = 1 << (n.bit_length() - 1)
+    return n ^ mask ^ 1",2
+3,"
+
+def solve(num):
+    first_bit = 1 << (num.bit_length() - 1)
+    last_bit = 1
+    return num ^ (first_bit | last_bit)",3
+4,"
+
+def solve(num):
+    mask = 1 << (len(bin(num))-3)
+    return num ^ mask",4
+5,"
+
+def solve(num):
+    mask = 1 << (len(bin(num))-3)
+    return num ^ (1 | mask)",5

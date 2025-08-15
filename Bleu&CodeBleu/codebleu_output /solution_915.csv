@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    return sorted(arr, key=lambda x: 0 if x >= 0 else 1)",1
+2,"
+
+def solve(arr):
+    return sorted(arr, key=lambda x: (x < 0, abs(x)))",2
+3,"
+
+def solve(arr):
+    pos = list(filter(lambda x: x > 0, arr))
+    neg = list(filter(lambda x: x < 0, arr))
+    return neg + pos",3
+4,"
+
+def solve(arr):
+    return sorted(arr, key=lambda x: (x >= 0, x))",4
+5,"
+
+def solve(arr):
+  return sorted(arr, key=lambda x: x>=0)",5

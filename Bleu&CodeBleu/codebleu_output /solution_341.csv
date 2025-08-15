@@ -1,0 +1,27 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    ordered_tuples = []
+    for item in s:
+        ordered_tuples.append(tuple(sorted(item)))
+    return ordered_tuples",1
+2,"
+
+def solve(s):
+    ordered_tuples = []
+    for elem in sorted(s):
+        ordered_tuples.append((elem,))
+    return ordered_tuples",2
+3,"
+
+def solve(s):
+    return tuple(sorted(s))",3
+4,"
+
+def solve(s):
+    return sorted(tuple(x) for x in s)",4
+5,"
+
+def solve(s):
+    return tuple(sorted(s))",3

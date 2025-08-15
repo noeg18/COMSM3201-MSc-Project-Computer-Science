@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, n):
+    result = []
+    for i in range(len(lst)):
+        if i+n <= len(lst):
+            result.append(lst[i:i+n])
+    return result",1
+2,"
+
+def solve(lst, n):
+    result = []
+    for i in range(len(lst)-n+1):
+        result.append(lst[i:i+n])
+    return result",2
+3,"
+
+def solve(lst, n):
+    result = []
+    for i in range(len(lst)-n+1):
+        temp = lst[i:i+n]
+        if temp == lst[i:i+n]:
+            result.append(temp)
+    return result",3
+4,"
+
+def solve(lst, n):
+    result = []
+    for i in range(len(lst)-n+1):
+        result.append(lst[i:i+n])
+    return result",2
+5,"
+
+def solve(lst, n):
+    i = 0
+    result = []
+    
+    while i < len(lst):
+        if len(result) == n:
+            break
+        else:
+            result.append(lst[i])
+        i += 1
+    
+    return result",4

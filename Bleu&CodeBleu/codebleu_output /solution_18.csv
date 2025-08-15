@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(s1, s2):
+    res = """"
+    for char in s1:
+        if char not in s2:
+            res += char
+    return res",1
+2,"
+
+def solve(first, second):
+    result = """"
+    for char in first:
+        if char not in second:
+            result += char
+    return result",2
+3,"
+
+def solve(first_string, second_string):
+    result = """"
+    for char in first_string:
+        if char not in second_string:
+            result += char
+    return result",3
+4,"
+
+def solve(str1, str2):
+    new_str = """"
+    for char in str1:
+        if char not in str2:
+            new_str += char
+    return new_str",4
+5,"
+
+def solve(str1, str2):
+    new_str = ''
+    for char in str1:
+        if char not in str2:
+            new_str += char
+    return new_str",4

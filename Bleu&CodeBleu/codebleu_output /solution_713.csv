@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    values = ['A', 'T', 'G', 'C']
+    for i in tup:
+        if i not in values:
+            return False
+    return True",1
+2,"
+
+def solve(tup):
+    valid_values = set([""a"", ""b"", ""c""]) # set of valid values
+    for val in tup:
+        if val not in valid_values:
+            return False
+    return True",2
+3,"
+
+def solve(tuple):
+    for i in tuple:
+        if i == None:
+            return False
+    return True",3
+4,"
+
+def solve(tup):
+    valid_values = [""a"", ""b"", ""c""]
+    for value in tup:
+        if value not in valid_values:
+            return False
+    return True",4
+5,"
+
+def solve(tup):
+    valid_values = [1, 2, 3, 4, 5]
+    for val in tup:
+        if val not in valid_values:
+            return False
+    return True",5

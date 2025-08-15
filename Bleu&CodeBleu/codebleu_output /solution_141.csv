@@ -1,0 +1,63 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+
+    for i in range(len(lst)-1,0,-1):
+        max_idx = lst.index(max(lst[:i+1]))
+        lst[:max_idx+1] = lst[:max_idx+1][::-1]
+        lst[:i+1] = lst[:i+1][::-1]
+        
+    return lst",1
+2,"
+
+def solve(arr):
+    n = len(arr)
+    for i in range(n-1,0,-1):
+        max_idx = arr.index(max(arr[:i+1]))
+        if max_idx != i:
+            arr[:max_idx+1] = arr[:max_idx+1][::-1]
+            arr[:i+1] = arr[:i+1][::-1]
+    return arr",2
+3,"
+
+def solve(arr):
+    n = len(arr)
+    curr = n
+    while curr > 1:
+        mi = arr.index(max(arr[:curr]))
+        arr[:mi+1] = arr[:mi+1][::-1]
+        arr[:curr] = arr[:curr][::-1]
+        curr -= 1
+    return arr",3
+4,"
+
+def solve(lst):
+    n = len(lst)
+    for i in range(n-1, 0, -1):
+        max_idx = 0
+        for j in range(1, i+1):
+            if lst[j] > lst[max_idx]:
+                max_idx = j
+        lst[:max_idx+1] = lst[:max_idx+1][::-1]
+        lst[:i+1] = lst[:i+1][::-1]
+    return lst",4
+5,"
+
+def solve(lst):
+    n = len(lst)
+    for i in range(n-1, 0, -1):
+        max_idx = 0
+        for j in range(1, i+1):
+            if lst[j] > lst[max_idx]:
+                max_idx = j
+        flip(lst, max_idx)
+        flip(lst, i)
+    return lst
+
+def flip(lst, idx):
+    start = 0
+    while start < idx:
+        lst[start], lst[idx] = lst[idx], lst[start]
+        start += 1
+        idx -= 1",5

@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_lists):
+    count = len(list_of_lists)
+    squared_count = count**2
+    return squared_count",1
+2,"
+
+def solve(lists):
+    return len(lists)**2",2
+3,"
+
+def solve(list_of_lists):
+    count = len(list_of_lists)
+    square = count**2
+    return square",3
+4,"
+
+def solve(list_of_lists):
+    count = 0
+    for lst in list_of_lists:
+        if isinstance(lst, list):
+            count += 1
+    return count**2",4
+5,"
+
+def solve(lst):
+    count = 0
+    for i in lst:
+        if isinstance(i, list):
+            count += 1
+    return count**2",5

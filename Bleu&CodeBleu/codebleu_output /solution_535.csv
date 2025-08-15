@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(radius, height, top=True):
+    if top:
+        return 3.14 * (radius**2)
+    else:
+        return 2 * 3.14 * radius * height",1
+2,"
+
+def solve(height, radius, is_top):
+    if is_top:
+        return radius * radius * 3.14159
+    else:
+        return 2 * radius * 3.14159 * height",2
+3,"
+
+def solve(radius, height, top_or_bottom):
+    if top_or_bottom == 'top':
+        return 3.14159 * (radius**2)
+    elif top_or_bottom == 'bottom':
+        return 3.14159 * (radius**2)
+    else:
+        print(""Please specify 'top' or 'bottom' for top_or_bottom argument."")",3
+4,"
+
+def solve(r, h, top = True):
+    if top:
+        return 2 * 3.14 * r**2
+    else:
+        return 2 * 3.14 * r * h",4
+5,"
+
+def solve(radius, height, top=True):
+    if top:
+        return 3.14 * radius**2
+    else:
+        return 3.14 * radius**2 + 2 * 3.14 * radius * height",5

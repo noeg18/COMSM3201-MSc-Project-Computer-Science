@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+def solve(tup, dic):
+    tup = list(tup)
+    tup.append(dic)
+    return tuple(tup)",1
+2,"
+
+def solve(tup, dict):
+    tup = list(tup)
+    tup.append(dict)
+    tup = tuple(tup)
+    return tup",2
+3,"
+
+def solve(tup, dict):
+    tup_list = list(tup)
+    tup_list.append(dict)
+    return tuple(tup_list)",3
+4,"
+
+def solve(tup, dict):
+    return tup + (dict,)",4
+5,"
+
+def solve(my_tuple, my_dict):
+    my_list = list(my_tuple)
+    my_list.append(my_dict)
+    return tuple(my_list)",5

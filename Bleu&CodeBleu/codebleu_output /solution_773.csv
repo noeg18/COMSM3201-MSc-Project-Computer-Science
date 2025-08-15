@@ -1,0 +1,58 @@
+response_num,response,cluster
+1,"
+
+def solve(string, substring):
+    occurrences = []
+    positions = []
+    for i in range(len(string)):
+        if string[i:i+len(substring)] == substring:
+            occurrences.append(substring)
+            positions.append(i)
+    return occurrences, positions",1
+2,"
+def solve(string, substring):
+    positions = []
+    occurrence = 0
+    for i in range(len(string)):
+        if string[i:i+len(substring)] == substring:
+            occurrence += 1
+            positions.append(i)
+    return (occurrence, positions)",2
+3,"
+
+def solve(string, substring):
+    positions = []
+    count = 0
+    index = 0
+    while index < len(string):
+        if string[index:index+len(substring)] == substring:
+            count += 1
+            positions.append(index)
+        index += 1
+    return count, positions",3
+4,"
+
+def solve(string, substring):
+    occurrence = 0
+    positions = []
+    start = 0
+    while True:
+        start = string.find(substring, start)
+        if start == -1:
+            break
+        occurrence += 1
+        positions.append(start)
+        start += 1
+    return (occurrence, positions)",4
+5,"
+
+def solve(string, substr):
+    count = 0
+    positions = []
+
+    for i in range(len(string)):
+        if string[i:].startswith(substr):
+            count += 1
+            positions.append(i)
+
+    return count, positions",5

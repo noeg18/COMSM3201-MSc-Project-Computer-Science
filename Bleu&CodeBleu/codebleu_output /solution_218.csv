@@ -1,0 +1,64 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2):
+    count = 0
+    while(num1 != num2):
+        if num1 > num2:
+            num1 -= 1
+        else:
+            num2 -= 1
+        count += 1
+    return count",1
+2,"
+
+def solve(num1, num2):
+    count = 0
+    while num1 != num2:
+        if num1 > num2:
+            num1 -= 1
+        else:
+            num1 *= 2
+        count += 1
+    return count",2
+3,"
+
+def solve(a, b):
+    count = 0
+    while a != b:
+        if a > b:
+            a /= 2
+        else:
+            b /= 2
+        count += 1
+    return count",3
+4,"
+
+def solve(a, b):
+    count = 0
+    while a != b:
+        if a % 2 == 0 and a > b:
+            a = a // 2
+            count += 1
+        elif a % 2 != 0 and a > b:
+            a -= 1
+            count += 1
+        elif a < b:
+            a += 1
+            count += 1
+    return count",4
+5,"
+
+def solve(a, b):
+    count = 0
+    while a != b:
+        if a % 2 == 0 and a > b:
+            a = a // 2
+            count += 1
+        elif a % 2 != 0 and a > b:
+            a -= 1
+            count += 1
+        elif a < b:
+            a += 1
+            count += 1
+    return count",4

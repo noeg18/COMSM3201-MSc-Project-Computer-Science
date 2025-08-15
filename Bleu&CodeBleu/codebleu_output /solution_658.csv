@@ -1,0 +1,66 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count = {}
+    max_item = None
+    max_count = 0
+    for item in lst:
+        if item in count:
+            count[item] += 1
+        else:
+            count[item] = 1
+        if count[item] > max_count:
+            max_item = item
+            max_count = count[item]
+    return max_item",1
+2,"
+
+def solve(lst):
+    max_occurrences = 0
+    max_item = None
+    for item in lst:
+        occurrences = lst.count(item)
+        if occurrences > max_occurrences:
+            max_occurrences = occurrences
+            max_item = item
+    return max_item",2
+3,"
+
+def solve(lst):
+    max_count = 0
+    max_item = None
+    for item in lst:
+        count = lst.count(item)
+        if count > max_count:
+            max_count = count
+            max_item = item
+    return max_item",3
+4,"
+
+def solve(lst):
+    counts = {}
+    for item in lst:
+        if item in counts:
+            counts[item] += 1
+        else:
+            counts[item] = 1
+    
+    max_count = 0
+    max_item = None
+    for item, count in counts.items():
+        if count > max_count:
+            max_count = count
+            max_item = item
+    
+    return max_item",4
+5,"
+
+def solve(lst):
+    max_occ = 0
+    max_item = None
+    for item in lst:
+        if lst.count(item) > max_occ:
+            max_occ = lst.count(item)
+            max_item = item
+    return max_item",5

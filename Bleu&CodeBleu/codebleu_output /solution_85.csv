@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(radius):
+    area = 4 * math.pi * (radius**2)
+    return area",1
+2,"
+
+import math
+
+def solve(radius):
+    surface_area = 4 * math.pi * radius**2
+    return surface_area",2
+3,"
+
+import math
+
+def solve(radius):
+    surface_area = 4 * math.pi * radius**2
+    return surface_area",2
+4,"
+
+def solve(radius):
+    return 4 * 3.14 * radius**2",3
+5,"
+
+def solve(radius):
+    return 4 * math.pi * (radius**2)",4

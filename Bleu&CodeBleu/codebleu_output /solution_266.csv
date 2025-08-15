@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(side):
+    return 4 * (side ** 2)",1
+2,"
+
+def solve(side):
+    return 4 * side**2",2
+3,"
+
+def solve(side):
+    return 4 * (side ** 2)",1
+4,"
+
+def solve(side):
+    return 4 * (side * side)",3
+5,"
+
+def solve(side):
+    return 4 * side * side",4

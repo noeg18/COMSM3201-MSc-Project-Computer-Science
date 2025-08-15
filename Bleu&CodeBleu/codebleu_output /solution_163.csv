@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(n, s):
+    return (n * s**2) / (4 * math.tan(math.pi / n))",1
+2,"
+
+def solve(n, s):
+    area = (n * s**2) / (4 * math.tan(math.pi / n))
+    return area",2
+3,"
+
+def solve(n, s):
+    return (n * s ** 2) / (4 * tan(pi / n))",3
+4,"
+def solve(n, s):
+    return (n * s**2) / (4 * math.tan(math.pi / n))",1
+5,"
+
+def solve(n, s):
+    area = (n * s ** 2) / (4 * math.tan(math.pi / n))
+    return area",4

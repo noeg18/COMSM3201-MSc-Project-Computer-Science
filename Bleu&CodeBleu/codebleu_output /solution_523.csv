@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(string, length):
+    check = lambda x: any(char.isupper() for char in x) and any(char.islower() for char in x) and any(char.isdigit() for char in x) and len(x) == length
+    return check(string)",1
+2,"
+
+def solve(string, length):
+    return lambda x: any(x.isupper() for x in string) and any(x.islower() for x in string) and any(x.isdigit() for x in string) and len(string) == length",2
+3,"
+
+def solve(string, length):
+    return lambda x: any(c.isupper() for c in x) and any(c.islower() for c in x) and any(c.isdigit() for c in x) and len(x) == length",3
+4,"
+
+def solve(s, length):
+    return lambda s: any(char.isupper() for char in s) and any(char.islower() for char in s) and any(char.isdigit() for char in s) and len(s) == length",4
+5,"
+
+def solve(string, length):
+    return lambda x: any(char.isupper() for char in x) and any(char.islower() for char in x) and any(char.isdigit() for char in x) and len(x) == length",5

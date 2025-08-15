@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(radius):
+    pi = 3.14159
+    volume = (4/3) * pi * (radius**3)
+    return volume",1
+2,"
+
+def solve(radius):
+    volume = (4/3) * pi * (radius**3)
+    return volume",2
+3,"
+
+def solve(radius):
+    volume = (4/3) * 3.14159265359 * (radius ** 3)
+    return volume",3
+4,"
+
+def solve(radius):
+    volume = (4/3) * 3.14159265359 * (radius ** 3)
+    return volume",3
+5,"
+
+def solve(radius):
+    pi = 3.141592653589793
+    volume = (4/3) * pi * (radius**3)
+    return volume",4

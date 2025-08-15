@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    max_len = 0
+    for sub_list in lst:
+        if len(sub_list) > max_len:
+            max_len = len(sub_list)
+    return max_len",1
+2,"
+
+def solve(lst):
+    max_len = 0
+    curr_len = 0
+    for num in lst:
+        if num != 0:
+            curr_len += 1
+        else:
+            max_len = max(max_len, curr_len)
+            curr_len = 0
+    return max_len",2
+3,"
+
+def solve(lst):
+    max_len = 0
+    curr_len = 0
+    for i in range(len(lst)):
+        if lst[i] == 1:
+            curr_len += 1
+        else:
+            if curr_len > max_len:
+                max_len = curr_len
+            curr_len = 0
+    if curr_len > max_len:
+        max_len = curr_len
+    return max_len",3
+4,"
+
+def solve(lst):
+    max_length = 0
+    for sublst in lst:
+        if len(sublst) > max_length:
+            max_length = len(sublst)
+    return max_length",4
+5,"
+
+def solve(lst):
+    max_length = 0
+    for sublist in lst:
+        if len(sublist) > max_length:
+            max_length = len(sublist)
+    return max_length",5

@@ -1,0 +1,54 @@
+response_num,response,cluster
+1,"
+
+def solve(camel_case_string):
+    snake_case_string = """"
+    for i in range(len(camel_case_string)):
+        if camel_case_string[i].isupper():
+            snake_case_string += ""_"" + camel_case_string[i].lower()
+        else:
+            snake_case_string += camel_case_string[i]
+    return snake_case_string.strip(""_"")",1
+2,"
+
+def solve(camel_str):
+    snake_str = """"
+    for i in range(len(camel_str)):
+        if camel_str[i].isupper() and i != 0:
+            snake_str += ""_"" + camel_str[i].lower()
+        else:
+            snake_str += camel_str[i].lower()
+    return snake_str",2
+3,"
+
+def solve(s):
+    result = ''
+    for i in range(len(s)):
+        if s[i].isupper():
+            result += '_' + s[i].lower()
+        else:
+            result += s[i]
+    return result.lstrip('_')",3
+4,"
+
+def solve(s):
+    snake_case = ''
+    for i in range(len(s)):
+        if s[i].isupper():
+            if i == 0:
+                snake_case += s[i].lower()
+            else:
+                snake_case += '_' + s[i].lower()
+        else:
+            snake_case += s[i]
+    return snake_case",4
+5,"
+
+def solve(camel_str):
+    snake_str = ''
+    for char in camel_str:
+        if char.isupper():
+            snake_str += '_' + char.lower()
+        else:
+            snake_str += char
+    return snake_str.lstrip('_')",5

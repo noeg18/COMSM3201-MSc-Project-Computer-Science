@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+import heapq
+
+def solve(nums):
+    heapq.heapify(nums)
+    largest = heapq.nlargest(3, nums)
+    return largest",1
+2,"
+
+def solve(nums):
+    import heapq
+    heap = []
+    for num in nums:
+        heapq.heappush(heap, -num)
+    
+    largest = []
+    for _ in range(len(nums)):
+        largest.append(-heapq.heappop(heap))
+    
+    return largest",2
+3,"
+
+def solve(nums):
+    heap = []
+    for num in nums:
+        heapq.heappush(heap, num)
+    return heapq.nlargest(3, heap)",3
+4,"
+
+import heapq
+
+def solve(nums):
+    heapq.heapify(nums)
+    largest = heapq.nlargest(3, nums)
+    return largest",1
+5,"
+
+def solve(lst):
+  import heapq
+  heap = []
+  for num in lst:
+    heapq.heappush(heap, -num)
+  largest = []
+  for i in range(len(lst)):
+    largest.append(-heapq.heappop(heap))
+  return largest",4

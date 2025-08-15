@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+def solve(numbers):
+    numbers = sorted(numbers)
+    sum = 0
+    for num in numbers:
+        if num > 0:
+            sum += num
+            if sum == 3:
+                break
+    return sum",1
+2,"
+
+def solve(numbers):
+    numbers.sort()
+    sum = 0
+    for i in range(len(numbers)):
+        if numbers[i] > 0 and i < 3:
+            sum += numbers[i]
+    return sum",2
+3,"
+
+def solve(numbers):
+    sorted_nums = sorted(numbers)
+    lowest_nums = sorted_nums[:3]
+    return sum(lowest_nums)",3
+4,"
+
+def solve(lst):
+    lst.sort()
+    sum = 0
+    for num in lst:
+        if num > 0:
+            sum += num
+            if sum == 3:
+                break
+    return sum",4
+5,"
+
+def solve(nums):
+    sorted_nums = sorted(nums)
+    lowest_nums = sorted_nums[:3]
+    return sum(lowest_nums)",5

@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(angle, radius):
+    return angle * radius * math.pi / 180",1
+2,"
+
+def solve(radius, angle):
+    return (radius * angle * 3.14159) / 180",2
+3,"
+
+import math
+
+def solve(angle, radius):
+    arc_length = (angle / 360) * 2 * math.pi * radius
+    return arc_length",3
+4,"
+
+def solve(radius, angle):
+    return (radius * angle * 3.14159) / 180",2
+5,"
+
+import math
+
+def solve(radius, angle):
+    return radius * angle * (math.pi / 180)",4

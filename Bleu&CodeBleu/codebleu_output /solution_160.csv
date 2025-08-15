@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, n):
+    if a == 0 and b == 0:
+        return None
+    elif a == 0:
+        return (0, n/b)
+    elif b == 0:
+        return (n/a, 0)
+    else:
+        x = n // a
+        y = (n - a*x) / b
+        if y.is_integer():
+            return (x, int(y))
+        else:
+            return None",1
+2,"
+
+def solve(a, b, n):
+    if a == 0 and b == 0:
+        return None
+    elif a == 0:
+        return (0, n/b)
+    elif b == 0:
+        return (n/a, 0)
+    else:
+        gcd = gcd(a, b)
+        if n % gcd != 0:
+            return None
+        else:
+            x = n/a
+            y = (n - a*x)/b
+            return (x, y)
+            
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)",2
+3,"
+
+def solve(a, b, n):
+    x = 0
+    y = 0
+    while n % a != 0:
+        n -= b
+        y += 1
+    x = n // a
+    return x, y",3
+4,"
+
+def solve(a, b, n):
+    x = n // a
+    y = (n - a * x) // b
+    return x, y",4
+5,"
+
+def solve(a, b, n):
+    gcd = math.gcd(a, b)
+    if n % gcd != 0:
+        return None
+    
+    x0, y0 = extended_euclidean(a, b)
+    x = x0 * (n // gcd)
+    y = y0 * (n // gcd)
+    return (x, y)
+    
+def extended_euclidean(a, b):
+    if b == 0:
+        return (1, 0)
+    else:
+        x, y = extended_euclidean(b, a % b)
+        return (y, x - (a // b) * y)",5

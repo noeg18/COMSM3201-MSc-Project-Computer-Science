@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    first_bit = n & 1
+    last_bit = n & (1 << (n.bit_length() - 1))
+    toggle_bits = n ^ ((1 << (n.bit_length() - 1)) - 1)
+    return first_bit | toggle_bits | last_bit",1
+2,"
+
+def solve(num):
+    mask = 0
+    temp = num
+    while temp > 0:
+        temp = temp >> 1
+        mask = (mask << 1) + 1
+    mask = mask ^ (1 << 1)
+    mask = mask ^ (1 << (len(bin(num)) - 3))
+    return num ^ mask",2
+3,"
+
+def solve(n):
+  first_bit = n & 0x01
+  last_bit = n & 0x80000000
+  middle_bits = n & 0x7FFFFFFE
+  inverted_middle_bits = ~middle_bits
+  return first_bit | inverted_middle_bits | last_bit",3
+4,"
+
+def solve(num):
+    mask = num & 0b01 # get first bit
+    toggle = num & 0b10 # get second bit
+    toggle = toggle >> 1 # shift it to the first bit position
+    for i in range(2, num.bit_length()-1): # loop through bits except first and last
+        mask = mask << 1 # shift mask left by one bit
+        mask = mask | toggle # combine mask with toggle
+    result = num ^ mask # toggle bits
+    return result",4
+5,"
+
+def solve(n):
+    mask = n & 1
+    n = n >> 1
+    while n:
+        mask = (mask << 1) + 1
+        n = n >> 1
+    return n ^ (~mask)
+",5

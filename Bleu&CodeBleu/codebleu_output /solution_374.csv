@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    if len(string) == 1:
+        return [string]
+    
+    result = []
+    for i in range(len(string)):
+        for perm in solve(string[:i] + string[i+1:]):
+            result.append(string[i] + perm)
+    
+    return result",1
+2,"
+
+def solve(string):
+    if len(string) == 1:
+        return [string]
+    result = []
+    for i in range(len(string)):
+        for perm in solve(string[:i] + string[i+1:]):
+            result.append(string[i] + perm)
+    return result",1
+3,"
+
+def solve(string):
+    if len(string) == 1:
+        return [string]
+    else:
+        result = []
+        for i in range(len(string)):
+            first_char = string[i]
+            remaining_chars = string[:i] + string[i+1:]
+            sub_permutations = solve(remaining_chars)
+            for permutation in sub_permutations:
+                result.append(first_char + permutation)
+        return result",2
+4,"
+def solve(string):
+    if len(string) == 1:
+        return [string]
+    
+    permutations = []
+    for i in range(len(string)):
+        for perm in solve(string[:i] + string[i + 1:]):
+            permutations.append(string[i] + perm)
+    
+    return permutations",3
+5,"
+
+def solve(s):
+    if len(s) == 1:
+        return [s]
+    else:
+        perms = []
+        for i in range(len(s)):
+            sub_perms = solve(s[:i] + s[i+1:])
+            for perm in sub_perms:
+                perms.append(s[i] + perm)
+        return perms",4

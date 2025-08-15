@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple):
+    new_tuple = ()
+    for i in tuple:
+        if type(i) != tuple:
+            new_tuple += (i,)
+    return new_tuple",1
+2,"
+
+def solve(input_tuple):
+    new_tuple = ()
+    for item in input_tuple:
+        if not isinstance(item, tuple):
+            new_tuple += (item,)
+    return new_tuple",2
+3,"
+
+def solve(tup):
+    new_tup = []
+    for i in tup:
+        if type(i) != tuple:
+            new_tup.append(i)
+    return tuple(new_tup)",3
+4,"
+
+def solve(tup):
+    tup_list = list(tup)
+    for i in range(len(tup_list)):
+        if type(tup_list[i]) == tuple:
+            tup_list.pop(i)
+            break
+    return tuple(tup_list)",4
+5,"
+
+def solve(tuple):
+    new_tuple = ()
+    for item in tuple:
+        if type(item) == tuple:
+            continue
+        else:
+            new_tuple += (item,)
+    return new_tuple",5

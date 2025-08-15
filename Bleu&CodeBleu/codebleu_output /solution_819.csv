@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count = 0
+    for i in range(len(lst)-1):
+        if lst[i] == lst[i+1]:
+            count += 1
+    return count",1
+2,"
+
+def solve(lst):
+    count = 0
+    for i in range(len(lst)-1):
+        if lst[i] == lst[i+1]:
+            count += 1
+    return count",1
+3,"
+
+def solve(lst):
+    count = 0
+    for i in range(len(lst)-1):
+        if lst[i] == lst[i+1]:
+            count += 1
+    return count",1
+4,"
+
+def solve(lst):
+    count = 0
+    for i in range(len(lst)-1):
+        if lst[i] == lst[i+1]:
+            count += 1
+    return count",1
+5,"
+
+def solve(lst):
+    count = 0
+    prev = None
+    for num in lst:
+        if num == prev:
+            count += 1
+        else:
+            prev = num
+    return count",2

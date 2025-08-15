@@ -1,0 +1,56 @@
+response_num,response,cluster
+1,"
+
+def solve(roman_numeral):
+    roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    result = 0
+    for i in range(len(roman_numeral)):
+        if i > 0 and roman_dict[roman_numeral[i]] > roman_dict[roman_numeral[i-1]]:
+            result += roman_dict[roman_numeral[i]] - 2 * roman_dict[roman_numeral[i-1]]
+        else:
+            result += roman_dict[roman_numeral[i]]
+    return result",1
+2,"
+
+def solve(roman):
+    values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    result = 0
+    for i in range(len(roman)):
+        if i > 0 and values[roman[i]] > values[roman[i-1]]:
+            result += values[roman[i]] - 2 * values[roman[i-1]]
+        else:
+            result += values[roman[i]]
+    return result",2
+3,"
+
+def solve(roman):
+    values = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+    result = 0
+    for i in range(len(roman)):
+        if i > 0 and values[roman[i]] > values[roman[i-1]]:
+            result += values[roman[i]] - 2*values[roman[i-1]]
+        else:
+            result += values[roman[i]]
+    return result",3
+4,"
+
+def solve(roman):
+    roman_numeral_dict = {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1}
+    integer = 0
+    for i in range(len(roman)):
+        if i > 0 and roman_numeral_dict[roman[i]] > roman_numeral_dict[roman[i-1]]:
+            integer += roman_numeral_dict[roman[i]] - 2 * roman_numeral_dict[roman[i-1]]
+        else:
+            integer += roman_numeral_dict[roman[i]]
+    return integer",4
+5,"
+
+def solve(roman):
+    values = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+    result = 0
+    for i in range(len(roman)):
+        if i > 0 and values[roman[i]] > values[roman[i - 1]]:
+            result += values[roman[i]] - 2 * values[roman[i - 1]]
+        else:
+            result += values[roman[i]]
+    return result",3

@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    combinations = []
+    n = len(lst)
+    for i in range(1, 2**n):
+        combination = []
+        for j in range(n):
+            if (i >> j) & 1:
+                combination.append(lst[j])
+        combinations.append(combination)
+    return combinations",1
+2,"
+
+def solve(lst):
+    res = [[]]
+    for i in lst:
+        res += [x+[i] for x in res]
+    return res[1:]",2
+3,"
+def solve(lst):
+    combinations = [[]]
+    for element in lst:
+        for i in range(len(combinations)):
+            new_combination = list(combinations[i])
+            new_combination.append(element)
+            combinations.append(new_combination)
+    return combinations[1:]",3
+4,"
+
+def solve(lst):
+    result = []
+    for i in range(2**len(lst)):
+        combo = []
+        for j in range(len(lst)):
+            if i & (1 << j):
+                combo.append(lst[j])
+        result.append(combo)
+    return result",4
+5,"
+
+def solve(lst):
+    if len(lst) == 0:
+        return [[]]
+    else:
+        res = []
+        for i in range(len(lst)):
+            rest = lst[:i] + lst[i+1:]
+            for j in solve(rest):
+                res.append([lst[i]] + j)
+        return res",5

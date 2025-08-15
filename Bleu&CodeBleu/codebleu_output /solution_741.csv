@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    for i in range(len(s)-1):
+        if s[i] != s[i+1]:
+            return False
+    return True",1
+2,"
+
+def solve(string):
+    return all(char == string[0] for char in string)",2
+3,"
+
+def solve(string):
+    char = string[0] #get the first character of the string
+    for i in range(1, len(string)): #loop through the string starting from index 1
+        if string[i] != char: #compare the current character with the first character
+            return False #if they are not equal, return False
+    return True #if all characters are equal, return True",3
+4,"
+
+def solve(string):
+    first_char = string[0]
+    for char in string:
+        if char != first_char:
+            return False
+    return True",4
+5,"
+
+def solve(string):
+    if len(string) < 2:
+        return True
+    first_char = string[0]
+    for char in string[1:]:
+        if char != first_char:
+            return False
+    return True",5

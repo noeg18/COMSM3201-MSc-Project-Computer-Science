@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(search_str, string):
+    if search_str in string:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(string, literals):
+    for literal in literals:
+        if literal in string:
+            print(""{} found in string"".format(literal))
+        else:
+            print(""{} not found in string"".format(literal))
+
+# Example
+string = ""This is a string""
+literals = [""This"", ""is"", ""not"", ""a"", ""string""]
+solve(string, literals)
+
+# Output:
+# This found in string
+# is found in string
+# not not found in string
+# a found in string
+# string found in string",2
+3,"
+
+def solve(string, search_strings):
+    result = []
+    for s in search_strings:
+        if s in string:
+            result.append(s)
+    return result",3
+4,"
+
+def solve(str, search_list):
+    result = []
+    for search_str in search_list:
+        if search_str in str:
+            result.append(search_str)
+    return result",4
+5,"
+
+def solve(string, literals):
+    for literal in literals:
+        if literal in string:
+            return True
+    return False",5

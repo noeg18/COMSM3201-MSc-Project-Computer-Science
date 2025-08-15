@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    even_sum = 0
+    odd_sum = 0
+    for num in lst:
+        if num % 2 == 0:
+            even_sum += num
+        else:
+            odd_sum += num
+    return [even_sum, odd_sum]",1
+2,"
+
+def solve(lst):
+    sum_even = 0
+    sum_odd = 0
+    for num in lst:
+        if num%2 == 0:
+            sum_even += num
+        else:
+            sum_odd += num
+    return sum_even + sum_odd",2
+3,"
+
+def solve(lst):
+    even_sum = 0
+    odd_sum = 0
+    for num in lst:
+        if num % 2 == 0:
+            even_sum += num
+        else:
+            odd_sum += num
+    return even_sum, odd_sum
+",1
+4,"
+
+def solve(lst):
+    even_sum = 0
+    odd_sum = 0
+    for num in lst:
+        if num % 2 == 0:
+            even_sum += num
+        else:
+            odd_sum += num
+    return [even_sum, odd_sum]",1
+5,"
+
+def solve(lst):
+    even_sum = 0
+    odd_sum = 0
+    for num in lst:
+        if num % 2 == 0:
+            even_sum += num
+        else:
+            odd_sum += num
+    return even_sum + odd_sum",1

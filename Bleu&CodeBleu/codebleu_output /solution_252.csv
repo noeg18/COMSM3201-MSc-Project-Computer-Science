@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(complex_num):
+    r = abs(complex_num)
+    theta = math.atan2(complex_num.imag, complex_num.real)
+    return r, theta",1
+2,"
+
+def solve(complex_num):
+    r = abs(complex_num)
+    theta = math.atan2(complex_num.imag, complex_num.real)
+    return (r, theta)",2
+3,"
+
+def solve(complex_num):
+    r = abs(complex_num)
+    theta = cmath.phase(complex_num)
+    return r, theta",3
+4,"
+
+def solve(complex_num):
+    import cmath
+    polar_num = cmath.polar(complex_num)
+    return polar_num",4
+5,"
+
+def solve(complex_num):
+    r = abs(complex_num)
+    theta = math.atan2(complex_num.imag, complex_num.real)
+    return r, theta",1

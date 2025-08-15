@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    import re
+    pattern = r'a[b]*'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(string):
+    import re
+    pattern = ""ab*""
+    matched = re.match(pattern, string)
+    if matched:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(string):
+    import re
+    pattern = 'ab*'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+4,"
+
+def solve(string):
+    import re
+    if re.search(""ab*"", string):
+        return True
+    else:
+        return False",3
+5,"
+
+def solve(string):
+    import re
+    if re.search(""ab*"", string):
+        return True
+    else:
+        return False",3

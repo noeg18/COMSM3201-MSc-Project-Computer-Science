@@ -1,0 +1,174 @@
+response_num,response,cluster
+1,"
+
+def solve(str1, str2, str3):
+    n1 = len(str1)
+    n2 = len(str2)
+    n3 = len(str3)
+    dp = [[[0 for i in range(n3+1)] for j in range(n2+1)] for k in range(n1+1)]
+    for i in range(n1+1):
+        for j in range(n2+1):
+            for k in range(n3+1):
+                if i==0 or j==0 or k==0:
+                    dp[i][j][k] = 0
+                elif str1[i-1]==str2[j-1]==str3[k-1]:
+                    dp[i][j][k] = dp[i-1][j-1][k-1] + 1
+                else:
+                    dp[i][j][k] = max(dp[i-1][j][k], dp[i][j-1][k], dp[i][j][k-1])
+    lcs_length = dp[n1][n2][n3]
+    lcs = [""""] * (lcs_length+1)
+    lcs[lcs_length] = """"
+    i = n1
+    j = n2
+    k = n3
+    while i>0 and j>0 and k>0:
+        if str1[i-1]==str2[j-1]==str3[k-1]:
+            lcs[lcs_length-1] = str1[i-1]
+            i-=1
+            j-=1
+            k-=1
+            lcs_length-=1
+        elif dp[i-1][j][k] > dp[i][j-1][k] and dp[i-1][j][k] > dp[i][j][k-1]:
+            i-=1
+        elif dp[i][j-1][k] > dp[i-1][j][k] and dp[i][j-1][k] > dp[i][j][k-1]:
+            j-=1
+        else:
+            k-=1
+    return """".join(lcs[:-1])",1
+2,"
+
+def solve(s1, s2, s3):
+    m = len(s1)
+    n = len(s2)
+    o = len(s3)
+    dp = [[[0 for _ in range(o+1)] for _ in range(n+1)] for _ in range(m+1)]
+    
+    for i in range(m+1):
+        for j in range(n+1):
+            for k in range(o+1):
+                if i == 0 or j == 0 or k == 0:
+                    dp[i][j][k] = 0
+                elif s1[i-1] == s2[j-1] == s3[k-1]:
+                    dp[i][j][k] = dp[i-1][j-1][k-1] + 1
+                else:
+                    dp[i][j][k] = max(dp[i-1][j][k], dp[i][j-1][k], dp[i][j][k-1])
+    
+    lcs_length = dp[m][n][o]
+    lcs = [""""] * (lcs_length+1)
+    
+    i = m
+    j = n
+    k = o
+    while i > 0 and j > 0 and k > 0:
+        if s1[i-1] == s2[j-1] == s3[k-1]:
+            lcs[lcs_length-1] = s1[i-1]
+            i -= 1
+            j -= 1
+            k -= 1
+            lcs_length -= 1
+        elif dp[i-1][j][k] > dp[i][j-1][k] and dp[i-1][j][k] > dp[i][j][k-1]:
+            i -= 1
+        elif dp[i][j-1][k] > dp[i-1][j][k] and dp[i][j-1][k] > dp[i][j][k-1]:
+            j -= 1
+        else:
+            k -= 1
+    
+    return """".join(lcs[:-1])",2
+3,"
+
+def solve(str1, str2, str3):
+    m = len(str1)
+    n = len(str2)
+    o = len(str3)
+    L = [[[0 for k in range(o+1)] for j in range(n+1)] for i in range(m+1)]
+    for i in range(m+1):
+        for j in range(n+1):
+            for k in range(o+1):
+                if i == 0 or j == 0 or k == 0:
+                    L[i][j][k] = 0
+                elif str1[i-1] == str2[j-1] and str1[i-1] == str3[k-1]:
+                    L[i][j][k] = L[i-1][j-1][k-1] + 1
+                else:
+                    L[i][j][k] = max(L[i-1][j][k], L[i][j-1][k], L[i][j][k-1])
+    lcs = """"
+    i = m
+    j = n
+    k = o
+    while i > 0 and j > 0 and k > 0:
+        if str1[i-1] == str2[j-1] and str1[i-1] == str3[k-1]:
+            lcs = str1[i-1] + lcs
+            i -= 1
+            j -= 1
+            k -= 1
+        elif L[i-1][j][k] > L[i][j-1][k] and L[i-1][j][k] > L[i][j][k-1]:
+            i -= 1
+        elif L[i][j-1][k] > L[i-1][j][k] and L[i][j-1][k] > L[i][j][k-1]:
+            j -= 1
+        else:
+            k -= 1
+    return lcs",3
+4,"
+
+def solve(str1, str2, str3):
+    m = len(str1)
+    n = len(str2)
+    o = len(str3)
+    L = [[[0 for k in range(o+1)] for j in range(n+1)] for i in range(m+1)]
+    for i in range(m+1):
+        for j in range(n+1):
+            for k in range(o+1):
+                if i == 0 or j == 0 or k == 0:
+                    L[i][j][k] = 0
+                elif str1[i-1] == str2[j-1] and str1[i-1] == str3[k-1]:
+                    L[i][j][k] = L[i-1][j-1][k-1] + 1
+                else:
+                    L[i][j][k] = max(max(L[i-1][j][k], L[i][j-1][k]), L[i][j][k-1])
+    
+    lcs = []
+    i = m
+    j = n
+    k = o
+    while i > 0 and j > 0 and k > 0:
+        if str1[i-1] == str2[j-1] and str1[i-1] == str3[k-1]:
+            lcs.insert(0, str1[i-1])
+            i -= 1
+            j -= 1
+            k -= 1
+        elif L[i-1][j][k] >= L[i][j-1][k] and L[i-1][j][k] >= L[i][j][k-1]:
+            i -= 1
+        elif L[i][j-1][k] >= L[i-1][j][k] and L[i][j-1][k] >= L[i][j][k-1]:
+            j -= 1
+        else:
+            k -= 1
+    return """".join(lcs)",4
+5,"
+
+def solve(str1, str2, str3):
+    m = len(str1)
+    n = len(str2)
+    p = len(str3)
+    dp = [[[0 for _ in range(p+1)] for _ in range(n+1)] for _ in range(m+1)]
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            for k in range(1, p+1):
+                if str1[i-1] == str2[j-1] == str3[k-1]:
+                    dp[i][j][k] = dp[i-1][j-1][k-1] + 1
+                else:
+                    dp[i][j][k] = max(dp[i-1][j][k], dp[i][j-1][k], dp[i][j][k-1])
+    lcs = """"
+    i = m
+    j = n
+    k = p
+    while i > 0 and j > 0 and k > 0:
+        if str1[i-1] == str2[j-1] == str3[k-1]:
+            lcs = str1[i-1] + lcs
+            i -= 1
+            j -= 1
+            k -= 1
+        elif dp[i-1][j][k] > dp[i][j-1][k] and dp[i-1][j][k] > dp[i][j][k-1]:
+            i -= 1
+        elif dp[i][j-1][k] > dp[i-1][j][k] and dp[i][j-1][k] > dp[i][j][k-1]:
+            j -= 1
+        else:
+            k -= 1
+    return lcs",5

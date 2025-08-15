@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    words = s.split()
+    seen = set()
+    for word in words:
+        if word in seen:
+            return word
+        seen.add(word)
+    return None",1
+2,"
+
+def solve(s):
+    words = s.split()
+    seen = set()
+    for word in words:
+        if word in seen:
+            return word
+        seen.add(word)",1
+3,"
+
+def solve(string):
+    words = string.split()
+    seen = set()
+    for word in words:
+        if word in seen:
+            return word
+        else:
+            seen.add(word)
+    return None",2
+4,"
+
+def solve(s):
+    words = s.split()
+    seen = set()
+    for word in words:
+        if word in seen:
+            return word
+        seen.add(word)
+    return None",1
+5,"
+
+def solve(string):
+    words = string.split()
+    seen = set()
+    for word in words:
+        if word in seen:
+            return word
+        else:
+            seen.add(word)",2

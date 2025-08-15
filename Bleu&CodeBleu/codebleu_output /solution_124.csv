@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(z):
+    import cmath
+    angle = cmath.phase(z)
+    return angle",1
+2,"
+
+def solve(z):
+    import cmath
+    angle = cmath.phase(z)
+    return angle",1
+3,"
+
+def solve(z):
+    import cmath
+    return cmath.phase(z)",2
+4,"
+
+def solve(z):
+    import math
+    angle = math.atan2(z.imag, z.real)
+    return math.degrees(angle)",3
+5,"
+
+def solve(c):
+    return cmath.phase(c)",4

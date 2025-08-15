@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    return num % 10",1
+2,"
+
+def solve(number):
+    return number % 10",2
+3,"
+
+def solve(number):
+    return number % 10",2
+4,"
+
+def solve(n):
+    return n % 10",3
+5,"
+
+def solve(num):
+    return num % 10",1

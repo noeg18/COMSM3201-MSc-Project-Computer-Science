@@ -1,0 +1,81 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, k):
+    n = len(arr)
+    dp = [0] * n
+    dp[0] = arr[0]
+    for i in range(1, n):
+        dp[i] = arr[i]
+        for j in range(i):
+            if arr[j] < arr[i]:
+                dp[i] = max(dp[i], dp[j] + arr[i])
+    max_sum = dp[k]
+    for i in range(k + 1, n):
+        max_sum = max(max_sum, dp[i])
+    return max_sum",1
+2,"
+
+def solve(arr, k):
+    # initialize a list to store the maximum sum of increasing subsequence till each index
+    dp = [0] * len(arr)
+    # initialize the maximum sum to be the value at index i
+    max_sum = arr[0]
+    # loop through the array from index 1 to k
+    for i in range(1, k+1):
+        # initialize the maximum sum of increasing subsequence till index i
+        dp[i] = arr[i]
+        # loop through the array from index 0 to i
+        for j in range(i):
+            # if the current element is greater than the previous element
+            if arr[i] > arr[j]:
+                # update the maximum sum of increasing subsequence till index i
+                dp[i] = max(dp[i], dp[j] + arr[i])
+        # update the maximum sum
+        max_sum = max(max_sum, dp[i])
+    # return the maximum sum
+    return max_sum",2
+3,"
+
+def solve(nums, k):
+    dp = [0] * len(nums)
+    dp[0] = nums[0]
+    for i in range(1, len(nums)):
+        dp[i] = nums[i]
+        for j in range(i):
+            if nums[j] < nums[i]:
+                dp[i] = max(dp[i], dp[j] + nums[i])
+    return max(dp) + nums[k]",3
+4,"
+
+def solve(nums, k):
+    dp = [0] * len(nums)
+    dp[0] = nums[0]
+    for i in range(1, len(nums)):
+        dp[i] = nums[i]
+        for j in range(i):
+            if nums[i] > nums[j]:
+                dp[i] = max(dp[i], dp[j] + nums[i])
+    return max(dp + nums[k:])",4
+5,"
+
+def solve(arr, k):
+    # initialize a list to store the maximum sum of increasing subsequence till each index
+    max_sum = [0] * len(arr)
+
+    # fill the first element with the value at index 0
+    max_sum[0] = arr[0]
+
+    # loop through the array starting from index 1
+    for i in range(1, len(arr)):
+        # initialize the maximum sum at index i to be the value at index i
+        max_sum[i] = arr[i]
+        # loop through the previous indices before i
+        for j in range(i):
+            # check if the value at index j is smaller than the value at index i
+            if arr[j] < arr[i]:
+                # update the maximum sum at index i by adding the value at index j
+                max_sum[i] = max(max_sum[i], max_sum[j] + arr[i])
+
+    # return the maximum sum at index k, which includes the value at index k
+    return max_sum[k]",5

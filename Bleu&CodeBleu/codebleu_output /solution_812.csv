@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+  return s.replace('road', 'rd.')",1
+2,"
+
+def solve(string):
+    string = string.replace('road', 'rd.')
+    return string ",2
+3,"
+
+def solve(string):
+    string = string.replace(""road"", ""rd."")
+    return string",3
+4,"
+
+def solve(string):
+    return string.replace('road', 'rd.')",4
+5,"
+
+def solve(string):
+    return string.replace('road', 'rd.')",4

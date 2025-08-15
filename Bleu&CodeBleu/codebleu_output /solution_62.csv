@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+  min_num = lst[0]
+  for num in lst:
+    if num < min_num:
+      min_num = num
+  return min_num",1
+2,"
+
+def solve(lst): 
+    smallest = lst[0] 
+    for i in range(1, len(lst)): 
+        if lst[i] < smallest: 
+            smallest = lst[i] 
+    return smallest",2
+3,"
+
+def solve(numbers):
+    smallest = numbers[0]
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+    return smallest",3
+4,"
+
+def solve(lst):
+    smallest = lst[0]
+    for num in lst:
+        if num < smallest:
+            smallest = num
+    return smallest",4
+5,"
+
+def solve(lst):
+    smallest = lst[0]
+    for num in lst:
+        if num < smallest:
+            smallest = num
+    return smallest",4

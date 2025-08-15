@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(substring, string_list):
+    for string in string_list:
+        if substring in string:
+            return True
+    return False",1
+2,"
+
+def solve(substring, string_list):
+    for string in string_list:
+        if substring in string:
+            return True
+    return False",1
+3,"
+
+def solve(substring, string_list):
+    for string in string_list:
+        if substring in string:
+            return True
+    return False",1
+4,"
+
+def solve(substring, string_list):
+    for string in string_list:
+        if substring in string:
+            return True
+    return False",1
+5,"
+
+def solve(substring, list_of_strings):
+    for string in list_of_strings:
+        if substring in string:
+            return True
+    return False",2

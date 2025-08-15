@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2):
+    result = []
+    for i in range(len(tup1)):
+        for j in range(len(tup2)):
+            if tup1[i] == tup2[j]:
+                result.append(tup1[i])
+    return tuple(result)",1
+2,"
+
+def solve(list1, list2):
+    result = []
+    for tup1 in list1:
+        for tup2 in list2:
+            if tup1 == tup2:
+                result.append(tup1)
+                break
+    return result",2
+3,"
+
+def solve(tuple_list1, tuple_list2):
+    common_elements = []
+    for tuple1 in tuple_list1:
+        for tuple2 in tuple_list2:
+            if tuple1 == tuple2:
+                common_elements.append(tuple1)
+    return common_elements",3
+4,"
+
+def solve(list1, list2):
+    similar = []
+    for elem1 in list1:
+        if elem1 in list2:
+            similar.append(elem1)
+    return similar",4
+5,"
+
+def solve(list1, list2):
+    result = []
+    for i in list1:
+        if i in list2:
+            result.append(i)
+    return result",5

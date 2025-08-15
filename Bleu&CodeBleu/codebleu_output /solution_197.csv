@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(base, exp):
+    result = ()
+    for i in base:
+        for j in exp:
+            result += (i**j,)
+    return result",1
+2,"
+
+def solve(tup1, tup2):
+    result = tuple(a ** b for a, b in zip(tup1, tup2))
+    return result",2
+3,"
+
+def solve(base, exponent):
+    result = ()
+    for b in base:
+        for e in exponent:
+            result += (b**e,)
+    return result",3
+4,"
+
+def solve(t1, t2):
+    result = ()
+    for num1 in t1:
+        for num2 in t2:
+            result = result + (num1 ** num2,)
+    return result",4
+5,"
+
+def solve(tup1, tup2):
+    result = ()
+    for i in range(len(tup1)):
+        result += (tup1[i] ** tup2[i],)
+    return result",5

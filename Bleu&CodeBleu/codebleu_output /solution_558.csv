@@ -1,0 +1,67 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2):
+    #convert the integers to strings
+    num1_str = str(num1)
+    num2_str = str(num2)
+    
+    #initialize a variable to keep track of the digit distance
+    digit_distance = 0
+    
+    #loop through the digits in the first number
+    for i in range(len(num1_str)):
+        #calculate the absolute difference between the current digit in num1 and num2
+        distance = abs(int(num1_str[i]) - int(num2_str[i]))
+        
+        #add the distance to the total digit distance
+        digit_distance += distance
+    
+    #return the final digit distance
+    return digit_distance",1
+2,"
+
+def solve(x, y):
+    diff = 0
+    while x > 0 and y > 0:
+        digit_x = x % 10
+        digit_y = y % 10
+        diff += abs(digit_x - digit_y)
+        x = x // 10
+        y = y // 10
+    while x > 0:
+        diff += x % 10
+        x = x // 10
+    while y > 0:
+        diff += y % 10
+        y = y // 10
+    return diff",2
+3,"
+
+def solve(num1, num2):
+    dist = 0
+    while num1 > 0 or num2 > 0:
+        digit1 = num1 % 10
+        digit2 = num2 % 10
+        dist += abs(digit1 - digit2)
+        num1 //= 10
+        num2 //= 10
+    return dist",3
+4,"
+
+def solve(x, y):
+    x_str = str(x)
+    y_str = str(y)
+    diff = 0
+    for i in range(len(x_str)):
+        diff += abs(int(x_str[i]) - int(y_str[i]))
+    return diff",4
+5,"
+
+def solve(int1, int2):
+    int1 = str(int1)
+    int2 = str(int2)
+    distance = 0
+    for i in range(len(int1)):
+        distance += abs(int(int1[i]) - int(int2[i]))
+    return distance",5

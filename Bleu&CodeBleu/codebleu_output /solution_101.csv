@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, k):
+    return arr[k-1]",1
+2,"
+
+def solve(arr, k):
+    arr.sort()
+    return arr[k-1]",2
+3,"
+
+def solve(arr, k):
+    return arr[k-1]",1
+4,"
+
+def solve(arr, k):
+    return arr[k-1]",1
+5,"
+
+def solve(arr, k):
+    return arr[k-1]",1

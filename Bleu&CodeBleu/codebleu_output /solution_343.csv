@@ -1,0 +1,56 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    digits = 0
+    letters = 0
+    for char in string:
+        if char.isdigit():
+            digits += 1
+        elif char.isalpha():
+            letters += 1
+    return digits, letters",1
+2,"
+
+def solve(string):
+    digits = 0
+    letters = 0
+    for char in string:
+        if char.isdigit():
+            digits += 1
+        elif char.isalpha():
+            letters += 1
+    return digits, letters",1
+3,"
+
+def solve(string):
+    digits = 0
+    letters = 0
+    for char in string:
+        if char.isdigit():
+            digits += 1
+        elif char.isalpha():
+            letters += 1
+    return digits, letters",1
+4,"
+
+def solve(s):
+    digits = 0
+    letters = 0
+    for char in s:
+        if char.isdigit():
+            digits += 1
+        elif char.isalpha():
+            letters += 1
+    return digits, letters",1
+5,"
+
+def solve(string):
+    digits = 0
+    letters = 0
+    for char in string:
+        if char.isdigit():
+            digits += 1
+        elif char.isalpha():
+            letters += 1
+    return digits, letters",1

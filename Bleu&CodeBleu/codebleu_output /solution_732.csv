@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    new_string = string.replace("" "", "":"").replace("","", "":"").replace(""."", "":"")
+    return new_string",1
+2,"
+
+def solve(s):
+    return s.replace(' ', ':').replace(',', ':').replace('.', ':')",2
+3,"
+
+def solve(string):
+    string = string.replace("" "", "":"")
+    string = string.replace("","", "":"")
+    string = string.replace(""."", "":"")
+    return string",3
+4,"
+
+def solve(string):
+    replaced = string.replace("" "", "":"")
+    replaced = replaced.replace("","", "":"")
+    replaced = replaced.replace(""."", "":"")
+    return replaced",4
+5,"
+
+def solve(string):
+    return string.replace("" "", "":"").replace("","", "":"").replace(""."", "":"")",5

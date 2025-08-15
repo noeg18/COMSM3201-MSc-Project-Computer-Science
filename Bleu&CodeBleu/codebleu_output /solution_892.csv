@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    return ' '.join(string.split())",1
+2,"
+
+def solve(string):
+    new_string = "" "".join(string.split())
+    return new_string",2
+3,"
+
+def solve(s):
+    return "" "".join(s.split())",3
+4,"
+
+def solve(string):
+    return "" "".join(string.split())",4
+5,"
+
+def solve(string):
+    return "" "".join(string.split())",4

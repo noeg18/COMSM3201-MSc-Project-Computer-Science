@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return n ** (1/2)",1
+2,"
+
+def solve(n):
+    return n**0.5",2
+3,"
+
+def solve(n):
+    return int(n ** 0.5)",3
+4,"
+
+def solve(n):
+    return n ** 0.5",4
+5,"
+
+def solve(n):
+    return n ** 0.5 ",4

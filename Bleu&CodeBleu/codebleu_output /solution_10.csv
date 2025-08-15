@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(dataset, n):
+    sorted_dataset = sorted(dataset)
+    return sorted_dataset[:n]",1
+2,"
+
+def solve(dataset, n):
+    return sorted(dataset)[:n]",2
+3,"
+
+def solve(dataset, n):
+    return sorted(dataset)[:n]",2
+4,"
+
+def solve(dataset, n):
+    return sorted(dataset)[:n]",2
+5,"
+
+def solve(dataset, n):
+    return sorted(dataset)[:n]",2

@@ -1,0 +1,91 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    # check if string is empty or has only one character
+    if len(string) < 2:
+        return True
+    
+    # create a dictionary to store the frequency of each character in the string
+    freq = {}
+    for char in string:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    
+    # check if there are any characters with a frequency of more than 1
+    for char in freq:
+        if freq[char] > 1:
+            return False
+    
+    return True",1
+2,"
+
+def solve(string):
+    char_count = {}
+    for char in string:
+        if char not in char_count:
+            char_count[char] = 0
+        char_count[char] += 1
+    max_char = max(char_count, key=char_count.get)
+    max_count = char_count[max_char]
+    if max_count > (len(string) + 1) // 2:
+        return False
+    return True",2
+3,"
+
+def solve(string):
+    # create a dictionary to store the frequency of each character
+    freq = {}
+    for char in string:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    
+    # sort the characters based on their frequency in descending order
+    sorted_chars = sorted(freq, key=freq.get, reverse=True)
+    
+    # check if the most frequent character has a count that is more than half of the length of the string
+    if freq[sorted_chars[0]] > len(string)//2:
+        return False
+    
+    # create a new string with the first character being the most frequent one
+    # and the rest of the characters in alternating order
+    new_string = sorted_chars[0]
+    for i in range(1, len(sorted_chars)):
+        for j in range(freq[sorted_chars[i]]):
+            new_string += sorted_chars[i]
+    
+    # check if the new string has two adjacent characters that are the same
+    for i in range(len(new_string)-1):
+        if new_string[i] == new_string[i+1]:
+            return False
+    
+    return True",3
+4,"
+
+def solve(string):
+    char_count = {}
+    for char in string:
+        if char not in char_count:
+            char_count[char] = 1
+        else:
+            char_count[char] += 1
+    
+    max_freq = max(char_count.values())
+    if max_freq > len(string) - max_freq + 1:
+        return False
+    else:
+        return True",4
+5,"
+
+def solve(string):
+    count = {}
+    for i in string:
+        count[i] = count.get(i, 0) + 1
+    max_count = max(count.values())
+    if max_count > (len(string)+1)//2:
+        return False
+    return True",5

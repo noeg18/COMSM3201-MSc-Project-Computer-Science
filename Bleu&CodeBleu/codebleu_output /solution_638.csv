@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(temperature, wind_speed):
+    if temperature > 50 or wind_speed < 3:
+        return ""Invalid input.""
+    else:
+        wind_chill_index = 35.74 + 0.6215 * temperature - 35.75 * (wind_speed ** 0.16) + 0.4275 * temperature * (wind_speed ** 0.16)
+        return wind_chill_index",1
+2,"
+
+def solve(temperature, wind_speed):
+    wind_chill_index = 35.74 + (0.6215 * temperature) - (35.75 * (wind_speed**0.16)) + (0.4275 * temperature * (wind_speed**0.16))
+    return wind_chill_index",2
+3,"
+
+def solve(temp, wind_speed):
+    wind_chill = 35.74 + 0.6215 * temp - 35.75 * (wind_speed ** 0.16) + 0.4275 * temp * (wind_speed ** 0.16)
+    return wind_chill",3
+4,"
+
+def solve(temp, wind_speed):
+    wind_chill = 35.74 + 0.6215 * temp - 35.75 * (wind_speed**0.16) + 0.4275 * temp * (wind_speed**0.16)
+    return wind_chill",4
+5,"
+
+def solve(air_temp, wind_speed):
+    return 35.74 + 0.6215*air_temp - 35.75*(wind_speed**0.16) + 0.4275*air_temp*(wind_speed**0.16) ",5

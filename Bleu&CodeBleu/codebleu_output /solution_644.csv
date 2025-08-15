@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, pos):
+    arr[:pos+1] = arr[:pos+1][::-1]
+    return arr",1
+2,"
+
+def solve(arr, pos):
+    return arr[:pos][::-1] + arr[pos:]",2
+3,"
+
+def solve(arr, pos):
+  arr[:pos] = arr[:pos][::-1]
+  return arr",3
+4,"
+
+def solve(arr, pos):
+    left = 0
+    right = pos - 1
+    
+    while left < right:
+        temp = arr[left]
+        arr[left] = arr[right]
+        arr[right] = temp
+        left += 1
+        right -= 1
+        
+    return arr",4
+5,"
+
+def solve(arr, pos):
+    return arr[:pos][::-1] + arr[pos:]",2

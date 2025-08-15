@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2):
+    return (tup1, tup2)",1
+2,"
+
+def solve(tuple1, tuple2):
+    return (tuple1, tuple2)",2
+3,"
+
+def solve(tuple1, tuple2):
+    return (tuple1, tuple2)",2
+4,"
+
+def solve(tup1, tup2):
+    nested_tup = (tup1, tup2)
+    return nested_tup",3
+5,"
+
+def solve(tuple1, tuple2):
+    nested_tuple = (tuple1, tuple2)
+    return nested_tuple",4

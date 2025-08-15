@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    even_nums = []
+    for num in lst:
+        if num % 2 == 0:
+            even_nums.append(num)
+    return even_nums",1
+2,"
+
+def solve(lst):
+    even_lst = []
+    for num in lst:
+        if num % 2 == 0:
+            even_lst.append(num)
+    return even_lst",2
+3,"
+
+def solve(lst):
+    even_numbers = []
+    for num in lst:
+        if num % 2 == 0:
+            even_numbers.append(num)
+    return even_numbers",3
+4,"
+
+def solve(lst):
+    even_lst = []
+    for num in lst:
+        if num % 2 == 0:
+            even_lst.append(num)
+    return even_lst",2
+5,"
+
+def solve(lst):
+    even_list = []
+    for num in lst:
+        if num % 2 == 0:
+            even_list.append(num)
+    return even_list",4

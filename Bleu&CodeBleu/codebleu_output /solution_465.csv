@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary):
+    return {key: value for key, value in dictionary.items() if value}",1
+2,"
+
+def solve(d):
+    return {k: v for k, v in d.items() if v}",2
+3,"
+
+def solve(input_dict):
+    output_dict = {}
+    for key, value in input_dict.items():
+        if value:
+            output_dict[key] = value
+    return output_dict",3
+4,"
+
+def solve(dictionary):
+    for key in list(dictionary.keys()):
+        if not dictionary[key]:
+            dictionary.pop(key)
+    return dictionary",4
+5,"
+
+def solve(d):
+    return {k: v for k, v in d.items() if v is not None and v != ''}",5

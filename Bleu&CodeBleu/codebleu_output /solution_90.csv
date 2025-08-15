@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(sentence):
+    longest_word = """"
+    words = sentence.split()
+    for word in words:
+        if len(word) > len(longest_word):
+            longest_word = word
+    return len(longest_word)",1
+2,"
+
+def solve(sentence):
+    words = sentence.split()
+    longest = 0
+    for word in words:
+        if len(word) > longest:
+            longest = len(word)
+    return longest",2
+3,"
+
+def solve(words):
+    longest = """"
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+    return len(longest)",3
+4,"
+
+def solve(word_list):
+    longest_word = """"
+    for word in word_list:
+        if len(word) > len(longest_word):
+            longest_word = word
+    return len(longest_word)",4
+5,"
+
+def solve(words):
+    longest_word = """"
+    for word in words:
+        if len(word) > len(longest_word):
+            longest_word = word
+    return len(longest_word)",5

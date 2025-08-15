@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    largest_neg = None
+    for num in nums:
+        if num < 0:
+            if largest_neg is None or num > largest_neg:
+                largest_neg = num
+    return largest_neg",1
+2,"
+
+def solve(nums):
+    largest_neg = None
+    for num in nums:
+        if num < 0:
+            if largest_neg is None or num > largest_neg:
+                largest_neg = num
+    return largest_neg",1
+3,"
+
+def solve(lst):
+    neg_lst = [i for i in lst if i < 0]
+    if len(neg_lst) == 0:
+        return None
+    else:
+        return max(neg_lst)",2
+4,"
+
+def solve(lst):
+    largest = None
+    for num in lst:
+        if num < 0 and (largest is None or num > largest):
+            largest = num
+    return largest",3
+5,"
+
+def solve(lst):
+    largest_neg = None
+    for num in lst:
+        if num < 0:
+            if largest_neg is None or num > largest_neg:
+                largest_neg = num
+    return largest_neg",1

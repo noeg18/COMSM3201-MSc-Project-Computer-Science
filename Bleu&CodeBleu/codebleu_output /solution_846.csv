@@ -1,0 +1,101 @@
+response_num,response,cluster
+1,"
+
+def solve(arrival, departure):
+    arrival.sort()
+    departure.sort()
+    n = len(arrival)
+    platform = 1
+    min_platform = 1
+    i = 1
+    j = 0
+    while i < n and j < n:
+        if arrival[i] <= departure[j]:
+            platform += 1
+            i += 1
+            if platform > min_platform:
+                min_platform = platform
+        else:
+            platform -= 1
+            j += 1
+    return min_platform",1
+2,"
+
+def solve(arrival, departure):
+    arrival.sort()
+    departure.sort()
+    platforms = 1
+    i = 1
+    j = 0
+    ans = 1
+    while i < len(arrival) and j < len(departure):
+        if arrival[i] < departure[j]:
+            platforms += 1
+            i += 1
+            if platforms > ans:
+                ans = platforms
+        else:
+            platforms -= 1
+            j += 1
+    return ans",2
+3,"
+
+def solve(arr, dep):
+    arr.sort()
+    dep.sort()
+    n = len(arr)
+    i = 0
+    j = 0
+    plat = 0
+    res = 0
+    while i < n and j < n:
+        if arr[i] <= dep[j]:
+            plat += 1
+            i += 1
+            if plat > res:
+                res = plat
+        else:
+            plat -= 1
+            j += 1
+    return res",3
+4,"
+
+def solve(arrival, departure):
+    arrival.sort()
+    departure.sort()
+    i = 0
+    j = 0
+    platforms = 0
+    max_platforms = 0
+    while i < len(arrival):
+        if arrival[i] < departure[j]:
+            platforms += 1
+            i += 1
+        else:
+            platforms -= 1
+            j += 1
+        if platforms > max_platforms:
+            max_platforms = platforms
+    return max_platforms",4
+5,"
+
+def solve(arrival, departure):
+  arrival.sort()
+  departure.sort()
+
+  num_platforms = 1
+  max_platforms = 1
+  i = 1
+  j = 0
+
+  while i < len(arrival) and j < len(departure):
+    if arrival[i] <= departure[j]:
+      num_platforms += 1
+      i += 1
+      if num_platforms > max_platforms:
+        max_platforms = num_platforms
+    else:
+      num_platforms -= 1
+      j += 1
+
+  return max_platforms",5

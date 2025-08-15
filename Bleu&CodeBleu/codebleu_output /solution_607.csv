@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+import re 
+
+def solve(literal_string, string):
+    pattern = re.compile(literal_string)
+    match = pattern.search(string)
+    return match.start()",1
+2,"
+
+import re
+
+def solve(pattern, string):
+    match = re.search(pattern, string)
+    if match:
+        return match.start()
+    else:
+        return -1",2
+3,"
+
+import re
+
+def solve(literal_string, string):
+    pattern = re.compile(literal_string)
+    match = pattern.search(string)
+    if match:
+        return match.start()
+    else:
+        return -1",3
+4,"
+
+import re
+
+def solve(lit_string, string):
+    match = re.search(lit_string, string)
+    if match:
+        return match.start()
+    else:
+        return -1",4
+5,"
+def solve(pattern, string):
+    import re
+    match = re.search(pattern, string)
+    if match:
+        return match.start()
+    else:
+        return -1",5

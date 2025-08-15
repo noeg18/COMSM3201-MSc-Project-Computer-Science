@@ -1,0 +1,129 @@
+response_num,response,cluster
+1,"
+
+def solve(text):
+    counts = {}
+    for char in text:
+        if char in counts:
+            counts[char] += 1
+        else:
+            counts[char] = 1
+    
+    most_common = []
+    max_count = 0
+    for char, count in counts.items():
+        if count > max_count:
+            most_common = [char]
+            max_count = count
+        elif count == max_count:
+            most_common.append(char)
+    
+    return most_common, max_count",1
+2,"
+
+def solve(text):
+    counts = {}
+    for word in text.split():
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+    most_common = []
+    for key, value in counts.items():
+        if value == max(counts.values()):
+            most_common.append((key, value))
+    return most_common",2
+3,"
+
+def solve(text):
+    # convert text to lowercase
+    text = text.lower()
+    
+    # create a dictionary to store the counts of each element
+    counts = {}
+    
+    # loop through each character in the text
+    for char in text:
+        # check if the character is a letter
+        if char.isalpha():
+            # check if the character is already in the dictionary
+            if char in counts:
+                # increment the count of the character by 1
+                counts[char] += 1
+            else:
+                # add the character to the dictionary with a count of 1
+                counts[char] = 1
+    
+    # find the maximum count
+    max_count = max(counts.values())
+    
+    # create a list to store the most common elements
+    most_common = []
+    
+    # loop through the dictionary to find the elements with the maximum count
+    for key, value in counts.items():
+        # check if the current value is equal to the maximum count
+        if value == max_count:
+            # add the key to the list of most common elements
+            most_common.append(key)
+    
+    # sort the list in alphabetical order
+    most_common.sort()
+    
+    # return the list of most common elements and their counts
+    return most_common, max_count",3
+4,"
+
+def solve(text):
+    
+    # create a dictionary to store the counts of each element
+    counts = {}
+    
+    # iterate through each character in the text
+    for char in text:
+        
+        # if the character is already in the dictionary, increase its count by 1
+        if char in counts:
+            counts[char] += 1
+            
+        # if the character is not in the dictionary, add it with a count of 1
+        else:
+            counts[char] = 1
+            
+    # find the maximum count in the dictionary
+    max_count = max(counts.values())
+    
+    # create a list to store the most common elements
+    most_common = []
+    
+    # iterate through the dictionary
+    for key, value in counts.items():
+        
+        # if the count of the element is equal to the maximum count, add it to the most_common list
+        if value == max_count:
+            most_common.append(key)
+    
+    # sort the most_common list in alphabetical order
+    most_common.sort()
+    
+    # print the most common elements and their counts
+    print(""Most common elements and their counts:"")
+    for element in most_common:
+        print(element, "":"", max_count)
+        
+    # return the most_common list for further use, if needed
+    return most_common",4
+5,"
+
+def solve(text):
+    counts = {}
+    for char in text:
+        if char in counts:
+            counts[char] += 1
+        else:
+            counts[char] = 1
+    
+    max_count = max(counts.values())
+    common_elements = [key for key, value in counts.items() if value == max_count]
+    
+    return common_elements, max_count",5

@@ -1,0 +1,99 @@
+response_num,response,cluster
+1,"
+
+def solve(heap, new_item):
+    heap[0] = heap[-1] #replace the smallest element with the last element in the heap
+    heap.pop() #remove the last element
+    i = 0
+    while True:
+        smallest = i
+        left = 2*i + 1
+        right = 2*i + 2
+        if left < len(heap) and heap[left] < heap[smallest]:
+            smallest = left
+        if right < len(heap) and heap[right] < heap[smallest]:
+            smallest = right
+        if smallest != i:
+            heap[i], heap[smallest] = heap[smallest], heap[i]
+            i = smallest
+        else:
+            break
+    heap.append(new_item) #append the new item to the end of the heap
+    i = len(heap) - 1
+    while True:
+        parent = (i-1)//2
+        if parent >= 0 and heap[i] < heap[parent]:
+            heap[parent], heap[i] = heap[i], heap[parent]
+            i = parent
+        else:
+            break
+    return heap",1
+2,"
+
+def solve(heap, new_item):
+    heap[0] = heap[-1]
+    heap.pop()
+    i = 0
+    while True:
+        smallest = i
+        left_child = 2 * i + 1
+        right_child = 2 * i + 2
+        if left_child < len(heap) and heap[left_child] < heap[smallest]:
+            smallest = left_child
+        if right_child < len(heap) and heap[right_child] < heap[smallest]:
+            smallest = right_child
+        if smallest != i:
+            heap[i], heap[smallest] = heap[smallest], heap[i]
+            i = smallest
+        else:
+            break
+    heap.append(new_item)
+    i = len(heap) - 1
+    while i > 0:
+        parent = (i - 1) // 2
+        if heap[i] < heap[parent]:
+            heap[i], heap[parent] = heap[parent], heap[i]
+            i = parent
+        else:
+            break
+    return heap",2
+3,"
+
+def solve(heap, new_item):
+    heap[0] = heap[-1]
+    heap.pop()
+    heapify(heap)
+    heap.append(new_item)
+    heapify(heap)",3
+4,"
+
+def solve(heap, new_item):
+    heap[0] = heap[-1]
+    heap.pop()
+    i = 0
+    while True:
+        left = 2 * i + 1
+        right = 2 * i + 2
+        smallest = i
+        if left < len(heap) and heap[left] < heap[i]:
+            smallest = left
+        if right < len(heap) and heap[right] < heap[smallest]:
+            smallest = right
+        if smallest == i:
+            break
+        heap[i], heap[smallest] = heap[smallest], heap[i]
+        i = smallest
+    heap.append(new_item)
+    while True:
+        parent = (i - 1) // 2
+        if parent < 0 or heap[parent] <= heap[i]:
+            break
+        heap[i], heap[parent] = heap[parent], heap[i]
+        i = parent
+    return heap",4
+5,"
+
+def solve(heap, new_item):
+    heap.remove(min(heap))
+    heap.append(new_item)
+    return heap",5

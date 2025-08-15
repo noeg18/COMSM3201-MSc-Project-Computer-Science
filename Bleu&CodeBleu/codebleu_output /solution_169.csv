@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    a = 1
+    b = 2
+    if n == 1:
+        return a
+    elif n == 2:
+        return b
+    else:
+        for i in range(3, n + 1):
+            c = 2 * b + a
+            a = b
+            b = c
+        return b",1
+2,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return 2*solve(n-1) + solve(n-2)",2
+3,"
+
+def solve(n):
+    if n == 1 or n == 2:
+        return n
+    else:
+        a = 1
+        b = 2
+        for i in range(3, n+1):
+            c = 2*b + a
+            a = b
+            b = c
+        return b",3
+4,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return 2*solve(n-1) + solve(n-2)",2
+5,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        pell = [0, 1]
+        for i in range(2, n+1):
+            pell.append(2*pell[i-1] + pell[i-2])
+        return pell[n]",4

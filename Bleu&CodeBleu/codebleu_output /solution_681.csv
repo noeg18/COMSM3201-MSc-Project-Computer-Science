@@ -1,0 +1,56 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    i = 2
+    while i <= n:
+        if n % i == 0:
+            return i
+        i += 1",1
+2,"
+
+def solve(n):
+    if n == 1:
+        return 1
+    for i in range(2, n+1):
+        if n % i == 0:
+            return i",2
+3,"
+
+def solve(n):
+    i = 2
+    while i <= n:
+        if n % i == 0:
+            return i
+        i += 1",1
+4,"
+
+def solve(num):
+    # check if number is prime
+    if num <= 1:
+        return None
+    # check if number is divisible by 2
+    while num % 2 == 0:
+        return 2
+    # check for other prime divisors
+    for i in range(3, int(num**0.5)+1, 2):
+        if num % i == 0:
+            return i
+    # if no prime divisor found, return the number itself
+    return num",3
+5,"
+
+def solve(num):
+    #check if the number is less than 2
+    if num < 2:
+        return None
+    #check if the number is divisible by 2
+    if num % 2 == 0:
+        return 2
+    #iterate through odd numbers from 3 to the square root of the number
+    for i in range(3, int(num**0.5)+1, 2):
+        #check if the number is divisible by the current number
+        if num % i == 0:
+            return i
+    #if no divisor is found, the number itself is the smallest prime divisor
+    return num",4

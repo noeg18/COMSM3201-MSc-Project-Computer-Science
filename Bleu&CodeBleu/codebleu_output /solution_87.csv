@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(dict1, dict2, dict3):
+    return {**dict1, **dict2, **dict3}",1
+2,"
+
+def solve(dict1, dict2, dict3):
+    return {**dict1, **dict2, **dict3}",1
+3,"
+
+def solve(dict1, dict2, dict3):
+    return {**dict1, **dict2, **dict3}",1
+4,"
+
+def solve(d1, d2, d3):
+    return {**d1, **d2, **d3}",2
+5,"
+
+def solve(dict1, dict2, dict3):
+    return {**dict1, **dict2, **dict3}",1

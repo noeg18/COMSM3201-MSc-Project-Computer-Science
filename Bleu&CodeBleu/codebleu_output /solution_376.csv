@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(tup, custom_value):
+    new_tup = []
+    for i in tup:
+        if i not in new_tup:
+            new_tup.append(i)
+        else:
+            new_tup.append(custom_value)
+    return tuple(new_tup)",1
+2,"
+
+def solve(tup, custom_value):
+    temp = []
+    for i in tup:
+        if i not in temp:
+            temp.append(i)
+        else:
+            temp.append(custom_value)
+    return tuple(temp)",2
+3,"
+
+def solve(tup, custom_val):
+    new_tup = ()
+    for i in tup:
+        if i not in new_tup:
+            new_tup = new_tup + (i,)
+        else:
+            new_tup = new_tup + (custom_val,)
+    return new_tup",3
+4,"
+
+def solve(tuples, custom_value):
+    unique_tuples = []
+    for tup in tuples:
+        if tup not in unique_tuples:
+            unique_tuples.append(tup)
+        else:
+            unique_tuples.append(custom_value)
+    return tuple(unique_tuples)",4
+5,"
+
+def solve(tup, custom_value):
+    new_tup = tuple(set(tup))
+    for i in range(len(new_tup)):
+        if tup.count(new_tup[i]) > 1:
+            tup = list(tup)
+            for j in range(tup.count(new_tup[i]) - 1):
+                tup[tup.index(new_tup[i])] = custom_value
+            tup = tuple(tup)
+    return tup",5

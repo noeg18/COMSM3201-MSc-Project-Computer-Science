@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2):
+    for i in range(len(tup1)):
+        if tup2[i] >= tup1[i]:
+            return False
+    return True",1
+2,"
+
+def solve(first_tuple, second_tuple):
+    for i in range(len(first_tuple)):
+        if second_tuple[i] >= i:
+            return False
+    return True",2
+3,"
+
+def solve(tuple1, tuple2):
+    for i in range(len(tuple1)):
+        if tuple2[i] >= tuple1[i]:
+            return False
+    return True",3
+4,"
+
+def solve(first_tuple, second_tuple):
+    for i in range(len(first_tuple)):
+        if second_tuple[i] >= first_tuple[i]:
+            return False
+    return True",4
+5,"
+
+def solve(t1, t2):
+    for i in range(len(t1)):
+        if t2[i] >= t1[i]:
+            return False
+    return True",5

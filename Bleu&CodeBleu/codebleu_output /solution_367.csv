@@ -1,0 +1,97 @@
+response_num,response,cluster
+1,"
+
+def solve(root):
+    if root is None:
+        return True
+    
+    def checkBalance(node):
+        if node is None:
+            return 0
+        
+        left = checkBalance(node.left)
+        if left == -1:
+            return -1
+        
+        right = checkBalance(node.right)
+        if right == -1:
+            return -1
+        
+        if abs(left - right) > 1:
+            return -1
+        
+        return max(left, right) + 1
+    
+    return checkBalance(root) != -1",1
+2,"
+
+def solve(root):
+    if not root:
+        return True
+    
+    left_height = height(root.left)
+    right_height = height(root.right)
+    
+    if abs(left_height - right_height) > 1:
+        return False
+    
+    return solve(root.left) and solve(root.right)
+
+def height(root):
+    if not root:
+        return 0
+    
+    return max(height(root.left), height(root.right)) + 1",2
+3,"
+
+def solve(root):
+    if not root:
+        return True
+    
+    left_height = height(root.left)
+    right_height = height(root.right)
+    
+    if abs(left_height - right_height) > 1:
+        return False
+    
+    return solve(root.left) and solve(root.right)
+
+def height(node):
+    if not node:
+        return 0
+    
+    return 1 + max(height(node.left), height(node.right))",3
+4,"
+
+def solve(root): 
+    if root == None: 
+        return True
+    left_height = height(root.left) 
+    right_height = height(root.right) 
+    if (abs(left_height - right_height) <= 1) and solve(root.left) is True and solve(root.right) is True: 
+        return True
+    return False
+
+def height(node): 
+    if node == None: 
+        return 0
+    return max(height(node.left), height(node.right)) + 1",4
+5,"
+
+def solve(root):
+    if root is None:
+        return True
+    
+    left_height = height(root.left)
+    right_height = height(root.right)
+    
+    if abs(left_height - right_height) > 1:
+        return False
+    
+    return solve(root.left) and solve(root.right)
+    
+def height(node):
+    if node is None:
+        return 0
+    
+    return 1 + max(height(node.left), height(node.right))",5

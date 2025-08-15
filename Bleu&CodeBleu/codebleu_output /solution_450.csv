@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_strings, size):
+    extracted_strings = []
+    for string in list_of_strings:
+        extracted_string = string[:size]
+        extracted_strings.append(extracted_string)
+    return extracted_strings",1
+2,"
+
+def solve(list_of_strings, size):
+    return [string[:size] for string in list_of_strings]",2
+3,"
+
+def solve(lst, size):
+  result = []
+  for string in lst:
+    if len(string) == size:
+      result.append(string)
+  return result",3
+4,"
+
+def solve(string_list, size):
+    result = []
+    for string in string_list:
+        if len(string) == size:
+            result.append(string)
+    return result",4
+5,"
+
+def solve(strings, size):
+    result = []
+    for s in strings:
+        if len(s) == size:
+            result.append(s)
+    return result",5

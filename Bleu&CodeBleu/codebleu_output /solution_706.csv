@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(arr1, arr2):
+    set1 = set(arr1)
+    set2 = set(arr2)
+    if set1.issubset(set2):
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(arr1, arr2):
+    for num in arr1:
+        if num not in arr2:
+            return False
+    return True",2
+3,"
+
+def solve(array1, array2):
+    for i in range(len(array2)):
+        if array2[i] not in array1:
+            return False
+    return True",3
+4,"
+
+def solve(array1, array2):
+    for num in array1:
+        if num not in array2:
+            return False
+    return True",4
+5,"
+
+def solve(arr1, arr2):
+    set1 = set(arr1)
+    set2 = set(arr2)
+    if set1.issubset(set2):
+        return True
+    else:
+        return False",1

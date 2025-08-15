@@ -1,0 +1,56 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2, num3):
+    # Sort the numbers in ascending order
+    sorted_nums = sorted([num1, num2, num3])
+    
+    # If there are an even number of numbers, find the middle two and take the average
+    if len(sorted_nums) % 2 == 0:
+        middle_idx1 = len(sorted_nums) // 2 - 1
+        middle_idx2 = len(sorted_nums) // 2
+        median = (sorted_nums[middle_idx1] + sorted_nums[middle_idx2]) / 2
+    # If there are an odd number of numbers, find the middle number
+    else:
+        middle_idx = len(sorted_nums) // 2
+        median = sorted_nums[middle_idx]
+    
+    return median",1
+2,"
+
+def solve(num1, num2, num3):
+    nums = [num1, num2, num3]
+    nums.sort()
+    if len(nums) % 2 == 0:
+        return (nums[len(nums)//2] + nums[(len(nums)//2)-1]) / 2
+    else:
+        return nums[len(nums)//2]",2
+3,"
+
+def solve(num1, num2, num3):
+    nums = [num1, num2, num3]
+    nums.sort()
+    if len(nums) % 2 == 0:
+        median = (nums[len(nums)//2] + nums[(len(nums)//2)-1])/2
+    else:
+        median = nums[len(nums)//2]
+    return median",3
+4,"
+
+def solve(a, b, c):
+    nums = [a, b, c]
+    nums.sort()
+    if len(nums) % 2 == 0:
+        median = (nums[len(nums)//2] + nums[len(nums)//2 - 1]) / 2
+    else:
+        median = nums[len(nums)//2]
+    return median",4
+5,"
+
+def solve(a, b, c):
+    nums = [a, b, c]
+    nums.sort()
+    if len(nums) % 2 == 0:
+        return (nums[len(nums)//2] + nums[len(nums)//2 - 1]) / 2
+    else:
+        return nums[len(nums)//2]",5

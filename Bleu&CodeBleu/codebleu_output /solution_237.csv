@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    occurences = {}
+    for tup in tuples:
+        if tup in occurences:
+            occurences[tup] += 1
+        else:
+            occurences[tup] = 1
+    
+    result = []
+    for key, value in occurences.items():
+        if value > 1:
+            result.append(key)
+    
+    return result",1
+2,"
+
+def solve(tuples):
+    occurrences = {}
+    for record in tuples:
+        if record in occurrences:
+            occurrences[record] += 1
+        else:
+            occurrences[record] = 1
+    return occurrences",2
+3,"
+
+def solve(tuples):
+    counts = {}
+    for tup in tuples:
+        if tup in counts:
+            counts[tup] += 1
+        else:
+            counts[tup] = 1
+    
+    occurrences = set()
+    for key, value in counts.items():
+        if value in occurrences:
+            continue
+        else:
+            occurrences.add(value)
+    
+    result = {}
+    for key, value in counts.items():
+        if value in occurrences:
+            result[key] = value
+    
+    return result",3
+4,"
+
+def solve(tuples):
+    count = {}
+    for tup in tuples:
+        if tup in count:
+            count[tup] += 1
+        else:
+            count[tup] = 1
+    occurrences = []
+    for key, value in count.items():
+        if value > 1:
+            occurrences.append(key)
+    return occurrences",4
+5,"
+
+def solve(tuples):
+    occurrences = {}
+    for t in tuples:
+        if t in occurrences:
+            occurrences[t] += 1
+        else:
+            occurrences[t] = 1
+    return occurrences",5

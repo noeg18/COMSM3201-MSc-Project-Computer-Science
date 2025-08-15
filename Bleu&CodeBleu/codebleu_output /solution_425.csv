@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, element):
+    count = 0
+    for sublst in lst:
+        if element in sublst:
+            count += 1
+    return count",1
+2,"
+
+def solve(lst, element):
+    count = 0
+    for sublist in lst:
+        if element in sublist:
+            count += 1
+    return count ",2
+3,"
+
+def solve(lst, element):
+    count = 0
+    for sublist in lst:
+        if element in sublist:
+            count += 1
+    return count",2
+4,"
+
+def solve(lst, element):
+    count = 0
+    for sublist in lst:
+        if element in sublist:
+            count += 1
+    return count",2
+5,"
+
+def solve(lst, elem):
+    count = 0
+    for sublst in lst:
+        if elem in sublst:
+            count += 1
+    return count",3

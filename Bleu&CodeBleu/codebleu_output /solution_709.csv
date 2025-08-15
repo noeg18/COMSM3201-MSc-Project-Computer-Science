@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    dict = {}
+    for i in tup:
+        if i in dict:
+            dict[i] += 1
+        else:
+            dict[i] = 1
+    return dict",1
+2,"
+
+def solve(tuple):
+    unique_dict = {}
+    for value in tuple:
+        if value in unique_dict:
+            unique_dict[value] += 1
+        else:
+            unique_dict[value] = 1
+    return unique_dict",2
+3,"
+
+def solve(tup):
+    dict = {}
+    for i in range(len(tup)):
+        if tup[i] not in dict:
+            dict[tup[i]] = 1
+        else:
+            dict[tup[i]] += 1
+    return dict",3
+4,"
+
+def solve(tuple):
+    unique_keys = {}
+    for value in tuple:
+        if value in unique_keys:
+            unique_keys[value] += 1
+        else:
+            unique_keys[value] = 1
+    return unique_keys",4
+5,"
+
+def solve(tup):
+    unique_keys = {}
+    for value in tup:
+        if value not in unique_keys:
+            unique_keys[value] = 1
+        else:
+            unique_keys[value] += 1
+    return unique_keys",5

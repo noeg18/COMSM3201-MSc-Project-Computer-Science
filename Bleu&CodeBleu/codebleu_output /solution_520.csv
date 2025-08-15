@@ -1,0 +1,58 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    lcm = 1
+    for i in range(len(arr)):
+        lcm = (lcm * arr[i]) // gcd(lcm, arr[i])
+    return lcm
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a",1
+2,"
+
+def solve(arr):
+    lcm = 1
+    for num in arr:
+        lcm = lcm * num // gcd(lcm, num)
+    return lcm
+
+def gcd(x, y):
+    while y:
+        x, y = y, x % y
+    return x",2
+3,"
+
+def solve(arr):
+    lcm = arr[0]
+    for i in range(1, len(arr)):
+        lcm = (lcm * arr[i]) // gcd(lcm, arr[i])
+    return lcm
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)",3
+4,"
+
+def solve(arr):
+    lcm = arr[0]
+    for i in range(1, len(arr)):
+        lcm = (lcm * arr[i]) // gcd(lcm, arr[i])
+    return lcm
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)",3
+5,"
+
+def solve(arr):
+    lcm = arr[0]
+    for i in range(1, len(arr)):
+        gcd = math.gcd(lcm, arr[i])
+        lcm = (lcm * arr[i]) // gcd
+    return lcm",4

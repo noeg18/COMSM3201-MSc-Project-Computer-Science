@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(given_list, search_list):
+    for element in search_list:
+        if element in given_list:
+            return True
+    return False",1
+2,"
+
+def solve(list1, list2):
+    for element in list1:
+        if element in list2:
+            return True
+    return False",2
+3,"
+
+def solve(lst1, lst2):
+    for elem in lst1:
+        if elem in lst2:
+            return True
+    return False",3
+4,"
+
+def solve(list1, list2):
+    for element in list1:
+        if element in list2:
+            return True
+    return False",2
+5,"
+
+def solve(list1, list2):
+    for elem in list1:
+        if elem in list2:
+            return True
+    return False",4

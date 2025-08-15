@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    result = []
+    for i in arr:
+        for j in range(i.count):
+            result.append(i.element)
+    return result",1
+2,"
+
+def solve(lst):
+    new_lst = []
+    for ele in lst:
+        count = lst.count(ele)
+        for i in range(count):
+            new_lst.append(ele)
+    return new_lst",2
+3,"
+
+def solve(elements):
+    result = []
+    for element in elements:
+        for i in range(elements[element]):
+            result.append(element)
+    return result",3
+4,"
+
+def solve(elements):
+    result = []
+    for element in elements:
+        result.extend([element] * elements.count(element))
+    return result",4
+5,"
+
+def solve(elements):
+    result = []
+    for element in elements:
+        count = elements.count(element)
+        for i in range(count):
+            result.append(element)
+    return result",5

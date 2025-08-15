@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    import re
+    pattern = r'a[bb]{2,3}'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(string):
+    import re
+    if re.search(r'a{1}b{2,3}', string):
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(s):
+    return re.search(r'a(b{2,3})', s) is not None",3
+4,"
+
+def solve(string):
+    import re
+    pattern = r'a(bb){1,2}'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+5,"
+
+def solve(string):
+    pattern = r'a[bb]{2,3}'
+    return re.search(pattern, string) is not None",4

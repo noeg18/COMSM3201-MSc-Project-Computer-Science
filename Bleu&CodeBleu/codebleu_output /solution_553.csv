@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple):
+    return float(tuple[0])",1
+2,"
+
+def solve(tup):
+    return float(tup[0])",2
+3,"
+
+def solve(tuple):
+    num = float(''.join(str(i) for i in tuple))
+    return num",3
+4,"
+
+def solve(tup):
+    return float(tup[0])",2
+5,"
+
+def solve(tup):
+    return float(''.join(str(i) for i in tup))",4

@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(s, k):
+    result = """"
+    for char in s:
+        if char.isdigit():
+            result += str(int(char) + k)
+        else:
+            result += char
+    return result",1
+2,"
+
+def solve(s, k):
+    res = """"
+    for char in s:
+        if char.isdigit():
+            num = int(char)
+            num += k
+            res += str(num)
+        else:
+            res += char
+    return res",2
+3,"
+
+def solve(s, k):
+  result = """"
+  for char in s:
+    if char.isdigit():
+      digit = int(char)
+      new_digit = (digit + k) % 10
+      result += str(new_digit)
+    else:
+      result += char
+  return result",3
+4,"
+
+def solve(s, k):
+    result = """"
+    for char in s:
+        if char.isnumeric():
+            num = int(char)
+            num += k
+            result += str(num)
+        else:
+            result += char
+    return result",4
+5,"
+
+def solve(string, k):
+    new_string = """"
+    for char in string:
+        if char.isdigit():
+            new_string += str(int(char) + k)
+        else:
+            new_string += char
+    return new_string",5

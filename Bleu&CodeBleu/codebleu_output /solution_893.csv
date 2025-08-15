@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    result = []
+    for sublist in lst:
+        result.append(sublist[-1])
+    return result",1
+2,"
+
+def solve(lst):
+    return [sublist[-1] for sublist in lst]",2
+3,"
+
+def solve(lst):
+    result = []
+    for sublst in lst:
+        result.append(sublst[-1])
+    return result",3
+4,"
+
+def solve(lst):
+    result = []
+    for sublst in lst:
+        result.append(sublst[-1])
+    return result",3
+5,"
+
+def solve(lst):
+    return [sublist[-1] for sublist in lst]",2

@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return [[['*' for _ in range(n)] for _ in range(n)] for _ in range(n)]",1
+2,"
+
+def solve(n):
+    arr = [['*' for i in range(n)] for j in range(n)]
+    return [[arr for k in range(n)] for l in range(n)]",2
+3,"
+
+def solve(n):
+    array_3d = [[['*' for _ in range(n)] for _ in range(n)] for _ in range(n)]
+    return array_3d",3
+4,"
+
+def solve():
+    return [[['*' for _ in range(3)] for _ in range(3)] for _ in range(3)]",4
+5,"
+
+def solve(n):
+    arr = [[['*']*n]*n]*n
+    return arr",5

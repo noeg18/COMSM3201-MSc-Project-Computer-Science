@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    words = string.split()
+    result = []
+    for word in words:
+        if word.startswith('a') or word.startswith('e'):
+            result.append(word)
+    return result",1
+2,"
+
+def solve(string):
+    words = string.split()
+    result = []
+    for word in words:
+        if word[0] == 'a' or word[0] == 'e':
+            result.append(word)
+    return result",2
+3,"
+
+def solve(string):
+    words = string.split()
+    result = []
+    for word in words:
+        if word.startswith('a') or word.startswith('e'):
+            result.append(word)
+    return result",1
+4,"
+
+def solve(string):
+    words = string.split()
+    result = []
+    for word in words:
+        if word[0] == 'a' or word[0] == 'e':
+            result.append(word)
+    return result",2
+5,"
+
+def solve(string):
+    result = []
+    words = string.split()
+    for word in words:
+        if word[0].lower() == 'a' or word[0].lower() == 'e':
+            result.append(word)
+    return result",3

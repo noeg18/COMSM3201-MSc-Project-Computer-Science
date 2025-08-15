@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(arr1, arr2):
+    arr1.sort()
+    arr2.sort()
+    min_sum = 0
+    for i in range(len(arr1)):
+        min_sum += abs(arr1[i] - arr2[i])
+    return min_sum",1
+2,"
+
+def solve(arr1, arr2):
+    arr1.sort()
+    arr2.sort()
+    sum = 0
+    for i in range(len(arr1)):
+        sum += abs(arr1[i] - arr2[i])
+    return sum",2
+3,"
+
+def solve(arr1, arr2):
+    arr1.sort()
+    arr2.sort()
+    sum = 0
+    for i in range(len(arr1)):
+        sum += abs(arr1[i] - arr2[i])
+        
+    return sum",2
+4,"
+
+def solve(arr1, arr2):
+    sorted_arr1 = sorted(arr1)
+    sorted_arr2 = sorted(arr2)
+    min_sum = 0
+    for i in range(len(arr1)):
+        min_sum += abs(sorted_arr1[i] - sorted_arr2[i])
+    return min_sum",3
+5,"
+
+def solve(arr1, arr2):
+    arr1.sort()
+    arr2.sort()
+    sum_diff = 0
+    for i in range(len(arr1)):
+        sum_diff += abs(arr1[i] - arr2[i])
+    return sum_diff",4

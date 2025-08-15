@@ -1,0 +1,66 @@
+response_num,response,cluster
+1,"
+
+def solve(units):
+    if units <= 50:
+        bill = units * 0.50
+    elif units <= 100:
+        bill = 25 + (units - 50) * 0.75
+    elif units <= 200:
+        bill = 75 + (units - 100) * 1.20
+    elif units <= 300:
+        bill = 195 + (units - 200) * 1.50
+    else:
+        bill = 375 + (units - 300) * 1.80
+    return bill",1
+2,"
+
+def solve(units):
+    if units <= 0:
+        return ""Invalid input. Units should be a positive integer.""
+    elif units <= 50:
+        return units * 2.60
+    elif units <= 100:
+        return 50 * 2.60 + (units - 50) * 3.25
+    elif units <= 200:
+        return 50 * 2.60 + 50 * 3.25 + (units - 100) * 5.26
+    elif units <= 300:
+        return 50 * 2.60 + 50 * 3.25 + 100 * 5.26 + (units - 200) * 8.45
+    else:
+        return 50 * 2.60 + 50 * 3.25 + 100 * 5.26 + 100 * 8.45 + (units - 300) * 11.50",2
+3,"
+
+def solve(units):
+    if units <= 50:
+        bill = units * 0.50
+    elif units <= 150:
+        bill = (50 * 0.50) + ((units - 50) * 0.75)
+    elif units <= 250:
+        bill = (50 * 0.50) + (100 * 0.75) + ((units - 150) * 1.20)
+    else:
+        bill = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + ((units - 250) * 1.50)
+    
+    return bill",3
+4,"
+
+def solve(units):
+    if units <= 50:
+        return units * 0.50
+    elif units <= 150:
+        return (units - 50) * 0.75 + 25
+    elif units <= 250:
+        return (units - 150) * 1.20 + 100
+    else:
+        return (units - 250) * 1.50 + 220",4
+5,"
+
+def solve(units):
+    if units <= 50:
+        bill = units * 0.50
+    elif units <= 150:
+        bill = 50 * 0.50 + (units - 50) * 0.75
+    elif units <= 250:
+        bill = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20
+    else:
+        bill = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50
+    return bill",5

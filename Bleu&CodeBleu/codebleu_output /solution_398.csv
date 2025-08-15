@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    result = []
+    for num in lst:
+        sum = 0
+        while num:
+            sum += num % 10
+            num //= 10
+        result.append(sum)
+    return result",1
+2,"
+
+def solve(lst):
+    result = []
+    for num in lst:
+        total = 0
+        for digit in str(num):
+            total += int(digit)
+        result.append(total)
+    return result",2
+3,"
+
+def solve(nums):
+    sums = []
+    for num in nums:
+        total = 0
+        for digit in str(num):
+            total += int(digit)
+        sums.append(total)
+    return sums",3
+4,"
+
+def solve(lst):
+    result = []
+    for num in lst:
+        sum = 0
+        while num > 0:
+            digit = num % 10
+            sum += digit
+            num //= 10
+        result.append(sum)
+    return result",4
+5,"
+
+def solve(nums):
+    result = []
+    for num in nums:
+        digits = [int(x) for x in str(num)]
+        sum_digits = sum(digits)
+        result.append(sum_digits)
+    return result",5

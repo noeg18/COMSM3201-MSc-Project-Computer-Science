@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    factorial = 1
+    for i in range(1, n+1):
+        factorial *= i
+    first_digit = int(str(factorial)[0])
+    return first_digit",1
+2,"
+
+def solve(n):
+    factorial = 1
+    for i in range(1,n+1):
+        factorial *= i
+    first_digit = str(factorial)[0]
+    return int(first_digit)",2
+3,"
+
+def solve(n):
+    factorial = 1
+    for i in range(1, n+1):
+        factorial *= i
+    first_digit = str(factorial)[0]
+    return int(first_digit)",2
+4,"
+
+def solve(n):
+    if n < 0:
+        return None
+    elif n == 0:
+        return 1
+    else:
+        factorial = 1
+        while n > 0:
+            factorial *= n
+            n -= 1
+        return int(str(factorial)[0])",3
+5,"
+
+def solve(n):
+    factorial = 1
+    while n > 0:
+        factorial *= n
+        n -= 1
+    first_digit = str(factorial)[0]
+    return int(first_digit)",4

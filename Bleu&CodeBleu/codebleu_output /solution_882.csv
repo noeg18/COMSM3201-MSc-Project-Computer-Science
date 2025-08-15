@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(length, width):
+    return 2 * (length + width)",1
+2,"
+
+def solve(length, width):
+    perimeter = 2 * (length + width)
+    return perimeter",2
+3,"
+
+def solve(base, side):
+    return 2 * (base + side)",3
+4,"
+
+def solve(base, side):
+    perimeter = 2 * (base + side)
+    return perimeter",4
+5,"
+
+def solve(base, side):
+    return 2*(base + side)",5

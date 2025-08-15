@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(radius, height):
+    import math
+    lateral_surface_area = math.pi * radius * math.sqrt((radius ** 2) + (height ** 2))
+    return lateral_surface_area",1
+2,"
+
+def solve(radius, height):
+    slant_height = (radius**2 + height**2)**0.5
+    lateral_surface_area = math.pi * radius * slant_height
+    return lateral_surface_area",2
+3,"
+
+def solve(radius, height):
+    import math
+    lateral_surface_area = math.pi * radius * math.sqrt((radius**2) + (height**2))
+    return lateral_surface_area",3
+4,"
+
+def solve(r, h):
+    from math import pi, sqrt
+    lateral_area = pi * r * sqrt(r**2 + h**2)
+    return lateral_area",4
+5,"
+
+def solve(radius, height):
+    slant_height = ((radius**2) + (height**2))**(1/2)
+    lateral_surface_area = (3.14159 * radius * slant_height)
+    return lateral_surface_area",5

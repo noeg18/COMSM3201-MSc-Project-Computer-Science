@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    n = len(arr)
+    low = 0
+    high = n - 1
+    mid = 0
+
+    while (high - low) > 1:
+        mid = (low + high) // 2
+        if (arr[low] - low) != (arr[mid] - mid):
+            high = mid
+        elif (arr[high] - high) != (arr[mid] - mid):
+            low = mid
+    return arr[low] + 1",1
+2,"
+
+def solve(arr):
+    missing = 1
+    
+    for num in arr:
+        if num == missing:
+            missing += 1
+        else:
+            return missing
+            
+    return missing",2
+3,"
+
+def solve(arr):
+    smallest_missing = 1
+    for num in arr:
+        if num == smallest_missing:
+            smallest_missing += 1
+        else:
+            return smallest_missing
+    return smallest_missing",3
+4,"
+
+def solve(arr):
+    smallest_missing = 1
+    
+    for num in arr:
+        if num == smallest_missing:
+            smallest_missing += 1
+        else:
+            return smallest_missing
+    
+    return smallest_missing",3
+5,"
+
+def solve(arr):
+    n = len(arr)
+    for i in range(n):
+        if arr[i] != i+1:
+            return i+1
+    
+    return n+1",4

@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    dict = {}
+    for i in range(0, len(tup), 2):
+        dict[tup[i]] = tup[i+1]
+    return dict",1
+2,"
+
+def solve(tuple):
+    dict = {}
+    for i in range(0, len(tuple), 2):
+        dict[tuple[i]] = tuple[i+1]
+    return dict",2
+3,"
+
+def solve(tup):
+    dict = {}
+    for i in range(0, len(tup), 2):
+        dict[tup[i]] = tup[i+1]
+    return dict",1
+4,"
+
+def solve(tuple):
+    dict = {}
+    for i in range(0, len(tuple), 2):
+        dict[tuple[i]] = tuple[i+1]
+    return dict",2
+5,"
+
+def solve(tup):
+    dict_ = {}
+    for i in range(0, len(tup), 2):
+        dict_[tup[i]] = tup[i+1]
+    return dict_",3

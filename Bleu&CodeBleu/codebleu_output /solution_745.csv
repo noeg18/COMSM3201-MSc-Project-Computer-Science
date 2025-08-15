@@ -1,0 +1,66 @@
+response_num,response,cluster
+1,"
+
+def solve(start, end):
+    result = []
+    for num in range(start, end+1):
+        digits = [int(d) for d in str(num)]
+        flag = True
+        for digit in digits:
+            if digit == 0:
+                flag = False
+                break
+            if num % digit != 0:
+                flag = False
+                break
+        if flag:
+            result.append(num)
+    return result",1
+2,"
+
+def solve(start, end):
+    result = []
+    for i in range(start, end+1):
+        num = str(i)
+        for digit in num:
+            if int(digit) == 0 or i % int(digit) != 0:
+                break
+        else:
+            result.append(i)
+    return result",2
+3,"
+
+def solve(start, end):
+    result = []
+    for num in range(start, end + 1):
+        digits = [int(i) for i in str(num)]
+        if all(num % digit == 0 for digit in digits):
+            result.append(num)
+    return result",3
+4,"
+
+def solve(start, end):
+    result = []
+    for num in range(start, end+1):
+        divisible = True
+        for digit in str(num):
+            if digit == '0' or num % int(digit) != 0:
+                divisible = False
+                break
+        if divisible:
+            result.append(num)
+    return result",4
+5,"
+
+def solve(start, end):
+    result = []
+    for i in range(start, end+1):
+        digits = [int(x) for x in str(i)]
+        divisible = True
+        for digit in digits:
+            if digit == 0 or i % digit != 0:
+                divisible = False
+                break
+        if divisible:
+            result.append(i)
+    return result",5

@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    diff = []
+    for i in range(len(lst)-1):
+        diff.append(lst[i+1] - lst[i])
+    return diff",1
+2,"
+
+def solve(lst):
+    diff = []
+    for i in range(len(lst)-1):
+        diff.append(abs(lst[i+1]-lst[i]))
+    return diff",2
+3,"
+
+def solve(lst):
+    diff = []
+    for i in range(len(lst)-1):
+        diff.append(lst[i+1] - lst[i])
+    return diff",1
+4,"
+
+def solve(numbers):
+    diff = []
+    for i in range(len(numbers)-1):
+        diff.append(numbers[i+1] - numbers[i])
+    return diff ",3
+5,"
+
+def solve(list):
+    difference = []
+    for i in range(len(list)-1):
+        difference.append(list[i+1]-list[i])
+    return difference",4

@@ -1,0 +1,72 @@
+response_num,response,cluster
+1,"
+
+def solve(colors, num):
+    result = []
+    def generate_combinations(curr, remaining):
+        if len(curr) == num:
+            result.append(curr)
+            return
+        for color in colors:
+            generate_combinations(curr + [color], remaining - 1)
+    
+    generate_combinations([], num)
+    return result",1
+2,"
+
+def solve(colours, num):
+    combinations = []
+    def generate_combinations(curr_comb, num):
+        if len(curr_comb) == num:
+            combinations.append(curr_comb)
+            return
+        for c in colours:
+            generate_combinations(curr_comb + [c], num)
+    generate_combinations([], num)
+    return combinations",2
+3,"
+
+def solve(n):
+    colors = ['red', 'blue', 'green']
+    combinations = []
+    
+    if n == 1:
+        return colors
+    
+    for i in range(n):
+        if i == 0:
+            for color in colors:
+                combinations.append([color])
+        else:
+            new_combinations = []
+            for combination in combinations:
+                for color in colors:
+                    new_combinations.append(combination + [color])
+            combinations = new_combinations
+    
+    return combinations",3
+4,"
+
+def solve(colours, num):
+    if num == 0:
+        return [[]]
+    else:
+        combos = []
+        for c in colours:
+            for combo in solve(colours, num-1):
+                combos.append([c] + combo)
+        return combos",4
+5,"
+
+def solve(colors, num):
+    result = []
+    if num == 1:
+        return colors
+    else:
+        for i in range(len(colors)):
+            previous = colors[i]
+            for j in range(len(colors)):
+                temp = previous + colors[j]
+                for k in range(len(colors)):
+                    result.append(temp + colors[k])
+        return result[:len(result)-len(colors)**(num-1)]",5

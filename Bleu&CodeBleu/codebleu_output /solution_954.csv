@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+def solve(amount):
+    if amount > 0:
+        profit = amount * 0.2
+        return profit
+    else:
+        return None",1
+2,"
+
+def solve(amount, cost, price):
+    if price > cost:
+        return price - cost
+    else:
+        return None",2
+3,"
+
+def solve(amount):
+    if amount > 0:
+        profit = round(amount * 0.1, 2)
+        return profit
+    else:
+        return None",3
+4,"
+
+def solve(amount):
+    if amount > 0:
+        profit = amount * 0.2
+        return profit
+    else:
+        return None",1
+5,"
+
+def solve(amount):
+    profit = amount - 100
+    if profit > 0:
+        return profit
+    else:
+        return None",4

@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+def solve(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return solve(n-1) + 2*solve(n-2)",1
+2,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return solve(n-1) + 2*solve(n-2)",2
+3,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return solve(n-1) + 2*solve(n-2)",2
+4,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return solve(n-1) + 2*solve(n-2)",2
+5,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return solve(n-1) + 2*solve(n-2)",1

@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, k):
+    arr.sort()
+    n = len(arr)
+    i = 0
+    j = 0
+    res = n
+    while i < n and j < n:
+        if arr[j] - arr[i] > k:
+            res = min(res, j - i)
+            i += 1
+        else:
+            j += 1
+    return res",1
+2,"
+
+def solve(arr, k):
+    arr.sort()
+    count = 0
+    for i in range(len(arr)-1):
+        if arr[i+1] - arr[i] > k:
+            count += 1
+    return count",2
+3,"
+
+def solve(arr, k):
+    arr.sort()
+    count = 0
+    for i in range(len(arr)-1):
+        if arr[i+1] - arr[i] > k:
+            count += 1
+    return count",2
+4,"
+
+def solve(arr, k):
+    arr.sort()
+    i = 0
+    j = 1
+    count = 0
+    while j < len(arr):
+        if arr[j] - arr[i] > k:
+            i += 1
+            count += 1
+        else:
+            j += 1
+    return count",3
+5,"
+
+def solve(arr, k):
+    arr.sort()
+    count = 0
+    for i in range(len(arr)-1):
+        if arr[i+1] - arr[i] > k:
+            count += 1
+        else:
+            break
+    return count",4

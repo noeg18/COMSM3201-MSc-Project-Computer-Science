@@ -1,0 +1,78 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    stack = []
+    for char in string:
+        if char == ""("":
+            stack.append(char)
+        elif char == "")"":
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    if len(stack) == 0:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    if len(stack) == 0:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append('(')
+        elif char == ')':
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    if len(stack) == 0:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(string):
+    stack = []
+    for char in string:
+        if char == ""("":
+            stack.append(char)
+        elif char == "")"":
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    return len(stack) == 0",4
+5,"
+
+def solve(s):
+    stack = []
+    for c in s:
+        if c == '(':
+            stack.append(c)
+        elif c == ')':
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    if len(stack) == 0:
+        return True
+    else:
+        return False",5

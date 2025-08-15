@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    result = set(tuples[0])
+    for i in range(1, len(tuples)):
+        result = result.intersection(set(tuples[i]))
+    return tuple(result)",1
+2,"
+
+def solve(tuple_list):
+    intersection = tuple_list[0]
+    for i in range(1, len(tuple_list)):
+        intersection = set(intersection).intersection(tuple_list[i])
+    return tuple(intersection)",2
+3,"
+
+def solve(tuple_list):
+    result = tuple_list[0]
+    for i in range(1, len(tuple_list)):
+        result = tuple(set(result).intersection(tuple_list[i]))
+    return result",3
+4,"
+
+def solve(tuple_list):
+    # Convert tuple list to a list of sets
+    sets_list = [set(t) for t in tuple_list]
+
+    # Find the intersection of all sets in the list
+    intersection = set.intersection(*sets_list)
+
+    # Convert the intersection set back to a tuple
+    return tuple(intersection)",4
+5,"
+
+def solve(tuple_list):
+    intersection = tuple_list[0]
+    for i in range(1, len(tuple_list)):
+        intersection = tuple(set(intersection) & set(tuple_list[i]))
+    return intersection",5

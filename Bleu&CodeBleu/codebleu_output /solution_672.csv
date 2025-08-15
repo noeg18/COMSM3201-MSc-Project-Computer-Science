@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2, num3):
+    max_num = num1
+    if num2 > max_num:
+        max_num = num2
+    if num3 > max_num:
+        max_num = num3
+    return max_num",1
+2,"
+
+def solve(num1, num2, num3):
+    return max(num1, num2, num3)
+
+# Alternatively, you can use the max() function with a list:
+# def solve(num1, num2, num3):
+#     return max([num1, num2, num3])",2
+3,"
+
+def solve(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c",3
+4,"
+
+def solve(num1, num2, num3):
+    if (num1 > num2) and (num1 > num3):
+        return num1
+    elif (num2 > num1) and (num2 > num3):
+        return num2
+    else:
+        return num3",4
+5,"
+
+def solve(a, b, c):
+    return max(a, b, c)",5

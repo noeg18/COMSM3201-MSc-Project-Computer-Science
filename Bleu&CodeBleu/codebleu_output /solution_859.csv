@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    sublists = [[]]
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublists.append(lst[i:j])
+    return sublists",1
+2,"
+
+def solve(lst):
+    sublists = [[]]
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublists.append(lst[i:j])
+    return sublists",1
+3,"
+
+def solve(lst):
+    sublists = [[]]
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublists.append(lst[i:j])
+    return sublists",1
+4,"
+
+def solve(lst):
+    sublists = []
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublists.append(lst[i:j])
+    return sublists",2
+5,"
+
+def solve(lst):
+    sublists = [[]]
+    for i in range(len(lst)):
+        for j in range(i + 1, len(lst) + 1):
+            sublists.append(lst[i:j])
+    return sublists",3

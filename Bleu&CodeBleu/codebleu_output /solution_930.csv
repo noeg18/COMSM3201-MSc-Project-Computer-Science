@@ -1,0 +1,64 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(text):
+    pattern = r""a*b*""
+    # ""a"" followed by zero or more ""b's""
+    # ""a"" can be followed by any number of ""b's""
+    # ""a"" does not have to be followed by ""b""
+    # ""b"" can appear zero or more times
+    match = re.findall(pattern, text)
+    # returns a list of all matches found in the text
+    if match:
+        print(""Match found!"")
+    else:
+        print(""No match found."")
+    return match
+
+# Example usage:
+solve(""ab"")  # Output: [""ab""]
+solve(""ac"")  # Output: [""a""]
+solve(""abb"")  # Output: [""abb"", ""ab"", ""a""]
+solve(""ba"")  # Output: [""a""]
+solve(""bbb"")  # Output: [""b"", """", ""bb"", ""b"", ""bb"", ""b"", ""b"", ""b"", ""b"", ""b"", ""b"", ""b"", ""b"", ""b"", ""b"", ""b""]",1
+2,"
+
+import re
+def solve(string):
+    pattern = r'a[b]*'
+    if re.search(pattern, string):
+        return True
+    else:
+        return False",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = ""ab*""
+    matches = re.findall(pattern, string)
+    if matches:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(string):
+    pattern = r'a[b]*'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",4
+5,"
+
+import re
+
+def solve(string):
+    pattern = r""a*b*""
+    if re.search(pattern, string):
+        return True
+    else:
+        return False",2

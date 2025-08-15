@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(nested_tuples):
+    result = nested_tuples[0][0] - nested_tuples[0][1]
+    for i in range(1, len(nested_tuples)):
+        result -= nested_tuples[i][0] - nested_tuples[i][1]
+    return result",1
+2,"
+
+def solve(nested_tuples):
+    result = nested_tuples[0][0] - nested_tuples[0][1]
+    for tup in nested_tuples[1:]:
+        result -= tup[0] - tup[1]
+    return result",2
+3,"
+
+def solve(nested_tuples):
+    result = nested_tuples[0][0]
+    for i in range(len(nested_tuples)):
+        for j in range(len(nested_tuples[i])):
+            if i == 0 and j == 0:
+                continue
+            result -= nested_tuples[i][j]
+    return result",3
+4,"
+
+def solve(tuples):
+    result = tuples[0][0] - tuples[1][0]
+    return result",4
+5,"
+
+def solve(tuples):
+    result = 0
+    for tup in tuples:
+        for num in tup:
+            result -= num
+    return result",5

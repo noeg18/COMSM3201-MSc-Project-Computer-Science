@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+def solve(rows, cols):
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(i*cols + j + 1)
+        matrix.append(row)
+    return matrix",1
+2,"
+
+def solve(rows, cols):
+    arr = []
+    for i in range(rows):
+        arr.append([])
+        for j in range(cols):
+            arr[i].append(0)
+    return arr",2
+3,"
+
+def solve(rows, cols):
+    arr = []
+    for i in range(rows):
+        arr.append([])
+        for j in range(cols):
+            arr[i].append(0)
+    return arr",2
+4,"
+
+def solve(rows, cols):
+    arr = []
+    for i in range(rows):
+        inner_arr = []
+        for j in range(cols):
+            inner_arr.append(j + 1)
+        arr.append(inner_arr)
+    return arr",3
+5,"
+
+def solve(rows, cols):
+    arr = []
+    for i in range(rows):
+        arr.append([])
+        for j in range(cols):
+            arr[i].append(0)
+    return arr",2

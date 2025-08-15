@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(num, multiple):
+    return round(num / multiple) * multiple",1
+2,"
+
+def solve(number, multiple):
+    return round(number / multiple) * multiple",2
+3,"
+
+def solve(num, multiple):
+    return round(num / multiple) * multiple",1
+4,"
+
+def solve(number, multiple):
+    return round(number / multiple) * multiple",2
+5,"
+
+def solve(num, multiple):
+    return round(num/multiple) * multiple",3

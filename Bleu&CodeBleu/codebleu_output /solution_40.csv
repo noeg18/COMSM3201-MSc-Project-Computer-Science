@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+from collections import Counter
+
+def solve(lists):
+    flat_list = [item for sublist in lists for item in sublist]
+    frequency = Counter(flat_list)
+    return frequency",1
+2,"
+
+from collections import Counter
+
+def solve(list_of_lists):
+    flat_list = [item for sublist in list_of_lists for item in sublist]
+    freq = Counter(flat_list)
+    return freq",2
+3,"
+
+from collections import Counter
+
+def solve(list_of_lists):
+  flat_list = [item for sublist in list_of_lists for item in sublist]
+  freq = Counter(flat_list)
+  return freq",2
+4,"
+
+from collections import Counter
+
+def solve(lists):
+    flat_list = [item for sublist in lists for item in sublist]
+    freq = Counter(flat_list)
+    return freq",1
+5,"
+
+from collections import Counter
+
+def solve(list_of_lists):
+    flattened_list = [item for sublist in list_of_lists for item in sublist]
+    frequency = Counter(flattened_list)
+    return frequency",3

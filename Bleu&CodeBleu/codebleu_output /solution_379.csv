@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(length, width, height):
+    area = 2 * (length * width + length * height + width * height)
+    return area",1
+2,"
+
+def solve(length, width, height):
+    return 2 * (length * width + width * height + height * length)",2
+3,"
+
+def solve(length, width, height):
+    area = 2 * (length * width + length * height + width * height)
+    return area",1
+4,"
+
+def solve(length, width, height):
+    surface_area = 2 * (length * width + width * height + height * length)
+    return surface_area",3
+5,"
+
+def solve(length, width, height):
+    return 2 * (length * width + length * height + width * height)",4

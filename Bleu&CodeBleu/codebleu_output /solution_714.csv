@@ -1,0 +1,87 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    # Initially, count is set to 0
+    count = 0
+    
+    # Loop through prime factors of n
+    for i in range(2, n+1):
+        if n % i == 0:
+            # Check if i is a prime number
+            is_prime = True
+            for j in range(2, i):
+                if i % j == 0:
+                    is_prime = False
+                    break
+            
+            # If i is a prime number, increase count and divide n by i
+            if is_prime:
+                count += 1
+                n //= i
+                
+                # Keep dividing n by i until n is no longer divisible by i
+                while n % i == 0:
+                    n //= i
+                    
+    return count",1
+2,"
+
+def solve(n):
+    count = 0
+    while n % 2 == 0:
+        count += 1
+        n = n // 2
+    i = 3
+    while i <= n:
+        while n % i == 0:
+            count += 1
+            n = n // i
+        i += 2
+    return count",2
+3,"
+
+def solve(num):
+    # initialize a set to store distinct prime factors
+    primes = set()
+    # loop through numbers from 2 to num
+    for i in range(2, num+1):
+        # check if i is a prime factor of num
+        if num % i == 0:
+            # if i is a prime factor, check if it is already in the set
+            if i not in primes:
+                # if not, add it to the set
+                primes.add(i)
+                # divide num by i until it is no longer divisible
+                while num % i == 0:
+                    num = num // i
+    # return the length of the set, which represents the number of distinct prime factors
+    return len(primes)",3
+4,"
+
+def solve(n):
+    count = 0
+    for i in range(2, n+1):
+        if n%i == 0:
+            prime = True
+            for j in range(2, i):
+                if i%j == 0:
+                    prime = False
+                    break
+            if prime:
+                count += 1
+    return count",4
+5,"
+
+def solve(num):
+    count = 0
+    while num % 2 == 0:
+        count += 1
+        num = num / 2
+    for i in range(3, int(num**0.5) + 1, 2):
+        while num % i == 0:
+            count += 1
+            num = num / i
+    if num > 2:
+        count += 1
+    return count",5

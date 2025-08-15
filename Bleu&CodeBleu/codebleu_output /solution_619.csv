@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    numbers = []
+    for char in string:
+        if char.isdigit():
+            numbers.append(char)
+    for num in numbers:
+        string = string.replace(num, '')
+    string += ''.join(numbers)
+    return string",1
+2,"
+
+def solve(string):
+    numbers = """"
+    for char in string:
+        if char.isdigit():
+            numbers += char
+    for num in numbers:
+        string = string.replace(num, """")
+    return numbers + string",2
+3,"
+
+def solve(numbers, string):
+    new_string = """"
+    for num in numbers:
+        new_string += str(num)
+    return string + new_string",3
+4,"
+
+def solve(numbers, string):
+    nums = [int(num) for num in numbers.split() if num.isdigit()]
+    chars = [char for char in string if char.isalpha()]
+    return """".join(chars) + "" "" + "" "".join(str(num) for num in nums)",4
+5,"
+
+def solve(numbers, string):
+    new_string = """"
+    for num in numbers:
+        new_string += str(num)
+    return string + new_string",3

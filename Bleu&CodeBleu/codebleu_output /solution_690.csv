@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    result = 1
+    for num in nums:
+        result *= num
+    return result",1
+2,"
+
+def solve(nums):
+    result = 1
+    for i in range(len(nums)-1):
+        result *= nums[i] * nums[i+1]
+    return result",2
+3,"
+
+def solve(lst):
+    product = 1
+    for i in range(len(lst)):
+        product *= lst[i]
+    return product ",3
+4,"
+
+def solve(lst):
+    result = 1
+    for i in range(len(lst)-1):
+        result *= lst[i] * lst[i+1]
+    return result",4
+5,"
+
+def solve(lst):
+    result = 1
+    for i in range(len(lst)-1):
+        result *= lst[i] * lst[i+1]
+    return result",4

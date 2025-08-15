@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+  return tuple(float(num) for num in string.split())",1
+2,"
+
+def solve(string):
+    tuple_list = []
+    for num in string.split():
+        tuple_list.append(float(num))
+    return tuple(tuple_list)",2
+3,"
+
+def solve(string):
+    return tuple(float(x) for x in string.split())",3
+4,"
+
+def solve(string):
+    tuple_lst = tuple(float(num) for num in string.split())
+    return tuple_lst",4
+5,"
+
+def solve(string):
+    return tuple(float(i) for i in string.split(','))",5

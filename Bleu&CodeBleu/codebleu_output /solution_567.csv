@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    if len(arr) <= 1:
+        return True
+    else:
+        for i in range(len(arr)-1):
+            if arr[i] > arr[i+1]:
+                return False
+        return True",1
+2,"
+
+def solve(lst):
+    sorted_lst = sorted(lst)
+    if lst == sorted_lst:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(lst):
+    return lst == sorted(lst)",3
+4,"
+
+def solve(lst):
+  for i in range(len(lst) - 1):
+    if lst[i] > lst[i+1]:
+      return False
+  return True",4
+5,"
+
+def solve(list):
+    sorted_list = sorted(list)
+    if sorted_list == list:
+        return True
+    else:
+        return False",5

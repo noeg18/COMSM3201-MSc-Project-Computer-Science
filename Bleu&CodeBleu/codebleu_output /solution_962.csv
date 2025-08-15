@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(l, r):
+    sum = 0
+    for i in range(l, r+1):
+        if i % 2 == 0:
+            sum += i
+    return sum ",1
+2,"
+
+def solve(l, r):
+    sum = 0
+    for i in range(l, r+1):
+        if i%2 == 0:
+            sum += i
+    return sum",2
+3,"
+
+def solve(l, r):
+    sum = 0
+    for i in range(l, r+1):
+        if i % 2 == 0:
+            sum += i
+    return sum",1
+4,"
+
+def solve(l,r):
+    sum = 0
+    for i in range(l,r+1):
+        if i%2 == 0:
+            sum += i
+    return sum",3
+5,"
+
+def solve(l, r):
+    sum = 0
+    for i in range(l, r+1):
+        if i%2 == 0:
+            sum += i
+    return sum",2

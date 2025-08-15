@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(words, n):
+    shortlist = []
+    for word in words:
+        if len(word) > n:
+            shortlist.append(word)
+    return shortlist",1
+2,"
+
+def solve(words, n):
+  shortlisted_words = []
+  for word in words:
+    if len(word) > n:
+      shortlisted_words.append(word)
+  return shortlisted_words",2
+3,"
+def solve(word_list, n):
+    shortlisted_words = []
+    for word in word_list:
+        if len(word) > n:
+            shortlisted_words.append(word)
+    return shortlisted_words",3
+4,"
+
+def solve(word_list, n):
+    result = []
+    for word in word_list:
+        if len(word) > n:
+            result.append(word)
+    return result",4
+5,"
+
+def solve(words, n):
+    return [word for word in words if len(word) > n]",5

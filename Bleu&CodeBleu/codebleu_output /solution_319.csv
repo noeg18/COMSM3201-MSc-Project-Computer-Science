@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    pattern = r'\b\w{5}\b'
+    result = re.findall(pattern, string)
+    return result",1
+2,"
+
+import re
+
+def solve(string):
+    pattern = r'\b\w{5}\b'
+    matches = re.findall(pattern, string)
+    return matches",2
+3,"
+
+def solve(string):
+    pattern = r""\b\w{5}\b""
+    matches = re.findall(pattern, string)
+    return matches",3
+4,"
+
+def solve(string):
+    import re
+    pattern = r'\b\w{5}\b'
+    result = re.findall(pattern, string)
+    return result",4
+5,"
+
+def solve(string):
+    pattern = r""\b\w{5}\b""
+    matches = re.findall(pattern, string)
+    return matches",3

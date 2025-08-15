@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_tuples):
+    return [tup for tup in list_of_tuples if tup != ()]",1
+2,"
+
+def solve(lst):
+    return [t for t in lst if t != ()]",2
+3,"
+
+def solve(lst):
+    return [tup for tup in lst if tup != ()]",3
+4,"
+
+def solve(tuples):
+    return [t for t in tuples if t != ()]",4
+5,"
+
+def solve(lst):
+    return [tup for tup in lst if tup != ()]",3

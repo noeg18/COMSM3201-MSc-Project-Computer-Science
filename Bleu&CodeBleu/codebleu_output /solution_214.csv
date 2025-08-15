@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(radians):
+    degrees = radians * (180 / math.pi)
+    return degrees",1
+2,"
+
+def solve(radians):
+    degrees = radians * (180/3.141592653589793)
+    return degrees",2
+3,"
+
+def solve(radians):
+    degrees = radians * (180 / math.pi)
+    return degrees",1
+4,"
+
+def solve(radians):
+    degrees = radians * (180/3.14159265359)
+    return degrees",3
+5,"
+
+def solve(radians):
+    degrees = radians * (180 / math.pi)
+    return degrees",1

@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(str_list, char):
+    new_list = []
+    for string in str_list:
+        if char in string:
+            new_string = string.replace(char, """")
+            new_list.append(new_string)
+        else:
+            new_list.append(string)
+    return new_list",1
+2,"
+
+def solve(string_list, char):
+    new_list = []
+    for string in string_list:
+        if char in string:
+            new_list.append(string.replace(char, ''))
+        else:
+            new_list.append(string)
+    return new_list",2
+3,"
+
+def solve(list_of_strings, character):
+    result = []
+    for string in list_of_strings:
+        if character in string:
+            result.append(string.replace(character, """"))
+        else:
+            result.append(string)
+    return result",3
+4,"
+
+def solve(strings, character):
+    new_list = []
+    for string in strings:
+        if character in string:
+            new_string = string.replace(character, """")
+            new_list.append(new_string)
+        else:
+            new_list.append(string)
+    return new_list",4
+5,"
+
+def solve(lst, char):
+    new_lst = []
+    for word in lst:
+        if char in word:
+            continue
+        else:
+            new_lst.append(word)
+    return new_lst",5

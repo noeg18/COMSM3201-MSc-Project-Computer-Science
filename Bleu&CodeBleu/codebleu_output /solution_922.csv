@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    max1 = max(arr)
+    arr.remove(max1)
+    max2 = max(arr)
+    return max1 * max2",1
+2,"
+
+def solve(arr):
+    max_product = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            product = arr[i] * arr[j]
+            if product > max_product:
+                max_product = product
+    return max_product",2
+3,"
+
+def solve(arr):
+    arr.sort(reverse=True)
+    highest_product = arr[0] * arr[1]
+    return highest_product",3
+4,"
+
+def solve(arr):
+    max_product = float('-inf')
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            product = arr[i] * arr[j]
+            if product > max_product:
+                max_product = product
+                pair = (arr[i], arr[j])
+    return pair",4
+5,"
+
+def solve(nums):
+    max_prod = float('-inf')
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            prod = nums[i] * nums[j]
+            if prod > max_prod:
+                max_prod = prod
+    return max_prod",5

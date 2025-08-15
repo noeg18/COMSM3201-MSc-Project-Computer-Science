@@ -1,0 +1,99 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    gap = len(lst)
+    shrink = 1.3
+    sorted = False
+    while not sorted:
+        gap = int(gap/shrink)
+        if gap < 1:
+            gap = 1
+            sorted = True
+        i = 0
+        while i+gap < len(lst):
+            if lst[i] > lst[i+gap]:
+                lst[i], lst[i+gap] = lst[i+gap], lst[i]
+                sorted = False
+            i += 1
+    return lst",1
+2,"
+
+def comb_sort(arr):
+    gap = len(arr)
+    shrink = 1.3
+    sorted = False
+    
+    while not sorted:
+        gap = int(gap / shrink)
+        if gap <= 1:
+            gap = 1
+            sorted = True
+        
+        i = 0
+        while i + gap < len(arr):
+            if arr[i] > arr[i + gap]:
+                arr[i], arr[i + gap] = arr[i + gap], arr[i]
+                sorted = False
+            i += 1
+    
+    return arr",2
+3,"
+
+def solve(arr):
+    gap = len(arr)
+    shrink = 1.3
+    swapped = True
+    
+    while gap > 1 or swapped:
+        gap = int(gap / shrink)
+        swapped = False
+        
+        for i in range(len(arr) - gap):
+            if arr[i] > arr[i + gap]:
+                arr[i], arr[i + gap] = arr[i + gap], arr[i]
+                swapped = True
+                
+    return arr",3
+4,"
+
+def solve(lst):
+    gap = len(lst)
+    shrink = 1.3
+    sorted = False
+
+    while not sorted:
+        gap = int(gap / shrink)
+        if gap < 1:
+            gap = 1
+            sorted = True
+        else:
+            sorted = False
+
+        i = 0
+        while i + gap < len(lst):
+            if lst[i] > lst[i + gap]:
+                lst[i], lst[i + gap] = lst[i + gap], lst[i]
+                sorted = False
+            i += 1
+    return lst",4
+5,"
+
+def solve(lst):
+    gap = len(lst)
+    shrink = 1.3
+    sorted = False
+    
+    while not sorted:
+        gap = int(gap / shrink)
+        if gap <= 1:
+            gap = 1
+            sorted = True
+        
+        i = 0
+        while i + gap < len(lst):
+            if lst[i] > lst[i + gap]:
+                lst[i], lst[i + gap] = lst[i + gap], lst[i]
+                sorted = False
+            i += 1
+    return lst",5

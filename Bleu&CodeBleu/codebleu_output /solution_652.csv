@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(matrix):
+    flattened = []
+    for i in range(len(matrix[0])):
+        column = []
+        for j in range(len(matrix)):
+            column.append(matrix[j][i])
+        flattened.append(tuple(column))
+    return flattened",1
+2,"
+
+def solve(matrix):
+    result = []
+    for col in range(len(matrix[0])):
+        temp = []
+        for row in range(len(matrix)):
+            temp.append(matrix[row][col])
+        result.append(tuple(temp))
+    return result",2
+3,"
+
+def solve(matrix):
+    flattened = []
+    for i in range(len(matrix[0])):
+        temp = []
+        for j in range(len(matrix)):
+            temp.append(matrix[j][i])
+        flattened.append(tuple(temp))
+    return flattened",3
+4,"
+
+def solve(mat):
+    return list(zip(*mat))",4
+5,"
+
+def solve(matrix):
+  result = []
+  for i in range(len(matrix[0])):
+    column = []
+    for j in range(len(matrix)):
+      column.append(matrix[j][i])
+    result.append(tuple(column))
+  return result",5

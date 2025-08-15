@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    numbers = re.findall(r'\d+', string)
+    return max(map(int, numbers))",1
+2,"
+
+import re
+def solve(string):
+    nums = re.findall(r'\d+', string)
+    nums = [int(num) for num in nums]
+    return max(nums)",2
+3,"
+
+import re
+
+def solve(string):
+    regex = r'\d+'
+    numbers = re.findall(regex, string)
+    numbers = [int(num) for num in numbers]
+    return max(numbers)",3
+4,"
+
+import re
+def solve(string):
+    numbers = re.findall(""[0-9]+"", string)
+    max_number = max(numbers, key=int)
+    return max_number",4
+5,"
+def solve(string):
+    import re
+    nums = re.findall(r""\d+"", string)
+    max_num = max(map(int, nums))
+    return max_num",5

@@ -1,0 +1,103 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    max_num = max(arr)
+    min_num = min(arr)
+    range_num = max_num - min_num + 1
+    count_arr = [0] * range_num
+    output_arr = [0] * len(arr)
+    
+    for i in range(len(arr)):
+        count_arr[arr[i] - min_num] += 1
+        
+    for i in range(1, len(count_arr)):
+        count_arr[i] += count_arr[i-1]
+        
+    for i in range(len(arr)):
+        output_arr[count_arr[arr[i] - min_num] - 1] = arr[i]
+        count_arr[arr[i] - min_num] -= 1
+        
+    for i in range(len(arr)):
+        arr[i] = output_arr[i]
+        
+    return arr",1
+2,"
+
+def solve(arr):
+    count = [0] * (max(arr) + 1)
+    result = [0] * len(arr)
+    
+    for num in arr:
+        count[num] += 1
+    
+    for i in range(1, len(count)):
+        count[i] += count[i-1]
+    
+    for num in arr:
+        result[count[num]-1] = num
+        count[num] -= 1
+    
+    return result",2
+3,"
+
+def solve(arr):
+    count = [0] * (max(arr) + 1)
+
+    for num in arr:
+        count[num] += 1
+
+    sorted_arr = []
+    for i in range(len(count)):
+        for j in range(count[i]):
+            sorted_arr.append(i)
+
+    return sorted_arr",3
+4,"
+
+def solve(arr):
+    max_element = max(arr)
+    min_element = min(arr)
+
+    # Create a count array to store the count of each element
+    count = [0] * (max_element - min_element + 1)
+
+    # Store the count of each element in the count array
+    for element in arr:
+        count[element - min_element] += 1
+
+    # Calculate the starting index of each element in the sorted array
+    for i in range(1, len(count)):
+        count[i] += count[i - 1]
+
+    # Create a output array to store the sorted array
+    output = [0] * len(arr)
+
+    # Place each element in the output array based on its count
+    for element in arr:
+        output[count[element - min_element] - 1] = element
+        count[element - min_element] -= 1
+
+    # Copy the sorted array to the original array
+    for i in range(len(arr)):
+        arr[i] = output[i]",4
+5,"
+
+def solve(arr): 
+    count = [0] * (max(arr) + 1) 
+    output = [0] * len(arr) 
+
+    for i in range(len(arr)): 
+        count[arr[i]] += 1
+
+    for i in range(1, len(count)): 
+        count[i] += count[i-1] 
+
+    for i in range(len(arr)-1, -1, -1): 
+        output[count[arr[i]]-1] = arr[i] 
+        count[arr[i]] -= 1
+
+    for i in range(len(arr)): 
+        arr[i] = output[i] 
+
+    return arr",5

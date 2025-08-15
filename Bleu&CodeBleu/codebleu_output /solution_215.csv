@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(encoded_list):
+    decoded_list = []
+    for i in range(0, len(encoded_list), 2):
+        decoded_list.extend([encoded_list[i+1]] * encoded_list[i])
+    return decoded_list",1
+2,"
+
+def solve(encoded_list):
+    decoded_list = []
+    for i in range(len(encoded_list)):
+        if i % 2 == 0:
+            for j in range(encoded_list[i]):
+                decoded_list.append(encoded_list[i+1])
+    return decoded_list",2
+3,"
+
+def solve(encoded_list):
+    decoded_list = []
+    for i in range(len(encoded_list)):
+        if i % 2 == 0:
+            decoded_list.extend([encoded_list[i+1]]*encoded_list[i])
+    return decoded_list
+
+# Example:
+# encoded_list = [4, ""a"", 2, ""b"", 3, ""c"", 1, ""d""]
+# decoded_list = solve(encoded_list)
+# print(decoded_list)
+# Output: [""a"", ""a"", ""a"", ""a"", ""b"", ""b"", ""c"", ""c"", ""c"", ""d""]",3
+4,"
+
+def solve(encoded_list):
+  decoded_list = []
+  for i in range(0, len(encoded_list), 2):
+    decoded_list.extend(encoded_list[i] * [encoded_list[i+1]])
+  return decoded_list",4
+5,"
+
+def solve(encoded_list):
+    decoded_list = []
+    for i in range(len(encoded_list)):
+        if i % 2 == 0:
+            decoded_list.extend([encoded_list[i+1]] * encoded_list[i])
+    return decoded_list",5

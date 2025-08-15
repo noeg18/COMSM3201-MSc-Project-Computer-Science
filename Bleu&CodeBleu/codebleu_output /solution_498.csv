@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b):
+    if a == 0:
+        return b
+    else:
+        return solve(b % a, a)",1
+2,"
+
+def solve(a, b):
+    while(a != b):
+        if(a > b):
+            a = a - b
+        else:
+            b = b - a
+    return a",2
+3,"
+
+def solve(num1, num2):
+    while(num2):
+        temp = num2
+        num2 = num1 % num2
+        num1 = temp
+    return num1",3
+4,"
+
+def solve(a, b):
+    if b == 0:
+        return a
+    else:
+        return solve(b, a % b)",4
+5,"
+
+def solve(num1, num2):
+    if num1 == 0:
+        return num2
+    else:
+        return solve(num2 % num1, num1)",5

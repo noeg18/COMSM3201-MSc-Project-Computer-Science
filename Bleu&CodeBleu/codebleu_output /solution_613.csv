@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(record_list):
+    max_value = None
+    for record in record_list:
+        if max_value == None or record[1] > max_value:
+            max_value = record[1]
+    return max_value",1
+2,"
+
+def solve(tuple_list):
+    max_value = 0
+    for record in tuple_list:
+        if record[1] > max_value:
+            max_value = record[1]
+    return max_value",2
+3,"
+
+def solve(record_list):
+    max_val = float('-inf')
+    for record in record_list:
+        if record[1] > max_val:
+            max_val = record[1]
+    return max_val",3
+4,"
+
+def solve(record_list):
+    max_value = float('-inf')
+    for record in record_list:
+        if record[1] > max_value:
+            max_value = record[1]
+    return max_value",4
+5,"
+
+def solve(tuple_list):
+    max_val = float('-inf')
+    for tup in tuple_list:
+        if tup[1] > max_val:
+            max_val = tup[1]
+    return max_val",5

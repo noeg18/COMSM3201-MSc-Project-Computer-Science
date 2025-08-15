@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    result = """"
+    for char in string:
+        result += char
+    return result",1
+2,"
+
+def solve(string):
+    total = 0
+    for char in string:
+        total += ord(char)
+    return chr(total)",2
+3,"
+
+def solve(string):
+    total = 0
+    for char in string:
+        total += ord(char)
+    return chr(total)",2
+4,"
+
+def solve(string):
+    sum = 0
+    for i in string:
+        sum += ord(i)
+    return chr(sum)",3
+5,"
+
+def solve(s):
+    total = 0
+    for char in s:
+        total += ord(char)
+    return chr(total)",4

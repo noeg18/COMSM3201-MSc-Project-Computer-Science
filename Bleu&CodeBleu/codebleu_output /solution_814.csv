@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(base, height):
+    return base * height",1
+2,"
+
+def solve(diagonal1, diagonal2):
+    return (diagonal1 * diagonal2) / 2",2
+3,"
+
+def solve(a, b):
+    return (a*b)/2",3
+4,"
+
+def solve(base, height):
+    return base * height",1
+5,"
+
+def solve(base, height):
+    area = base * height
+    return area",4

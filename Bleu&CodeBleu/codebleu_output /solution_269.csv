@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(char):
+    return ord(char)",1
+2,"
+
+def solve(char):
+    return ord(char)",1
+3,"
+
+def solve(char):
+    return ord(char)",1
+4,"
+
+def solve(char):
+    return ord(char)
+
+# Test Cases
+print(solve('A')) # 65
+print(solve('a')) # 97
+print(solve('1')) # 49",2
+5,"
+
+def solve(char):
+    return ord(char)",1

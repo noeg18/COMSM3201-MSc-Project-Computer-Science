@@ -1,0 +1,64 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    return [s[i:j] for i, j in zip([0] + filter(str.islower, range(len(s))), filter(str.islower, range(len(s))) + [len(s)])]",1
+2,"
+def solve(s):
+    split_string = []
+    current_word = """"
+
+    for char in s:
+        if char.islower():
+            if current_word != """":
+                split_string.append(current_word)
+            current_word = char
+        else:
+            current_word += char
+
+    if current_word != """":
+        split_string.append(current_word)
+
+    return split_string",2
+3,"
+
+def solve(string):
+    result = []
+    current = """"
+    for char in string:
+        if char.islower():
+            if current:
+                result.append(current)
+            current = char
+        else:
+            current += char
+    if current:
+        result.append(current)
+    return result",3
+4,"
+
+def solve(s):
+    result = []
+    temp = """"
+    for char in s:
+        if char.islower():
+            result.append(temp)
+            temp = char
+        else:
+            temp += char
+    result.append(temp)
+    return result",4
+5,"
+
+def solve(string):
+    split_string = []
+    current_word = """"
+    for char in string:
+        if char.islower():
+            if current_word:
+                split_string.append(current_word)
+            current_word = char
+        else:
+            current_word += char
+    split_string.append(current_word)
+    return split_string",5

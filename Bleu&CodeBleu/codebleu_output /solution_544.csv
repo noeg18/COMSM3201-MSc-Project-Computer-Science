@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple_list):
+    flatten = [item for sublist in tuple_list for item in sublist]
+    return ''.join(flatten)",1
+2,"
+
+def solve(tup):
+    result = """"
+    for i in tup:
+        if type(i) == tuple:
+            result += solve(i)
+        else:
+            result += str(i) + "" ""
+    return result
+
+# Example
+tup = (1, 2, (3, 4), (5, (6, 7)))
+print(solve(tup))
+# Output: 1 2 3 4 5 6 7",2
+3,"
+
+def solve(tuple_list):
+    flat_list = []
+    for tup in tuple_list:
+        flat_list.extend(tup)
+    return ''.join(flat_list)",3
+4,"
+
+def solve(tuple_list):
+    flatten_tuple = []
+    for tup in tuple_list:
+        for item in tup:
+            flatten_tuple.append(item)
+    return ''.join(flatten_tuple)",4
+5,"
+
+def solve(tuple_list):
+    flat_string = """"
+    for tuple in tuple_list:
+        for element in tuple:
+            flat_string += str(element)
+    return flat_string",5

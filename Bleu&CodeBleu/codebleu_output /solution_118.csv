@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+```
+def solve(string):
+    return list(string)
+    
+# Example input
+print(solve(""Hello World""))
+# Output: ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']",1
+2,"
+
+def solve(string):
+    lst = []
+    for char in string:
+        lst.append(char)
+    return lst",2
+3,"
+
+def solve(string):
+    return list(string)",3
+4,"
+
+def solve(string):
+    return list(string)",3
+5,"
+
+def solve(string):
+    return list(string)",3

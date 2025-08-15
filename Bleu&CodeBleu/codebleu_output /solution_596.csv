@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    return len(tup)",1
+2,"
+
+def solve(tuple):
+    return len(tuple)",2
+3,"
+
+def solve(tuple):
+    return len(tuple)",2
+4,"
+
+def solve(tup):
+    return len(tup)",1
+5,"
+
+def solve(tup):
+    return len(tup)",1

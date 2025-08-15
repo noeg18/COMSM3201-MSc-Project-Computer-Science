@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    parity = 0
+    while num > 0:
+        parity ^= num & 1
+        num >>= 1
+    return parity == 1",1
+2,"
+
+def solve(n):
+    count = 0
+    while n:
+        count += n & 1
+        n >>= 1
+    return count % 2 == 1",2
+3,"
+
+def solve(num):
+    count = 0
+    while num:
+        count += num & 1
+        num = num >> 1
+    return count % 2 == 1",3
+4,"
+
+def solve(num):
+    count = 0
+    while num > 0:
+        if num % 2 == 1:
+            count += 1
+        num //= 2
+    if count % 2 == 1:
+        return True
+    else:
+        return False ",4
+5,"
+
+def solve(n):
+    parity = 0
+    while n:
+        parity = 1 - parity
+        n = n & (n - 1)
+    return parity",5

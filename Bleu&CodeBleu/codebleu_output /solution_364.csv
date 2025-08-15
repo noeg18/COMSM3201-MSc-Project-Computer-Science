@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(binary_string):
+    flips = 0
+    for i in range(len(binary_string) - 1):
+        if binary_string[i] == binary_string[i+1]:
+            flips += 1
+    return flips",1
+2,"
+
+def solve(binary_str):
+    flips = 0
+    for i in range(len(binary_str)):
+        if i % 2 == 0 and binary_str[i] == ""0"":
+            flips += 1
+        elif i % 2 == 1 and binary_str[i] == ""1"":
+            flips += 1
+    return flips",2
+3,"
+
+def solve(binary_string):
+    flips = 0
+    for i in range(1, len(binary_string)):
+        if binary_string[i] == binary_string[i-1]:
+            flips += 1
+    return flips",3
+4,"
+
+def solve(s):
+    count = 0
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            count += 1
+    return count",4
+5,"
+
+def solve(s):
+    flips = 0
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            flips += 1
+    return flips",5

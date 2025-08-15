@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    return re.sub(r""\s+"", """", string)",1
+2,"
+
+import re
+
+def solve(string):
+    return re.sub(r'\s+', '', string)",2
+3,"
+
+def solve(string):
+    return re.sub(r""\s+"", """", string)",3
+4,"
+
+def solve(string):
+  return re.sub(r'\s+', '', string)",4
+5,"
+
+import re
+
+def solve(string):
+    return re.sub(r""\s+"", """", string)
+",1

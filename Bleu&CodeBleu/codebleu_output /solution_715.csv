@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    tuple_list = []
+    for num in string.split():
+        tuple_list.append(int(num))
+    return tuple(tuple_list)",1
+2,"
+
+def solve(string):
+    return tuple(map(int, string.split()))",2
+3,"
+
+def solve(string):
+    nums = tuple(map(int, string.split()))
+    return nums",3
+4,"
+
+def solve(string):
+    nums = tuple(int(num) for num in string.split())
+    return nums",4
+5,"
+
+def solve(string):
+    return tuple(int(num) for num in string.split())",5

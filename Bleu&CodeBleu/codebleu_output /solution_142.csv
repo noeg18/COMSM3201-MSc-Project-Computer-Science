@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2, list3):
+    count = 0
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            if list1[i] == list2[j]:
+                for k in range(len(list3)):
+                    if list1[i] == list3[k]:
+                        count += 1
+    return count",1
+2,"
+
+def solve(list1, list2, list3):
+    count = 0
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            for k in range(len(list3)):
+                if list1[i] == list2[j] and list2[j] == list3[k]:
+                    count += 1
+    return count",2
+3,"
+
+def solve(list1, list2, list3):
+    count = 0
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            for k in range(len(list3)):
+                if list1[i] == list2[j] == list3[k]:
+                    count += 1
+    return count",3
+4,"
+
+def solve(list1, list2, list3):
+    count = 0
+    for i in list1:
+        for j in list2:
+            if i == j:
+                for k in list3:
+                    if i == k:
+                        count += 1
+    return count",4
+5,"
+
+def solve(list1, list2, list3):
+    count = 0
+    for i in range(len(list1)):
+        pair = (list1[i], list2[i], list3[i])
+        if pair[0] == pair[1] and pair[1] == pair[2]:
+            count += 1
+    return count",5

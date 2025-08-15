@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(url):
+    pattern = ""(\d{4})/(\d{2})/(\d{2})""
+    match = re.search(pattern, url)
+    year = match.group(1)
+    month = match.group(2)
+    date = match.group(3)
+    return year, month, date",1
+2,"
+
+import re
+
+def solve(url):
+  regex = r'/(\d{4})/(\d{2})/(\d{2})/'
+  match = re.search(regex, url)
+  return match.group(1), match.group(2), match.group(3)",2
+3,"
+
+import re
+
+def solve(url):
+    pattern = r'\d{4}/\d{2}/\d{2}'
+    match = re.search(pattern, url)
+    if match:
+        date = match.group()
+        year = date[:4]
+        month = date[5:7]
+        day = date[8:]
+        return year, month, day
+    else:
+        return ""Invalid URL""",3
+4,"
+
+import re
+
+def solve(url):
+    pattern = r'(\d{4})\/(\d{2})\/(\d{2})'
+    match = re.search(pattern, url)
+    year = match.group(1)
+    month = match.group(2)
+    date = match.group(3)
+    return year, month, date",1
+5,"
+
+import re
+
+def solve(url):
+    match = re.search(r'\d{4}\/\d{2}\/\d{2}', url)
+    if match:
+        date_str = match.group()
+        year = date_str[:4]
+        month = date_str[5:7]
+        day = date_str[8:]
+        return year, month, day
+    else:
+        return None",4

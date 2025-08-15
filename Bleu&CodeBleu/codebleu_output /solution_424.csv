@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(input_tuple):
+    rear_index_elements = []
+    for string in input_tuple:
+        rear_index_elements.append(string[-1])
+    return rear_index_elements",1
+2,"
+
+def solve(input_tuple):
+    result = []
+    for string in input_tuple:
+        result.append(string[-1])
+    return result",2
+3,"
+
+def solve(tup):
+    result = []
+    for string in tup:
+        result.append(string[-1])
+    return tuple(result)",3
+4,"
+
+def solve(tup):
+    result = []
+    for string in tup:
+        result.append(string[-1])
+    return tuple(result)",3
+5,"
+
+def solve(tup):
+    result = []
+    for string in tup:
+        result.append(string[-1])
+    return result",4

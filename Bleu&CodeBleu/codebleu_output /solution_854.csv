@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    import heapq
+    heap = []
+    for num in lst:
+        heapq.heappush(heap, num)
+    return heap",1
+2,"
+
+def solve(lst):
+    import heapq
+    heapq.heapify(lst)
+    return lst",2
+3,"
+
+def solve(arr):
+    import heapq
+    heapq.heapify(arr)
+    return arr",3
+4,"
+
+def solve(lst):
+    import heapq
+    heapq.heapify(lst)
+    return lst",2
+5,"
+
+def solve(lst):
+  import heapq
+  heapq.heapify(lst)
+  return lst",2

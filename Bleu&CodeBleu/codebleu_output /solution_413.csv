@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_tuples, n):
+    result = []
+    for tup in list_of_tuples:
+        result.append(tup[n])
+    return result",1
+2,"
+
+
+def solve(lst, n):
+    return [tup[n-1] for tup in lst]",2
+3,"
+
+def solve(list_of_tuples, n):
+    result = []
+    for tuple in list_of_tuples:
+        result.append(tuple[n])
+    return result",3
+4,"
+
+def solve(lst, n):
+    return [t[n] for t in lst]",4
+5,"
+
+def solve(lst, n):
+    return [item[n] for item in lst]",5

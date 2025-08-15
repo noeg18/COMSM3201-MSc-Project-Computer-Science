@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    min_index = 0
+    for i in range(1, len(tuples)):
+        if tuples[i][1] < tuples[min_index][1]:
+            min_index = i
+    return tuples[min_index]",1
+2,"
+
+def solve(tuples):
+    min_val = tuples[0][0]
+    min_index = 0
+    for i in range(len(tuples)):
+        if tuples[i][0] < min_val:
+            min_val = tuples[i][0]
+            min_index = i
+    return tuples[min_index]",2
+3,"
+
+def solve(tuples):
+    min_index = 0
+    min_value = tuples[0][0]
+    for i in range(len(tuples)):
+        if tuples[i][0] < min_value:
+            min_value = tuples[i][0]
+            min_index = i
+    return tuples[min_index]",3
+4,"
+
+def solve(tuples):
+    min_val = tuples[0][1]
+    min_idx = 0
+    for i in range(1, len(tuples)):
+        if tuples[i][1] < min_val:
+            min_val = tuples[i][1]
+            min_idx = i
+    return tuples[min_idx]",4
+5,"
+
+def solve(tuples):
+    min_val = tuples[0][0]
+    min_idx = 0
+    for i in range(len(tuples)):
+        if tuples[i][0] < min_val:
+            min_val = tuples[i][0]
+            min_idx = i
+    return tuples[min_idx]",5

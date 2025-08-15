@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, n):
+    prod = 1
+    for num in arr:
+        prod = (prod * num) % n
+    return prod",1
+2,"
+
+def solve(arr, n):
+    prod = 1
+    for num in arr:
+        prod *= num
+    return prod % n",2
+3,"
+
+def solve(arr, n):
+    result = 1
+    for num in arr:
+        result = (result * num) % n
+    return result",3
+4,"
+
+def solve(arr, n):
+    result = 1
+    for num in arr:
+        result *= num
+    return result % n",4
+5,"
+
+def solve(arr, n):
+    product = 1
+    for num in arr:
+        product *= num
+    remainder = product % n
+    return remainder",5

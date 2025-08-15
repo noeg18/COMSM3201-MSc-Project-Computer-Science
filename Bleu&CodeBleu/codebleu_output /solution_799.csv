@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(n, d):
+    return (n << d) | (n >> (32 - d))",1
+2,"
+
+def solve(n, d):
+    bin_n = bin(n)[2:]
+    new_bin = bin_n[d:] + bin_n[:d]
+    return int(new_bin, 2)",2
+3,"
+
+def solve(num, rotations):
+    # convert number to binary string
+    binary = bin(num)[2:]
+
+    # left rotate the binary string by the given number of rotations
+    rotated_binary = binary[rotations:] + binary[:rotations]
+
+    # convert back to integer
+    result = int(rotated_binary, 2)
+
+    return result",3
+4,"
+
+def solve(num, rotate):
+    return ((num << rotate) | (num >> (32 - rotate))) & 0xFFFFFFFF",4
+5,"
+
+def solve(n, d):
+    return (n << d) | (n >> (32 - d))",1

@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(a):
+    return (a-1)**2",1
+2,"
+
+def solve(x1, y1, x2, y2):
+    count = 0
+    for x in range(x1+1, x2):
+        for y in range(y1+1, y2):
+            if x.is_integer() and y.is_integer():
+                count += 1
+    return count",2
+3,"
+
+def solve(side_length):
+    count = 0
+    for x in range(side_length):
+        for y in range(side_length):
+            if x % 1 == 0 and y % 1 == 0:
+                count += 1
+    return count",3
+4,"
+
+def solve(x1, y1, x2, y2):
+    count = 0
+    for i in range(x1+1, x2):
+        for j in range(y1+1, y2):
+            if i.is_integer() and j.is_integer():
+                count += 1
+    return count",4
+5,"
+
+def solve(x1, y1, x2, y2):
+    count = 0
+    for x in range(x1+1, x2):
+        for y in range(y1+1, y2):
+            count += 1
+    return count",5

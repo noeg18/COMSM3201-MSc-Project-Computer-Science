@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if not char.islower():
+            new_string += char
+    return new_string",1
+2,"
+
+def solve(string):
+    upper = """"
+    for char in string:
+        if char.isupper():
+            upper += char
+    return upper",2
+3,"
+
+def solve(string):
+    result = """"
+    for char in string:
+        if char.isupper():
+            result += char
+    return result",3
+4,"
+
+def solve(string):
+    result = ''
+    for char in string:
+        if char.islower():
+            continue
+        else:
+            result += char
+    return result",4
+5,"
+
+def solve(string):
+    result = ''
+    for char in string:
+        if not char.islower():
+            result += char
+    return result",5

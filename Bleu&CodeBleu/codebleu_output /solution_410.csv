@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(list):
+    min_val = float('inf')
+    for element in list:
+        if type(element) == int or type(element) == float:
+            if element < min_val:
+                min_val = element
+    return min_val",1
+2,"
+
+def solve(lst):
+    min_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] < min_val:
+            min_val = lst[i]
+    return min_val",2
+3,"
+
+def solve(lst):
+    min_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] < min_val:
+            min_val = lst[i]
+    return min_val",2
+4,"
+
+def solve(lst):
+    min_value = lst[0]
+    for item in lst:
+        if type(item) == int or type(item) == float:
+            if item < min_value:
+                min_value = item
+    return min_value",3
+5,"
+
+def solve(lst):
+    min_val = lst[0]
+    for i in range(len(lst)):
+        if lst[i] < min_val:
+            min_val = lst[i]
+    return min_val",4

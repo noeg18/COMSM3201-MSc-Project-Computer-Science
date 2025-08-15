@@ -1,0 +1,50 @@
+response_num,response,cluster
+1,"
+
+def solve(base, power):
+    result = 0
+    num = base ** power
+    while num > 0:
+        digit = num % 10
+        result += digit
+        num //= 10
+    return result",1
+2,"
+
+def solve(base, power):
+    sum = 0
+    num = base ** power
+    while num > 0:
+        digit = num % 10
+        sum += digit
+        num //= 10
+    return sum",2
+3,"
+
+def solve(base, power):
+    result = 0
+    num = base ** power
+    while num > 0:
+        digit = num % 10
+        result += digit
+        num = num // 10
+    return result",3
+4,"
+
+def solve(base, power):
+    sum = 0
+    result = base ** power
+    while result > 0:
+        sum += result % 10
+        result //= 10
+    return sum",4
+5,"
+
+def solve(base, power):
+    result = 0
+    num = base ** power
+    while num > 0:
+        digit = num % 10
+        result += digit
+        num = num // 10
+    return result",3

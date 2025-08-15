@@ -1,0 +1,77 @@
+response_num,response,cluster
+1,"
+
+def solve(start1, end1, start2, end2):
+    if end1 < start2 or end2 < start1:
+        return (start1, end1, start2, end2)
+    else:
+        return (start1, start2, end2 + 1, end1)",1
+2,"
+
+def solve(r1, r2):
+    
+    # sort the ranges in ascending order
+    r1.sort()
+    r2.sort()
+    
+    # initialize a list to store the chosen points
+    chosen_points = []
+    
+    # loop through the first range
+    for i in range(len(r1)):
+        
+        # check if the current point in the first range is within the second range
+        if r1[i] >= r2[0] and r1[i] <= r2[-1]:
+            
+            # if yes, move on to the next point in the first range
+            continue
+        
+        # if not, add the current point to the chosen points list
+        chosen_points.append(r1[i])
+    
+    # loop through the second range
+    for i in range(len(r2)):
+        
+        # check if the current point in the second range is within the first range
+        if r2[i] >= r1[0] and r2[i] <= r1[-1]:
+            
+            # if yes, move on to the next point in the second range
+            continue
+        
+        # if not, add the current point to the chosen points list
+        chosen_points.append(r2[i])
+    
+    # return the chosen points list
+    return chosen_points",2
+3,"
+
+def solve(range1, range2):
+    points = []
+    for i in range1:
+        if i not in range2:
+            points.append(i)
+    for j in range2:
+        if j not in range1:
+            points.append(j)
+
+    return points",3
+4,"
+
+def solve(range1, range2):
+    points = []
+    for i in range1:
+        for j in range2:
+            if i not in range(j[0], j[1]+1) and j not in range(i[0], i[1]+1):
+                points.append(i)
+                points.append(j)
+    return points",4
+5,"
+
+def solve(range1, range2):
+    points = []
+    for i in range1:
+        for j in range2:
+            if i not in range(j[0], j[1]+1) and j not in range(i[0], i[1]+1):
+                points.append(i)
+                points.append(j)
+    return points",4

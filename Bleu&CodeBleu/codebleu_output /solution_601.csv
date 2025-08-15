@@ -1,0 +1,85 @@
+response_num,response,cluster
+1,"
+
+def solve(pairs):
+    pairs.sort(key=lambda x: x[0])
+    dp = [1] * len(pairs)
+    for i in range(1, len(pairs)):
+        for j in range(i):
+            if pairs[j][1] < pairs[i][0]:
+                dp[i] = max(dp[i], dp[j] + 1)
+    return max(dp)",1
+2,"
+
+def solve(pairs):
+    chain = []
+    for pair in pairs:
+        if not chain:
+            chain.append(pair)
+        else:
+            for i in range(len(chain)):
+                if pair[0] > chain[i][-1]:
+                    if i == len(chain) - 1:
+                        chain.append(chain[i] + pair)
+                        break
+                    else:
+                        continue
+                else:
+                    chain[i] += pair
+                    break
+    return chain[-1]",2
+3,"
+
+def solve(pairs):
+    graph = {}
+    for pair in pairs:
+        if pair[0] not in graph:
+            graph[pair[0]] = []
+        graph[pair[0]].append(pair[1])
+    
+    def dfs(node, path):
+        if node not in graph:
+            return path
+        else:
+            max_path = path
+            for neighbor in graph[node]:
+                max_path = max(max_path, dfs(neighbor, path+1))
+            return max_path
+    
+    max_path = 0
+    for pair in pairs:
+        max_path = max(max_path, dfs(pair[0], 1))
+    
+    return max_path",3
+4,"
+
+def solve(pairs):
+    pairs.sort(key = lambda x: x[0])
+    longest_chain = []
+    for i in range(len(pairs)):
+        chain = [pairs[i]]
+        current_end = pairs[i][1]
+        for j in range(i+1, len(pairs)):
+            if pairs[j][0] > current_end:
+                chain.append(pairs[j])
+                current_end = pairs[j][1]
+        if len(chain) > len(longest_chain):
+            longest_chain = chain
+    return longest_chain",4
+5,"
+
+def solve(pairs):
+    chain = []
+    for i in range(len(pairs)):
+        curr = pairs[i]
+        temp_chain = [curr]
+        prev = curr
+        for j in range(len(pairs)):
+            if j != i:
+                next = pairs[j]
+                if prev[1] == next[0]:
+                    temp_chain.append(next)
+                    prev = next
+        if len(temp_chain) > len(chain):
+            chain = temp_chain
+    return chain",5

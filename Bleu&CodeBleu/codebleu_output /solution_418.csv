@@ -1,0 +1,64 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    max_length = 0
+    max_sublist = []
+
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            if len(lst[i:j]) > max_length:
+                max_length = len(lst[i:j])
+                max_sublist = lst[i:j]
+
+    return max_sublist",1
+2,"
+
+def solve(lst):
+    max_len = 0
+    max_sublist = []
+    
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublist = lst[i:j]
+            if len(sublist) > max_len:
+                max_len = len(sublist)
+                max_sublist = sublist
+    
+    return max_sublist",2
+3,"
+
+def solve(lst):
+    max_len = 0
+    max_sublist = []
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublist = lst[i:j]
+            if len(sublist) > max_len:
+                max_len = len(sublist)
+                max_sublist = sublist
+    return max_sublist",2
+4,"
+
+def solve(lst):
+    max_sublist = []
+    max_length = 0
+    
+    for sublist in lst:
+        if len(sublist) > max_length:
+            max_sublist = sublist
+            max_length = len(sublist)
+            
+    return max_sublist",3
+5,"
+
+def solve(lst):
+    max_len = 0
+    max_sublist = []
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)+1):
+            sublist = lst[i:j]
+            if len(sublist) > max_len:
+                max_len = len(sublist)
+                max_sublist = sublist
+    return max_sublist",2

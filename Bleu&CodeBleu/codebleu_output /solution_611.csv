@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, n):
+    max_val = lst[0][n-1]
+    for tup in lst:
+        if tup[n-1] > max_val:
+            max_val = tup[n-1]
+    return max_val",1
+2,"
+
+def solve(tuples, n):
+    max_value = tuples[0][n]
+    for i in range(1, len(tuples)):
+        if tuples[i][n] > max_value:
+            max_value = tuples[i][n]
+    return max_value",2
+3,"
+
+def solve(tuple_list, n):
+    max_value = float('-inf')
+    for row in tuple_list:
+        if row[n] > max_value:
+            max_value = row[n]
+    return max_value",3
+4,"
+
+def solve(n, tuple_list):
+    max_val = tuple_list[0][n]
+    for tup in tuple_list:
+        if tup[n] > max_val:
+            max_val = tup[n]
+    return max_val",4
+5,"
+
+def solve(tuple_list, n):
+    max_val = float('-inf')
+    for t in tuple_list:
+        if t[n] > max_val:
+            max_val = t[n]
+    return max_val",5

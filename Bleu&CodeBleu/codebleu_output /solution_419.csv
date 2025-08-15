@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(numbers):
+    total = 0
+    for num in numbers:
+        total += round(num)
+    return total * len(numbers)",1
+2,"
+
+def solve(numbers):
+    total = 0
+    for num in numbers:
+        total += round(num)
+    return total * len(numbers)",1
+3,"
+
+def solve(numbers):
+    total = 0
+    for num in numbers:
+        total += round(num)
+    return total * len(numbers)",1
+4,"
+
+def solve(lst):
+    total = 0
+    for num in lst:
+        total += round(num)
+    return total * len(lst)",2
+5,"
+
+def solve(numbers):
+    total = 0
+    for num in numbers:
+        total += round(num)
+    return total * len(numbers)",1

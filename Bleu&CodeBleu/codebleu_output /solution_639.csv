@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(names):
+    total = 0
+    for name in names:
+        if name[0].isupper():
+            total += len(name)
+    return total",1
+2,"
+
+def solve(names):
+    total_length = 0
+    for name in names:
+        if name[0].isupper():
+            total_length += len(name)
+    return total_length",2
+3,"
+
+def solve(names):
+    total_length = 0
+    for name in names:
+        if name[0].isupper():
+            total_length += len(name)
+    return total_length",2
+4,"
+
+def solve(names):
+    total_length = 0
+    for name in names:
+        if name[0].isupper():
+            total_length += len(name)
+    return total_length",2
+5,"
+
+def solve(names):
+    total_length = 0
+    for name in names:
+        if name[0].isupper():
+            total_length += len(name)
+    return total_length",2

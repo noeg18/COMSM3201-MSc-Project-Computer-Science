@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+def solve(length, width):
+    if length == 0 or width == 0:
+        return 0
+    else:
+        return length * width + solve(length - 1, width) + solve(length, width - 1) - solve(length - 1, width - 1)",1
+2,"
+
+def solve(length, width):
+    count = 0
+    for i in range(1, min(length, width) + 1):
+        count += (length - i + 1) * (width - i + 1)
+    return count",2
+3,"
+
+def solve(length, width):
+    return (length * width) + (length-1) * (width-1)",3
+4,"
+
+def solve(length, width):
+    return (length * (length + 1) * (2 * length + 1) * width * (width + 1) * (2 * width + 1)) // 12",4
+5,"
+
+def solve(length, width):
+    squares = 0
+    for i in range(1, min(length, width) + 1):
+        squares += (length - i + 1) * (width - i + 1)
+    return squares",5

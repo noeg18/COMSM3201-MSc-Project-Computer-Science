@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(t1, t2):
+    union = t1 + t2
+    return tuple(set(union))",1
+2,"
+
+def solve(tup1, tup2):
+    union = set(tup1).union(set(tup2))
+    return tuple(union)",2
+3,"
+
+def solve(tuples):
+    union = set()
+    for tuple in tuples:
+        union = union.union(set(tuple))
+    return union",3
+4,"
+
+def solve(tup1, tup2):
+    return tuple(set(tup1).union(set(tup2)))",4
+5,"
+
+def solve(tuples):
+    union = []
+    for t in tuples:
+        for num in t:
+            if num not in union:
+                union.append(num)
+    return union",5

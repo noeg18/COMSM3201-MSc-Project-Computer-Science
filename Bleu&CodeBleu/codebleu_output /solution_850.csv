@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(angle1, angle2, angle3):
+    if angle1 + angle2 + angle3 == 180 and angle1 > 0 and angle2 > 0 and angle3 > 0:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(angle1, angle2, angle3):
+    if angle1 + angle2 + angle3 == 180 and angle1 > 0 and angle2 > 0 and angle3 > 0:
+        return True
+    else:
+        return False",1
+3,"
+
+def solve(angle1, angle2, angle3):
+    if angle1 + angle2 + angle3 != 180:
+        return False
+    elif angle1 <= 0 or angle2 <= 0 or angle3 <= 0:
+        return False
+    else:
+        return True",2
+4,"
+
+def solve(angle1, angle2, angle3):
+    if angle1 + angle2 + angle3 != 180:
+        return False
+    elif angle1 <= 0 or angle2 <= 0 or angle3 <= 0:
+        return False
+    else:
+        return True",2
+5,"
+
+def solve(angle1, angle2, angle3):
+    if angle1 + angle2 + angle3 == 180 and angle1 > 0 and angle2 > 0 and angle3 > 0:
+        return True
+    else:
+        return False",1

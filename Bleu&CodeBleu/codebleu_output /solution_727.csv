@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+import re
+def solve(string):
+    return re.sub(""[^a-zA-Z0-9]"", """", string)",1
+2,"
+
+import re
+
+def solve(string):
+    return re.sub(r'[^a-zA-Z0-9]', '', string)",2
+3,"
+
+import re
+
+def solve(s):
+    return re.sub('[^a-zA-Z0-9]', '', s)",3
+4,"
+
+import re
+
+def solve(string):
+    pattern = r'[^a-zA-Z0-9]'
+    return re.sub(pattern, '', string)",4
+5,"
+def solve(string):
+    return re.sub(r'[^a-zA-Z0-9]', '', string)",5

@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(l, r):
+    for x in range(l, r+1):
+        for y in range(x+1, r+1):
+            lcm = (x*y)//gcd(x,y)
+            if lcm >= l and lcm <= r:
+                return x, y",1
+2,"
+
+def solve(start, end):
+    for i in range(start, end+1):
+        for j in range(i+1, end+1):
+            if i*j % lcm(i,j) == 0:
+                return i, j
+    return ""No such numbers exist in the given range.""",2
+3,"
+
+def solve(start, end):
+    for i in range(start, end+1):
+        for j in range(i+1, end+1):
+            if i % j == 0 or j % i == 0:
+                return i, j
+    return None",3
+4,"
+
+def solve(start, end):
+    for i in range(start, end+1):
+        for j in range(i+1, end+1):
+            if i*j % max(i,j) == 0:
+                return i, j
+    return None",4
+5,"
+
+def solve(start, end):
+    for i in range(start, end + 1):
+        for j in range(i + 1, end + 1):
+            lcm = (i * j) // gcd(i, j)
+            if lcm >= start and lcm <= end:
+                return i, j
+    return ""No distinct numbers found within the given range.""",5

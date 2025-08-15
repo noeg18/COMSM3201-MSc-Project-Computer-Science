@@ -1,0 +1,80 @@
+response_num,response,cluster
+1,"
+
+import heapq
+
+def solve(n, primes):
+    uglies = [1]
+    heap = [(1, 0)]
+    for _ in range(n):
+        next_ugly, idx = heapq.heappop(heap)
+        for i in range(idx, len(primes)):
+            new_ugly = next_ugly * primes[i]
+            if new_ugly not in uglies:
+                heapq.heappush(heap, (new_ugly, i))
+                uglies.append(new_ugly)
+    return uglies[-1]",1
+2,"
+
+import heapq
+
+def solve(n, primes):
+    heap = [1]
+    heapq.heapify(heap)
+    visited = set()
+    
+    for i in range(n):
+        ugly = heapq.heappop(heap)
+        for p in primes:
+            if ugly*p not in visited:
+                visited.add(ugly*p)
+                heapq.heappush(heap, ugly*p)
+    return ugly",2
+3,"
+
+import heapq
+
+def solve(n, primes):
+    heap = [1]
+    count = 0
+    while count < n:
+        num = heapq.heappop(heap)
+        for prime in primes:
+            heapq.heappush(heap, prime * num)
+        
+        count += 1
+        
+    return num",3
+4,"
+
+import heapq
+
+def solve(n, primes):
+    
+    heap = [1]
+    heapq.heapify(heap)
+    
+    for i in range(n):
+        ugly_num = heapq.heappop(heap)
+        
+        for prime in primes:
+            heapq.heappush(heap, ugly_num * prime)
+            
+            if ugly_num % prime == 0:
+                break
+                
+    return ugly_num",4
+5,"
+
+import heapq
+
+def solve(n, primes):
+    heap = [1]
+    heapq.heapify(heap)
+    count = 0
+    while count < n:
+        curr = heapq.heappop(heap)
+        for p in primes:
+            heapq.heappush(heap, p * curr)
+        count += 1
+    return curr",5

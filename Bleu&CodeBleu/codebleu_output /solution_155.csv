@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    mask = 0b0101010101010101
+    return n ^ mask",1
+2,"
+
+def solve(num):
+    result = 0
+    pos = 0
+    while(num>0):
+        if(num & 1):
+            result ^= (1<<pos)
+        num = num >>1
+        pos += 2
+    return result",2
+3,"
+
+def solve(num):
+  mask = 0b10101010101010101010101010101010 #create mask with all even bits set to 1
+  return num ^ mask #use bitwise XOR to toggle all even bits",3
+4,"
+
+def solve(num):
+    result = 0
+    i = 0
+    while num:
+        bit = num & 1
+        if bit == 0 and i % 2 == 1:
+            bit = 1
+        elif bit == 1 and i % 2 == 0:
+            bit = 0
+        result |= bit << i
+        i += 1
+        num >>= 1
+    return result",4
+5,"
+
+def solve(n):
+    mask = 0xAAAAAAAA
+    return (n ^ mask)",5

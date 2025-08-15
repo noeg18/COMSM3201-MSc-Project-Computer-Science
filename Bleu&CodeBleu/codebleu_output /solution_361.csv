@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return [x for x in lst if x]",1
+2,"
+
+def solve(list_of_lists):
+    return [lst for lst in list_of_lists if lst]",2
+3,"
+
+def solve(list_of_lists):
+    return [x for x in list_of_lists if x]",3
+4,"
+
+def solve(lst):
+    return [sublst for sublst in lst if sublst]",4
+5,"
+
+def solve(list_of_lists):
+    return [lst for lst in list_of_lists if lst != []]",5

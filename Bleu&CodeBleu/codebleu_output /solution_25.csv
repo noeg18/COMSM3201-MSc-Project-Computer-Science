@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    product = 1
+    for num in arr:
+        if arr.count(num) == 1:
+            product *= num
+    return product",1
+2,"
+
+def solve(arr):
+    result = 1
+    for i in range(len(arr)):
+        if arr.count(arr[i]) == 1:
+            result *= arr[i]
+    return result",2
+3,"
+
+def solve(arr):
+    product = 1
+    for i in range(len(arr)):
+        if arr.count(arr[i]) == 1:
+            product *= arr[i]
+    return product",3
+4,"
+
+def solve(arr):
+    product = 1
+    non_repeated = set()
+    for num in arr:
+        if num not in non_repeated:
+            product *= num
+            non_repeated.add(num)
+    return product",4
+5,"
+
+def solve(arr):
+  prod = 1
+  for i in range(len(arr)):
+    if arr.count(arr[i]) == 1:
+      prod = prod * arr[i]
+  return prod",5

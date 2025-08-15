@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(string, lst):
+    anagrams = list(filter(lambda x: sorted(x) == sorted(string), lst))
+    return anagrams",1
+2,"
+
+def solve(string, string_list):
+    return list(filter(lambda x: sorted(string) == sorted(x), string_list))",2
+3,"
+
+def solve(string, string_list):
+    return [word for word in string_list if sorted(string) == sorted(word)]",3
+4,"
+
+def solve(string, string_list):
+    return list(filter(lambda x: sorted(string) == sorted(x), string_list))",2
+5,"
+
+def solve(string, strings):
+    return list(filter(lambda x: sorted(x) == sorted(string) and x != string, strings))",4

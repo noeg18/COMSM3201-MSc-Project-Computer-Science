@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(word, string):
+    if string.startswith(word):
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(word, string):
+    if string[:len(word)] == word:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(word, string):
+    if string.startswith(word):
+        return True
+    else:
+        return False",1
+4,"
+
+def solve(word, string):
+    return string.startswith(word)",3
+5,"
+
+def solve(word, string):
+    if string.startswith(word):
+        return True
+    else:
+        return False",1

@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(data):
+    mean = sum(data)/len(data)
+    sum_sq_diff = 0
+    for i in range(len(data)):
+        sum_sq_diff += (data[i] - mean)**2
+    variance = sum_sq_diff/len(data)
+    std_dev = variance**0.5
+    return std_dev",1
+2,"
+
+def solve(values):
+    mean = sum(values) / len(values)
+    squared_diffs = [(x-mean)**2 for x in values]
+    variance = sum(squared_diffs) / len(values)
+    std_dev = variance ** 0.5
+    return std_dev",2
+3,"
+
+def solve(num_list):
+    mean = sum(num_list) / len(num_list)
+    squared_diff = [(x-mean)**2 for x in num_list]
+    variance = sum(squared_diff) / len(num_list)
+    std_dev = variance ** 0.5
+    return std_dev",3
+4,"
+
+import math
+
+def solve(data):
+    n = len(data)
+    mean = sum(data) / n
+    deviations = [(x - mean) ** 2 for x in data]
+    variance = sum(deviations) / n
+    std_dev = math.sqrt(variance)
+    return std_dev",4
+5,"
+
+def solve(nums):
+    mean = sum(nums) / len(nums)
+    variances = [(x - mean)**2 for x in nums]
+    variance = sum(variances) / len(variances)
+    sd = variance ** 0.5
+    return sd",5

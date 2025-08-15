@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(numbers, m, n):
+    return list(filter(lambda x: x % m == 0 or x % n == 0, numbers))",1
+2,"
+
+def solve(nums, m, n):
+    return list(filter(lambda x: x%m == 0 or x%n == 0, nums))",2
+3,"
+
+def solve(numbers, m, n):
+    return list(filter(lambda x: x % m == 0 or x % n == 0, numbers))",1
+4,"
+
+def solve(m, n, numbers):
+    return list(filter(lambda x: x % m == 0 or x % n == 0, numbers))",3
+5,"
+
+def solve(lst, m, n):
+    return list(filter(lambda x: x % m == 0 or x % n == 0, lst))",1

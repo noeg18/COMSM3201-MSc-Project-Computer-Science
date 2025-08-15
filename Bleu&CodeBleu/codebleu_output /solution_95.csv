@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    min_len = len(lst[0])
+    for sublist in lst:
+        if len(sublist) < min_len:
+            min_len = len(sublist)
+    return min_len",1
+2,"
+
+def solve(lst):
+    min_len = len(lst)
+    for sublist in lst:
+        if len(sublist) < min_len:
+            min_len = len(sublist)
+    return min_len",2
+3,"
+
+def solve(lst):
+    min_length = len(lst[0])
+    for sublist in lst:
+        if len(sublist) < min_length:
+            min_length = len(sublist)
+    return min_length",3
+4,"
+
+def solve(lst):
+    min_len = float('inf')
+    for sublist in lst:
+        if len(sublist) < min_len:
+            min_len = len(sublist)
+    return min_len",4
+5,"
+
+def solve(lst):
+    min_len = float('inf')
+    for sublst in lst:
+        if len(sublst) < min_len:
+            min_len = len(sublst)
+    return min_len",5

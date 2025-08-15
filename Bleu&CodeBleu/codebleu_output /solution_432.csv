@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(trapezium):
+    trapezium.sort()
+    length = len(trapezium)
+    if length % 2 == 0:
+        median1 = trapezium[length//2]
+        median2 = trapezium[length//2 - 1]
+        median = (median1 + median2) / 2
+    else:
+        median = trapezium[length//2]
+    return median",1
+2,"
+
+def solve(trapezium):
+    trapezium.sort()
+    n = len(trapezium)
+    if n % 2 == 0:
+        median = (trapezium[n//2] + trapezium[n//2 - 1]) / 2
+    else:
+        median = trapezium[n//2]
+    return median",2
+3,"
+
+def solve(trapezium):
+    sides = [trapezium[0], trapezium[1], trapezium[2], trapezium[3]]
+    sides.sort()
+    median = (sides[1] + sides[2]) / 2
+    return median",3
+4,"
+
+def solve(a, b, h):
+    return (a + b)/2 * h",4
+5,"
+
+def solve(trapezium):
+    sorted_sides = sorted(trapezium)
+    if len(sorted_sides) % 2 == 0:
+        median = (sorted_sides[len(sorted_sides)//2] + sorted_sides[len(sorted_sides)//2-1]) / 2
+    else:
+        median = sorted_sides[len(sorted_sides)//2]
+    return median",5

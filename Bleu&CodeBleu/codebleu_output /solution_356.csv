@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(angle1, angle2):
+    angle3 = 180 - angle1 - angle2
+    return angle3",1
+2,"
+
+def solve(angle1, angle2):
+    angle3 = 180 - angle1 - angle2
+    return angle3",1
+3,"
+
+def solve(angle1, angle2):
+    angle3 = 180 - angle1 - angle2
+    return angle3",1
+4,"
+
+def solve(angle1, angle2):
+    angle3 = 180 - angle1 - angle2
+    return angle3",1
+5,"
+
+def solve(angle1, angle2):
+    angle3 = 180 - angle1 - angle2
+    return angle3",1

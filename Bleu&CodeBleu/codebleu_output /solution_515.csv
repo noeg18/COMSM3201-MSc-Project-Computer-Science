@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(nums, m):
+    if sum(nums) % m == 0:
+        return True
+    else:
+        for i in range(1, len(nums)):
+            for j in range(len(nums)-i+1):
+                if sum(nums[j:j+i]) % m == 0:
+                    return True
+    return False",1
+2,"
+
+def solve(arr, m):
+    n = len(arr)
+    dp = [[False for i in range(m)] for j in range(n + 1)]
+    dp[0][0] = True
+    for i in range(1, n + 1):
+        for j in range(m):
+            if dp[i - 1][j]:
+                dp[i][j] = True
+                dp[i][(j + arr[i - 1]) % m] = True
+    return dp[n][0]",2
+3,"
+
+def solve(nums, m):
+    for i in range(1, len(nums) + 1):
+        for subset in itertools.combinations(nums, i):
+            if sum(subset) % m == 0:
+                return True
+    return False",3
+4,"
+
+def solve(nums, m):
+    if m == 0:
+        return False
+    n = len(nums)
+    dp = [[False for i in range(m)] for j in range(n + 1)]
+    for i in range(n + 1):
+        dp[i][0] = True
+    for i in range(1, n + 1):
+        for j in range(1, m):
+            if dp[i - 1][j]:
+                dp[i][j] = True
+            else:
+                if j >= nums[i - 1]:
+                    dp[i][j] = dp[i - 1][j - nums[i - 1]]
+    return dp[n][m - 1]",4
+5,"
+
+def solve(arr, m):
+    n = len(arr)
+    dp = [False] * (m + 1)
+    dp[0] = True
+    for i in range(n):
+        for j in range(m, arr[i] - 1, -1):
+            dp[j] |= dp[j - arr[i]]
+    return dp[m]",5

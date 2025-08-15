@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(vals):
+    heap = []
+    for val in vals:
+        heapq.heappush(heap, val)
+    result = []
+    while heap:
+        smallest = heapq.heappop(heap)
+        result.append(smallest)
+    return result",1
+2,"
+
+def solve(values):
+    heap = []
+    for value in values:
+        heapq.heappush(heap, value)
+    sorted_values = []
+    while heap:
+        sorted_values.append(heapq.heappop(heap))
+    return sorted_values",2
+3,"
+
+def solve(heap):
+    heapq.heapify(heap)
+    sorted_list = []
+    while heap:
+        sorted_list.append(heapq.heappop(heap))
+    return sorted_list",3
+4,"
+
+def solve(values):
+    heap = []
+    for value in values:
+        heapq.heappush(heap, value)
+    result = []
+    while heap:
+        result.append(heapq.heappop(heap))
+    return result",4
+5,"
+
+def solve(values):
+  heap = []
+  for value in values:
+    heapq.heappush(heap, value)
+  
+  sorted_values = []
+  while heap:
+    sorted_values.append(heapq.heappop(heap))
+  
+  return sorted_values",2

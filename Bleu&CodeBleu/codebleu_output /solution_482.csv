@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(input_string):
+    pattern = ""[A-Z][a-z]+""
+    matches = re.findall(pattern, input_string)
+    return matches",1
+2,"
+
+import re
+
+def solve(string):
+    pattern = r'[A-Z][a-z]+'
+    matches = re.findall(pattern, string)
+    return matches",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = ""[A-Z][a-z]+""
+    matches = re.findall(pattern, string)
+    return matches",3
+4,"
+
+import re
+
+def solve(string):
+    pattern = r""[A-Z][a-z]+""
+    matches = re.findall(pattern, string)
+    return matches",4
+5,"
+
+import re
+
+def solve(string):
+    pattern = r""[A-Z][a-z]+""
+    matches = re.findall(pattern, string)
+    return matches",4

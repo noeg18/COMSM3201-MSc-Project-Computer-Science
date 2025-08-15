@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    pairs = []
+    for i in range(len(tuples)):
+        for j in range(i+1, len(tuples)):
+            if tuples[i][0] == tuples[j][1] and tuples[i][1] == tuples[j][0]:
+                pairs.append((tuples[i], tuples[j]))
+    return pairs",1
+2,"
+
+def solve(tuple_list):
+    symmetric_pairs = []
+    
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            if tuple_list[i][0] == tuple_list[j][1] and tuple_list[i][1] == tuple_list[j][0]:
+                symmetric_pairs.append((tuple_list[i], tuple_list[j]))
+                
+    return symmetric_pairs",2
+3,"
+
+def solve(tuple_list):
+    symmetric_pairs = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            if tuple_list[i][0] == tuple_list[j][1] and tuple_list[i][1] == tuple_list[j][0]:
+                symmetric_pairs.append(tuple_list[i])
+                symmetric_pairs.append(tuple_list[j])
+    return symmetric_pairs",3
+4,"
+
+def solve(tuple_list):
+    result = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            if tuple_list[i][0] == tuple_list[j][1] and tuple_list[i][1] == tuple_list[j][0]:
+                result.append(tuple_list[i])
+                result.append(tuple_list[j])
+    return result",4
+5,"
+
+def solve(tuple_list):
+    pairs = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            if tuple_list[i][0] == tuple_list[j][1] and tuple_list[i][1] == tuple_list[j][0]:
+                pairs.append(tuple_list[i])
+                pairs.append(tuple_list[j])
+    return pairs",5

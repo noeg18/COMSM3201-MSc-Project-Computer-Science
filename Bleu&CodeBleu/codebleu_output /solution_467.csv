@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(dec):
+    octal = """"
+    while dec > 0:
+        rem = dec % 8
+        octal = str(rem) + octal
+        dec = dec // 8
+    return octal",1
+2,"
+
+def solve(decimal): 
+    octal = """" 
+    while decimal > 0: 
+        octal = str(decimal % 8) + octal 
+        decimal = decimal // 8 
+    return octal",2
+3,"
+
+def solve(decimal):
+    octal = """"
+    while decimal > 0:
+        remainder = decimal % 8
+        octal = str(remainder) + octal
+        decimal = decimal // 8
+    return octal",3
+4,"
+
+def solve(decimal):
+    octal = """"
+    while decimal > 0:
+        rem = decimal % 8
+        octal = str(rem) + octal
+        decimal = decimal // 8
+    return octal",4
+5,"
+
+def solve(num):
+    octal = """"
+    while num > 0:
+        octal = str(num % 8) + octal
+        num //= 8
+    return octal",5

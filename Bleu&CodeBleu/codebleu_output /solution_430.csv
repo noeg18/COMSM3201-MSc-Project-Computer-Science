@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    return -b / (2 * a)",1
+2,"
+
+def solve(a, b, c):
+    directrix = -b / (2 * a)
+    return directrix",2
+3,"
+
+def solve(a, b, c):
+    if a == 0:
+        return ""The given equation is not a parabola.""
+    else:
+        directrix = -(b**2 - 4*a*c)/(4*a)
+        return ""The directrix of the parabola is x = {}"".format(directrix)",3
+4,"
+
+def solve(a, b, c):
+    directrix = -b / (2 * a)
+    return directrix",2
+5,"
+
+def solve(a, b, c):
+    D = (b**2 - 4*a*c)/4*a
+    return (-b/(2*a), D)",4

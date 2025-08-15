@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    if a == b == c:
+        return ""Equilateral Triangle""
+    elif a == b or b == c or a == c:
+        return ""Isosceles Triangle""
+    else:
+        return ""Scalene Triangle""",1
+2,"
+
+def solve(side1, side2, side3):
+    if side1 == side2 == side3:
+        return ""Equilateral Triangle""
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        return ""Isosceles Triangle""
+    else:
+        return ""Scalene Triangle""",2
+3,"
+
+def solve(a, b, c):
+    if a == b == c:
+        return ""Equilateral""
+    elif a == b or b == c or a == c:
+        return ""Isosceles""
+    else:
+        return ""Scalene""",3
+4,"
+
+def solve(side1, side2, side3):
+    if side1 == side2 and side2 == side3:
+        return ""Equilateral Triangle""
+    elif side1 == side2 or side2 == side3 or side1 == side3:
+        return ""Isosceles Triangle""
+    else:
+        return ""Scalene Triangle""",4
+5,"
+
+def solve(side1, side2, side3):
+    # Check if all sides are equal
+    if side1 == side2 == side3:
+        return ""Equilateral triangle""
+    # Check if two sides are equal
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        return ""Isosceles triangle""
+    # Check if all sides are different
+    else:
+        return ""Scalene triangle""",5

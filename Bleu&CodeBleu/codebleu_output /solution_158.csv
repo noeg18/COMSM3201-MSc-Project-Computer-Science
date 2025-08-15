@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(elements):
+    n = len(elements)
+    operations = 0
+    target = sum(elements) // n
+    for num in elements:
+        operations += abs(num - target)
+    return operations",1
+2,"
+
+def solve(k, nums):
+    nums.sort()
+    count = 0
+    while nums[-1] != nums[0]:
+        nums[-1] -= 1
+        nums.sort()
+        count += 1
+        if count == k:
+            return count
+    return count",2
+3,"
+
+def solve(nums, k):
+    min_val = min(nums)
+    max_val = max(nums)
+    count = 0
+    while min_val != max_val:
+        count += 1
+        for i in range(len(nums)):
+            if nums[i] == max_val:
+                nums[i] = min_val
+        max_val = max(nums)
+    if count <= k:
+        return count
+    else:
+        return -1",3
+4,"
+
+def solve(nums, k):
+    target = min(nums)
+    count = 0
+    for num in nums:
+        count += num - target
+    if count % k == 0:
+        return count // k
+    else:
+        return -1",4
+5,"
+
+def solve(arr, k):
+    operations = 0
+    while len(set(arr)) > 1:
+        max_val = max(arr)
+        min_val = min(arr)
+        diff = max_val - min_val
+        operations += diff
+        arr[arr.index(max_val)] = min_val
+    return operations * k",5

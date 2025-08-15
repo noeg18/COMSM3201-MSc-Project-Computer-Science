@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2):
+    sum = num1 + num2
+    print(len(str(sum)))",1
+2,"
+
+def solve(num1, num2):
+    sum = num1 + num2
+    count = len(str(sum))
+    print(count)",2
+3,"
+
+def solve(num1, num2):
+    sum = num1 + num2
+    print(len(str(sum)))",1
+4,"
+
+def solve(num1, num2):
+    sum = num1 + num2
+    digits = len(str(sum))
+    print(digits)",3
+5,"
+
+def solve(num1, num2):
+    sum = num1 + num2
+    print(len(str(sum)))",1

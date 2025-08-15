@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(n, k):
+    return (n//k)**3",1
+2,"
+
+def solve(n, k):
+    return (n//k)**3",1
+3,"
+
+def solve(n, k):
+    count = 0
+    for i in range(1, n+1):
+        if i**3 % k == 0:
+            count += 1
+    return count",2
+4,"
+
+def solve(n,k):
+    if n < 0 or k < 0:
+        return(""Error: n and k must be positive integers"")
+    else:
+        return (n//k)**3",3
+5,"
+
+def solve(n, k):
+    return (n//k) ** 3",4

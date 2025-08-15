@@ -1,0 +1,34 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple, string):
+    list = []
+    for element in tuple:
+        list.append(element)
+        list.append(string)
+    return list",1
+2,"
+
+def solve(tup, string):
+    listt = list(tup)
+    for i in range(len(listt)):
+        listt[i] = str(listt[i]) + string
+    return listt",2
+3,"
+
+def solve(tuple, string):
+    return [x + string for x in tuple]",3
+4,"
+
+def solve(tup, string):
+    lst = list(tup)
+    for i in range(len(lst)):
+        lst[i] = lst[i] + string
+    return lst",4
+5,"
+
+def solve(tup, string):
+    lst = list(tup)
+    for i in range(len(lst)):
+        lst[i] = lst[i] + string
+    return lst",4

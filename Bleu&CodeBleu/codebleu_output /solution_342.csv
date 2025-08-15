@@ -1,0 +1,180 @@
+response_num,response,cluster
+1,"
+
+def solve(arrays):
+    # initialize variables
+    n = len(arrays)
+    max_val = float('-inf')
+    min_val = float('inf')
+    range_val = float('inf')
+    # create a list of tuples to store the index and current value for each array
+    queue = []
+    # add the first element from each array to the queue
+    for i in range(n):
+        queue.append((i,0,arrays[i][0]))
+    # sort the queue based on the current value
+    queue.sort(key=lambda x: x[2])
+    # loop until the queue is empty
+    while queue:
+        # get the index of the array with the smallest current value
+        idx, j, val = queue[0]
+        # update the maximum value
+        max_val = max(max_val, val)
+        # update the minimum value
+        min_val = min(min_val, val)
+        # remove the first element from the queue
+        queue.pop(0)
+        # if there are more elements in the current array, add the next element to the queue
+        if j + 1 < len(arrays[idx]):
+            queue.append((idx, j+1, arrays[idx][j+1]))
+            # re-sort the queue
+            queue.sort(key=lambda x: x[2])
+        # if the queue is empty or the current range is smaller than the previous smallest range, update the range
+        if not queue or max_val - min_val < range_val:
+            range_val = max_val - min_val
+    # return the smallest range
+    return range_val",1
+2,"
+
+def solve(arrays):
+    # initialize variables
+    min_range = None
+    min_num = None
+    max_num = None
+    # create a set of all numbers in the arrays
+    all_nums = set()
+    for arr in arrays:
+        all_nums.update(arr)
+    # loop through all numbers and check if they are present in all arrays
+    for num in all_nums:
+        is_in_all = True
+        for arr in arrays:
+            if num not in arr:
+                is_in_all = False
+                break
+        # if num is present in all arrays, update min_range, min_num, and max_num
+        if is_in_all:
+            if min_range is None:
+                min_range = 1
+            if min_num is None or num < min_num:
+                min_num = num
+            if max_num is None or num > max_num:
+                max_num = num
+            # check if the range is smaller than the current min_range
+            if max_num - min_num + 1 < min_range:
+                min_range = max_num - min_num + 1
+    return min_range",2
+3,"
+
+def solve(arrays):
+    # initialize variables
+    min_range = float('inf') # set initial range to infinity
+    max_val = float('-inf') # set initial max value to negative infinity
+    min_val = float('inf') # set initial min value to infinity
+    range_list = [] # list to store ranges
+    
+    # iterate through arrays
+    for arr in arrays:
+        # find min and max values in current array
+        min_val = min(arr)
+        max_val = max(arr)
+        
+        # check if current range is smaller than min_range
+        if (max_val - min_val) < min_range:
+            # update min_range
+            min_range = max_val - min_val
+        
+        # add current range to range_list
+        range_list.append((min_val, max_val))
+    
+    # sort range_list in ascending order
+    range_list.sort()
+    
+    # initialize variables for current range
+    current_range = range_list[0][1] - range_list[0][0]
+    current_min = range_list[0][0]
+    current_max = range_list[0][1]
+    
+    # iterate through range_list
+    for i in range(len(range_list)):
+        # check if current range is smaller than min_range
+        if current_range < min_range:
+            # update min_range
+            min_range = current_range
+        
+        # check if current max value is less than the maximum value in the last array
+        if current_max < range_list[len(range_list)-1][1]:
+            # update current_max
+            current_max = range_list[i+1][1]
+        
+        # check if current min value is greater than the minimum value in the last array
+        if current_min > range_list[len(range_list)-1][0]:
+            # update current_min
+            current_min = range_list[i+1][0]
+        
+        # update current_range
+        current_range = current_max - current_min
+    
+    # return smallest range
+    return min_range",3
+4,"
+
+def solve(arrays):
+    # initialize variables
+    min_range = float('inf')
+    max_value = float('-inf')
+
+    # find the maximum value among all arrays
+    for arr in arrays:
+        max_value = max(max_value, max(arr))
+
+    # iterate through all possible values from min to max
+    for val in range(min(arrays[0]), max_value+1):
+        is_in_range = True
+        # check if the current value is present in all arrays
+        for arr in arrays:
+            if val not in arr:
+                is_in_range = False
+                break
+        # if current value is present in all arrays, update min range
+        if is_in_range:
+            min_range = min(min_range, max_value-val)
+
+    return min_range",4
+5,"
+
+def solve(arr):
+    # find the number of arrays
+    n = len(arr)
+    
+    # initialize minimum and maximum values
+    min_val = float('inf')
+    max_val = float('-inf')
+    
+    # initialize pointers for each array
+    ptr = [0] * n
+    
+    # initialize flag to check if all arrays have been traversed
+    flag = False
+    
+    # loop until all arrays have been traversed
+    while not flag:
+        # find the minimum and maximum values among the current elements
+        curr_min = min(arr[i][ptr[i]] for i in range(n))
+        curr_max = max(arr[i][ptr[i]] for i in range(n))
+        
+        # update the minimum range if necessary
+        if curr_max - curr_min < min_val:
+            min_val = curr_max - curr_min
+        
+        # increment the pointer for the array with the minimum value
+        for i in range(n):
+            if arr[i][ptr[i]] == curr_min:
+                ptr[i] += 1
+        
+        # check if all arrays have been traversed
+        if ptr[0] == len(arr[0]):
+            flag = True
+    
+    # return the smallest range
+    return min_val",5

@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(tup, k):
+    return tuple(map(lambda x: x + k, tup))",1
+2,"
+
+def solve(tup, k):
+    return tuple(x+k for x in tup)",2
+3,"
+
+def solve(tup, k):
+    result = []
+    for elem in tup:
+        result.append(elem + k)
+    return tuple(result)",3
+4,"
+
+def solve(tup, k):
+    return tuple(elem + k for elem in tup)",4
+5,"
+
+def solve(tup, k):
+    new_tup = tuple(i+k for i in tup)
+    return new_tup",5

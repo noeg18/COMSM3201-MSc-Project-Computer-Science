@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(base, powers):
+    return list(map(lambda x: base**x, powers))",1
+2,"
+
+def solve(number, bases):
+    return list(map(lambda base, index: base**index, bases, range(len(bases))))",2
+3,"
+
+def solve(base, n):
+    powers = list(map(lambda x: base**x, range(n+1)))
+    return powers",3
+4,"
+
+def solve(number, bases):
+    powers = list(map(lambda x, y: x**y, bases, range(len(bases))))
+    return [number**power for power in powers]",4
+5,"
+
+def solve(n):
+    num_list = list(range(1, n+1))
+    power_list = list(map(lambda x,y: x**y, num_list, num_list))
+    return power_list",5

@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary):
+    sorted_dict = {}
+    tuple_keys = []
+    
+    for key in dictionary.keys():
+        tuple_keys.append(key)
+    
+    tuple_keys.sort(key = lambda x: x[0] * x[1])
+    
+    for key in tuple_keys:
+        sorted_dict[key] = dictionary[key]
+    
+    return sorted_dict",1
+2,"
+
+def solve(dictionary):
+    sorted_dict = {}
+    for key in sorted(dictionary, key=lambda x: x[0] * x[1]):
+        sorted_dict[key] = dictionary[key]
+    return sorted_dict",2
+3,"
+
+def solve(dictionary):
+    sorted_dict = {}
+    sorted_keys = sorted(dictionary.keys(), key=lambda x: x[0]*x[1])
+    for key in sorted_keys:
+        sorted_dict[key] = dictionary[key]
+    return sorted_dict",3
+4,"
+
+def solve(dictionary):
+    return dict(sorted(dictionary.items(), key=lambda x: x[0][0] * x[0][1]))",4
+5,"
+
+def solve(dictionary):
+    sorted_list = []
+    for key in dictionary.keys():
+        sorted_list.append((key, dictionary[key]))
+    sorted_list.sort(key = lambda x: x[0])
+    sorted_list.sort(key = lambda x: x[0][0] * x[0][1])
+    sorted_dict = {}
+    for item in sorted_list:
+        sorted_dict[item[0]] = item[1]
+    return sorted_dict",5

@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    return re.sub('[\s,.]', ':', string)",1
+2,"
+
+import re
+def solve(string):
+    pattern = r""[ ,\.]"" #regex pattern to match spaces, commas and dots
+    replacement = "":"" #replacement string
+    new_string = re.sub(pattern, replacement, string) #using re.sub() to replace all occurrences
+    return new_string #return the new string with replaced characters",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = r""[ ,.]""
+    replacement = "":""
+    result = re.sub(pattern, replacement, string)
+    return result",3
+4,"
+
+import re
+
+def solve(string):
+    return re.sub(""[ ,.]"", "":"", string)",4
+5,"
+
+import re
+
+def solve(string):
+    return re.sub(""[ ,.]"", "":"", string)",4

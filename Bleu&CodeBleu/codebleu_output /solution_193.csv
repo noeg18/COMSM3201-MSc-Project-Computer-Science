@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple):
+    return tuple(set(tuple))",1
+2,"
+
+def solve(tup):
+    unique_tup = ()
+    for i in tup:
+        if i not in unique_tup:
+            unique_tup += (i,)
+    return unique_tup",2
+3,"
+
+def solve(tup):
+  return tuple(set(tup))",3
+4,"
+
+def solve(tuple_input):
+    return tuple(set(tuple_input))",4
+5,"
+
+def solve(my_tuple):
+    unique_tuple = tuple(set(my_tuple))
+    return unique_tuple",5

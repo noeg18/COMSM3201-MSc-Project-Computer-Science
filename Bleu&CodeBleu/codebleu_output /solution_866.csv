@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(month):
+    thirty_one_days = [""January"", ""March"", ""May"", ""July"", ""August"", ""October"", ""December""]
+    if month in thirty_one_days:
+        return True
+    else:
+        return False",1
+2,"
+def solve(month):
+    thirty_one_days = ['January', 'March', 'May', 'July', 'August', 'October', 'December']
+    if month in thirty_one_days:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(month):
+    thirty_one_days = [""January"", ""March"", ""May"", ""July"", ""August"", ""October"", ""December""]
+    if month in thirty_one_days:
+        return True
+    else:
+        return False",1
+4,"
+
+def solve(month):
+    if month in {""January"", ""March"", ""May"", ""July"", ""August"", ""October"", ""December""}:
+        return True
+    else:
+        return False",3
+5,"
+
+def solve(month):
+    if month in ['January', 'March', 'May', 'July', 'August', 'October', 'December']:
+        return True
+    else:
+        return False",4

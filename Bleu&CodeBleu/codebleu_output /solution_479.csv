@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    num_str = str(num)
+    first_digit = num_str[0]
+    return int(first_digit)",1
+2,"
+
+def solve(num):
+    num_str = str(num)
+    first_digit = num_str[0]
+    return int(first_digit)",1
+3,"
+
+def solve(num):
+    while num >= 10:
+        num = num // 10
+    return num",2
+4,"
+
+def solve(n):
+    while n >= 10:
+        n = n // 10
+    return n",3
+5,"
+
+def solve(num):
+    while num >= 10:
+        num = num // 10
+    return num",2

@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+import heapq
+
+def solve(*inputs):
+    heap = []
+    for input in inputs:
+        heapq.heappush(heap, input)
+    
+    while heap:
+        yield heapq.heappop(heap)",1
+2,"
+
+from heapq import merge
+
+def solve(*args):
+    return merge(*args)",2
+3,"
+
+import heapq
+
+def solve(*inputs):
+    heap = []
+    for input in inputs:
+        for element in input:
+            heapq.heappush(heap, element)
+    while heap:
+        yield heapq.heappop(heap)",3
+4,"
+
+def solve(*inputs):
+    # Create a heap queue
+    heap = []
+
+    # For each input, add the first element to the heap
+    for input in inputs:
+        if len(input) > 0:
+            heapq.heappush(heap, input[0])
+
+    # While the heap is not empty
+    while len(heap) > 0:
+        # Pop the smallest element from the heap
+        smallest = heapq.heappop(heap)
+        # Yield the smallest element
+        yield smallest
+        # Find which input the smallest element came from
+        for input in inputs:
+            if len(input) > 0 and input[0] == smallest:
+                # Remove the smallest element from the input
+                input.pop(0)
+                # If the input is not empty, add the next element to the heap
+                if len(input) > 0:
+                    heapq.heappush(heap, input[0])",4
+5,"
+
+from heapq import merge
+
+def solve(*iterables):
+    return merge(*iterables)",5

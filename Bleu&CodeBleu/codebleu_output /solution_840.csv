@@ -1,0 +1,71 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return False
+    elif discriminant == 0:
+        return True
+    else:
+        root1 = (-b + discriminant**0.5) / (2*a)
+        root2 = (-b - discriminant**0.5) / (2*a)
+        if root1 == -root2:
+            return True
+        else:
+            return False",1
+2,"
+
+def solve(a, b, c):
+    discriminant = (b**2) - (4*a*c)
+    if discriminant < 0:
+        return False
+    else:
+        root1 = (-b+ (discriminant)**0.5) / (2*a)
+        root2 = (-b- (discriminant)**0.5) / (2*a)
+        if root1 == -root2:
+            return True
+        else:
+            return False",2
+3,"
+
+def solve(a, b, c):
+    discriminant = (b**2) - (4*a*c)
+    if discriminant < 0:
+        return False
+    else:
+        root1 = (-b + (discriminant ** 0.5)) / (2*a)
+        root2 = (-b - (discriminant ** 0.5)) / (2*a)
+        if root1 == -root2:
+            return True
+        else:
+            return False",3
+4,"
+
+def solve(a, b, c):
+    discriminant = (b**2) - (4*a*c)
+    if discriminant >= 0:
+        root1 = (-b + (discriminant**0.5)) / (2*a)
+        root2 = (-b - (discriminant**0.5)) / (2*a)
+        if root1 == -root2:
+            if root1 > 0:
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False",4
+5,"
+
+def solve(a,b,c):
+    discriminant = (b**2) - (4*a*c)
+    if discriminant >= 0:
+        root1 = (-b + (discriminant)**0.5)/(2*a)
+        root2 = (-b - (discriminant)**0.5)/(2*a)
+        if root1 == -root2:
+            return True
+        else:
+            return False
+    else:
+        return False",5

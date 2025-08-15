@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    if len(string) <= 1:
+        return 0
+    else:
+        min_rotations = float('inf')
+        for i in range(len(string)):
+            rotated_string = string[i:] + string[:i]
+            if rotated_string == string:
+                min_rotations = min(min_rotations, i)
+        return min_rotations",1
+2,"
+
+def solve(s):
+    n = len(s)
+    min_rotations = float('inf')
+    for i in range(n):
+        rotated = s[i:] + s[:i]
+        if rotated == s:
+            min_rotations = min(min_rotations, i)
+    return min_rotations",2
+3,"
+
+def solve(string):
+    n = len(string)
+    rotations = 0
+    for i in range(n):
+        rotated_string = string[i:] + string[:i]
+        if rotated_string == string:
+            rotations = i
+            break
+    return rotations",3
+4,"
+
+def solve(string):
+    if len(string) <= 1:
+        return 0
+    rotations = 0
+    for i in range(1, len(string)):
+        rotated = string[i:] + string[:i]
+        if rotated == string:
+            rotations = i
+            break
+    return rotations",4
+5,"
+
+
+def solve(s):
+    rotated = s+s
+    n = len(s)
+    for i in range(n):
+        new = rotated[i:i+n]
+        if new == s:
+            return i
+    return -1",5

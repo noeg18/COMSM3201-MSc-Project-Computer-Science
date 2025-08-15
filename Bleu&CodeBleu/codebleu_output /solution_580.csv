@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(nested_tuple):
+    even_elements = []
+    for tup in nested_tuple:
+        if type(tup) == tuple:
+            even_elements.extend(solve(tup))
+        elif type(tup) == int and tup % 2 == 0:
+            even_elements.append(tup)
+    return even_elements",1
+2,"
+def solve(tup):
+    result = []
+    for i in range(len(tup)):
+        if type(tup[i]) == tuple:
+            result.extend(solve(tup[i]))
+        elif type(tup[i]) == list:
+            result.extend(solve(tuple(tup[i])))
+        else:
+            if tup[i] % 2 == 0:
+                result.append(tup[i])
+    return result",2
+3,"
+
+def solve(nested_tuple):
+    even_elements = []
+    for element in nested_tuple:
+        if type(element) == tuple:
+            even_elements.extend(solve(element))
+        elif type(element) == int and element % 2 == 0:
+            even_elements.append(element)
+    return even_elements",3
+4,"
+
+def solve(tup):
+    even_elements = []
+    for item in tup:
+        if type(item) == tuple:
+            for subitem in item:
+                if subitem % 2 == 0:
+                    even_elements.append(subitem)
+        elif item % 2 == 0:
+            even_elements.append(item)
+    return tuple(even_elements)",4
+5,"
+
+def solve(mixed_tuple):
+    even_list = []
+    for element in mixed_tuple:
+        if isinstance(element, tuple):
+            for sub_element in element:
+                if isinstance(sub_element, int) and sub_element % 2 == 0:
+                    even_list.append(sub_element)
+        elif isinstance(element, int) and element % 2 == 0:
+            even_list.append(element)
+    return even_list",5

@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(numbers):
+    if len(numbers) == len(set(numbers)):
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(numbers):
+    if len(numbers) == len(set(numbers)):
+        return True
+    else:
+        return False",1
+3,"
+
+def solve(numbers):
+    return len(numbers) == len(set(numbers))",2
+4,"
+
+def solve(numbers):
+    for i in range(len(numbers)):
+        if numbers.count(numbers[i]) > 1:
+            return False
+    return True",3
+5,"
+
+def solve(numbers):
+    if len(numbers) == len(set(numbers)):
+        return True
+    else:
+        return False",1

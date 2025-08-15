@@ -1,0 +1,84 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    even_mult = 1
+    odd_mult = 1
+    num = str(num)
+    for i in range(len(num)):
+        if i % 2 == 0:
+            even_mult *= int(num[i])
+        else:
+            odd_mult *= int(num[i])
+    if even_mult == odd_mult:
+        return True
+    else:
+        return False",1
+2,"
+def solve(num):
+    even_prod = 1
+    odd_prod = 1
+    
+    # loop through the digits of the number
+    while num > 0:
+        # get the last digit
+        digit = num % 10
+        
+        # check if the digit is at an even or odd position
+        if digit % 2 == 0:
+            # update the product of even digits
+            even_prod *= digit
+        else:
+            # update the product of odd digits
+            odd_prod *= digit
+        
+        # remove the last digit from the number
+        num //= 10
+    
+    # check if the product of even and odd digits is equal
+    if even_prod == odd_prod:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(num):
+    even_product = 1
+    odd_product = 1
+    num_str = str(num)
+    for i in range(len(num_str)):
+        if i % 2 == 0:
+            even_product *= int(num_str[i])
+        else:
+            odd_product *= int(num_str[i])
+    return even_product == odd_product",3
+4,"
+
+def solve(num):
+    digits = [int(x) for x in str(num)]
+    even_product = 1
+    odd_product = 1
+    for i in range(len(digits)):
+        if i % 2 == 0:
+            even_product *= digits[i]
+        else:
+            odd_product *= digits[i]
+    if even_product == odd_product:
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(num):
+    even = 1
+    odd = 1
+    digits = [int(i) for i in str(num)]
+    for i in range(len(digits)):
+        if i % 2 == 0:
+            even *= digits[i]
+        else:
+            odd *= digits[i]
+    if even == odd:
+        return True
+    else:
+        return False",5

@@ -1,0 +1,107 @@
+response_num,response,cluster
+1,"
+
+def solve(n, k):
+    if n == 0:
+        return 0
+    same = 0
+    diff = k
+    for i in range(2, n+1):
+        same, diff = diff, (same + diff) * (k-1)
+    return same + diff",1
+2,"
+
+def solve(n, k):
+    # base cases
+    if n == 1:
+        return k
+    if n == 2:
+        return k*k
+    
+    # create a dp array to store the number of ways for each post
+    dp = [0 for i in range(n)]
+    
+    # initialize the first two post with k and k*k ways
+    dp[0] = k
+    dp[1] = k*k
+    
+    # loop through the remaining posts
+    for i in range(2, n):
+        # calculate the number of ways for the current post based on the previous two posts
+        dp[i] = (k-1) * (dp[i-1] + dp[i-2])
+        
+    # return the total number of ways for n posts
+    return dp[n-1]",2
+3,"
+
+def solve(n, k):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return k
+    elif n == 2:
+        return k * k
+    else:
+        same = k
+        diff = k * (k - 1)
+        for i in range(3, n + 1):
+            temp = diff
+            diff = (same + diff) * (k - 1)
+            same = temp
+        return same + diff",3
+4,"
+
+def solve(n, k):
+    if n == 0:
+        return 0
+    if n == 1:
+        return k
+    same = k
+    diff = k * (k-1)
+    for i in range(3, n+1):
+        temp = diff
+        diff = (same + diff) * (k-1)
+        same = temp
+    return same + diff",4
+5,"
+
+def solve(n, k):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return k
+    elif n == 2:
+        return k * k
+    
+    # Initialize dp array to store number of ways to paint fence
+    # with i posts and j colors
+    dp = [[0 for i in range(k)] for j in range(n)]
+    
+    # For 1st post, there are k ways to paint it
+    for j in range(k):
+        dp[0][j] = k
+    
+    # For 2nd post, there are k ways to paint it if the 1st post
+    # has a different color, and k-1 ways if they have the same color
+    for j in range(k):
+        dp[1][j] = k
+        if j == 0:
+            dp[1][j] *= k
+        else:
+            dp[1][j] *= (k-1)
+    
+    # For the remaining posts, there are two cases:
+    # 1. If the current post has a different color than the previous post,
+    #    then there are k-1 ways to paint it.
+    # 2. If the current post has the same color as the previous post,
+    #    then we cannot have more than 2 adjacent posts with the same color,
+    #    so there are k-2 ways to paint it.
+    for i in range(2, n):
+        for j in range(k):
+            dp[i][j] = (dp[i-1][j] + dp[i-2][j]) * (k-1)
+            if j > 0:
+                dp[i][j] += dp[i-1][j-1] * (k-2)
+    
+    # The total number of ways to paint the fence is the sum of all entries
+    # in the last row of the dp array
+    return sum(dp[n-1])",5

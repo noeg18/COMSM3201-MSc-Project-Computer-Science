@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    i = 0
+    while i < len(arr):
+        if arr[i] == 0:
+            arr.pop(i)
+            arr.append(0)
+        else:
+            i += 1
+    return arr",1
+2,"
+
+def solve(arr):
+    zero_count = 0
+    for i in range(len(arr)):
+        if arr[i] == 0:
+            zero_count += 1
+        else:
+            arr[i-zero_count] = arr[i]
+    for i in range(len(arr)-zero_count,len(arr)):
+        arr[i] = 0",2
+3,"
+
+def solve(array):
+    zeroes = []
+    non_zeroes = []
+    for i in range(len(array)):
+        if array[i] == 0:
+            zeroes.append(array[i])
+        else:
+            non_zeroes.append(array[i])
+    return non_zeroes + zeroes",3
+4,"
+
+def solve(arr):
+    non_zero = [x for x in arr if x != 0]
+    zeros = [x for x in arr if x == 0]
+    return non_zero + zeros",4
+5,"
+
+def solve(nums):
+    zeros = []
+    non_zeros = []
+    
+    for num in nums:
+        if num == 0:
+            zeros.append(num)
+        else:
+            non_zeros.append(num)
+    
+    return non_zeros + zeros",5

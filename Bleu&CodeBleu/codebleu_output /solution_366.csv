@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    max_product = float('-inf')
+    for i in range(len(nums)-1):
+        product = nums[i] * nums[i+1]
+        if product > max_product:
+            max_product = product
+    return max_product",1
+2,"
+
+def solve(lst):
+    largest_product = lst[0] * lst[1]
+    for i in range(1, len(lst) - 1):
+        if lst[i] * lst[i+1] > largest_product:
+            largest_product = lst[i] * lst[i+1]
+    return largest_product",2
+3,"
+
+def solve(nums):
+    largest_product = 0
+    for i in range(len(nums)-1):
+        product = nums[i] * nums[i+1]
+        if product > largest_product:
+            largest_product = product
+    return largest_product",3
+4,"
+
+def solve(nums):
+    max_prod = nums[0] * nums[1]
+    for i in range(len(nums)-1):
+        if nums[i] * nums[i+1] > max_prod:
+            max_prod = nums[i] * nums[i+1]
+    return max_prod",4
+5,"
+
+def solve(nums):
+    max_product = nums[0] * nums[1]
+    for i in range(1, len(nums)-1):
+        product = nums[i] * nums[i+1]
+        if product > max_product:
+            max_product = product
+    return max_product",5

@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+def solve(num):
+    reverse = int(str(num)[::-1])
+    if num == (2*reverse) - 1:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(num):
+    reverse = str(num)[::-1]
+    if num == (2 * int(reverse)) - 1:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(n):
+    reverse = int(str(n)[::-1])
+    if n == (2 * reverse - 1):
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(num):
+    reverse = int(str(num)[::-1])
+    if num == (2*reverse) - 1:
+        return True
+    else:
+        return False",1
+5,"
+
+def solve(n):
+    reverse = int(str(n)[::-1])
+    if n == (2 * reverse) - 1:
+        return True
+    else:
+        return False",4

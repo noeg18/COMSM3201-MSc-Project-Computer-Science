@@ -1,0 +1,86 @@
+response_num,response,cluster
+1,"
+
+def solve(mixed_tuple):
+    freq_dict = {}
+    for elem in mixed_tuple:
+        if isinstance(elem, tuple):
+            for nested_elem in elem:
+                if nested_elem in freq_dict:
+                    freq_dict[nested_elem] += 1
+                else:
+                    freq_dict[nested_elem] = 1
+        else:
+            if elem in freq_dict:
+                freq_dict[elem] += 1
+            else:
+                freq_dict[elem] = 1
+    return freq_dict",1
+2,"
+
+def solve(nested_tuple):
+    freq_dict = {}
+    for i in nested_tuple:
+        if type(i) == tuple:
+            for j in i:
+                if j in freq_dict:
+                    freq_dict[j] += 1
+                else:
+                    freq_dict[j] = 1
+        else:
+            if i in freq_dict:
+                freq_dict[i] += 1
+            else:
+                freq_dict[i] = 1
+    return freq_dict",2
+3,"
+
+def solve(tup):
+    freq_dict = {}
+    for element in tup:
+        if type(element) == tuple:
+            for nested_element in element:
+                if nested_element in freq_dict:
+                    freq_dict[nested_element] += 1
+                else:
+                    freq_dict[nested_element] = 1
+        else:
+            if element in freq_dict:
+                freq_dict[element] += 1
+            else:
+                freq_dict[element] = 1
+    return freq_dict",3
+4,"
+
+def solve(nested_tuple):
+    frequency = {}
+    for i in nested_tuple:
+        if isinstance(i, tuple):
+            for j in i:
+                if j in frequency:
+                    frequency[j] += 1
+                else:
+                    frequency[j] = 1
+        else:
+            if i in frequency:
+                frequency[i] += 1
+            else:
+                frequency[i] = 1
+    return frequency",4
+5,"
+
+def solve(tup):
+    freq = {}
+    for i in tup:
+        if isinstance(i, tuple):
+            for j in i:
+                if j in freq:
+                    freq[j] += 1
+                else:
+                    freq[j] = 1
+        else:
+            if i in freq:
+                freq[i] += 1
+            else:
+                freq[i] = 1
+    return freq",5

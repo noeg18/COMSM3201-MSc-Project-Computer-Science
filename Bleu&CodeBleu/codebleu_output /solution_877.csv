@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    sorted_string = ''.join(sorted(string))
+    return sorted_string",1
+2,"
+
+def solve(string):
+    sorted_string = """".join(sorted(string))
+    return sorted_string",2
+3,"
+
+def solve(string):
+    sorted_string = ''.join(sorted(string))
+    return sorted_string",1
+4,"
+
+def solve(string):
+    sorted_string = ''.join(sorted(string))
+    return sorted_string",1
+5,"
+
+def solve(string):
+    sorted_string = ''.join(sorted(string))
+    return sorted_string",1

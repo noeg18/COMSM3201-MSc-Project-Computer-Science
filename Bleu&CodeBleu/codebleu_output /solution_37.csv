@@ -1,0 +1,68 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    ints = []
+    strings = []
+    for item in lst:
+        if isinstance(item, int):
+            ints.append(item)
+        else:
+            strings.append(item)
+    ints.sort()
+    strings.sort()
+    return ints + strings",1
+2,"
+
+def solve(mixed_list):
+    numbers = []
+    strings = []
+    for item in mixed_list:
+        if isinstance(item, int):
+            numbers.append(item)
+        elif isinstance(item, str):
+            strings.append(item)
+    numbers.sort()
+    strings.sort()
+    sorted_list = numbers + strings
+    return sorted_list",2
+3,"
+
+def solve(lst):
+    ints = []
+    strings = []
+    for x in lst:
+        if type(x) == int:
+            ints.append(x)
+        else:
+            strings.append(x)
+    ints.sort()
+    strings.sort()
+    lst = ints + strings
+    return lst",3
+4,"
+
+def solve(lst):
+    nums = []
+    strs = []
+    for item in lst:
+        if type(item) == int:
+            nums.append(item)
+        else:
+            strs.append(item)
+    nums.sort()
+    strs.sort()
+    return nums + strs",4
+5,"
+
+def solve(lst):
+    numbers = []
+    strings = []
+    for i in lst:
+        if type(i) == int:
+            numbers.append(i)
+        else:
+            strings.append(i)
+    numbers.sort()
+    strings.sort()
+    return numbers + strings",5

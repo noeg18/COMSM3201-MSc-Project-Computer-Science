@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    total = 0
+    for num in arr:
+        total += num
+    return total",1
+2,"
+
+def solve(arr):
+    sum = 0
+    for num in arr:
+        sum += num
+    return sum",2
+3,"
+
+def solve(arr):
+    sum = 0
+    for num in arr:
+        sum += num
+    return sum",2
+4,"
+
+def solve(arr):
+    sum = 0
+    for i in arr:
+        sum += i
+    return sum",3
+5,"
+
+def solve(arr):
+    sum = 0
+    for num in arr:
+        sum += num
+    return sum",2

@@ -1,0 +1,61 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    common_elements = []
+    for element in list1:
+        if element in list2:
+            common_elements.append(element)
+    if common_elements == list1[:len(common_elements)]:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(list1, list2):
+    common_elements = []
+    for element in list1:
+        if element in list2:
+            common_elements.append(element)
+    if common_elements == list1:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(list1, list2):
+    i = 0
+    j = 0
+    while i < len(list1) and j < len(list2):
+        if list1[i] == list2[j]:
+            i += 1
+            j += 1
+        else:
+            i += 1
+    if j == len(list2):
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(list1, list2):
+    common = []
+    for i in range(len(list1)):
+        if list1[i] in list2:
+            common.append(list1[i])
+    if common == list2:
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(list1, list2):
+    common_items = []
+    for item in list1:
+        if item in list2:
+            common_items.append(item)
+    
+    if common_items == list2:
+        return True
+    else:
+        return False",5

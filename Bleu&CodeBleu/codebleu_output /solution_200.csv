@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    max_val = max(lst)
+    max_indices = []
+    for i in range(len(lst)):
+        if lst[i] == max_val:
+            max_indices.append(i)
+    return max_indices",1
+2,"
+
+def solve(lst):
+    max_val = max(lst)
+    return [i for i, x in enumerate(lst) if x == max_val]",2
+3,"
+
+def solve(lst):
+    max_value = max(lst)
+    max_indices = []
+    for i in range(len(lst)):
+        if lst[i] == max_value:
+            max_indices.append(i)
+    return max_indices",3
+4,"
+
+def solve(lst):
+    max_val = max(lst)
+    max_indexes = []
+    for i in range(len(lst)):
+        if lst[i] == max_val:
+            max_indexes.append(i)
+    return max_indexes",4
+5,"
+
+def solve(lst):
+    max_val = max(lst)
+    indices = [i for i, val in enumerate(lst) if val == max_val]
+    return indices",5

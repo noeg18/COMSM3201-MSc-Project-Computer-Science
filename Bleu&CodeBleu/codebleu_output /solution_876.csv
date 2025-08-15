@@ -1,0 +1,78 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2):
+    if num1 > num2:
+        greater = num1
+    else:
+        greater = num2
+
+    while True:
+        if (greater % num1 == 0) and (greater % num2 == 0):
+            lcm = greater
+            break
+        greater += 1
+
+    return lcm",1
+2,"
+
+def solve(a,b):
+  if a > b:
+    greater = a
+  else:
+    greater = b
+
+  while(True):
+    if((greater % a == 0) and (greater % b == 0)):
+      lcm = greater
+      break
+    greater += 1
+
+  return lcm",2
+3,"
+
+def solve(x, y):
+    lcm = (x*y) // gcd(x, y)
+    return lcm
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a%b)",3
+4,"
+
+def solve(a, b):
+    if a > b:
+        greater = a
+    else:
+        greater = b
+
+    while True:
+        if greater % a == 0 and greater % b == 0:
+            lcm = greater
+            break
+        greater += 1
+
+    return lcm",4
+5,"
+
+def solve(a, b):
+    # find the larger number
+    if a > b:
+        larger = a
+    else:
+        larger = b
+    # find the smaller number
+    if a < b:
+        smaller = a
+    else:
+        smaller = b
+    # initialize lcm
+    lcm = larger
+    # loop until lcm is found
+    while True:
+        if lcm % smaller == 0 and lcm % larger == 0:
+            break
+        lcm += larger
+    return lcm",5

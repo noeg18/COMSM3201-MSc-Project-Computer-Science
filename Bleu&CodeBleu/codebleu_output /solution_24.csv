@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+
+def solve(binary):
+    decimal = 0
+    power = 0
+    while(binary > 0):
+        decimal += (binary % 10) * (2**power)
+        power += 1
+        binary = binary // 10
+    return decimal",1
+2,"
+
+def solve(binary):
+    decimal = 0
+    power = 0
+    while binary > 0:
+        decimal += (binary % 10) * (2 ** power)
+        power += 1
+        binary = binary // 10
+    return decimal",2
+3,"
+
+def solve(binary):
+    decimal = 0
+    power = 0
+    while binary > 0:
+        decimal += (binary % 10) * (2 ** power)
+        power += 1
+        binary //= 10
+    return decimal ",3
+4,"
+
+def solve(binary):
+    decimal = 0
+    power = len(binary) - 1
+    for digit in binary:
+        decimal += int(digit) * (2 ** power)
+        power -= 1
+    return decimal",4
+5,"
+
+def solve(binary):
+    decimal = 0
+    power = 0
+    for digit in binary[::-1]:
+        decimal += int(digit) * 2**power
+        power += 1
+    return decimal",5

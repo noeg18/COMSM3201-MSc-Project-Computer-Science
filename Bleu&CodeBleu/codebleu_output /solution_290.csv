@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(lists):
+    max_length = 0
+    max_lists = []
+    for l in lists:
+        if len(l) > max_length:
+            max_length = len(l)
+            max_lists = [l]
+        elif len(l) == max_length:
+            max_lists.append(l)
+    return max_lists",1
+2,"
+
+def solve(list_of_lists):
+    max_length = 0
+    max_lists = []
+
+    for lst in list_of_lists:
+        if len(lst) > max_length:
+            max_length = len(lst)
+            max_lists = [lst]
+        elif len(lst) == max_length:
+            max_lists.append(lst)
+
+    return max_lists",2
+3,"
+
+def solve(list_of_lists):
+    max_length = len(max(list_of_lists, key=len))
+    max_lists = [lst for lst in list_of_lists if len(lst) == max_length]
+    return max_lists",3
+4,"
+
+def solve(list_of_lists):
+    max_length = 0
+    max_lists = []
+    for lst in list_of_lists:
+        if len(lst) > max_length:
+            max_length = len(lst)
+            max_lists = [lst]
+        elif len(lst) == max_length:
+            max_lists.append(lst)
+    return max_lists",2
+5,"
+
+def solve(list_of_lists):
+    max_length = 0
+    max_lists = []
+    
+    for lst in list_of_lists:
+        if len(lst) > max_length:
+            max_length = len(lst)
+            max_lists = [lst]
+        elif len(lst) == max_length:
+            max_lists.append(lst)
+            
+    return max_lists",2

@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(month):
+    thirty_days = [4, 6, 9, 11]
+    if month in thirty_days:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(month):
+    if month == 4 or month == 6 or month == 9 or month == 11:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(month):
+    if month in [4, 6, 9, 11]:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(month):
+    if month == 4 or month == 6 or month == 9 or month == 11:
+        return True
+    return False",4
+5,"
+
+def solve(month):
+    if month in [4, 6, 9, 11]:
+        return True
+    else:
+        return False",3

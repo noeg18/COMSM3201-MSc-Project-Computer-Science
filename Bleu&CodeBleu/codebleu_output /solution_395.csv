@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    for char in s:
+        if s.count(char) == 1:
+            return char
+    return ""No non-repeated characters found.""",1
+2,"
+
+def solve(string):
+    for char in string:
+        if string.count(char) == 1:
+            return char
+    return None",2
+3,"
+
+def solve(string):
+    counts = {}
+    for char in string:
+        if char in counts:
+            counts[char] += 1
+        else:
+            counts[char] = 1
+    for char in string:
+        if counts[char] == 1:
+            return char
+    return None",3
+4,"
+
+def solve(string):
+    for char in string:
+        if string.count(char) == 1:
+            return char
+    return None",2
+5,"
+
+def solve(string):
+    for char in string:
+        if string.count(char) == 1:
+            return char
+    return None",2

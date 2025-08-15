@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return list(map(lambda x: x**2, lst))",1
+2,"
+
+def solve(nums):
+    return list(map(lambda x: x**2, nums))",2
+3,"
+
+def solve(lst):
+    squares = list(map(lambda x: x**2, lst))
+    return squares",3
+4,"
+
+def solve(lst):
+    return list(map(lambda x: x**2, lst))",1
+5,"
+
+def solve(lst):
+    return list(map(lambda x: x**2, lst))",1

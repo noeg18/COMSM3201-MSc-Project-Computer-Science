@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(sequence):
+    result = {}
+    for key, value in sequence:
+        if key in result:
+            result[key].append(value)
+        else:
+            result[key] = [value]
+    return result",1
+2,"
+
+def solve(seq):
+    result = {}
+    for key, value in seq:
+        if key in result:
+            result[key].append(value)
+        else:
+            result[key] = [value]
+    return result",2
+3,"
+
+def solve(seq):
+    result = {}
+    for key, value in seq:
+        if key in result:
+            result[key].append(value)
+        else:
+            result[key] = [value]
+    return result",2
+4,"
+
+def solve(key_value_pairs):
+    result = {}
+    for key, value in key_value_pairs:
+        if key in result:
+            result[key].append(value)
+        else:
+            result[key] = [value]
+    return result",3
+5,"
+
+def solve(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            result[key].append(value)
+        else:
+            result[key] = [value]
+    return result",4

@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(word_list):
+    matches = []
+    for word in word_list:
+        if word.startswith('p'):
+            matches.append(word)
+    return matches",1
+2,"
+
+def solve(words):
+    matches = []
+    for word in words:
+        if word[0] == 'p':
+            matches.append(word)
+    return matches",2
+3,"
+
+def solve(words):
+    p_words = [word for word in words if word.startswith('p')]
+    if len(p_words) == 2:
+        return p_words
+    else:
+        return False",3
+4,"
+
+def solve(words):
+    result = []
+    for word in words:
+        if word[0] == 'p':
+            result.append(word)
+    return result",4
+5,"
+
+def solve(words):
+    matches = []
+    for word in words:
+        if word[0] == 'p' and len(word) >= 2:
+            matches.append(word)
+    return matches
+
+# Example usage:
+# words = ['apple', 'pear', 'penguin', 'orange', 'pineapple']
+# result = solve(words)
+# print(result) # ['pear', 'penguin', 'pineapple']",5

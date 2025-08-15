@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary):
+    return list(dictionary.keys())",1
+2,"
+
+def solve(dictionary):
+    keys = list(dictionary.keys())
+    return keys",2
+3,"
+
+def solve(dictionary):
+    return list(dictionary.keys())",1
+4,"
+
+def solve(dictionary):
+    return list(dictionary.keys())",1
+5,"
+
+def solve(dictionary):
+    return list(dictionary.keys())",1

@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    n = len(arr)
+    mid = n // 2
+    arr = arr[mid:] + arr[:mid]
+    return arr",1
+2,"
+
+def solve(arr):
+    mid = len(arr) // 2
+    return arr[mid:] + arr[:mid]",2
+3,"
+
+def solve(arr):
+    n = len(arr)
+    mid = n // 2
+    return arr[mid:] + arr[:mid]",3
+4,"
+
+def solve(arr):
+    n = len(arr)
+    mid = n // 2
+    arr = arr[mid:] + arr[:mid]
+    return arr",1
+5,"
+
+def solve(arr):
+    first_part = arr[:len(arr)//2]
+    second_part = arr[len(arr)//2:]
+    return second_part + first_part",4

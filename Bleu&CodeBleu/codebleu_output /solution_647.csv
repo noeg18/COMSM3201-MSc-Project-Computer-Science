@@ -1,0 +1,66 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    split_string = []
+    current_word = """"
+    
+    for char in string:
+        if char.isupper():
+            if current_word != """":
+                split_string.append(current_word)
+            current_word = char
+        else:
+            current_word += char
+    split_string.append(current_word)
+    
+    return split_string",1
+2,"
+
+def solve(s):
+    result = []
+    temp = """"
+    for i in range(len(s)):
+        if s[i].isupper():
+            result.append(temp)
+            temp = s[i]
+        else:
+            temp += s[i]
+    result.append(temp)
+    return result",2
+3,"
+
+def solve(string):
+    output = []
+    current_word = """"
+    for letter in string:
+        if letter.isupper():
+            if current_word:
+                output.append(current_word)
+            current_word = letter
+        else:
+            current_word += letter
+    output.append(current_word)
+    return output",3
+4,"
+
+def solve(s):
+    split_str = [char for char in s if char.isupper()]
+    split_str.append(s[-1])
+    return """".join(split_str).split(s)[-1]",4
+5,"
+
+def solve(string):
+    result = []
+    current_word = """"
+
+    for char in string:
+        if char.isupper():
+            result.append(current_word)
+            current_word = char
+        else:
+            current_word += char
+
+    result.append(current_word)
+
+    return result",5

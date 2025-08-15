@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(input_tuple, data_type):
+    output_tuple = tuple()
+    for element in input_tuple:
+        if type(element) != data_type:
+            output_tuple += (element,)
+    return output_tuple",1
+2,"
+
+def solve(tup, data_type):
+    new_tup = ()
+    for elem in tup:
+        if not isinstance(elem, data_type):
+            new_tup += (elem,)
+    return new_tup",2
+3,"
+
+def solve(tup, data_type):
+    new_tup = ()
+    for element in tup:
+        if type(element) != data_type:
+            new_tup = new_tup + (element,)
+    return new_tup",3
+4,"
+
+def solve(input_tuple, data_type):
+    output_tuple = tuple(element for element in input_tuple if not isinstance(element, data_type))
+    return output_tuple",4
+5,"
+
+def solve(data_type, tup):
+    new_tup = ()
+    for i in tup:
+        if type(i) != data_type:
+            new_tup = new_tup + (i,)
+    return new_tup",5

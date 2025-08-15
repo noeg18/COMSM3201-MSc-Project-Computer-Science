@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    result = """"
+    for c in s:
+        if c.isupper():
+            result += c.lower()
+        else:
+            result += c.upper()
+    return result",1
+2,"
+
+def solve(s):
+    result = """"
+    for char in s:
+        if char.islower():
+            result += char.upper()
+        else:
+            result += char.lower()
+    return result",2
+3,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char.isupper():
+            new_string += char.lower()
+        else:
+            new_string += char.upper()
+    return new_string",3
+4,"
+
+def solve(string):
+    result = ''
+    for char in string:
+        if char.isupper():
+            result += char.lower()
+        else:
+            result += char.upper()
+    return result",4
+5,"
+
+def solve(string):
+    result = """"
+    for char in string:
+        if char.isupper():
+            result += char.lower()
+        else:
+            result += char.upper()
+    return result",4

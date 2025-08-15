@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(sequence, patterns):
+    pattern_index = 0
+    for num in sequence:
+        if num == patterns[pattern_index]:
+            pattern_index += 1
+            if pattern_index == len(patterns):
+                return True
+        else:
+            continue
+    return False",1
+2,"
+
+def solve(seq, patterns):
+    for i in range(len(seq)-1):
+        if (seq[i+1] - seq[i]) not in patterns:
+            return False
+    return True",2
+3,"
+
+def solve(string, patterns):
+    for i in range(len(patterns)):
+        if patterns[i] in string:
+            string = string.replace(patterns[i], '', 1)
+        else:
+            return False
+    return True",3
+4,"
+def solve(patterns, word):
+    if len(patterns) == 0:
+        return False
+    curr_pattern = patterns[0]
+    curr_word = ''
+    for letter in word:
+        if letter.isdigit():
+            curr_word += letter
+        else:
+            if curr_pattern == 'D' and not curr_word.isdigit():
+                return False
+            elif curr_pattern == 'A' and curr_word.isdigit():
+                return False
+            curr_word = ''
+            curr_pattern = patterns[patterns.index(curr_pattern)+1]
+    if curr_pattern == 'D' and not curr_word.isdigit():
+        return False
+    elif curr_pattern == 'A' and curr_word.isdigit():
+        return False
+    return True",4
+5,"
+
+def solve(array, patterns):
+    for i in range(len(array)-1):
+        if array[i] not in patterns or array[i+1] not in patterns:
+            return False
+        elif patterns.index(array[i]) != patterns.index(array[i+1]) - 1:
+            return False
+    return True",5

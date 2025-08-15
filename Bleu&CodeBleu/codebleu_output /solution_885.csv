@@ -1,0 +1,65 @@
+response_num,response,cluster
+1,"
+
+def solve(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    mapping = {}
+    for i in range(len(s1)):
+        if s1[i] in mapping:
+            if mapping[s1[i]] != s2[i]:
+                return False
+        else:
+            mapping[s1[i]] = s2[i]
+    return True",1
+2,"
+
+def solve(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    mapping = {}
+    for i in range(len(s1)):
+        if s1[i] not in mapping:
+            mapping[s1[i]] = s2[i]
+        elif mapping[s1[i]] != s2[i]:
+            return False
+    return True",2
+3,"
+
+def solve(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    dict = {}
+    for i in range(len(s1)):
+        if s1[i] not in dict:
+            dict[s1[i]] = s2[i]
+        else:
+            if dict[s1[i]] != s2[i]:
+                return False
+    return True",3
+4,"
+
+def solve(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    mapping = {}
+    for i in range(len(s1)):
+        if s1[i] not in mapping:
+            mapping[s1[i]] = s2[i]
+        else:
+            if mapping[s1[i]] != s2[i]:
+                return False
+    return True",2
+5,"
+
+def solve(string1, string2):
+    if len(string1) != len(string2):
+        return False
+    mapping = {}
+    for i in range(len(string1)):
+        if string1[i] not in mapping:
+            mapping[string1[i]] = string2[i]
+        else:
+            if mapping[string1[i]] != string2[i]:
+                return False
+    return True",4

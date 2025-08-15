@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    upper = re.findall(""[A-Z]"", string)
+    lower = re.findall(""[a-z]"", string)
+    special = re.findall(""[^A-Za-z0-9]"", string)
+    numeric = re.findall(""[0-9]"", string)
+    return upper, lower, special, numeric",1
+2,"
+
+import re
+
+def solve(string):
+    uppercase = re.findall(r'[A-Z]', string)
+    lowercase = re.findall(r'[a-z]', string)
+    special_char = re.findall(r'[^A-Za-z0-9]', string)
+    numeric = re.findall(r'[0-9]', string)
+    return uppercase, lowercase, special_char, numeric",2
+3,"
+
+import re
+
+def solve(text):
+    uppercase = re.findall(r""[A-Z]"", text)
+    lowercase = re.findall(r""[a-z]"", text)
+    special = re.findall(r""[\W]"", text)
+    numeric = re.findall(r""\d"", text)
+    
+    return uppercase, lowercase, special, numeric",3
+4,"
+
+import re
+
+def solve(input_str):
+    uppercase = re.findall(r""[A-Z]"", input_str)
+    lowercase = re.findall(r""[a-z]"", input_str)
+    special_char = re.findall(r""[^A-Za-z0-9]"", input_str)
+    numeric = re.findall(r""\d"", input_str)
+
+    return uppercase, lowercase, special_char, numeric",4
+5,"
+
+def solve(string):
+    uppercase = re.findall(r'[A-Z]', string)
+    lowercase = re.findall(r'[a-z]', string)
+    special = re.findall(r'[^A-Za-z0-9]', string)
+    numeric = re.findall(r'\d', string)
+    return uppercase, lowercase, special, numeric",5

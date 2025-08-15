@@ -1,0 +1,69 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    max_count = 0
+    current_count = 0
+    for char in string:
+        if char.isupper():
+            current_count += 1
+            if current_count > max_count:
+                max_count = current_count
+        else:
+            current_count = 0
+    return max_count",1
+2,"
+
+def solve(string):
+    max_run = 0
+    curr_run = 0
+    
+    for char in string:
+        if char.isupper():
+            curr_run += 1
+        else:
+            max_run = max(max_run, curr_run)
+            curr_run = 0
+    
+    return max_run",2
+3,"
+
+def solve(string):
+    max_run = 0
+    current_run = 0
+    for char in string:
+        if char.isupper():
+            current_run += 1
+            if current_run > max_run:
+                max_run = current_run
+        else:
+            current_run = 0
+    return max_run",3
+4,"
+
+def solve(string):
+    max_run = 0
+    current_run = 0
+    
+    for char in string:
+        if char.isupper():
+            current_run += 1
+            if current_run > max_run:
+                max_run = current_run
+        else:
+            current_run = 0
+    
+    return max_run",3
+5,"
+
+def solve(s):
+    max_run = 0
+    curr_run = 0
+    for i in range(len(s)):
+        if s[i].isupper():
+            curr_run += 1
+            if curr_run > max_run:
+                max_run = curr_run
+        else:
+            curr_run = 0
+    return max_run",4

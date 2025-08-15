@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    even_prod = 1
+    odd_prod = 1
+    
+    for num in lst:
+        if num % 2 == 0:
+            even_prod *= num
+        else:
+            odd_prod *= num
+    
+    return even_prod * odd_prod",1
+2,"
+
+def solve(lst):
+    even = 1
+    odd = 1
+    for num in lst:
+        if num % 2 == 0:
+            even *= num
+        else:
+            odd *= num
+    return even * odd",2
+3,"
+
+def solve(lst):
+    even_product = 1
+    odd_product = 1
+    
+    for num in lst:
+        if num % 2 == 0:
+            even_product *= num
+        else:
+            odd_product *= num
+    
+    return even_product * odd_product",3
+4,"
+
+def solve(lst):
+    prod_even = 1
+    prod_odd = 1
+    for num in lst:
+        if num % 2 == 0:
+            prod_even *= num
+        else:
+            prod_odd *= num
+    return prod_even * prod_odd",4
+5,"
+
+def solve(lst):
+    even_product = 1
+    odd_product = 1
+    for num in lst:
+        if num % 2 == 0:
+            even_product *= num
+        else:
+            odd_product *= num
+    return even_product * odd_product",3

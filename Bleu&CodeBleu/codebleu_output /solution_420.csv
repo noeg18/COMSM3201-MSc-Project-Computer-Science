@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return (n*(n+1)*(2*n+1))",1
+2,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += (2*i)**3
+    return sum",2
+3,"
+
+def solve(n):
+    sum = 0
+    for i in range(1,n+1):
+        sum += (2*i)**3
+    return sum",3
+4,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += (2*i)**3
+    return sum",2
+5,"
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += (2*i)**3
+    return sum",2

@@ -1,0 +1,55 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, k):
+    result = []
+    for tup in lst:
+        flag = True
+        for num in tup:
+            if num % k != 0:
+                flag = False
+                break
+        if flag:
+            result.append(tup)
+    return result",1
+2,"
+
+def solve(lst, k):
+    result = []
+    for tup in lst:
+        for num in tup:
+            if num % k != 0:
+                break
+        else:
+            result.append(tup)
+    return result",2
+3,"
+
+def solve(tuples, k):
+    result = []
+    for tup in tuples:
+        divisible = True
+        for element in tup:
+            if element % k != 0:
+                divisible = False
+                break
+        if divisible:
+            result.append(tup)
+    return result",3
+4,"
+
+def solve(lst, k):
+    res = []
+    for tup in lst:
+        flag = True
+        for num in tup:
+            if num % k != 0:
+                flag = False
+                break
+        if flag:
+            res.append(tup)
+    return res",1
+5,"
+
+def solve(lst, k):
+    return [tup for tup in lst if all(elem % k == 0 for elem in tup)]",4

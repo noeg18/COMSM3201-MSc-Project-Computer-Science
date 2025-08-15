@@ -1,0 +1,143 @@
+response_num,response,cluster
+1,"
+
+def solve(r, g, b):
+    r = r/255
+    g = g/255
+    b = b/255
+    cmax = max(r, g, b)
+    cmin = min(r, g, b)
+    delta = cmax - cmin
+    
+    if delta == 0:
+        h = 0
+    elif cmax == r:
+        h = 60 * ((g-b)/delta % 6)
+    elif cmax == g:
+        h = 60 * ((b-r)/delta + 2)
+    else:
+        h = 60 * ((r-g)/delta + 4)
+        
+    if cmax == 0:
+        s = 0
+    else:
+        s = delta/cmax
+        
+    v = cmax
+    
+    return h, s, v",1
+2,"
+
+def solve(r, g, b):
+    r = r/255
+    g = g/255
+    b = b/255
+    
+    c_max = max(r, g, b)
+    c_min = min(r, g, b)
+    delta = c_max - c_min
+    
+    #Hue calculation
+    if delta == 0:
+        h = 0
+    elif c_max == r:
+        h = ((g-b)/delta) % 6
+    elif c_max == g:
+        h = ((b-r)/delta) + 2
+    else:
+        h = ((r-g)/delta) + 4
+    h = round(h*60)
+    
+    #Saturation calculation
+    if c_max == 0:
+        s = 0
+    else:
+        s = delta/c_max
+    s = round(s*100)
+    
+    #Value calculation
+    v = c_max
+    v = round(v*100)
+    
+    return (h, s, v)",2
+3,"
+
+def solve(rgb):
+    r = rgb[0] / 255.0
+    g = rgb[1] / 255.0
+    b = rgb[2] / 255.0
+    
+    cmax = max(r, g, b)
+    cmin = min(r, g, b)
+    delta = cmax - cmin
+    
+    if delta == 0:
+        h = 0
+    elif cmax == r:
+        h = 60 * ((g - b)/delta % 6)
+    elif cmax == g:
+        h = 60 * ((b - r)/delta + 2)
+    else:
+        h = 60 * ((r - g)/delta + 4)
+    
+    if cmax == 0:
+        s = 0
+    else:
+        s = delta / cmax
+        
+    v = cmax
+    
+    hsv = (h, s, v)
+    
+    return hsv",3
+4,"
+
+def solve(r, g, b):
+    r = r/255.0
+    g = g/255.0
+    b = b/255.0
+    cmax = max(r, g, b)
+    cmin = min(r, g, b)
+    delta = cmax - cmin
+    if delta == 0:
+        h = 0
+    elif cmax == r:
+        h = 60 * (((g - b)/delta) % 6)
+    elif cmax == g:
+        h = 60 * (((b - r)/delta) + 2)
+    else:
+        h = 60 * (((r - g)/delta) + 4)
+    if cmax == 0:
+        s = 0
+    else:
+        s = delta/cmax
+    v = cmax
+    return h, s, v",4
+5,"
+
+def solve(r, g, b):
+    r = r / 255.0
+    g = g / 255.0
+    b = b / 255.0
+    
+    cmax = max(r, g, b)
+    cmin = min(r, g, b)
+    delta = cmax - cmin
+    
+    if delta == 0:
+        h = 0
+    elif cmax == r:
+        h = 60 * (((g - b) / delta) % 6)
+    elif cmax == g:
+        h = 60 * (((b - r) / delta) + 2)
+    else:
+        h = 60 * (((r - g) / delta) + 4)
+        
+    if cmax == 0:
+        s = 0
+    else:
+        s = delta / cmax
+        
+    v = cmax
+    
+    return h, s, v",5

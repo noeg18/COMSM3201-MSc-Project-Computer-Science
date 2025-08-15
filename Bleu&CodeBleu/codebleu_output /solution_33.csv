@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(decimal_num):
+    binary_num = """"
+    while decimal_num > 0:
+        binary_num = str(decimal_num % 2) + binary_num
+        decimal_num = decimal_num//2
+    return binary_num",1
+2,"
+
+def solve(num):
+    binary = """"
+    while num > 0:
+        binary = str(num % 2) + binary
+        num = num // 2
+    return binary",2
+3,"
+
+def solve(decimal):
+    binary = """"
+    while decimal > 0:
+        binary = str(decimal % 2) + binary
+        decimal = decimal // 2
+    return binary",3
+4,"
+
+def solve(decimal):
+    binary = """"
+    while decimal > 0:
+        binary = str(decimal % 2) + binary
+        decimal = decimal // 2
+    return binary",3
+5,"
+
+def solve(n):
+    binary = """"
+    while n > 0:
+        binary = str(n % 2) + binary
+        n = n // 2
+    return binary",4

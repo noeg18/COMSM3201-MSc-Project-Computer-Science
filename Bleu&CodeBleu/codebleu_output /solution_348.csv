@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+def solve(values, length):
+    count = 0
+    for i in range(len(values)):
+        prefix_sum = 0
+        for j in range(i, len(values)):
+            prefix_sum += values[j]
+            if prefix_sum >= 0 and j-i+1 == length:
+                count += 1
+    return count",1
+2,"
+
+def solve(length, values):
+    count = 0
+    prefix_sum = 0
+    for i in range(length):
+        for j in range(length):
+            prefix_sum += values[j]
+            if prefix_sum >= 0:
+                count += 1
+    return count",2
+3,"
+
+def solve(values, length):
+    count = 0
+    for i in range(len(values)):
+        prefix_sum = 0
+        for j in range(i, len(values)):
+            prefix_sum += values[j]
+            if prefix_sum >= 0 and j-i+1 == length:
+                count += 1
+    return count",1
+4,"
+
+def solve(values, length):
+    count = 0
+    for i in range(len(values)-length+1):
+        if sum(values[i:i+length]) >= 0:
+            count += 1
+    return count",3
+5,"
+
+def solve(values, n):
+    count = 0
+    for i in range(len(values)-n+1):
+        if all(sum(values[i:i+n]) >= 0 for j in range(n)):
+            count += 1
+    return count",4

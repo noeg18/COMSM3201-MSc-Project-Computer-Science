@@ -1,0 +1,55 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    largest = 0
+    i = 2
+    while i * i <= num:
+        while num % i == 0:
+            largest = i
+            num = num / i
+        i += 1
+    if num > largest:
+        largest = num
+    return largest",1
+2,"
+
+def solve(num):
+    i = 2
+    while i * i <= num:
+        if num % i:
+            i += 1
+        else:
+            num //= i
+    return num",2
+3,"
+
+def solve(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n",3
+4,"
+
+def solve(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n",3
+5,"
+
+def solve(num):
+    i = 2
+    while i * i <= num:
+        if num % i:
+            i += 1
+        else:
+            num //= i
+
+    return num",2

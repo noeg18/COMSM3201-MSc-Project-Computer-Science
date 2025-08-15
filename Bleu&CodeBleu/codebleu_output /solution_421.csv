@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(tup, delimiter):
+    return delimiter.join(str(x) for x in tup)",1
+2,"
+
+def solve(tuple, delimiter):
+    result = ''
+    for element in tuple:
+        result += str(element) + delimiter
+    return result[:-1]",2
+3,"
+
+def solve(tup, delimiter):
+    result = """"
+    for elem in tup:
+        result += str(elem) + str(delimiter)
+    result = result[:-1]
+    return result",3
+4,"
+
+def solve(tup, delim):
+    result = """"
+    for element in tup:
+        result += str(element) + delim
+    return result[:-len(delim)]",4
+5,"
+
+def solve(tup, delimiter):
+    return delimiter.join(str(i) for i in tup)",5

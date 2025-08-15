@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(length, width, height):
+    return 2 * (length * height + width * height)",1
+2,"
+
+def solve(length, width, height):
+    return 2 * (length * height + width * height)",1
+3,"
+
+def solve(length, width, height):
+    return 2 * (length * height + width * height)",1
+4,"
+
+def solve(length, width, height):
+    return 2 * height * (length + width)",2
+5,"
+
+def solve(length, width, height):
+    return 2 * (length * height + width * height)",1

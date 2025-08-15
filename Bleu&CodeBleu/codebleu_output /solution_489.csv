@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    max_val = max(arr)
+    freq = arr.count(max_val)
+    return freq",1
+2,"
+
+def solve(arr):
+    largest = max(arr)
+    count = 0
+    for num in arr:
+        if num == largest:
+            count += 1
+    return count",2
+3,"
+
+def solve(arr):
+    frequency = 0
+    largest = max(arr)
+    for num in arr:
+        if num == largest:
+            frequency += 1
+    return frequency",3
+4,"
+
+def solve(arr):
+    max_freq = 0
+    max_val = max(arr)
+    for num in arr:
+        if num == max_val:
+            max_freq += 1
+    return max_freq",4
+5,"
+
+def solve(arr):
+    freq = {}
+    max_value = max(arr)
+    
+    for num in arr:
+        if num == max_value:
+            freq[num] = freq.get(num, 0) + 1
+    
+    return freq[max_value]",5

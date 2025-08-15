@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(num, arr):
+    for elem in arr:
+        if num <= elem:
+            return False
+    return True",1
+2,"
+
+def solve(num, arr):
+    return num > max(arr)",2
+3,"
+
+def solve(num, arr):
+    for element in arr:
+        if num <= element:
+            return False
+    return True",3
+4,"
+
+def solve(num, arr):
+    for element in arr:
+        if num <= element:
+            return False
+    return True",3
+5,"
+
+def solve(number, array):
+    for element in array:
+        if number <= element:
+            return False
+    return True",4

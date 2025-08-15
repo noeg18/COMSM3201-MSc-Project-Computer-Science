@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    num_list = list(str(n))
+    while sum(num_list) < n:
+        num_list.append(sum(num_list[-3:]))
+    if sum(num_list) == n:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(n):
+    digits = [int(i) for i in str(n)]
+    # initialize sequence with digits of n
+    sequence = digits.copy()
+    # calculate sum of sequence
+    sequence_sum = sum(sequence)
+    # check if sum of sequence is equal to n
+    if sequence_sum == n:
+        return True
+    # loop until sequence_sum is greater than n
+    while sequence_sum < n:
+        # add the last k digits of sequence to itself
+        sequence.append(sum(sequence[-len(digits):]))
+        # update sequence_sum
+        sequence_sum = sum(sequence)
+        # check if sum of sequence is equal to n
+        if sequence_sum == n:
+            return True
+    # if loop terminates without returning, n is not a Keith number
+    return False",2
+3,"
+
+def solve(num):
+    digits = [int(x) for x in str(num)]
+    n = len(digits)
+    sum = 0
+    i = 0
+    while sum < num:
+        sum = 0
+        for j in range(n):
+            sum += digits[i+j]
+        digits.append(sum)
+        i += 1
+    if sum == num:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(num):
+    num_str = str(num)
+    num_list = []
+    for digit in num_str:
+        num_list.append(int(digit))
+    n = len(num_list)
+    sum_list = [sum(num_list[:i]) for i in range(1, n+1)]
+    while sum_list[-1] < num:
+        next_num = sum(sum_list[-n:])
+        sum_list.append(next_num)
+    if sum_list[-1] == num:
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(num):
+    digits = [int(i) for i in str(num)]
+    seq = [0] * len(digits)
+    while sum(seq) < num:
+        seq.append(sum(seq[-len(digits):]))
+    return sum(seq[-len(digits):]) == num",5

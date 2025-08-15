@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    return list(map(lambda x, y: x/y, list1, list2))",1
+2,"
+
+def solve(list1, list2):
+    return list(map(lambda x,y: x/y, list1, list2))",2
+3,"
+
+def solve(list1, list2):
+    return list(map(lambda x, y: x / y, list1, list2))",3
+4,"
+
+def solve(list1, list2):
+    return list(map(lambda x, y: x/y, list1, list2))",1
+5,"
+
+def solve(list1, list2):
+    return list(map(lambda x, y: x/y, list1, list2))",1

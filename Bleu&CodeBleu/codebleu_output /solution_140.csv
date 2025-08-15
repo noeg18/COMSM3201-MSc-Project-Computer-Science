@@ -1,0 +1,81 @@
+response_num,response,cluster
+1,"
+def solve(tup):
+    # create an empty list to store the singly occurring elements
+    singles = []
+    # loop through the elements in the tuple list
+    for elem in tup:
+        # check if the element occurs only once in the tuple list
+        if tup.count(elem) == 1:
+            # if so, append it to the singles list
+            singles.append(elem)
+    # return the singles list
+    return singles",1
+2,"
+
+def solve(lst):
+    count_dict = {}
+
+    for tup in lst:
+        for item in tup:
+            if item in count_dict:
+                count_dict[item] += 1
+            else:
+                count_dict[item] = 1
+
+    result = []
+
+    for key, value in count_dict.items():
+        if value == 1:
+            result.append(key)
+
+    return result",2
+3,"
+
+def solve(tuple_list):
+    count_dict = {}
+    for tup in tuple_list:
+        for elem in tup:
+            if elem in count_dict:
+                count_dict[elem] += 1
+            else:
+                count_dict[elem] = 1
+    
+    single_elems = []
+    for key, value in count_dict.items():
+        if value == 1:
+            single_elems.append(key)
+    
+    return single_elems",3
+4,"
+
+def solve(tuples):
+    singles = []
+    for tup in tuples:
+        if tuples.count(tup) == 1:
+            singles.append(tup)
+    return singles",4
+5,"
+
+def solve(tuple_list):
+    # create a dictionary to store the count of each element in the tuple list
+    count_dict = {}
+    # loop through the tuple list
+    for tuple in tuple_list:
+        # loop through each element in the tuple
+        for element in tuple:
+            # if the element is already in the dictionary, increase its count by 1
+            if element in count_dict:
+                count_dict[element] += 1
+            # if the element is not in the dictionary, add it with a count of 1
+            else:
+                count_dict[element] = 1
+    # create a list to store the elements that occur singly
+    single_elements = []
+    # loop through the dictionary
+    for key, value in count_dict.items():
+        # if the count of the element is 1, add it to the single_elements list
+        if value == 1:
+            single_elements.append(key)
+    # return the single_elements list
+    return single_elements",5

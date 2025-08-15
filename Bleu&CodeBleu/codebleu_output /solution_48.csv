@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    odd_bits = 0
+    for i in range(0, 32, 2):
+        odd_bits |= 1 << i
+    return n | odd_bits",1
+2,"
+
+def solve(num):
+    result = 0
+    bit_pos = 0
+    while num > 0:
+        if bit_pos % 2 == 1:
+            result |= (num & 1) << bit_pos
+        num >>= 1
+        bit_pos += 1
+    return result",2
+3,"
+
+def solve(n):
+    result = 0
+    for i in range(0, len(bin(n)[2:]), 2):
+        result += 2**i
+    return result",3
+4,"
+
+def solve(num):
+    mask = 0xAAAAAAAA # mask to set all odd bits to 1
+    return num | mask  # bitwise OR with num to set odd bits to 1",4
+5,"
+
+def solve(num):
+    result = 0
+    i = 1
+    while num > 0:
+        if i % 2 == 1:
+            result = result | (num & 1)
+            num = num >> 1
+            i += 1
+        else:
+            num = num >> 1
+            i += 1
+    return result",5

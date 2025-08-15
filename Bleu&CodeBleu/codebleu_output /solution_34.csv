@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    n = len(arr)
+    total = (n+1)*(n+2)/2
+    sum_arr = sum(arr)
+    return int(total - sum_arr)",1
+2,"
+
+def solve(arr):
+    n = len(arr)
+    total = (n+1)*(n+2)/2
+    sum_of_arr = sum(arr)
+    return int(total - sum_of_arr)",2
+3,"
+
+def solve(arr):
+    n = len(arr)
+    total = (n+1)*(n+2)//2
+    for i in range(n):
+        total -= arr[i]
+    return total",3
+4,"
+
+def solve(arr):
+    n = len(arr)
+    total = (n+1)*(n+2)/2
+    for i in range(n):
+        total -= arr[i]
+    return int(total)",4
+5,"
+
+def solve(arr):
+    n = len(arr)
+    total = (n+1)*(n+2)/2
+    sum_of_arr = sum(arr)
+    return total - sum_of_arr",5

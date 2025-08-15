@@ -1,0 +1,79 @@
+response_num,response,cluster
+1,"
+
+def solve(string, n):
+    count = 0
+    new_string = ''
+    for char in string:
+        if char in [' ', ',', '.']:
+            count += 1
+            if count <= n:
+                new_string += ':'
+            else:
+                new_string += char
+        else:
+            new_string += char
+    return new_string",1
+2,"
+
+def solve(string, n):
+    count = 0
+    new_string = """"
+    
+    for char in string:
+        if char == ' ' or char == ',' or char == '.':
+            if count < n:
+                new_string += ':'
+                count += 1
+            else:
+                new_string += char
+        else:
+            new_string += char
+    
+    return new_string",2
+3,"
+
+def solve(string, n):
+    count = 0
+    new_string = """"
+    for char in string:
+        if char == "" "" or char == "","" or char == ""."":
+            if count < n:
+                new_string += "":""
+                count += 1
+            else:
+                new_string += char
+        else:
+            new_string += char
+    return new_string",3
+4,"
+def solve(string, n):
+    count = 0
+    result = ''
+    for char in string:
+        if char == ' ' or char == ',' or char == '.':
+            if count < n:
+                result += ':'
+                count += 1
+            else:
+                result += char
+        else:
+            result += char
+    return result",4
+5,"
+
+def solve(string, n):
+    count = 0
+    result = """"
+    
+    for char in string:
+        if char == ' ' or char == ',' or char == '.':
+            count += 1
+            if count <= n:
+                result += ':'
+            else:
+                result += char
+        else:
+            result += char
+    
+    return result",5

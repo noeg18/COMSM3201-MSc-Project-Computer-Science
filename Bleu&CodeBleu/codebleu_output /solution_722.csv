@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(students):
+    filtered = {}
+    for student, dimensions in students.items():
+        filtered[student] = (dimensions[0], dimensions[1])
+    return filtered",1
+2,"
+
+def solve(students):
+    filtered = {}
+    for key, value in students.items():
+        if type(value) == dict:
+            if ""height"" in value.keys() and ""width"" in value.keys():
+                filtered[key] = (value[""height""], value[""width""])
+    return filtered",2
+3,"
+
+def solve(students):
+    filtered = {}
+    for key, value in students.items():
+        if key == 'height' or key == 'width':
+            filtered[key] = value
+    return filtered",3
+4,"
+
+def solve(students):
+    heights = []
+    widths = []
+    
+    for student in students.values():
+        heights.append(student['height'])
+        widths.append(student['width'])
+        
+    return heights, widths",4
+5,"
+
+def solve(students):
+    filtered_dict = {}
+    for key, value in students.items():
+        if key == 'height' or key == 'width':
+            filtered_dict[key] = value
+    return filtered_dict",5

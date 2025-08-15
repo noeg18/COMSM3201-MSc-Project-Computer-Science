@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(list, string):
+    for item in list:
+        if item != string:
+            return False
+    return True",1
+2,"
+
+def solve(lst, string):
+    for item in lst:
+        if item != string:
+            return False
+    return True",2
+3,"
+
+def solve(lst, string):
+    for item in lst:
+        if item != string:
+            return False
+    return True",2
+4,"
+
+def solve(lst, string):
+    for item in lst:
+        if item != string:
+            return False
+    return True",2
+5,"
+
+def solve(lst, str):
+    for item in lst:
+        if item != str:
+            return False
+    return True",3

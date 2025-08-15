@@ -1,0 +1,70 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    jumps = 0
+    curr_end = 0
+    curr_max = 0
+    for i in range(len(nums)-1):
+        curr_max = max(curr_max, i + nums[i])
+        if i == curr_end:
+            jumps += 1
+            curr_end = curr_max
+    return jumps",1
+2,"
+
+def solve(arr):
+    n = len(arr)
+    jumps = [None] * n
+    jumps[0] = 0
+    for i in range(1, n):
+        jumps[i] = float('inf')
+        for j in range(0, i):
+            if i <= j + arr[j]:
+                jumps[i] = min(jumps[i], jumps[j] + 1)
+    return jumps[n-1]",2
+3,"
+
+def solve(arr):
+    jumps = 0
+    end = len(arr) - 1
+    curr_max = 0
+    next_max = 0
+    
+    for i in range(end):
+        next_max = max(next_max, i + arr[i])
+        
+        if i == curr_max:
+            jumps += 1
+            curr_max = next_max
+            
+        if curr_max >= end:
+            return jumps
+            
+    return -1",3
+4,"
+
+def solve(arr):
+    n = len(arr)
+    jumps = [float('inf')] * n
+    jumps[0] = 0
+
+    for i in range(1, n):
+        for j in range(i):
+            if arr[j] + j >= i:
+                jumps[i] = min(jumps[i], jumps[j] + 1)
+                break
+
+    return jumps[-1]",4
+5,"
+
+def solve(arr):
+  jumps = [float('inf')] * len(arr)
+  jumps[0] = 0
+  
+  for i in range(1, len(arr)):
+    for j in range(i):
+      if arr[j] + j >= i:
+        jumps[i] = min(jumps[i], jumps[j] + 1)
+  
+  return jumps[-1]",5

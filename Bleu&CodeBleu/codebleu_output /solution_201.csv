@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return all(elem == lst[0] for elem in lst) ",1
+2,"
+
+def solve(lst):
+    if len(lst) == 0:
+        return False
+    else:
+        first = lst[0]
+        for i in lst:
+            if i != first:
+                return False
+        return True",2
+3,"
+
+def solve(lst):
+    if len(lst) <= 1:
+        return True
+    else:
+        first = lst[0]
+        for ele in lst:
+            if ele != first:
+                return False
+        return True",3
+4,"
+
+def solve(lst):
+    return all(x == lst[0] for x in lst)",4
+5,"
+
+def solve(lst):
+    return all(x == lst[0] for x in lst)",4

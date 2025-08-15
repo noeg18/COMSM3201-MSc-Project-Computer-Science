@@ -1,0 +1,104 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    digits = [int(x) for x in str(num)]
+    for i in range(len(digits)-1, 0, -1):
+        if digits[i] > digits[i-1]:
+            min_idx = i
+            for j in range(i+1, len(digits)):
+                if digits[j] > digits[i-1] and digits[j] < digits[min_idx]:
+                    min_idx = j
+            digits[i-1], digits[min_idx] = digits[min_idx], digits[i-1]
+            digits[i:] = sorted(digits[i:])
+            return int(''.join(str(x) for x in digits))
+    return -1",1
+2,"
+
+def solve(num):
+    digits = list(str(num))
+    # Find the first digit from the right that is smaller than the digit next to it
+    for i in range(len(digits) - 2, -1, -1):
+        if digits[i] < digits[i+1]:
+            break
+    else:
+        # If no such digit is found, the number is already the largest possible
+        return num
+    
+    # Find the smallest digit after the digit found in the previous step, but greater than it
+    j = i+1
+    while j < len(digits) and digits[j] > digits[i]:
+        j += 1
+    j -= 1
+    
+    # Swap the two digits found in the previous steps
+    digits[i], digits[j] = digits[j], digits[i]
+    
+    # Reverse the order of the digits starting from the one next to the one found in the first step
+    digits[i+1:] = digits[i+1:][::-1]
+    
+    # Convert the list of digits back to a number and return it
+    return int("""".join(digits))",2
+3,"
+
+def solve(n):
+    digits = [int(x) for x in str(n)]
+    for i in range(len(digits)-1, 0, -1):
+        if digits[i] > digits[i-1]:
+            digits[i], digits[i-1] = digits[i-1], digits[i]
+            return int(''.join(str(x) for x in digits))
+    return -1",3
+4,"
+
+def solve(num):
+    # convert number to string
+    num_str = str(num)
+    
+    # convert string to list of digits
+    digits = list(num_str)
+    
+    # initialize pivot index
+    pivot_idx = -1
+    
+    # find pivot index
+    for i in range(len(digits)-1, 0, -1):
+        if digits[i-1] < digits[i]:
+            pivot_idx = i-1
+            break
+    
+    # if pivot index is not found, return -1
+    if pivot_idx == -1:
+        return -1
+    
+    # find the smallest digit on the right side of pivot index that is larger than the digit at pivot index
+    smallest_idx = pivot_idx + 1
+    for i in range(pivot_idx + 2, len(digits)):
+        if digits[i] > digits[pivot_idx] and digits[i] < digits[smallest_idx]:
+            smallest_idx = i
+    
+    # swap pivot digit with smallest digit on the right side
+    digits[pivot_idx], digits[smallest_idx] = digits[smallest_idx], digits[pivot_idx]
+    
+    # sort the digits on the right side of pivot index in ascending order
+    digits[pivot_idx+1:] = sorted(digits[pivot_idx+1:])
+    
+    # convert the list of digits back to a string and then to an integer
+    next_bigger_num = int("""".join(digits))
+    
+    return next_bigger_num",4
+5,"
+
+def solve(number):
+    digits = [int(d) for d in str(number)]
+    for i in range(len(digits)-2, -1, -1):
+        if digits[i] < digits[i+1]:
+            break
+    else:
+        return -1
+    pivot = digits[i]
+    suffix = digits[i+1:]
+    min_greater = min([x for x in suffix if x > pivot])
+    suffix.remove(min_greater)
+    suffix.sort()
+    digits = digits[:i] + [min_greater] + suffix
+    return int("""".join([str(d) for d in digits]))",5

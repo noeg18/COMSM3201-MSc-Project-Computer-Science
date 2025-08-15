@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    pattern = r'\s'
+    if re.search(pattern, string):
+        return re.sub(pattern, '_', string)
+    else:
+        return re.sub('_', ' ', string)",1
+2,"
+
+import re
+
+def solve(string):
+    string = re.sub(r'\s', '_', string)
+    string = re.sub(r'_', ' ', string)
+    return string",2
+3,"
+
+def solve(string):
+    new_string = re.sub(r'\s', '_', string)
+    new_string = re.sub(r'_', ' ', new_string)
+    return new_string",3
+4,"
+
+def solve(string):
+    string = re.sub(r'\s', '_', string)
+    string = re.sub(r'_', ' ', string)
+    return string",4
+5,"
+
+import re
+
+def solve(string):
+    new_string = re.sub(r""\s"", ""_"", string)
+    new_string = re.sub(r""_"", "" "", new_string)
+    return new_string
+    
+# Example:
+print(solve(""hello world"")) # Output: hello_world",5

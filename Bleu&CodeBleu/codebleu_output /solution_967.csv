@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+    for char in string.lower():
+        if char not in vowels:
+            return False
+    return True",1
+2,"
+
+def solve(string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for vowel in vowels:
+        if vowel not in string.lower():
+            return False
+    return True",2
+3,"
+
+def solve(string):
+    vowels = set('aeiou')
+    return set(string.lower()) >= vowels",3
+4,"
+
+def solve(string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for vowel in vowels:
+        if vowel not in string.lower():
+            return False
+    return True",2
+5,"
+
+def solve(string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for vowel in vowels:
+        if vowel not in string.lower():
+            return False
+    return True",2

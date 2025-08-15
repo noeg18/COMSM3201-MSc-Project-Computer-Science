@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(numerator, denominator, n):
+    fraction = numerator / denominator
+    fraction_str = str(fraction)
+    decimal_index = fraction_str.index('.')
+    nth_digit = fraction_str[decimal_index + n + 1]
+    return nth_digit",1
+2,"
+
+def solve(numerator, denominator, n):
+    fraction = numerator / denominator
+    digits = str(fraction).split(""."")[1]
+    return int(digits[n-1])",2
+3,"
+
+def solve(numerator, denominator, n):
+    fraction = str(numerator/denominator)
+    decimal = fraction.split('.')[1]
+    if n > len(decimal):
+        return ""Error: n is larger than the number of digits in the fraction.""
+    else:
+        return decimal[n-1]",3
+4,"
+
+def solve(n, num1, num2):
+    fraction = num1 / num2
+    digits = str(fraction).split(""."")[1]
+    return digits[n-1]",4
+5,"
+
+def solve(numerator, denominator, n):
+    decimal = numerator/denominator
+    decimal_str = str(decimal).split(""."")[1]
+    if n < len(decimal_str):
+        return int(decimal_str[n-1])
+    else:
+        return -1",5

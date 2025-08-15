@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    length = len(tuples[0])
+    for tup in tuples:
+        if len(tup) != length:
+            return False
+    return True",1
+2,"
+
+def solve(tuples):
+    length = len(tuples[0])
+    for tuple in tuples:
+        if len(tuple) != length:
+            return False
+    return True",2
+3,"
+
+def solve(tuples):
+    length = len(tuples[0])
+    for tuple in tuples:
+        if len(tuple) != length:
+            return False
+    return True",2
+4,"
+
+def solve(tuples):
+    length = len(tuples[0])
+    for t in tuples:
+        if len(t) != length:
+            return False
+    return True",3
+5,"
+
+def solve(tuples):
+    length = len(tuples[0])
+    for t in tuples:
+        if len(t) != length:
+            return False
+    return True",3

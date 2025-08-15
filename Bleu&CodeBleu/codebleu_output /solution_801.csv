@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(num1, num2, num3):
+    count = 0
+    if num1 == num2 == num3:
+        count = 3
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        count = 2
+    else:
+        count = 0
+    return count",1
+2,"
+
+def solve(a, b, c):
+    count = 0
+    if a == b == c:
+        count = 3
+    elif a == b or a == c or b == c:
+        count = 2
+    else:
+        count = 0
+    return count",2
+3,"
+
+def solve(num1, num2, num3):
+    count = 0
+    if num1 == num2 == num3:
+        count = 3
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        count = 2
+    return count",3
+4,"
+
+def solve(a,b,c):
+    count = 0
+    if a == b:
+        count += 1
+    if a == c:
+        count += 1
+    if b == c:
+        count += 1
+    return count
+",4
+5,"
+
+def solve(num1, num2, num3):
+    count = 0
+    if num1 == num2 == num3:
+        count = 3
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        count = 2
+    return count",3

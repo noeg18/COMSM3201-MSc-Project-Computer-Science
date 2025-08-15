@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    subsets = set()
+    for num in nums:
+        subsets.add(num)
+    return len(subsets)",1
+2,"
+
+def solve(nums):
+    subsets = set()
+    for num in nums:
+        subsets.add(num)
+    return len(subsets)",1
+3,"
+
+def solve(list1):
+    subsets = set()
+    for i in list1:
+        subsets.add(i)
+
+    return len(subsets)
+
+# Example usage:
+# solve([1, 2, 3, 1, 2, 4]) -> 4",2
+4,"
+
+def solve(input_list):
+    subset_list = []
+    for num in input_list:
+        if num not in subset_list:
+            subset_list.append(num)
+    return len(subset_list)",3
+5,"
+
+def solve(nums):
+    return len(set(nums))",4

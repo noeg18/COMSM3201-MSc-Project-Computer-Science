@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(string, k):
+    words = string.split()
+    result = []
+    for word in words:
+        if len(word) != k:
+            result.append(word)
+    return "" "".join(result)",1
+2,"
+
+def solve(string, k):
+    words = string.split()
+    filtered_words = [word for word in words if len(word) != k]
+    return "" "".join(filtered_words)
+",2
+3,"
+
+def solve(string, k):
+    words = string.split()
+    result = []
+    for word in words:
+        if len(word) != k:
+            result.append(word)
+    return ' '.join(result)",1
+4,"
+
+def solve(string, k):
+    words = string.split()
+    filtered_words = [word for word in words if len(word) != k]
+    return "" "".join(filtered_words)",2
+5,"
+
+def solve(string, k):
+    words = string.split()
+    result = []
+    for word in words:
+        if len(word) != k:
+            result.append(word)
+    return "" "".join(result)",1

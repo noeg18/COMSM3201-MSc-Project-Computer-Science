@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    result = """"
+    for char in string:
+        if char.isalnum():
+            result += char
+    return result",1
+2,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char.isalnum():
+            new_string += char
+    return new_string",2
+3,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char.isalnum():
+            new_string += char
+    return new_string",2
+4,"
+
+def solve(string):
+    new_string = """"
+    for char in string:
+        if char.isalnum():
+            new_string += char
+    return new_string",2
+5,"
+
+def solve(string):
+    alphanumeric = """"
+    for char in string:
+        if char.isalnum():
+            alphanumeric += char
+    return alphanumeric",3

@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    nums.sort()
+    missing = 1
+    for num in nums:
+        if num == missing:
+            missing += 1
+        elif num > missing:
+            return missing
+    return missing",1
+2,"
+
+def solve(nums):
+    nums.sort()
+    missing = 1
+    for num in nums:
+        if num > 0:
+            if num == missing:
+                missing += 1
+            elif num > missing:
+                return missing
+    return missing",1
+3,"
+
+def solve(nums):
+    nums = sorted(nums)
+    if not nums:
+        return 1
+    if nums[-1] < 0:
+        return 1
+    for i in range(1, nums[-1]+2):
+        if i not in nums:
+            return i",2
+4,"
+
+def solve(nums):
+    nums.sort()
+    missing = 1
+    for num in nums:
+        if num == missing:
+            missing += 1
+    return missing",3
+5,"
+
+def solve(nums):
+    nums.sort()
+    smallest = 1
+    for num in nums:
+        if num == smallest:
+            smallest += 1
+    return smallest",4

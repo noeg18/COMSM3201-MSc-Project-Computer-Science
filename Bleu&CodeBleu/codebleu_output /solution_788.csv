@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(string, lst):
+    new_tuple = (string, lst)
+    return new_tuple",1
+2,"
+
+def solve(string, list):
+    new_tuple = (string, list)
+    return new_tuple",2
+3,"
+
+def solve(string, lst):
+    return (string,) + tuple(lst)",3
+4,"
+
+def solve(string, lst):
+    new_tuple = (string, lst)
+    return new_tuple",1
+5,"
+
+def solve(string, list):
+    new_tuple = (string, list)
+    return new_tuple",2

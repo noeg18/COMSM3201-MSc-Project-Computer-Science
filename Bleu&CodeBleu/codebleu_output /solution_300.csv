@@ -1,0 +1,84 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    count = 0
+    for i in range(2**(2*n)):
+        binary = bin(i)[2:].zfill(2*n)
+        first_half = binary[:n]
+        second_half = binary[n:]
+        if sum(int(bit) for bit in first_half) == sum(int(bit) for bit in second_half):
+            count += 1
+    return count",1
+2,"
+
+def solve(n):
+    # Base case: if n is 0, there are no valid binary sequences
+    if n == 0:
+        return 0
+    
+    # Use dynamic programming to store the counts for each number of bits
+    counts = [0 for _ in range(n+1)]
+    
+    # The first count is always 1, since a sequence of length 0 has a sum of 0
+    counts[0] = 1
+    
+    # Iterate through all possible values for the first n bits
+    for i in range(1, n+1):
+        # Calculate the sum of the first n bits
+        sum = i
+        
+        # Iterate through all possible values for the last n bits
+        for j in range(0, i+1):
+            # If the sum of the last n bits is the same as the sum of the first n bits,
+            # increment the count for this number of bits by the count for the previous number of bits
+            if sum == (i-j):
+                counts[i] += counts[j]
+    
+    # The total count is the last count in the list
+    return counts[-1]",2
+3,"
+
+def solve(n):
+    count = 0
+    for i in range(2**(2*n)):
+        binary = bin(i)[2:].zfill(2*n)
+        first_half = binary[:n]
+        second_half = binary[n:]
+        if sum([int(x) for x in first_half]) == sum([int(x) for x in second_half]):
+            count += 1
+    return count",3
+4,"
+
+def solve(n):
+    count = 0
+    # Generate all binary sequences of length 2n
+    for i in range(2**(2*n)):
+        # Convert the integer to binary string
+        binary = bin(i)[2:]
+        # Pad the binary string with leading zeros if necessary
+        binary = binary.zfill(2*n)
+        # Split the binary string into two halves
+        first_half = binary[:n]
+        last_half = binary[n:]
+        # Convert the binary strings to integers
+        first_half_sum = int(first_half, 2)
+        last_half_sum = int(last_half, 2)
+        # Check if the sum of first n bits is equal to the sum of last n bits
+        if first_half_sum == last_half_sum:
+            count += 1
+    return count",4
+5,"
+
+def solve(n):
+    count = 0
+    for i in range(2**(2*n)):
+        binary = format(i, '0' + str(2*n) + 'b')
+        first_sum = 0
+        last_sum = 0
+        for j in range(n):
+            first_sum += int(binary[j])
+            last_sum += int(binary[n+j])
+        if first_sum == last_sum:
+            count += 1
+    return count",5

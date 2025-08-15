@@ -1,0 +1,70 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple_list):
+    result = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            temp = tuple_list[i][0] + tuple_list[j][0], tuple_list[i][1] + tuple_list[j][1]
+            result.append(temp)
+    return result",1
+2,"
+
+def solve(tuple_list):
+    result = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            result.append((tuple_list[i], tuple_list[j], tuple_list[i][0] + tuple_list[j][0]))
+    return result",2
+3,"
+
+def solve(tuple_list):
+    result = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            result.append((tuple_list[i][0] + tuple_list[j][0], (tuple_list[i][1], tuple_list[j][1])))
+    return result",3
+4,"
+
+def solve(tuple_list):
+    combinations = []
+    for i in range(len(tuple_list)):
+        for j in range(i+1, len(tuple_list)):
+            combinations.append((tuple_list[i], tuple_list[j], tuple_list[i][0]+tuple_list[j][0], tuple_list[i][1]+tuple_list[j][1]))
+    return combinations",4
+5,"
+
+def solve(tuple_list):
+    # create an empty dictionary to store the sums as keys and the tuples as values
+    sum_dict = {}
+    
+    # loop through the tuple list
+    for tup in tuple_list:
+        # calculate the sum of the tuple
+        tup_sum = sum(tup)
+        # check if the sum already exists in the dictionary
+        if tup_sum in sum_dict:
+            # if it does, append the current tuple to the list of tuples for that sum
+            sum_dict[tup_sum].append(tup)
+        else:
+            # if it doesn't, create a new key-value pair with the sum as the key and the current tuple as the value
+            sum_dict[tup_sum] = [tup]
+    
+    # create an empty list to store the combinations of sums with tuples
+    sum_combinations = []
+    
+    # loop through the keys in the dictionary
+    for key in sum_dict:
+        # loop through the tuples for each sum
+        for tup in sum_dict[key]:
+            # loop through the remaining keys in the dictionary
+            for other_key in sum_dict:
+                # check if the other key is not the same as the current key
+                if other_key != key:
+                    # loop through the tuples for the other key
+                    for other_tup in sum_dict[other_key]:
+                        # append the combination of the current tuple and the other tuple to the list of combinations
+                        sum_combinations.append((tup, other_tup))
+    
+    # return the list of combinations
+    return sum_combinations",5

@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(human_age):
+    if human_age <= 0:
+        return ""Invalid age. Please enter a positive number.""
+    elif human_age == 1:
+        return ""Your dog is 15 years old in dog years.""
+    elif human_age == 2:
+        return ""Your dog is 24 years old in dog years.""
+    else:
+        dog_age = 24 + (human_age - 2) * 4
+        return ""Your dog is "" + str(dog_age) + "" years old in dog years.""",1
+2,"
+
+def solve(human_years):
+    if human_years <= 2:
+        dog_years = human_years * 10.5
+    else:
+        dog_years = (2 * 10.5) + (human_years - 2) * 4
+    return dog_years",2
+3,"
+
+def solve(human_age):
+    if human_age <= 0:
+        return ""Invalid age. Please enter a positive number.""
+    elif human_age == 1:
+        return ""The dog's age is 15 in dog's years.""
+    elif human_age == 2:
+        return ""The dog's age is 24 in dog's years.""
+    else:
+        dog_age = 24 + (human_age - 2) * 4
+        return ""The dog's age is {} in dog's years."".format(dog_age)",3
+4,"
+
+def solve(human_years):
+    if human_years <= 0:
+        return ""Invalid input. Please enter a positive number.""
+    elif human_years == 1:
+        return ""The dog's age in dog years is 15.""
+    elif human_years == 2:
+        return ""The dog's age in dog years is 24.""
+    else:
+        dog_years = 24 + (human_years - 2) * 4
+        return ""The dog's age in dog years is {}."".format(dog_years)",4
+5,"
+
+def solve(human_years):
+    if human_years <= 2:
+        dog_years = human_years * 10.5
+    else:
+        dog_years = 21 + (human_years - 2) * 4
+    return dog_years",5

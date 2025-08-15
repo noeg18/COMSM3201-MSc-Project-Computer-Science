@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    duplicates = []
+    for num in lst:
+        if lst.count(num) > 1:
+            if num not in duplicates:
+                duplicates.append(num)
+    print(duplicates)",1
+2,"
+
+def solve(lst):
+   duplicates = []
+   for i in range(len(lst)):
+      for j in range(i+1, len(lst)):
+         if lst[i] == lst[j] and lst[i] not in duplicates:
+            duplicates.append(lst[i])
+   print(""Duplicates:"", duplicates)",2
+3,"
+
+def solve(lst):
+    duplicates = []
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            if lst[i] == lst[j] and lst[i] not in duplicates:
+                duplicates.append(lst[i])
+    print(""The duplicates in the list are:"", duplicates)",2
+4,"
+
+def solve(lst):
+    duplicates = []
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            if lst[i] == lst[j] and lst[i] not in duplicates:
+                duplicates.append(lst[i])
+    return duplicates",2
+5,"
+def solve(lst):
+    seen = set()
+    duplicates = []
+    for num in lst:
+        if num in seen:
+            duplicates.append(num)
+        else:
+            seen.add(num)
+    return duplicates",3

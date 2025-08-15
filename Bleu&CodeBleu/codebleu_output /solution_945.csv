@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    result = set()
+    for t in tuples:
+        result.add(t)
+    return result",1
+2,"
+
+def solve(tuples):
+    return set(tuples)",2
+3,"
+
+def solve(tuples):
+    return set(tuples)",2
+4,"
+def solve(tuples):
+    return set(tuples)",2
+5,"
+
+def solve(tuples):
+    return set(tuples)",2

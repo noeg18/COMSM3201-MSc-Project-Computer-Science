@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_lists, start, end):
+    new_list = []
+    for sublist in list_of_lists:
+        if not (sublist[0] < start or sublist[-1] > end):
+            new_list.append(sublist)
+    return new_list",1
+2,"
+
+def solve(list_of_lists, start, end):
+    new_list = []
+    for sublist in list_of_lists:
+        if start <= min(sublist) and max(sublist) <= end:
+            new_list.append(sublist)
+    return new_list",2
+3,"
+
+def solve(list_of_lists, start, end):
+    for sublist in list_of_lists:
+        if sublist[0] < start or sublist[-1] > end:
+            list_of_lists.remove(sublist)
+    return list_of_lists",3
+4,"
+
+def solve(lists, min_range, max_range):
+    for i in range(len(lists)-1, -1, -1):
+        if type(lists[i]) == list:
+            if min(lists[i]) < min_range or max(lists[i]) > max_range:
+                lists.pop(i)
+    return lists",4
+5,"
+
+def solve(list_of_lists, start, end):
+    for sublist in list_of_lists:
+        if any(element < start or element > end for element in sublist):
+            list_of_lists.remove(sublist)
+    return list_of_lists",5

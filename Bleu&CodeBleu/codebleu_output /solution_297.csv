@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(nested_list):
+    flattened_list = []
+    for element in nested_list:
+        if type(element) == list:
+            flattened_list.extend(solve(element))
+        else:
+            flattened_list.append(element)
+    return flattened_list",1
+2,"
+
+def solve(nested_list):
+    flattened_list = []
+    for item in nested_list:
+        if type(item) == list:
+            flattened_list.extend(solve(item))
+        else:
+            flattened_list.append(item)
+    return flattened_list",2
+3,"
+
+def solve(nested_list):
+    flattened_list = []
+    for el in nested_list:
+        if isinstance(el, list):
+            flattened_list.extend(solve(el))
+        else:
+            flattened_list.append(el)
+    return flattened_list",3
+4,"
+
+def solve(nested_list):
+    flattened_list = []
+    for item in nested_list:
+        if type(item) == list:
+            flattened_list.extend(solve(item))
+        else:
+            flattened_list.append(item)
+    return flattened_list",2
+5,"
+
+def solve(nested_list):
+    flattened_list = []
+    for i in nested_list:
+        if type(i) == list:
+            flattened_list.extend(solve(i))
+        else:
+            flattened_list.append(i)
+    return flattened_list",4

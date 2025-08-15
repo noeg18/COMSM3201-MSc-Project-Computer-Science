@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+def solve(lists):
+    unique = []
+    for lst in lists:
+        for num in lst:
+            if num not in unique:
+                unique.append(num)
+
+    return [unique[:2]]",1
+2,"
+
+def solve(lists):
+    for lst in lists:
+        for num in lst:
+            if lst.count(num) > 1:
+                lst.remove(num)
+                lst.remove(num)
+    return lists",2
+3,"
+
+def solve(lists):
+    seen = set()
+    result = []
+    for lst in lists:
+        temp = []
+        for num in lst:
+            if num not in seen:
+                temp.append(num)
+                seen.add(num)
+        result.append(temp)
+        seen.clear()
+    return result",3
+4,"
+
+def solve(lists):
+    result = []
+    for lst in lists:
+        temp = []
+        for num in lst:
+            if num not in temp:
+                temp.append(num)
+        result.append(temp)
+    return result",4
+5,"
+
+def solve(lists):
+    for list in lists:
+        for num in list:
+            if list.count(num) > 1:
+                list.remove(num)
+    return lists",5

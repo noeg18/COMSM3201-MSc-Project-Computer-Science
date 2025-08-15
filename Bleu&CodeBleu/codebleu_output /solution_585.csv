@@ -1,0 +1,56 @@
+response_num,response,cluster
+1,"
+
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, (-item[1], item[0]))
+    result = []
+    while n > 0:
+        result.append(heapq.heappop(heap)[1])
+        n -= 1
+    return result",1
+2,"
+
+from heapq import nlargest
+def solve(dataset, n):
+    prices = [item['price'] for item in dataset]
+    return nlargest(n, prices)",2
+3,"
+
+def solve(dataset, n):
+    from heapq import nlargest
+    prices = [item['price'] for item in dataset]
+    n_expensive = nlargest(n, prices)
+    result = []
+    for item in dataset:
+        if item['price'] in n_expensive:
+            result.append(item)
+    return result",3
+4,"
+
+import heapq
+
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, (-item[1], item[0]))
+    
+    result = []
+    for i in range(n):
+        result.append(heapq.heappop(heap)[1])
+    return result",4
+5,"
+
+import heapq
+
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, (-item[1], item[0]))
+    
+    result = []
+    for i in range(n):
+        result.append(heapq.heappop(heap)[1])
+    
+    return result",4

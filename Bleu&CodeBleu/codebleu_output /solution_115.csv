@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    for dic in lst:
+        if bool(dic):
+            return False
+    return True",1
+2,"
+
+def solve(list_of_dicts):
+    for dictionary in list_of_dicts:
+        if dictionary:
+            return False
+    return True",2
+3,"
+
+def solve(l):
+    for d in l:
+        if bool(d):
+            return False
+    return True",3
+4,"
+
+def solve(lst):
+    for d in lst:
+        if len(d) > 0:
+            return False
+    return True",4
+5,"
+
+def solve(lst):
+    for d in lst:
+        if d:
+            return False
+    return True",5

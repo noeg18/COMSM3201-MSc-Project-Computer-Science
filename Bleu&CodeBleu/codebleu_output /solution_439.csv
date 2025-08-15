@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    result = """"
+    for num in lst:
+        result += str(num)
+    return int(result)",1
+2,"
+
+def solve(list):
+    num = 0
+    for i in range(len(list)):
+        num += list[i] * (10 ** (len(list) - 1 - i))
+    return num",2
+3,"
+
+def solve(lst):
+    result = 0
+    for num in lst:
+        result = result * 10 + num
+    return result",3
+4,"
+
+def solve(int_list):
+    result = 0
+    for num in int_list:
+        result = result * 10 + num
+    return result",4
+5,"
+
+def solve(lst):
+    num = """"
+    for i in lst:
+        num += str(i)
+    return int(num)",5

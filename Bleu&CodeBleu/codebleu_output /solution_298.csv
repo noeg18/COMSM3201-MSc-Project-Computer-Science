@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(nested_list, main_list):
+    result = []
+    for sublist in nested_list:
+        for ele in sublist:
+            if ele in main_list:
+                result.append(ele)
+    return result",1
+2,"
+
+def solve(nested_list, another_list):
+    result = []
+    for sublist in nested_list:
+        for element in sublist:
+            if element in another_list:
+                result.append(element)
+    return result",2
+3,"
+
+def solve(nested_list, other_list):
+    result = []
+    for sublist in nested_list:
+        for element in sublist:
+            if element in other_list:
+                result.append(element)
+    return result",3
+4,"
+
+def solve(list1, list2):
+    result = []
+    for i in list1:
+        if type(i) == list:
+            for j in i:
+                if j in list2:
+                    result.append(j)
+        else:
+            if i in list2:
+                result.append(i)
+    return result",4
+5,"
+def solve(nested_list, list):
+    result = []
+    
+    for sublist in nested_list:
+        for element in sublist:
+            if element in list and element not in result:
+                result.append(element)
+    
+    return result",5

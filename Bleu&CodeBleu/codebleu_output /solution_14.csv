@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(base, height, length):
+    return (1/2 * base * height) * length",1
+2,"
+
+def solve(base, height, length):
+    return (1/2 * base * height) * length",1
+3,"
+
+def solve(base, height, length, depth):
+    area = 0.5 * base * height
+    volume = area * length * depth
+    return volume",2
+4,"
+
+def solve(base, height, length):
+    return (base * height * length) / 2",3
+5,"
+
+def solve(base, height, length):
+    return (1/2 * base * height) * length",1

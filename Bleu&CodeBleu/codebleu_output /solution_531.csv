@@ -1,0 +1,54 @@
+response_num,response,cluster
+1,"
+
+def solve(coins, value):
+    min_coins = [0] * (value + 1)
+    
+    for i in range(1, value + 1):
+        min_coins[i] = float('inf')
+        
+        for coin in coins:
+            if i - coin >= 0:
+                min_coins[i] = min(min_coins[i], min_coins[i - coin] + 1)
+                
+    return min_coins[value]",1
+2,"
+
+def solve(coins, value):
+    if value == 0:
+        return 0
+    min_coins = [float('inf')] * (value+1)
+    min_coins[0] = 0
+    for coin in coins:
+        for i in range(coin, value+1):
+            min_coins[i] = min(min_coins[i], min_coins[i-coin] + 1)
+    return min_coins[value] if min_coins[value] != float('inf') else -1",2
+3,"
+
+def solve(value):
+    coins = [1, 5, 10, 25]
+    count = 0
+    for coin in coins[::-1]:
+        count += value // coin
+        value = value % coin
+    return count",3
+4,"
+
+def solve(coins, value):
+    min_coins = [float('inf')] * (value + 1)
+    min_coins[0] = 0
+    for i in range(1, value + 1):
+        for coin in coins:
+            if (i - coin) >= 0:
+                min_coins[i] = min(min_coins[i], min_coins[i - coin] + 1)
+
+    return min_coins[value] if min_coins[value] != float('inf') else -1",4
+5,"
+
+def solve(value):
+    coins = [1, 5, 10, 25] # available coin denominations
+    num_coins = 0
+    for coin in reversed(coins):
+        num_coins += value // coin
+        value = value % coin
+    return num_coins",5

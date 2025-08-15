@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return [float(x) if isinstance(x, (int, float, str)) else x for x in lst]",1
+2,"
+
+def solve(lst):
+    for i in range(len(lst)):
+        try:
+            lst[i] = float(lst[i])
+        except:
+            pass
+    return lst",2
+3,"
+
+def solve(lst):
+    for i in range(len(lst)):
+        try:
+            lst[i] = float(lst[i])
+        except:
+            pass
+    return lst",2
+4,"
+
+def solve(lst):
+    for i in range(len(lst)):
+        try:
+            lst[i] = float(lst[i])
+        except:
+            continue
+    return lst",3
+5,"
+
+def solve(lst):
+    result = []
+    for i in lst:
+        try:
+            result.append(float(i))
+        except:
+            result.append(i)
+    return result",4

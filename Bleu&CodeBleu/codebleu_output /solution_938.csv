@@ -1,0 +1,122 @@
+response_num,response,cluster
+1,"
+
+def solve(arr1, arr2, arr3):
+
+    # initialize the result list
+    result = []
+
+    # initialize the pointers for each array
+    i = 0
+    j = 0
+    k = 0
+
+    # loop until one of the pointers reaches the end of its respective array
+    while i < len(arr1) and j < len(arr2) and k < len(arr3):
+
+        # find the maximum value among the current elements from each array
+        max_val = max(arr1[i], arr2[j], arr3[k])
+
+        # append the maximum value to the result list
+        result.append(max_val)
+
+        # update the pointers based on which array the maximum value came from
+        if max_val == arr1[i]:
+            i += 1
+        elif max_val == arr2[j]:
+            j += 1
+        else:
+            k += 1
+
+    # return the last three elements from the result list
+    return result[-3:]",1
+2,"
+
+def solve(arr1, arr2, arr3):
+    i = 0
+    j = 0
+    k = 0
+    result = []
+    min_diff = float('inf')
+
+    while i < len(arr1) and j < len(arr2) and k < len(arr3):
+        current_diff = abs(max(arr1[i], arr2[j], arr3[k]) - min(arr1[i], arr2[j], arr3[k]))
+        if current_diff < min_diff:
+            min_diff = current_diff
+            result = [arr1[i], arr2[j], arr3[k]]
+        
+        min_val = min(arr1[i], arr2[j], arr3[k])
+        if arr1[i] == min_val:
+            i += 1
+        elif arr2[j] == min_val:
+            j += 1
+        else:
+            k += 1
+    
+    return result",2
+3,"
+
+def solve(arr1, arr2, arr3):
+    i = 0
+    j = 0
+    k = 0
+    min_diff = float('inf')
+    result = []
+    while i < len(arr1) and j < len(arr2) and k < len(arr3):
+        max_num = max(arr1[i], arr2[j], arr3[k])
+        min_num = min(arr1[i], arr2[j], arr3[k])
+        diff = max_num - min_num
+        if diff < min_diff:
+            min_diff = diff
+            result = [arr1[i], arr2[j], arr3[k]]
+        if min_num == arr1[i]:
+            i += 1
+        elif min_num == arr2[j]:
+            j += 1
+        else:
+            k += 1
+    return result",3
+4,"
+
+def solve(arr1, arr2, arr3):
+    result = []
+    i = 0
+    j = 0
+    k = 0
+    while i < len(arr1) and j < len(arr2) and k < len(arr3):
+        min_val = min(arr1[i], arr2[j], arr3[k])
+        max_val = max(arr1[i], arr2[j], arr3[k])
+        result.append((min_val, max_val))
+        if min_val == arr1[i]:
+            i += 1
+        elif min_val == arr2[j]:
+            j += 1
+        else:
+            k += 1
+    return result",4
+5,"
+
+def solve(arr1, arr2, arr3):
+    i = 0
+    j = 0
+    k = 0
+    min_diff = float('inf')
+    result = []
+
+    while i < len(arr1) and j < len(arr2) and k < len(arr3):
+        max_num = max(arr1[i], arr2[j], arr3[k])
+        min_num = min(arr1[i], arr2[j], arr3[k])
+        diff = max_num - min_num
+
+        if diff < min_diff:
+            min_diff = diff
+            result = [arr1[i], arr2[j], arr3[k]]
+
+        if min_num == arr1[i]:
+            i += 1
+        elif min_num == arr2[j]:
+            j += 1
+        else:
+            k += 1
+
+    return result",3

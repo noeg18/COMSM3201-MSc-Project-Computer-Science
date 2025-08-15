@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(numbers):
+    return sum(filter(lambda x: x > 0, numbers))",1
+2,"
+
+def solve(nums):
+    return sum(filter(lambda x: x > 0, nums))",2
+3,"
+
+def solve(numbers):
+    return sum(filter(lambda x: x > 0, numbers))",1
+4,"
+
+def solve(nums):
+    return sum(filter(lambda x: x > 0, nums))",2
+5,"
+
+def solve(nums):
+    return sum(filter(lambda x: x > 0, nums))",2

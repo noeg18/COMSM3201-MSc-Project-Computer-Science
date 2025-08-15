@@ -1,0 +1,105 @@
+response_num,response,cluster
+1,"
+
+def solve(grid):
+    rows = len(grid)
+    cols = len(grid[0])
+    dp = [[0 for _ in range(cols)] for _ in range(rows)]
+
+    for i in range(rows):
+        dp[i][0] = grid[i][0]
+
+    for j in range(1, cols):
+        for i in range(rows):
+            if i == 0:
+                dp[i][j] = grid[i][j] + max(dp[i][j-1], dp[i+1][j-1])
+            elif i == rows - 1:
+                dp[i][j] = grid[i][j] + max(dp[i][j-1], dp[i-1][j-1])
+            else:
+                dp[i][j] = grid[i][j] + max(dp[i-1][j-1], dp[i][j-1], dp[i+1][j-1])
+
+    max_gold = 0
+    for i in range(rows):
+        max_gold = max(max_gold, dp[i][cols-1])
+
+    return max_gold",1
+2,"
+
+def solve(matrix):
+    n = len(matrix)
+    m = len(matrix[0])
+    dp = [[0 for j in range(m)] for i in range(n)]
+    for i in range(n):
+        dp[i][0] = matrix[i][0]
+    for j in range(1, m):
+        for i in range(n):
+            if i == 0:
+                dp[i][j] = max(dp[i][j-1], dp[i+1][j-1]) + matrix[i][j]
+            elif i == n-1:
+                dp[i][j] = max(dp[i][j-1], dp[i-1][j-1]) + matrix[i][j]
+            else:
+                dp[i][j] = max(dp[i][j-1], dp[i-1][j-1], dp[i+1][j-1]) + matrix[i][j]
+    max_gold = 0
+    for i in range(n):
+        max_gold = max(max_gold, dp[i][m-1])
+    return max_gold",2
+3,"
+
+def solve(matrix):
+    m = len(matrix)
+    n = len(matrix[0])
+    
+    dp = [[0 for i in range(n)] for j in range(m)]
+    
+    for i in range(m):
+        dp[i][0] = matrix[i][0]
+        
+    for j in range(1, n):
+        for i in range(m):
+            if i == 0:
+                dp[i][j] = max(dp[i][j-1], dp[i+1][j-1]) + matrix[i][j]
+            elif i == m-1:
+                dp[i][j] = max(dp[i][j-1], dp[i-1][j-1]) + matrix[i][j]
+            else:
+                dp[i][j] = max(dp[i-1][j-1], dp[i][j-1], dp[i+1][j-1]) + matrix[i][j]
+                
+    max_gold = 0
+    for i in range(m):
+        max_gold = max(max_gold, dp[i][n-1])
+        
+    return max_gold",3
+4,"
+
+def solve(grid):
+    m = len(grid)
+    n = len(grid[0])
+    for col in range(n-2,-1,-1):
+        for row in range(m):
+            right = grid[row][col+1]
+            right_up = grid[row-1][col+1] if row-1 >= 0 else 0
+            right_down = grid[row+1][col+1] if row+1 < m else 0
+            grid[row][col] += max(right, right_up, right_down)
+    return max(grid[row][0] for row in range(m))",4
+5,"
+
+def solve(grid):
+    rows = len(grid)
+    cols = len(grid[0])
+    dp = [[0 for _ in range(cols)] for _ in range(rows)]
+    
+    for col in range(cols-1, -1, -1):
+        for row in range(rows):
+            if col == cols-1:
+                dp[row][col] = grid[row][col]
+            elif row == 0:
+                dp[row][col] = grid[row][col] + max(dp[row][col+1], dp[row+1][col+1])
+            elif row == rows-1:
+                dp[row][col] = grid[row][col] + max(dp[row][col+1], dp[row-1][col+1])
+            else:
+                dp[row][col] = grid[row][col] + max(dp[row][col+1], dp[row-1][col+1], dp[row+1][col+1])
+    
+    max_gold = 0
+    for row in range(rows):
+        max_gold = max(max_gold, dp[row][0])
+    
+    return max_gold",5

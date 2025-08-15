@@ -1,0 +1,85 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    freq = {}
+    for item in lst:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    max_freq = max(freq.values())
+    for key, value in freq.items():
+        if value == max_freq:
+            return key",1
+2,"
+
+def solve(lst):
+    freq_dict = {}
+    for item in lst:
+        if item in freq_dict:
+            freq_dict[item] += 1
+        else:
+            freq_dict[item] = 1
+    
+    max_freq = 0
+    max_item = None
+    for key, value in freq_dict.items():
+        if value > max_freq:
+            max_freq = value
+            max_item = key
+    
+    return max_item",2
+3,"
+
+def solve(lst):
+    freq = {}
+    for item in lst:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    max_freq = 0
+    max_item = None
+    for key, value in freq.items():
+        if value > max_freq:
+            max_freq = value
+            max_item = key
+    return max_item",3
+4,"
+
+def solve(lst):
+    max_freq = 0
+    max_item = None
+    freq_dict = {}
+    
+    for item in lst:
+        if item in freq_dict:
+            freq_dict[item] += 1
+        else:
+            freq_dict[item] = 1
+    
+    for key, value in freq_dict.items():
+        if value > max_freq:
+            max_freq = value
+            max_item = key
+    
+    return max_item",4
+5,"
+
+def solve(lst):
+    counts = {}
+    for item in lst:
+        if item not in counts:
+            counts[item] = 1
+        else:
+            counts[item] += 1
+    
+    max_count = 0
+    max_item = None
+    for item, count in counts.items():
+        if count > max_count:
+            max_count = count
+            max_item = item
+    
+    return max_item",5

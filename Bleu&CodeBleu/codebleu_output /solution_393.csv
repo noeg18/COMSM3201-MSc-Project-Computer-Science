@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return max(lst, key=lambda x: len(x))",1
+2,"
+
+def solve(lists):
+    return max(lists, key=lambda l: len(l))",2
+3,"
+
+def solve(lists):
+    max_list = max(lists, key=lambda x:len(x))
+    return max_list",3
+4,"
+
+def solve(lists):
+    return max(lists, key=lambda x: len(x))",4
+5,"
+
+def solve(lst):
+    return max(lst, key=lambda x: len(x))",1

@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_tuples):
+    return sorted(list_of_tuples, key=lambda x: x[0])",1
+2,"
+
+def solve(lst):
+    return sorted(lst, key=lambda x: x[0])",2
+3,"
+
+def solve(tuple_list):
+  sorted_list = sorted(tuple_list, key = lambda x: x[0])
+  return sorted_list",3
+4,"
+
+def solve(lst):
+    return sorted(lst, key=lambda tup: tup[0])",4
+5,"
+
+def solve(lst):
+    return sorted(lst, key=lambda x: x[0])",2

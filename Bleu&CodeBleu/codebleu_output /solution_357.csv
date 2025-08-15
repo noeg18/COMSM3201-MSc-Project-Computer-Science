@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(records):
+    max_element = records[0][0]
+    for tup in records:
+        for element in tup:
+            if element > max_element:
+                max_element = element
+    return max_element",1
+2,"
+
+def solve(tuples):
+    max_element = float(""-inf"")
+    for tuple in tuples:
+        for element in tuple:
+            if element > max_element:
+                max_element = element
+    return max_element",2
+3,"
+
+def solve(records):
+    max_element = records[0][0]
+    for record in records:
+        for element in record:
+            if element > max_element:
+                max_element = element
+    return max_element",3
+4,"
+
+def solve(*tuples):
+    max_element = float('-inf')
+    for tuple in tuples:
+        for element in tuple:
+            if element > max_element:
+                max_element = element
+    return max_element",4
+5,"
+
+def solve(tuples):
+    max_element = tuples[0][0]
+    for tup in tuples:
+        for elem in tup:
+            if elem > max_element:
+                max_element = elem
+    return max_element",5

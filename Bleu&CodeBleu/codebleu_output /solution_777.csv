@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    non_repeated = []
+    for num in arr:
+        if arr.count(num) == 1:
+            non_repeated.append(num)
+    return sum(non_repeated)",1
+2,"
+
+def solve(arr):
+    sum = 0
+    for i in range(len(arr)):
+        if arr.count(arr[i]) == 1:
+            sum += arr[i]
+    return sum",2
+3,"
+
+def solve(arr):
+    unique_elements = set()
+    non_repeated_sum = 0
+    for num in arr:
+        if num not in unique_elements:
+            unique_elements.add(num)
+            non_repeated_sum += num
+    return non_repeated_sum",3
+4,"
+
+def solve(arr):
+    sum = 0
+    repeated = []
+    for i in arr:
+        if i not in repeated:
+            sum += i
+            repeated.append(i)
+    return sum",4
+5,"
+
+def solve(arr):
+    sum = 0
+    for i in range(len(arr)):
+        if arr.count(arr[i]) == 1:
+            sum += arr[i]
+    return sum",2

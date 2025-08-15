@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, p):
+    for i in range(p):
+        arr[-1] = arr[-1] // 2
+    if arr[-1] % 2 == 0:
+        return ""even""
+    else:
+        return ""odd""",1
+2,"
+
+def solve(arr, p):
+    for i in range(p):
+        arr[-1] += 1
+    if arr[-1] % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""",2
+3,"
+
+def solve(arr, p):
+    for i in range(p):
+        last = arr[-1]
+        if last % 2 == 0:
+            arr.append(last // 2)
+        else:
+            arr.append(last * 3 + 1)
+
+    if arr[-1] % 2 == 0:
+        return ""even""
+    else:
+        return ""odd""",3
+4,"
+
+def solve(arr, p):
+    for i in range(p):
+        arr[-1] = arr[-1] ** 2
+    if arr[-1] % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""",4
+5,"
+
+def solve(arr, p):
+    for i in range(p):
+        arr[-1] = arr[-1] * 2
+    if arr[-1] % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""",4

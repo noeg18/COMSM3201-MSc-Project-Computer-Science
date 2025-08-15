@@ -1,0 +1,80 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    # Initialize a dictionary to store the count of each character in the string
+    char_count = {}
+    # Initialize a dictionary to store the longest repeating subsequences
+    longest_subseq = {}
+    # Loop through each character in the string
+    for char in s:
+        # If the character is not present in the dictionary, add it with a count of 1
+        if char not in char_count:
+            char_count[char] = 1
+        # If the character is present in the dictionary, increment its count by 1
+        else:
+            char_count[char] += 1
+        # Loop through all the characters in the dictionary
+        for key in char_count:
+            # If the character count is greater than 1 and the character is not present in the longest_subseq dictionary
+            if char_count[key] > 1 and key not in longest_subseq:
+                # Add the character to the longest_subseq dictionary with a count of 1
+                longest_subseq[key] = 1
+            # If the character count is greater than 1 and the character is present in the longest_subseq dictionary
+            elif char_count[key] > 1 and key in longest_subseq:
+                # Increment the count of the character by 1
+                longest_subseq[key] += 1
+    # Return the maximum count from the longest_subseq dictionary
+    return max(longest_subseq.values())",1
+2,"
+
+def solve(s):
+    n = len(s)
+    dp = [[0 for i in range(n+1)] for j in range(n+1)]
+    
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            if s[i-1] == s[j-1] and i != j:
+                dp[i][j] = 1 + dp[i-1][j-1]
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    
+    return dp[n][n]",2
+3,"
+
+def solve(s):
+    n = len(s)
+    dp = [[0 for i in range(n + 1)] for j in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            if s[i - 1] == s[j - 1] and i != j:
+                dp[i][j] = 1 + dp[i - 1][j - 1]
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    return dp[n][n]",3
+4,"
+
+def solve(s):
+    n = len(s)
+    dp = [[0 for i in range(n+1)] for j in range(n+1)]
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            if s[i-1] == s[j-1] and i != j:
+                dp[i][j] = 1 + dp[i-1][j-1]
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    return dp[n][n]",2
+5,"
+
+def solve(s):
+    n = len(s)
+    dp = [[0 for i in range(n + 1)] for j in range(n + 1)]
+    
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            if s[i - 1] == s[j - 1] and i != j:
+                dp[i][j] = 1 + dp[i - 1][j - 1]
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    
+    return dp[n][n]",3

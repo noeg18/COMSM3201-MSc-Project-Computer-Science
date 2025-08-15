@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    if re.match(r'^[aeiou]', string.lower()):
+        return True
+    else:
+        return False ",1
+2,"
+
+import re
+
+def solve(string):
+    pattern = ""^[aeiouAEIOU]""
+    if re.match(pattern, string):
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(string):
+    return re.match(r'^[aeiouAEIOU]', string) is not None",3
+4,"
+
+def solve(string):
+    pattern = ""^[aeiouAEIOU].*""
+    if re.match(pattern, string):
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(string):
+    import re
+    pattern = ""^[aeiouAEIOU]""
+    if re.match(pattern, string):
+        return True
+    else:
+        return False",5

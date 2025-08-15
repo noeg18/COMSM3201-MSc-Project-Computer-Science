@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    total = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            total += (math.factorial(n)/(math.factorial(i)*math.factorial(n-i)))
+    return total",1
+2,"
+
+def solve(n):
+    sum = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            sum += math.factorial(n) / (math.factorial(i) * math.factorial(n-i))
+    return sum",2
+3,"
+
+def solve(n):
+    result = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            result += (n choose i)
+    return result",3
+4,"
+
+def solve(n):
+    total = 0
+    for i in range(n+1):
+        if i % 2 == 0:
+            total += nCr(n,i)
+    return total",4
+5,"
+
+def solve(n):
+  sum = 0
+  for i in range(0, n+1):
+    if i % 2 == 0:
+      sum += nCr(n, i)
+  return sum",5

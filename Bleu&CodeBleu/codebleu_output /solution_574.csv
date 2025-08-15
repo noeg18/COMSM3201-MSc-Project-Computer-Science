@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(radius, height):
+    pi = 3.14159
+    surface_area = 2 * pi * radius * (radius + height)
+    return surface_area",1
+2,"
+
+def solve(radius, height):
+    return 2 * math.pi * radius**2 + 2 * math.pi * radius * height",2
+3,"
+
+def solve(radius, height):
+    pi = 3.14159
+    base_area = pi * radius**2
+    lateral_area = 2 * pi * radius * height
+    surface_area = 2 * base_area + lateral_area
+    return surface_area",3
+4,"
+
+def solve(radius, height):
+    surface_area = 2 * (3.14 * radius * radius) + 2 * (3.14 * radius * height)
+    return surface_area",4
+5,"
+
+def solve(radius, height):
+    base_area = 3.14 * radius**2
+    lateral_area = 2 * 3.14 * radius * height
+    total_area = 2 * base_area + lateral_area
+    return total_area",5

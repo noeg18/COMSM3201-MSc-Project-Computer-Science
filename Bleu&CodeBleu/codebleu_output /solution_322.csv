@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    min_val = min(lst)
+    min_indices = []
+    for i in range(len(lst)):
+        if lst[i] == min_val:
+            min_indices.append(i)
+    return min_indices",1
+2,"
+
+def solve(lst):
+    min_val = min(lst)
+    result = []
+    for i in range(len(lst)):
+        if lst[i] == min_val:
+            result.append(i)
+    return result",2
+3,"
+
+def solve(arr):
+    min_val = min(arr)
+    min_positions = []
+    for i in range(len(arr)):
+        if arr[i] == min_val:
+            min_positions.append(i)
+    return min_positions",3
+4,"
+
+def solve(lst):
+
+    min_val = min(lst)
+    indices = []
+
+    for i in range(len(lst)):
+        if lst[i] == min_val:
+            indices.append(i)
+    
+    return indices",4
+5,"
+
+def solve(lst):
+    min_value = min(lst)
+    indices = []
+    for i, num in enumerate(lst):
+        if num == min_value:
+            indices.append(i)
+    return indices",5

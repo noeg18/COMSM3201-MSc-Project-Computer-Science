@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, n):
+    n = n % len(lst)
+    return lst[-n:] + lst[:-n]",1
+2,"
+
+def solve(lst, num):
+    if num == 0:
+        return lst
+    else:
+        return lst[-num:] + lst[:-num]",2
+3,"
+
+def solve(list, num):
+    for i in range(num):
+        list.insert(0, list.pop())
+    return list",3
+4,"
+
+def solve(lst, num):
+  return lst[-num:] + lst[:-num]",4
+5,"
+
+def solve(lst, n):
+    n = n % len(lst)
+    lst = lst[-n:] + lst[:-n]
+    return lst",5

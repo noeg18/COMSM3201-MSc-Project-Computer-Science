@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    if n == 0:
+        return 1
+    else:
+        return n * (n + 1) // 2",1
+2,"
+def solve(n):
+    if n == 0:
+        return 0
+    else:
+        demlo_num = 0
+        for i in range(1, n + 1):
+            demlo_num += i * (i + 1) * (i + 2)
+        return demlo_num ",2
+3,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    else:
+        demlo = 0
+        while n > 0:
+            digit = n % 10
+            demlo += digit ** 2
+            n = n // 10
+        return demlo",3
+4,"
+
+def solve(n):
+    result = 0
+    for i in range(1, n+1):
+        result += (i**3 + 1)
+    return result",4
+5,"
+
+def solve(n):
+    count = 0
+    for i in range(1, n+1):
+        if n % i == 0:
+            count += 1
+    return count",5

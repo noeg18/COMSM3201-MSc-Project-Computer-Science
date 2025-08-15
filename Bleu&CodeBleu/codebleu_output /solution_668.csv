@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    new_string = """"
+    prev_char = """"
+    for char in string:
+        if char != prev_char:
+            new_string += char
+        prev_char = char
+    return new_string",1
+2,"
+
+def solve(string):
+    result = ''
+    prev_char = ''
+    for char in string:
+        if char != prev_char:
+            result += char
+            prev_char = char
+    return result",2
+3,"
+
+def solve(string):
+    result = ''
+    prev_char = ''
+    for char in string:
+        if char != prev_char:
+            result += char
+            prev_char = char
+    return result",2
+4,"
+
+def solve(s):
+    res = ''
+    prev = ''
+    for c in s:
+        if c != prev:
+            res += c
+            prev = c
+    return res",3
+5,"
+
+def solve(string):
+    new_string = """"
+    prev_char = """"
+    for char in string:
+        if char != prev_char:
+            new_string += char
+        prev_char = char
+    return new_string",1

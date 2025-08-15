@@ -1,0 +1,58 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    numbers = []
+    positions = []
+    for i in range(len(string)):
+        if string[i].isdigit():
+            numbers.append(string[i])
+            positions.append(i)
+    print(""Numbers:"", numbers)
+    print(""Positions:"", positions)",1
+2,"
+
+def solve(string):
+    numbers = []
+    positions = []
+    for i in range(len(string)):
+        if string[i].isdigit():
+            numbers.append(string[i])
+            positions.append(i)
+    print(""Numbers:"", numbers)
+    print(""Positions:"", positions)",1
+3,"
+
+def solve(string):
+    numbers = []
+    positions = []
+    for index, char in enumerate(string):
+        if char.isdigit():
+            numbers.append(char)
+            positions.append(index)
+    print(""Numbers:"", numbers)
+    print(""Positions:"", positions)",2
+4,"
+
+def solve(string):
+    numbers = []
+    positions = []
+
+    for i, char in enumerate(string):
+        if char.isdigit():
+            numbers.append(char)
+            positions.append(i+1)
+
+    print(""Numbers: "", numbers)
+    print(""Positions: "", positions)",3
+5,"
+
+def solve(string):
+    numbers = []
+    positions = []
+    for i, char in enumerate(string):
+        if char.isdigit():
+            numbers.append(char)
+            positions.append(i)
+    print(""Numbers:"", numbers)
+    print(""Positions:"", positions)",4

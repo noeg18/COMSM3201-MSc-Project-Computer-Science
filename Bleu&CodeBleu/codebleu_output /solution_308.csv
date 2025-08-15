@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2, n):
+    products = []
+    for num1 in list1:
+        for num2 in list2:
+            products.append(num1 * num2)
+    sorted_products = sorted(products, reverse=True)
+    return sorted_products[:n]",1
+2,"
+
+def solve(lst1, lst2, n):
+    products = []
+    for num1 in lst1:
+        for num2 in lst2:
+            products.append(num1 * num2)
+    
+    products.sort(reverse=True)
+    return products[:n]",2
+3,"
+
+def solve(list1, list2, num):
+    list1.sort(reverse=True)
+    list2.sort(reverse=True)
+    products = []
+    for i in range(num):
+        products.append(list1[i] * list2[i])
+    return products",3
+4,"
+
+def solve(list1, list2, num):
+    products = []
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            products.append(list1[i]*list2[j])
+    products.sort(reverse=True)
+    return products[:num]",4
+5,"
+
+def solve(list1, list2, num):
+    products = []
+    for i in range(len(list1)):
+        for j in range(len(list2)):
+            products.append(list1[i] * list2[j])
+    products.sort(reverse = True)
+    return products[:num]",5

@@ -1,0 +1,80 @@
+response_num,response,cluster
+1,"
+
+def solve(prices, k):
+    n = len(prices)
+    if n == 0 or k == 0:
+        return 0
+    dp = [[0 for _ in range(n)] for _ in range(k+1)]
+    for i in range(1, k+1):
+        maxdiff = -prices[0]
+        for j in range(1, n):
+            dp[i][j] = max(dp[i][j-1], maxdiff + prices[j])
+            maxdiff = max(maxdiff, dp[i-1][j] - prices[j])
+    return dp[k][n-1]",1
+2,"
+
+def solve(prices, k):
+    n = len(prices)
+    dp = [[0 for _ in range(k+1)] for _ in range(n)]
+    for i in range(1, n):
+        for j in range(1, k+1):
+            max_profit = dp[i-1][j]
+            for m in range(i):
+                max_profit = max(max_profit, dp[m][j-1] + prices[i] - prices[m])
+            dp[i][j] = max_profit
+    return dp[n-1][k]",2
+3,"
+
+def solve(prices, k):
+    n = len(prices)
+    if n <= 1 or k <= 0:
+        return 0
+    if k > n // 2:
+        max_profit = 0
+        for i in range(1, n):
+            if prices[i] > prices[i - 1]:
+                max_profit += prices[i] - prices[i - 1]
+        return max_profit
+    else:
+        dp = [[0 for _ in range(n)] for _ in range(k + 1)]
+        for i in range(1, k + 1):
+            max_diff = -prices[0]
+            for j in range(1, n):
+                max_diff = max(max_diff, dp[i - 1][j - 1] - prices[j - 1])
+                dp[i][j] = max(dp[i][j - 1], prices[j] + max_diff)
+        return dp[k][n - 1]",3
+4,"
+
+def solve(prices, k):
+    n = len(prices)
+    if k >= n // 2:
+        profit = 0
+        for i in range(1, n):
+            if prices[i] > prices[i-1]:
+                profit += prices[i] - prices[i-1]
+        return profit
+    else:
+        dp = [[0 for _ in range(n)] for _ in range(k+1)]
+        for i in range(1, k+1):
+            max_diff = -prices[0]
+            for j in range(1, n):
+                dp[i][j] = max(dp[i][j-1], prices[j] + max_diff)
+                max_diff = max(max_diff, dp[i-1][j] - prices[j])
+        return dp[k][n-1]",4
+5,"
+
+def solve(prices, k):
+    if len(prices) <= 1 or k == 0:
+        return 0
+    if k >= len(prices) // 2:
+        profit = 0
+        for i in range(1, len(prices)):
+            if prices[i] > prices[i-1]:
+                profit += prices[i] - prices[i-1]
+        return profit
+    dp = [[0 for j in range(len(prices))] for i in range(k+1)]
+    for i in range(1, k+1):
+        for j in range(1, len(prices)):
+            dp[i][j] = max(dp[i][j-1], prices[j] + max(dp[i-1][m] - prices[m] for m in range(j)))
+    return dp[-1][-1]",5

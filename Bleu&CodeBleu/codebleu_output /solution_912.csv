@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(ln, m):
+    return math.log(m, ln)",1
+2,"
+
+def solve(x):
+    ln = 0
+    m = 0
+    while x > 1:
+        ln += 1
+        x /= 2
+    while x < 0.5:
+        ln -= 1
+        x *= 2
+    while m < x:
+        m += 1
+    return ln, m",2
+3,"
+
+def solve(n):
+    result = 0
+    for i in range(1, n + 1):
+        result += math.log(i)
+    return result",3
+4,"
+
+import math
+
+def solve(n):
+    l = 0
+    for i in range(1,n+1):
+        l += math.log(i)
+    return l",4
+5,"
+
+def solve(n):
+    ln = 0
+    for i in range(1, n+1):
+        ln += 1/(i*(i+1))
+    return ln",5

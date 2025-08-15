@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    xor_sum = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            xor_sum += arr[i] ^ arr[j]
+    return xor_sum",1
+2,"
+def solve(arr):
+    result = 0
+    n = len(arr)
+    for i in range(n):
+        for j in range(i+1, n):
+            result += arr[i] ^ arr[j]
+    return result",2
+3,"
+
+def solve(arr):
+    result = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            result += arr[i] ^ arr[j]
+    return result",3
+4,"
+
+def solve(arr):
+    res = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            res += arr[i] ^ arr[j]
+    return res",4
+5,"
+
+def solve(arr):
+    result = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            result += arr[i] ^ arr[j]
+    return result",3

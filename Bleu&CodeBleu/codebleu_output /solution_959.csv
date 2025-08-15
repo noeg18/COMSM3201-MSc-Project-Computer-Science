@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    return sum(lst)/len(lst)",1
+2,"
+
+def solve(lst):
+    return sum(lst)/len(lst)",1
+3,"
+
+def solve(lst):
+    if not lst:
+        return 0
+    return sum(lst) / len(lst)",2
+4,"
+
+def solve(lst):
+    total = 0
+    for num in lst:
+        total += num
+    return total / len(lst)",3
+5,"
+
+def solve(lst):
+    sum = 0
+    for num in lst:
+        sum += num
+    return sum / len(lst)",4

@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count = 0
+    for element in lst:
+        if isinstance(element, tuple):
+            return count
+        else:
+            count += 1
+    return count",1
+2,"
+
+def solve(lst):
+    count = 0
+    for element in lst:
+        if type(element) == tuple:
+            break
+        count += 1
+    return count",2
+3,"
+
+def solve(lst):
+    count = 0
+    for element in lst:
+        if isinstance(element, tuple):
+            return count
+        count += 1
+    return count",3
+4,"
+
+def solve(lst):
+    count = 0
+    for element in lst:
+        if type(element) == tuple:
+            break
+        count += 1
+    return count",2
+5,"
+
+def solve(lst):
+    count = 0
+    for item in lst:
+        if isinstance(item, tuple):
+            break
+        count += 1
+    return count",4

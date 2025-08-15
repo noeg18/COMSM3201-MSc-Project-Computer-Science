@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    if len(set(tup)) == len(tup):
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(tup):
+    return len(set(tup)) == len(tup)",2
+3,"
+
+def solve(tuple):
+    if len(tuple) == len(set(tuple)):
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(tup):
+    return len(tup) == len(set(tup))",4
+5,"
+
+def solve(tup):
+    if len(tup) == len(set(tup)):
+        return True
+    else:
+        return False",5

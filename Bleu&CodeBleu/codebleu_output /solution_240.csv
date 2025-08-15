@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+def solve(list1, list2):
+    list1[-1] = list2
+    return list1",1
+2,"
+
+def solve(list1, list2):
+    list1[-1] = list2
+    return list1",1
+3,"
+
+def solve(list1, list2):
+    list1[-1] = list2
+    return list1",1
+4,"
+
+def solve(list1, list2):
+    list1[-1:] = list2
+    return list1",2
+5,"
+
+def solve(lst, new_lst):
+    lst[-1] = new_lst
+    return lst",3

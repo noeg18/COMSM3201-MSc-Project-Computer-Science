@@ -1,0 +1,28 @@
+response_num,response,cluster
+1,"
+
+def solve(input_list, string):
+    return [string + item for item in input_list]",1
+2,"
+
+def solve(lst, string):
+    return [string + item for item in lst]",2
+3,"
+
+def solve(string, lst):
+    new_lst = []
+    for item in lst:
+        new_lst.append(string + item)
+    return new_lst",3
+4,"
+
+def solve(string, list):
+    return [string + item for item in list]",4
+5,"
+
+def solve(string, lst):
+    new_lst = []
+    for item in lst:
+        new_item = string + item
+        new_lst.append(new_item)
+    return new_lst",5

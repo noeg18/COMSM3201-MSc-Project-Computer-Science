@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+
+def solve(lst):
+    for tup in lst:
+        if all(x == tup[0] for x in tup):
+            return tup[0]",1
+2,"
+
+def solve(tuples):
+    first = tuples[0][0]
+    for tup in tuples:
+        if tup[0] != first:
+            return None
+    return first",2
+3,"
+
+def solve(lst):
+    first_elements = [t[0] for t in lst]
+    return list(set(first_elements))[0]",3
+4,"
+
+def solve(lst):
+    result = None
+    for tup in lst:
+        if result is None:
+            result = set(tup)
+        else:
+            result = result.intersection(set(tup))
+    if result:
+        return list(result)[0]
+    return result",4
+5,"
+
+def solve(lst):
+    first_element = lst[0][0] 
+    for tup in lst:
+        if first_element not in tup:
+            return ""No common first element found""
+    return first_element",5

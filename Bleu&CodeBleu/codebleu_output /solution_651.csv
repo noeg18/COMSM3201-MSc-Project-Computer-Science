@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple1, tuple2):
+    for item in tuple1:
+        if item not in tuple2:
+            return False
+    return True",1
+2,"
+
+def solve(tup1, tup2):
+    if set(tup1).issubset(set(tup2)):
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(t1, t2):
+    if set(t1).issubset(set(t2)):
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(tup1, tup2):
+    if set(tup1).issubset(set(tup2)):
+        return True
+    else:
+        return False",2
+5,"
+
+def solve(tuple1, tuple2):
+    return all(item in tuple2 for item in tuple1)",4

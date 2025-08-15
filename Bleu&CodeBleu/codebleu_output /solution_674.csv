@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    words = string.split()
+    unique_words = collections.Counter(words)
+    return "" "".join(unique_words.keys())",1
+2,"
+
+from collections import Counter
+
+def solve(string):
+    words = string.split()
+    counts = Counter(words)
+    unique_words = [word for word, count in counts.items()]
+    return ' '.join(unique_words)",2
+3,"
+
+from collections import Counter
+
+def solve(string):
+    words = string.split()
+    counter = Counter(words)
+    unique_words = [word for word, count in counter.items() if count == 1]
+    return ' '.join(unique_words)",3
+4,"
+
+from collections import Counter
+
+def solve(sentence):
+    words = sentence.split()
+    counts = Counter(words)
+    output = []
+    for word in words:
+        if counts[word] > 1:
+            counts[word] = 0
+        else:
+            output.append(word)
+    return ' '.join(output)",4
+5,"
+
+def solve(string):
+    words = string.split()
+    unique_words = []
+    for word in words:
+        if word not in unique_words:
+            unique_words.append(word)
+    return ' '.join(unique_words)",5

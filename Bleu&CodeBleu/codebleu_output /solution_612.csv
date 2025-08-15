@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    first_list = [sub_lst[0] for sub_lst in lst]
+    last_list = [sub_lst[-1] for sub_lst in lst]
+    return [first_list, last_list]",1
+2,"
+
+def solve(lst):
+    result = []
+    for i in range(len(lst)):
+        temp = [lst[i][0], lst[i][-1]]
+        result.append(temp)
+    return result",2
+3,"
+
+def solve(lst):
+    merged_first = []
+    merged_last = []
+    
+    for i in range(len(lst)):
+        merged_first.append(lst[i][0])
+        merged_last.append(lst[i][-1])
+    
+    return [merged_first, merged_last]",3
+4,"
+
+def solve(list_of_lists):
+    merged = []
+    for lst in list_of_lists:
+        if len(lst) > 1:
+            merged.append([lst[0], lst[-1]])
+        else:
+            merged.append(lst)
+    return merged",4
+5,"
+
+def solve(lst):
+    result = []
+    for i in range(len(lst)):
+        first = lst[i][0]
+        last = lst[i][-1]
+        result.append([first] + [last])
+    return result",5

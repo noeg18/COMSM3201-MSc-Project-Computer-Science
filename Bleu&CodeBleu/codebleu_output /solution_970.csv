@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(num1,num2):
+    if num1 < num2:
+        return num1
+    else:
+        return num2",1
+2,"
+
+def solve(a, b):
+    if a < b:
+        return a
+    else:
+        return b",2
+3,"
+
+def solve(num1, num2):
+    if num1 < num2:
+        return num1
+    else:
+        return num2",3
+4,"
+
+def solve(x, y):
+    if x < y:
+        return x
+    else:
+        return y",4
+5,"
+
+def solve(num1, num2):
+    if num1 < num2:
+        return num1
+    else:
+        return num2",3

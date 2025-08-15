@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(pattern, string):
+    index = string.find(pattern)
+    if index == -1:
+        return ""Pattern not found""
+    else:
+        return ""Pattern found at index "" + str(index)",1
+2,"
+
+def solve(literals, string):
+    index = string.find(literals)
+    if index == -1:
+        return ""Pattern not found""
+    else:
+        return ""Pattern found at index "" + str(index)",2
+3,"
+
+def solve(str1, str2):
+    if str1 in str2:
+        return ""The literal string is present in the original string at index: "" + str(str2.index(str1))
+    else:
+        return ""The literal string is not present in the original string.""
+
+#Example:
+solve(""world"", ""hello world"") #Output: The literal string is present in the original string at index: 6",3
+4,"
+
+def solve(pattern, string):
+    if pattern in string:
+        location = string.find(pattern)
+        return ""Pattern found at index "" + str(location)
+    else:
+        return ""Pattern not found""",4
+5,"
+
+def solve(str, pattern):
+    if pattern in str:
+        return str.find(pattern)
+    else:
+        return -1",5

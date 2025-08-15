@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        if arr[left] > arr[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",1
+2,"
+
+def solve(arr):
+    for i in range(len(arr)-1):
+        if arr[i] > arr[i+1]:
+            return False
+    return True",2
+3,"
+
+def solve(arr):
+    if not arr:
+        return False
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        if arr[left] > arr[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",1
+4,"
+
+def solve(arr):
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        if arr[left] > arr[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",1
+5,"
+
+def solve(arr):
+    if len(arr) < 3:
+        return True
+    else:
+        left = 0
+        right = len(arr) - 1
+        while left < right:
+            if arr[left] > arr[right]:
+                return False
+            left += 1
+            right -= 1
+        return True",1

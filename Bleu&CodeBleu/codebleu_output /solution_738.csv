@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+def solve(n):
+    sum = 0
+    for i in range(n):
+        sum += 1 / (2 ** i)
+    return sum",1
+2,"
+
+def solve(n):
+    sum = 0
+    for i in range(n):
+        sum += 1 / pow(2, i)
+    return sum",2
+3,"
+
+def solve(n):
+    return (1 - pow(2, n)) / (1 - 2)",3
+4,"
+
+def solve(n):
+    return (1 - (1/2)**(n-1))/(1 - 1/2)",4
+5,"
+
+def solve(n):
+    sum = 0
+    for i in range(n):
+        sum += 1 / (2 ** i)
+    return sum",1

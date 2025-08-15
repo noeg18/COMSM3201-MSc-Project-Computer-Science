@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    odd_lst = []
+    for num in lst:
+        if num % 2 != 0:
+            odd_lst.append(num)
+    return odd_lst",1
+2,"
+
+def solve(lst):
+    odd_numbers = []
+    for num in lst:
+        if num % 2 != 0:
+            odd_numbers.append(num)
+    return odd_numbers",2
+3,"
+
+def solve(lst):
+    odd_numbers = []
+    for num in lst:
+        if num % 2 != 0:
+            odd_numbers.append(num)
+    return odd_numbers",2
+4,"
+
+def solve(lst):
+    odd_nums = []
+    for num in lst:
+        if num % 2 != 0:
+            odd_nums.append(num)
+    return odd_nums",3
+5,"
+
+def solve(lst):
+    odd_lst = []
+    for num in lst:
+        if num % 2 != 0:
+            odd_lst.append(num)
+    return odd_lst",1

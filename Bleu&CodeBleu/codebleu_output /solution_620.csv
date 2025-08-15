@@ -1,0 +1,57 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    max_subset = []
+    for i in range(len(arr)):
+        subset = [arr[i]]
+        for j in range(i+1, len(arr)):
+            if arr[j] % subset[-1] == 0:
+                subset.append(arr[j])
+        if len(subset) > len(max_subset):
+            max_subset = subset
+    return max_subset",1
+2,"
+
+def solve(nums):
+    nums.sort()
+    subsets = []
+    for i in range(len(nums)):
+        subsets.append([nums[i]])
+        for j in range(i+1, len(nums)):
+            if nums[j] % nums[i] == 0:
+                subsets[-1].append(nums[j])
+    largest_subset = max(subsets, key=len)
+    return largest_subset",2
+3,"
+
+def solve(nums):
+    nums.sort()
+    dp = [1] * len(nums)
+    for i in range(len(nums)):
+        for j in range(i):
+            if nums[i] % nums[j] == 0:
+                dp[i] = max(dp[i], dp[j] + 1)
+    return max(dp)",3
+4,"
+
+def solve(nums):
+    largest_subset = []
+    for i in range(len(nums)):
+        current_subset = [nums[i]]
+        for j in range(i+1, len(nums)):
+            if nums[j] % nums[i] == 0:
+                current_subset.append(nums[j])
+        if len(current_subset) > len(largest_subset):
+            largest_subset = current_subset
+    return largest_subset",4
+5,"
+
+def solve(nums):
+    nums.sort()
+    dp = [1] * len(nums)
+    for i in range(len(nums)):
+        for j in range(i):
+            if nums[i] % nums[j] == 0:
+                dp[i] = max(dp[i], dp[j] + 1)
+    return max(dp)",3

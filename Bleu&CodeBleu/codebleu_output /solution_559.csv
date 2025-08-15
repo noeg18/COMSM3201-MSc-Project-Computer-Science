@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    max_sum = arr[0]
+    current_sum = arr[0]
+    
+    for i in range(1, len(arr)):
+        current_sum = max(arr[i], current_sum + arr[i])
+        max_sum = max(max_sum, current_sum)
+    
+    return max_sum",1
+2,"
+
+def solve(arr):
+    max_sum = arr[0]
+    current_sum = 0
+    for num in arr:
+        current_sum = max(num, current_sum + num)
+        max_sum = max(max_sum, current_sum)
+    return max_sum",2
+3,"
+
+def solve(arr):
+    max_sum = float('-inf')
+    curr_sum = 0
+    for num in arr:
+        curr_sum = max(curr_sum + num, num)
+        max_sum = max(max_sum, curr_sum)
+    return max_sum",3
+4,"
+
+def solve(nums):
+    max_so_far = nums[0]
+    max_ending_here = nums[0]
+    
+    for i in range(1, len(nums)):
+        max_ending_here = max(nums[i], max_ending_here + nums[i])
+        max_so_far = max(max_so_far, max_ending_here)
+    
+    return max_so_far",4
+5,"
+
+def solve(arr):
+    max_sum = arr[0]
+    curr_sum = arr[0]
+    
+    for i in range(1, len(arr)):
+        curr_sum = max(curr_sum + arr[i], arr[i])
+        max_sum = max(max_sum, curr_sum)
+        
+    return max_sum",5

@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(records):
+    return [record[-1] for record in records]",1
+2,"
+
+def solve(records):
+    rear_elements = []
+    for record in records:
+        rear_elements.append(record[-1])
+    return rear_elements",2
+3,"
+
+def solve(records):
+    if not records:
+        return None
+    return records[-1][-1]",3
+4,"
+
+def solve(records):
+    return [record[-1] for record in records]",1
+5,"
+
+def solve(records):
+    return [t[-1] for t in records]",4

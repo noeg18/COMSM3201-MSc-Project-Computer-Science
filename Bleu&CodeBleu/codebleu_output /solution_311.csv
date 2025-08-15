@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    mask = 1
+    while (n & mask) == mask:
+        mask <<= 1
+    return n | mask",1
+2,"
+
+def solve(n):
+    return n | (n + 1)",2
+3,"
+
+def solve(n):
+    return n | (n + 1)",2
+4,"
+
+def solve(n):
+    if n == 0:
+        return 1
+    mask = 1 << (n.bit_length() - 1)
+    return n | mask",3
+5,"
+def solve(n):
+    if n == 0:
+        return 1
+    else:
+        i = 1
+        while n & i:
+            i <<= 1
+        return n | i",4

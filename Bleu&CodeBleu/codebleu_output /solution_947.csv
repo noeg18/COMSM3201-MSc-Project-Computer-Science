@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(words):
+    shortest = len(words[0])
+    for word in words:
+        if len(word) < shortest:
+            shortest = len(word)
+    return shortest",1
+2,"
+
+def solve(words):
+    shortest_word = min(words, key=len)
+    return len(shortest_word)",2
+3,"
+
+def solve(words):
+    shortest = len(words[0])
+    for word in words:
+        if len(word) < shortest:
+            shortest = len(word)
+    return shortest",1
+4,"
+
+def solve(words):
+    shortest = len(words[0])
+    for word in words:
+        if len(word) < shortest:
+            shortest = len(word)
+    return shortest",1
+5,"
+
+def solve(words):
+    shortest = len(words[0])
+    for word in words:
+        if len(word) < shortest:
+            shortest = len(word)
+    return shortest",1

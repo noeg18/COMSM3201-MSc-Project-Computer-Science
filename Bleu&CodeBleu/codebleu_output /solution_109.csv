@@ -1,0 +1,50 @@
+response_num,response,cluster
+1,"
+
+def solve(str):
+    count = 0
+    for i in range(len(str)):
+        if str[i] == '1':
+            count += 1
+    if count % 2 != 0:
+        return count // 2 + 1
+    else:
+        return count // 2",1
+2,"
+
+def solve(binary_string):
+    count = 0
+    for i in range(len(binary_string)):
+        if int(binary_string[i]) == 1:
+            count += 1
+    if count % 2 == 0:
+        return 0
+    else:
+        return count // 2 + 1",2
+3,"
+
+def solve(s):
+    count = 0
+    for i in range(len(s)):
+        if s[i] == '1':
+            count += 1
+    if count % 2 == 0:
+        return 0
+    else:
+        return count",3
+4,"
+
+def solve(s):
+    count = 0
+    for i in range(len(s)):
+        if int(s[i], 2) % 2 != 0:
+            count += 1
+    return count",4
+5,"
+
+def solve(binary_string):
+    count = 0
+    for i in range(len(binary_string)):
+        if binary_string[i] == ""1"":
+            count += 1
+    return count % 2",5

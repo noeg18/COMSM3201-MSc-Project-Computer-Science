@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple):
+    product = 1
+    for num in tuple:
+        product *= num
+    return product",1
+2,"
+
+def solve(tup):
+    product = 1
+    for num in tup:
+        product *= num
+    return product",2
+3,"
+
+def solve(tup):
+    prod = 1
+    for num in tup:
+        prod *= num
+    return prod",3
+4,"
+
+def solve(tuple):
+    product = 1
+    for num in tuple:
+        product *= num
+    return product",1
+5,"
+
+def solve(numbers):
+    product = 1
+    for num in numbers:
+        product *= num
+    return product",4

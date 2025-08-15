@@ -1,0 +1,69 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    res = """"
+    count = 0
+    for c in s:
+        if c == ""("":
+            count += 1
+        elif c == "")"":
+            count -= 1
+        elif count == 0:
+            res += c
+    return res",1
+2,"
+
+def solve(string):
+    result = """"
+    open_count = 0
+    
+    for char in string:
+        if char == ""("":
+            open_count += 1
+        elif char == "")"":
+            open_count -= 1
+        elif open_count == 0:
+            result += char
+    
+    return result",2
+3,"
+def solve(string):
+    result = """"
+    inside_parenthesis = False
+
+    for char in string:
+        if char == '(':
+            inside_parenthesis = True
+        elif char == ')':
+            inside_parenthesis = False
+        elif not inside_parenthesis:
+            result += char
+    
+    return result",3
+4,"
+
+def solve(string):
+    result = ''
+    open_paren = 0
+    for char in string:
+        if char == '(':
+            open_paren += 1
+        elif char == ')':
+            open_paren -= 1
+        elif open_paren == 0:
+            result += char
+    return result",4
+5,"
+
+def solve(string):
+    new_string = ''
+    skip = 0
+    for char in string:
+        if char == '(':
+            skip += 1
+        elif char == ')':
+            skip -= 1
+        elif skip == 0:
+            new_string += char
+    return new_string",5

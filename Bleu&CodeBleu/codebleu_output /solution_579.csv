@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2): 
+    return set(tup1).symmetric_difference(set(tup2))",1
+2,"
+
+def solve(tuple1, tuple2):
+    return list(set(tuple1) ^ set(tuple2))",2
+3,"
+
+def solve(tuple1, tuple2):
+    diff = tuple(set(tuple1) ^ set(tuple2))
+    return diff",3
+4,"
+
+def solve(tup1, tup2):
+    return tuple(set(tup1).symmetric_difference(tup2))",4
+5,"
+
+def solve(tup1, tup2):
+    diff = []
+    for elem in tup1:
+        if elem not in tup2:
+            diff.append(elem)
+    for elem in tup2:
+        if elem not in tup1:
+            diff.append(elem)
+    return diff",5

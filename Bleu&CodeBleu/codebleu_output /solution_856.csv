@@ -1,0 +1,65 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)-1):
+        if arr[i] != 0:
+            for j in range(i+1, len(arr)):
+                if arr[j] == 0:
+                    arr[i], arr[j] = arr[j], arr[i]
+                    count += 1
+                    break
+    return count",1
+2,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)):
+        if arr[i] == 0:
+            count += 1
+    
+    swaps = 0
+    for i in range(count):
+        if arr[i] == 1:
+            swaps += 1
+    
+    return swaps",2
+3,"
+
+def solve(arr):
+    swaps = 0
+    for i in range(len(arr)):
+        if arr[i] != i%2:
+            for j in range(i+1, len(arr)):
+                if arr[j] == i%2:
+                    arr[i], arr[j] = arr[j], arr[i]
+                    swaps += 1
+                    break
+    return swaps",3
+4,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)):
+        min_idx = i
+        for j in range(i+1, len(arr)):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        if min_idx != i:
+            arr[i], arr[min_idx] = arr[min_idx], arr[i]
+            count += 1
+    return count",4
+5,"
+
+def solve(arr):
+    swaps = 0
+    for i in range(len(arr)):
+        min_idx = i
+        for j in range(i+1, len(arr)):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        if min_idx != i:
+            arr[i], arr[min_idx] = arr[min_idx], arr[i]
+            swaps += 1
+    return swaps",4

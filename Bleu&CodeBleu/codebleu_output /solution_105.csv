@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count = 0
+    for i in lst:
+        if i == True:
+            count += 1
+    return count",1
+2,"
+
+def solve(list):
+    count = 0
+    for value in list:
+        if value == True:
+            count += 1
+    return count",2
+3,"
+
+def solve(lst):
+    count = 0
+    for i in lst:
+        if i == True:
+            count += 1
+    return count",1
+4,"
+
+def solve(lst):
+    count = 0
+    for item in lst:
+        if item == True:
+            count += 1
+    return count",3
+5,"
+
+def solve(lst):
+    count = 0
+    for i in lst:
+        if i is True:
+            count += 1
+    return count",1

@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    for char in string:
+        if char != '0' and char != '1':
+            return False
+    return True",1
+2,"
+
+def solve(string):
+    for char in string:
+        if char not in ['0', '1']:
+            return False
+    return True",2
+3,"
+
+def solve(string):
+    binary = ""01""
+    for char in string:
+        if char not in binary:
+            return False
+    return True",3
+4,"
+
+def solve(string):
+    for char in string:
+        if char not in ['0', '1']:
+            return False
+    return True",2
+5,"
+
+def solve(string):
+    for char in string:
+        if char not in ['0', '1']:
+            return False
+    return True",2

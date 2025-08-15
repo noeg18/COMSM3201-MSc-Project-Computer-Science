@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    return list(string)",1
+2,"
+
+def solve(s):
+    return list(s)",2
+3,"
+
+def solve(string):
+    return list(string)",1
+4,"
+
+def solve(string):
+    return list(string)",1
+5,"
+
+def solve(string):
+    lst = list(string)
+    return lst",3

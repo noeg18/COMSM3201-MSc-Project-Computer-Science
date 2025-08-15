@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    return string.replace("" "", """")",1
+2,"
+
+def solve(string):
+    return string.replace("" "", """")",1
+3,"
+
+def solve(string):
+    return string.replace("" "","""")",2
+4,"
+
+def solve(string):
+    return string.replace("" "", """")",1
+5,"
+
+def solve(str):
+    return str.replace("" "", """")
+    
+# Test case
+str = ""Hello World""
+print(solve(str)) # Output: HelloWorld",3

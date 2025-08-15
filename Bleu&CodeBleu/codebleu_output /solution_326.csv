@@ -1,0 +1,86 @@
+response_num,response,cluster
+1,"
+
+def solve(strings):
+    word_counts = {}
+    for string in strings:
+        words = string.split()
+        for word in words:
+            if word in word_counts:
+                word_counts[word] += 1
+            else:
+                word_counts[word] = 1
+    max_count = 0
+    max_word = """"
+    for word, count in word_counts.items():
+        if count > max_count:
+            max_count = count
+            max_word = word
+    return max_word",1
+2,"
+
+def solve(strings):
+    word_count = {}
+    for string in strings:
+        words = string.split()
+        for word in words:
+            if word in word_count:
+                word_count[word] += 1
+            else:
+                word_count[word] = 1
+    max_count = 0
+    max_word = """"
+    for word, count in word_count.items():
+        if count > max_count:
+            max_count = count
+            max_word = word
+    return max_word",2
+3,"
+
+def solve(strings):
+    words = {}
+    for string in strings:
+        for word in string.split():
+            if word not in words:
+                words[word] = 1
+            else:
+                words[word] += 1
+    max_word = ''
+    max_count = 0
+    for word, count in words.items():
+        if count > max_count:
+            max_word = word
+            max_count = count
+    return max_word",3
+4,"
+
+def solve(strings):
+    words = {}
+    for string in strings:
+        for word in string.split():
+            if word in words:
+                words[word] += 1
+            else:
+                words[word] = 1
+    max_word = max(words, key=words.get)
+    return max_word",4
+5,"
+
+def solve(strings):
+    count_dict = {}
+    for string in strings:
+        words = string.split()
+        for word in words:
+            if word in count_dict:
+                count_dict[word] += 1
+            else:
+                count_dict[word] = 1
+
+    max_count = 0
+    max_word = """"
+    for word, count in count_dict.items():
+        if count > max_count:
+            max_count = count
+            max_word = word
+
+    return max_word",5

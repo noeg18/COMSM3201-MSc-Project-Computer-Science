@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(cost, selling_price):
+    if cost == selling_price:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(cost, selling_price):
+    if cost == selling_price:
+        return ""No profit or loss.""
+    else:
+        return ""Profit or loss present.""",2
+3,"
+
+def solve(amount, cost, revenue):
+    if cost == revenue:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(cost, selling_price):
+    if cost == selling_price:
+        return True
+    else:
+        return False",1
+5,"
+
+def solve(cost_price, selling_price):
+    if cost_price == selling_price:
+        return True
+    else:
+        return False",4

@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    new_lst = []
+    for word in lst:
+        if word not in new_lst:
+            new_lst.append(word)
+    return new_lst",1
+2,"
+
+def solve(words):
+  unique_words = []
+  for word in words:
+    if word not in unique_words:
+      unique_words.append(word)
+  return unique_words",2
+3,"
+
+def solve(words):
+    unique_words = []
+    for word in words:
+        if word not in unique_words:
+            unique_words.append(word)
+    return unique_words",2
+4,"
+
+def solve(words):
+    unique_words = []
+    for word in words:
+        if word not in unique_words:
+            unique_words.append(word)
+    return unique_words",2
+5,"
+
+def solve(words):
+    unique_words = []
+    for word in words:
+        if word not in unique_words:
+            unique_words.append(word)
+    return unique_words",2

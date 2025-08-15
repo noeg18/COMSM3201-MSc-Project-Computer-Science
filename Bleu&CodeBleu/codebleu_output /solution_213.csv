@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple1, tuple2):
+  return tuple1 + tuple2",1
+2,"
+
+def solve(t1, t2):
+    return t1 + t2",2
+3,"
+
+def solve(tup1, tup2):
+    new_tup = tup1 + tup2
+    return new_tup",3
+4,"
+
+def solve(tuple1, tuple2):
+    return tuple1 + tuple2",1
+5,"
+
+def solve(str_tuple1, str_tuple2):
+    return str_tuple1 + str_tuple2",4

@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    min_val = min(arr)
+    count = 0
+    for num in arr:
+        if num == min_val:
+            count += 1
+    return count",1
+2,"
+
+def solve(arr):
+    smallest = min(arr)
+    frequency = arr.count(smallest)
+    return frequency",2
+3,"
+
+def solve(arr):
+    smallest = min(arr)
+    return arr.count(smallest)",3
+4,"
+
+def solve(arr):
+    smallest = min(arr)
+    frequency = arr.count(smallest)
+    return frequency",2
+5,"
+def solve(arr):
+    freq = 0
+    min_val = min(arr)
+    for i in arr:
+        if i == min_val:
+            freq += 1
+    return freq",4

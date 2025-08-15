@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    min_product = float('inf')
+    for i in range(len(tuples)):
+        for j in range(i+1, len(tuples)):
+            product = tuples[i][0] * tuples[j][0]
+            if product < min_product:
+                min_product = product
+    return min_product",1
+2,"
+
+def solve(lst):
+    min_product = None
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            product = lst[i][0] * lst[j][0]
+            if min_product is None or product < min_product:
+                min_product = product
+    return min_product",2
+3,"
+
+def solve(lst):
+    min_product = float('inf')
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            product = lst[i][0] * lst[j][0]
+            if product < min_product:
+                min_product = product
+    return min_product",3
+4,"
+
+def solve(lst):
+    min_product = lst[0][0] * lst[0][1]
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            product = lst[i][0] * lst[j][0]
+            if product < min_product:
+                min_product = product
+    return min_product",4
+5,"
+
+def solve(lst):
+    min_product = None
+    for i in range(len(lst)):
+        for j in range(i+1, len(lst)):
+            product = lst[i][0] * lst[j][0]
+            if min_product is None or product < min_product:
+                min_product = product
+    return min_product",2

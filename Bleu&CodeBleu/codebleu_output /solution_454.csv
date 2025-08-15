@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(word):
+    if ""z"" in word:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(word):
+    if 'z' in word:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(word):
+  if 'z' in word:
+    return True
+  else:
+    return False",2
+4,"
+
+def solve(word):
+    if 'z' in word:
+        return True
+    else:
+        return False",2
+5,"
+
+def solve(word):
+    if 'z' in word:
+        return True
+    else:
+        return False",2

@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple_list):
+    return sorted(tuple_list, key=lambda x: sum([len(str(i)) for i in x]))",1
+2,"
+
+def solve(tuple_list):
+    sorted_list = sorted(tuple_list, key=lambda x: sum([len(str(num)) for num in x]))
+    return sorted_list",2
+3,"
+
+def solve(tup_list):
+    tup_list.sort(key=lambda x: sum(map(lambda y: len(str(y)), x)), reverse=True)
+    return tup_list",3
+4,"
+
+def solve(tuple_list):
+    return sorted(tuple_list, key=lambda x: sum(len(str(i)) for i in x))",4
+5,"
+
+def solve(tuple_list):
+    sorted_tuple_list = sorted(tuple_list, key=lambda x: sum([len(str(num)) for num in x]))
+    return sorted_tuple_list",5

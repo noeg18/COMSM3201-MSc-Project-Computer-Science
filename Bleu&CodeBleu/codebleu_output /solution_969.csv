@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    result = []
+    for i in range(len(tuples)):
+        for j in range(i+1, len(tuples)):
+            if tuples[i][0] == tuples[j][0]:
+                result.append(tuples[i] + tuples[j])
+    return result",1
+2,"
+
+def solve(tuples):
+    result = []
+    for i in range(len(tuples)):
+        temp = [tuples[i][0]]
+        for j in range(i+1, len(tuples)):
+            if tuples[i][0] == tuples[j][0]:
+                temp.append(tuples[j][1])
+        if len(temp) > 1:
+            result.append(tuple(temp))
+    return result",2
+3,"
+
+def solve(tuples):
+    result = []
+    for i in range(len(tuples)):
+        if i + 1 < len(tuples):
+            if tuples[i][0] == tuples[i+1][0]:
+                result.append(tuples[i] + tuples[i+1])
+            else:
+                result.append(tuples[i])
+        else:
+            result.append(tuples[i])
+    return result",3
+4,"
+
+def solve(tuples):
+    result = []
+    for i in range(len(tuples)):
+        if i == len(tuples)-1:
+            result.append(tuples[i])
+            break
+        if tuples[i][0] == tuples[i+1][0]:
+            result.append((tuples[i][0], tuples[i][1] + tuples[i+1][1]))
+        else:
+            result.append(tuples[i])
+    return result",4
+5,"
+def solve(tuples):
+    result = []
+    for i in tuples:
+        if len(result) == 0:
+            result.append(i)
+        else:
+            if i[0] == result[-1][0]:
+                result[-1] = result[-1] + i[1:]
+            else:
+                result.append(i)
+    return result",5

@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return [{} for i in range(n)]",1
+2,"
+
+def solve(n):
+    result = [{} for i in range(n)]
+    return result",2
+3,"
+
+def solve(n):
+    return [{} for i in range(n)]",1
+4,"
+
+def solve(n):
+    return [{} for i in range(n)]",1
+5,"
+
+def solve(n):
+    return [{} for i in range(n)]",1

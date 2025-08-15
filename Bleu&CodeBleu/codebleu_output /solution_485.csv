@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    largest_palindrome = 0
+    for num in arr:
+        if str(num) == str(num)[::-1]:
+            if num > largest_palindrome:
+                largest_palindrome = num
+    return largest_palindrome",1
+2,"
+
+def solve(arr):
+    largest_palindrome = 0
+    for num in arr:
+        if str(num) == str(num)[::-1] and num > largest_palindrome:
+            largest_palindrome = num
+    return largest_palindrome",2
+3,"
+
+def solve(arr):
+    largest_palindrome = 0
+    for num in arr:
+        if str(num) == str(num)[::-1]:
+            if num > largest_palindrome:
+                largest_palindrome = num
+    return largest_palindrome",1
+4,"
+
+def solve(arr):
+    largest_palindrome = 0
+    for num in arr:
+        if str(num) == str(num)[::-1]: # check if number is palindrome
+            if num > largest_palindrome:
+                largest_palindrome = num
+    return largest_palindrome",1
+5,"
+
+def solve(arr):
+    largest_palindrome = 0
+    for num in arr:
+        # check if num is a palindrome
+        if str(num)[::-1] == str(num):
+            # check if num is larger than current largest palindrome
+            if num > largest_palindrome:
+                largest_palindrome = num
+    return largest_palindrome",3

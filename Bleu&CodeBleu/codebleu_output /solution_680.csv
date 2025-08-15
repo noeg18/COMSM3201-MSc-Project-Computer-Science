@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    for i in range(len(nums)-1):
+        if nums[i] >= nums[i+1]:
+            return False
+    return True",1
+2,"
+
+def solve(nums):
+    for i in range(len(nums)-1):
+        if nums[i+1] < nums[i]:
+            return False
+    return True",2
+3,"
+
+def solve(seq):
+    for i in range(len(seq)-1):
+        if seq[i] >= seq[i+1]:
+            return False
+    return True",3
+4,"
+
+def solve(seq):
+    if len(seq) < 2:
+        return False
+    for i in range(len(seq)-1):
+        if seq[i] >= seq[i+1]:
+            return False
+    return True",4
+5,"
+
+def solve(nums):
+    for i in range(len(nums)-1):
+        if nums[i+1] > nums[i]:
+            continue
+        else:
+            return False
+    return True",5

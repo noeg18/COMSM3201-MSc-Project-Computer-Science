@@ -1,0 +1,27 @@
+response_num,response,cluster
+1,"
+
+import math 
+  
+def solve(side): 
+    volume = (side**3) / (6 * math.sqrt(2)) 
+    return volume",1
+2,"
+
+def solve(a):
+    return (a**3)/(6*(2**0.5))",2
+3,"
+
+def solve(a):
+    return (a ** 3) / (6 * (2 ** 0.5))",3
+4,"
+
+import math 
+
+def solve(a):
+    volume = (math.sqrt(2)/12) * (a**3)
+    return volume",4
+5,"
+
+def solve(a):
+    return (a**3)/(6*(2**(1/2)))",5

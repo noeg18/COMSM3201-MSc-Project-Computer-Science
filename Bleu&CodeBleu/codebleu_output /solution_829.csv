@@ -1,0 +1,91 @@
+response_num,response,cluster
+1,"
+
+def solve(seq):
+    freq = {}
+    for s in seq:
+        if s in freq:
+            freq[s] += 1
+        else:
+            freq[s] = 1
+    
+    max_freq = 0
+    second_freq = 0
+    max_s = ''
+    second_s = ''
+
+    for s in freq:
+        if freq[s] > max_freq:
+            second_freq = max_freq
+            max_freq = freq[s]
+            second_s = max_s
+            max_s = s
+        elif freq[s] > second_freq:
+            second_freq = freq[s]
+            second_s = s
+    
+    return second_s",1
+2,"
+
+def solve(sequence):
+    # create a dictionary to store the count of each string
+    freq = {}
+    for string in sequence:
+        if string in freq:
+            freq[string] += 1
+        else:
+            freq[string] = 1
+    
+    # create a list to store the count of each string in descending order
+    count_list = sorted(freq.values(), reverse=True)
+    
+    # find the second most frequent count
+    second_freq = count_list[1]
+    
+    # create a list to store the strings with the second most frequent count
+    second_most_common = []
+    for key, value in freq.items():
+        if value == second_freq:
+            second_most_common.append(key)
+    
+    # return the first string in the list as the second most repeated string
+    return second_most_common[0]",2
+3,"
+
+def solve(sequence):
+    freq_dict = {}
+    for string in sequence:
+        if string not in freq_dict:
+            freq_dict[string] = 1
+        else:
+            freq_dict[string] += 1
+    
+    sorted_freq = sorted(freq_dict.items(), key=lambda x: x[1], reverse=True)
+    return sorted_freq[1][0]",3
+4,"
+
+def solve(seq):
+    freq_dict = {}
+    for string in seq:
+        if string in freq_dict:
+            freq_dict[string] += 1
+        else:
+            freq_dict[string] = 1
+    
+    sorted_freq = sorted(freq_dict.items(), key=lambda x: x[1], reverse=True)
+    return sorted_freq[1][0]",4
+5,"
+
+def solve(seq):
+  # create a dictionary to store the count of each string
+  count_dict = {}
+  # loop through the sequence and update the count for each string
+  for string in seq:
+    if string in count_dict:
+      count_dict[string] += 1
+    else:
+      count_dict[string] = 1
+  # sort the dictionary by value in descending order
+  sorted_dict = sorted(count_dict.items(), key=lambda x: x[1], reverse=True)
+  # return the second most repeated string
+  return sorted_dict[1][0]",5

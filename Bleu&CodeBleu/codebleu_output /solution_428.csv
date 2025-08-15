@@ -1,0 +1,77 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    gap = len(arr) // 2
+    while gap > 0:
+        for i in range(gap, len(arr)):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    return arr",1
+2,"
+
+def solve(arr):
+    n = len(arr)
+    gap = n // 2
+    
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            
+            arr[j] = temp
+        gap //= 2
+    
+    return arr",2
+3,"
+
+def solve(arr):
+    gap = len(arr) // 2
+    while gap > 0:
+        for i in range(gap, len(arr)):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    return arr",1
+4,"
+
+def solve(arr):
+    n = len(arr)
+    gap = n // 2
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    return arr",2
+5,"
+
+def solve(arr):
+    gap = len(arr) // 2
+    while gap > 0:
+        for i in range(gap, len(arr)):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    return arr",1

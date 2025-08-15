@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return n-1",1
+2,"
+
+def solve(n):
+    if n == 0:
+        return None
+    else:
+        return n - 1",2
+3,"
+
+def solve(n):
+    closest = n - 1
+    while closest >= 0:
+        if closest < n:
+            return closest
+        closest -= 1
+    return None",3
+4,"
+
+def solve(n):
+    if n == 0:
+        return -1
+    else:
+        return n - 1",4
+5,"
+
+def solve(n):
+  if n == 0:
+    return None
+  else:
+    return n-1",5

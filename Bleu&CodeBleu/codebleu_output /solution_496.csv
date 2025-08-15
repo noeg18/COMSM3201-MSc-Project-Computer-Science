@@ -1,0 +1,34 @@
+response_num,response,cluster
+1,"
+
+def solve(nums):
+    import heapq
+    heapq.heapify(nums)
+    return heapq.nsmallest(2, nums)",1
+2,"
+
+def solve(nums):
+    import heapq
+    return heapq.nsmallest(1, nums)[0]",2
+3,"
+
+def solve(nums):
+    import heapq
+    heap = []
+    for num in nums:
+        heapq.heappush(heap,num)
+    return heapq.heappop(heap)",3
+4,"
+
+import heapq
+
+def solve(numbers):
+  heapq.heapify(numbers)
+  smallest = heapq.heappop(numbers)
+  return smallest",4
+5,"
+
+def solve(nums):
+    import heapq
+    heapq.heapify(nums)
+    return heapq.nsmallest(2, nums)",1

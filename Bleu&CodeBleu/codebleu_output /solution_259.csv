@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2):
+    return max(tup1) + max(tup2)",1
+2,"
+
+def solve(tuple1, tuple2):
+    return max(tuple1) + max(tuple2)",2
+3,"
+
+def solve(tup1, tup2):
+    return tuple([max(tup1[i], tup2[i]) for i in range(len(tup1))])",3
+4,"
+
+def solve(tuple1, tuple2):
+    return tuple(max(x, y) for x, y in zip(tuple1, tuple2))",4
+5,"
+
+def solve(tuple1, tuple2):
+    return tuple(map(max, tuple1, tuple2))",5

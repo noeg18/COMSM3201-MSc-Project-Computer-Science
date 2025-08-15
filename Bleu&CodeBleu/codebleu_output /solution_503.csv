@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    sum = 0
+    for i in range(len(lst)):
+        sum += lst[i]
+    return sum",1
+2,"
+
+def solve(lst):
+    total = 0
+    for i in range(len(lst)):
+        total += lst[i]
+    return total",2
+3,"
+
+def solve(lst):
+    total = 0
+    for i in range(len(lst)-1):
+        total += lst[i] + lst[i+1]
+    return total",3
+4,"
+
+def solve(lst):
+    total = 0
+    for i in range(len(lst)):
+        total += lst[i]
+    return total",2
+5,"
+
+def solve(lst):
+    sum = 0
+    for i in range(len(lst)):
+        sum += lst[i]
+    return sum",1

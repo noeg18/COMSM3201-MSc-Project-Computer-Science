@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(n, m):
+    if m > n:
+        return 0
+    if n == 0 and m == 0:
+        return 1
+    if n == 0 or m == 0:
+        return 0
+    return (n - m + 1) * solve(n - 1, m - 1) + (m + 1) * solve(n - 1, m)",1
+2,"
+
+def solve(n, m):
+    if n == 0:
+        return 1
+    elif m == 0:
+        return 0
+    else:
+        return (m + 1) * solve(n - 1, m) + (n - m) * solve(n - 1, m - 1)",2
+3,"
+
+def solve(n,m):
+    if m == 0 or n == m:
+        return 1
+    elif m > n:
+        return 0
+    else:
+        return (n-m+1)*solve(n-1, m-1) + (m+1)*solve(n-1, m)",3
+4,"
+
+def solve(n, m):
+    if n == 0:
+        return 1
+    if m == 0:
+        return 0
+    return (n - m) * solve(n - 1, m - 1) + (m + 1) * solve(n - 1, m)",4
+5,"
+
+def solve(n,m):
+    if n == 0 or m == 0:
+        return 1
+    else:
+        return (m+1)*solve(n-1,m) - (n-1)*solve(n-1,m-1)",5

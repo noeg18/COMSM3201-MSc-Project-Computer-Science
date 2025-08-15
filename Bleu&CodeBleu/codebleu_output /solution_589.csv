@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(start, end):
+    squares = []
+    for num in range(start, end+1):
+        if int(num**0.5) == num**0.5:
+            squares.append(num)
+    return squares",1
+2,"
+
+def solve(start, end):
+    squares = []
+    for num in range(start, end+1):
+        if num**0.5 == int(num**0.5):
+            squares.append(num)
+    return squares",2
+3,"
+
+def solve(num1, num2):
+    perfect_squares = []
+    for i in range(num1, num2+1):
+        if i**(1/2) == int(i**(1/2)):
+            perfect_squares.append(i)
+    return perfect_squares",3
+4,"
+
+def solve(num1, num2):
+    squares = []
+    for i in range(num1, num2+1):
+        if i >= 0 and (i**0.5).is_integer():
+            squares.append(i)
+    return squares",4
+5,"
+
+def solve(a, b):
+    perfect_squares = []
+    for i in range(a, b+1):
+        if i**0.5 == int(i**0.5):
+            perfect_squares.append(i)
+    return perfect_squares ",5

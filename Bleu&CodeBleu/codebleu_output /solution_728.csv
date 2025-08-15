@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    return sum(list1) + sum(list2)",1
+2,"
+
+def solve(list1, list2):
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i] + list2[i])
+    return result",2
+3,"
+
+def solve(list1, list2):
+    sum = 0
+    for num in list1:
+        sum += num
+    for num in list2:
+        sum += num
+    return sum",3
+4,"
+
+def solve(list1, list2):
+    sum = 0
+    for element in list1:
+        sum += element
+    for element in list2:
+        sum += element
+    return sum",4
+5,"
+
+def solve(list1, list2):
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i] + list2[i])
+    return result",2

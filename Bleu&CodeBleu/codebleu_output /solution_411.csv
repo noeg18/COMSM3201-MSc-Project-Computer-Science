@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(str):
+    return re.sub(r'_([a-z])', lambda m: m.group(1).upper(), str)",1
+2,"
+
+def solve(s):
+    return re.sub(r""_(\w)"", lambda m: m.group(1).upper(), s)",2
+3,"
+
+def solve(s):
+    return re.sub('_(.)', lambda m: m.group(1).upper(), s)",3
+4,"
+
+import re
+
+def solve(s):
+    return re.sub(r'_([a-z])', lambda match: match.group(1).upper(), s)",4
+5,"
+
+def solve(s):
+    return re.sub(r'_([a-z])', lambda m: m.group(1).upper(), s)",5

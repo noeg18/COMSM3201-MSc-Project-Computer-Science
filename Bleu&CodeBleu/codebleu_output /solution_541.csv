@@ -1,0 +1,54 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    sum = 0
+    for i in range(1, num):
+        if num % i == 0:
+            sum += i
+    if sum > num:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(num):
+    sum = 0
+    for i in range(1, num):
+        if num % i == 0:
+            sum += i
+    if sum > num:
+        return True
+    else:
+        return False",1
+3,"
+
+def solve(num):
+    factors = []
+    for i in range(1, num):
+        if num % i == 0:
+            factors.append(i)
+    if sum(factors) > num:
+        return True
+    else:
+        return False",2
+4,"
+def solve(n):
+    sum = 0
+    for i in range(1, n):
+        if n % i == 0:
+            sum += i
+    if sum > n:
+        return True
+    else:
+        return False",3
+5,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n):
+        if n % i == 0:
+            sum += i
+    if sum > n:
+        return True
+    return False ",4

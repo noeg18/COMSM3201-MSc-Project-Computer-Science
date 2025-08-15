@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2):
+    result = ()
+    for i in range(len(tup1)):
+        result += (tup1[i] % tup2[i],)
+    return result",1
+2,"
+
+def solve(tup1, tup2):
+    result = []
+
+    for i in range(len(tup1)):
+        result.append(tup1[i] % tup2[i])
+
+    return tuple(result)",2
+3,"
+
+def solve(tup1, tup2):
+    result = ()
+    for i in range(len(tup1)):
+        result += (tup1[i] % tup2[i],)
+    return result",1
+4,"
+
+def solve(tup1, tup2):
+    result = []
+    for i in range(len(tup1)):
+        result.append(tup1[i]%tup2[i])
+    return tuple(result)",3
+5,"
+
+def solve(tup1, tup2):
+    result = ()
+    for i in range(len(tup1)):
+        result += (tup1[i] % tup2[i],)
+    return result",1

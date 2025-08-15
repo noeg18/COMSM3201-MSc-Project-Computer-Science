@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, k):
+    return lst[k:] + lst[:k]",1
+2,"
+
+def solve(lst, n):
+    n = n % len(lst)
+    return lst[n:] + lst[:n]",2
+3,"
+
+def solve(lst, n):
+    n = n % len(lst)
+    return lst[n:] + lst[:n]",2
+4,"
+
+def solve(lst, n):
+    return lst[n:] + lst[:n]",3
+5,"
+
+def solve(lst, n):
+    n = n % len(lst)
+    return lst[n:] + lst[:n]",2

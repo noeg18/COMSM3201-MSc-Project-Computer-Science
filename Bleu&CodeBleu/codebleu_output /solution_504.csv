@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i**3
+    return sum",1
+2,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum = sum + i**3
+    return sum",2
+3,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i**3
+    return sum",1
+4,"
+
+def solve(n):
+    return sum([i**3 for i in range(1,n+1)])",3
+5,"
+
+def solve(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i**3
+    return sum",1

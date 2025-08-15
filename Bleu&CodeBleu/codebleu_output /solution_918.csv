@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(coin_list, total):
+    dp = [0] * (total + 1)
+    dp[0] = 1
+    for coin in coin_list:
+        for i in range(coin, total + 1):
+            dp[i] += dp[i - coin]
+    return dp[total]",1
+2,"
+
+def solve(coins, amount):
+    dp = [0] * (amount + 1)
+    dp[0] = 1
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] += dp[i - coin]
+    return dp[amount]",2
+3,"
+
+def solve(coins, amount):
+    dp = [0] * (amount + 1)
+    dp[0] = 1
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] += dp[i - coin]
+    return dp[amount]",2
+4,"
+def solve(coins, amount):
+    dp = [0] * (amount + 1)
+    dp[0] = 1
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] += dp[i - coin]
+    return dp[amount]",2
+5,"
+
+def solve(coins, amount):
+    dp = [0] * (amount + 1)
+    dp[0] = 1
+    
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] += dp[i - coin]
+            
+    return dp[amount]",2

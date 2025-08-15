@@ -1,0 +1,81 @@
+response_num,response,cluster
+1,"
+
+def solve(n, r, p):
+    # calculate factorial of n
+    factorial_n = 1
+    for i in range(1, n+1):
+        factorial_n *= i
+    
+    # calculate factorial of r
+    factorial_r = 1
+    for i in range(1, r+1):
+        factorial_r *= i
+    
+    # calculate factorial of n-r
+    factorial_n_r = 1
+    for i in range(1, n-r+1):
+        factorial_n_r *= i
+    
+    # calculate nCr
+    nCr = factorial_n // (factorial_r * factorial_n_r)
+    
+    # calculate nCr%p
+    nCr_mod_p = nCr % p
+    
+    return nCr_mod_p",1
+2,"
+def solve(n, r, p):
+    if n < r:
+        return 0
+    if r == 0 or r == n:
+        return 1
+    numerator = 1
+    denominator = 1
+    for i in range(1, r+1):
+        numerator = (numerator * (n-i+1)) % p
+        denominator = (denominator * i) % p
+    return (numerator * pow(denominator, p-2, p)) % p",2
+3,"
+
+def solve(n, r, p):
+    factorial_n = 1
+    factorial_r = 1
+    factorial_nr = 1
+    for i in range(1, n+1):
+        factorial_n *= i
+    for i in range(1, r+1):
+        factorial_r *= i
+    for i in range(1, n-r+1):
+        factorial_nr *= i
+    ncr = factorial_n // (factorial_r * factorial_nr)
+    return ncr % p",3
+4,"
+
+def solve(n, r, p):
+    # initialize result
+    result = 1
+    # calculate factorial of n
+    for i in range(1, n+1):
+        result = (result * i) % p
+    # calculate factorial of r
+    for i in range(1, r+1):
+        result = (result * pow(i, p-2, p)) % p
+    # calculate factorial of (n-r)
+    for i in range(1, n-r+1):
+        result = (result * pow(i, p-2, p)) % p
+    # return result
+    return result",4
+5,"
+
+def solve(n, r, p):
+    fact_n = 1
+    fact_r = 1
+    fact_nr = 1
+    for i in range(1, n + 1):
+        fact_n = (fact_n * i) % p
+    for i in range(1, r + 1):
+        fact_r = (fact_r * i) % p
+    for i in range(1, n - r + 1):
+        fact_nr = (fact_nr * i) % p
+    return (fact_n // (fact_r * fact_nr)) % p",5

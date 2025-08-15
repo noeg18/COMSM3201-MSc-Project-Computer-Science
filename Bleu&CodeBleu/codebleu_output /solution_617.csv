@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(d):
+    if d == 0:
+        return 0
+    elif d == 1:
+        return 1
+    elif d == 2:
+        return 2
+    else:
+        count = 2
+        x = 3
+        while x <= d:
+            count += 1
+            x += 2
+        return count",1
+2,"
+
+def solve(d):
+    jumps = 0
+    while d > 0:
+        if d <= 2:
+            jumps += 1
+            break
+        elif d % 2 == 0:
+            d = d // 2
+            jumps += 1
+        else:
+            d = (d + 1) // 2
+            jumps += 2
+    return jumps",2
+3,"
+
+def solve(d):
+    if d == 0:
+        return 0
+    elif d % 2 == 0:
+        return d // 2
+    else:
+        return d // 2 + 1",3
+4,"
+
+def solve(d):
+    if d == 0:
+        return 0
+    elif d % 2 == 0:
+        return (d // 2) * 2
+    else:
+        return (d // 2) * 2 + 1",4
+5,"
+
+def solve(d):
+    jumps = 0
+    x = 0
+    y = 0
+    while x < d:
+        jumps += 1
+        x += jumps
+    return jumps",5

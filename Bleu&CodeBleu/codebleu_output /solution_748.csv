@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    return re.sub(r""(\w)([A-Z])"", r""\1 \2"", string)",1
+2,"
+
+import re
+def solve(string):
+  return re.sub(r'([A-Z])', r' \1', string).strip()
+",2
+3,"
+
+import re
+
+def solve(string):
+    return re.sub(r'([A-Z])', r' \1', string).strip()",2
+4,"
+
+import re
+
+def solve(string):
+    return re.sub(r""([A-Z])"", r"" \1"", string).strip()",3
+5,"
+
+def solve(s):
+    import re
+    return re.sub(r""(\w)([A-Z])"", r""\1 \2"", s)",4

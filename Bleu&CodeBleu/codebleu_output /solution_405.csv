@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(element, tup):
+    if element in tup:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(tup, element):
+    if element in tup:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(tup, elem):
+    if elem in tup:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(element, tuple):
+    if element in tuple:
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(element, tup):
+    if element in tup:
+        return True
+    else:
+        return False",1

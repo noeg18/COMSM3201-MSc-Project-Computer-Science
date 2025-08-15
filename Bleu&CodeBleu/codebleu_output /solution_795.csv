@@ -1,0 +1,68 @@
+response_num,response,cluster
+1,"
+
+import heapq
+
+def solve(dataset, n):
+    # create a min heap
+    heap = []
+    # loop through the dataset and add the prices to the heap
+    for price in dataset:
+        heapq.heappush(heap, price)
+    # create an empty list to store the n cheapest items
+    cheapest_items = []
+    # loop n times
+    for i in range(n):
+        # pop the smallest item from the heap and add it to the list
+        cheapest_items.append(heapq.heappop(heap))
+    # return the list of n cheapest items
+    return cheapest_items",1
+2,"
+
+import heapq
+
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, item)
+    
+    cheapest_items = []
+    for i in range(n):
+        cheapest_items.append(heapq.heappop(heap))
+    
+    return cheapest_items",2
+3,"
+
+import heapq
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, item)
+    cheapest_items = []
+    for i in range(n):
+        cheapest_items.append(heapq.heappop(heap))
+    return cheapest_items",2
+4,"
+
+import heapq
+
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, item)
+    
+    cheap_items = []
+    for i in range(n):
+        cheap_items.append(heapq.heappop(heap))
+    
+    return cheap_items",3
+5,"
+
+def solve(dataset, n):
+    heap = []
+    for item in dataset:
+        heapq.heappush(heap, item)
+    result = []
+    for i in range(n):
+        result.append(heapq.heappop(heap))
+    return result",4

@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    if num % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""",1
+2,"
+
+def solve(n):
+    if n%2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""",2
+3,"
+
+def solve(num):
+    if num % 2 == 0:
+        return ""Even""
+    else:
+        return ""Odd""",1
+4,"
+
+def solve(num):
+    if num % 2 == 0:
+        print(""Even"")
+    else:
+        print(""Odd"")",3
+5,"
+
+def solve(n):
+    if n % 2 == 0:
+        print(""Even"")
+    else:
+        print(""Odd"")",4

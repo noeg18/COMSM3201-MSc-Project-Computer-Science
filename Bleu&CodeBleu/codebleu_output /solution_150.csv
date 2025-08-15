@@ -1,0 +1,54 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    if num == 0:
+        return True
+    elif num % 2 == 0:
+        return False
+    else:
+        return True",1
+2,"
+
+def solve(n):
+    if n == 0:
+        return True
+    elif n == 1:
+        return False
+    else:
+        i = 1
+        while True:
+            if n == i:
+                return True
+            elif n == -i:
+                return True
+            else:
+                i += 1",2
+3,"
+
+def solve(number):
+    i = 1
+    while True:
+        if number == i:
+            return True
+        elif number < i:
+            return False
+        else:
+            i *= 2",3
+4,"
+
+def solve(number):
+    i = 1
+    while True:
+        if number == i:
+            return True
+        else:
+            i += 1
+    return False",4
+5,"
+def solve(n):
+    i = 1
+    while True:
+        if i == n:
+            return True
+        i += 1",5

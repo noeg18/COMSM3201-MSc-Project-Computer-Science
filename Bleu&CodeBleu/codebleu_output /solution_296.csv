@@ -1,0 +1,84 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                count += 1
+    return count",1
+2,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                count += 1
+    return count",1
+3,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                count += 1
+    return count",1
+4,"
+
+def merge(arr, temp_arr, left, mid, right): 
+	inversions = 0
+	i = left
+	j = mid + 1
+	k = left 
+	
+	while i <= mid and j <= right: 
+		if arr[i] <= arr[j]: 
+			temp_arr[k] = arr[i] 
+			i += 1
+		else: 
+			temp_arr[k] = arr[j] 
+			inversions += (mid - i + 1)
+			j += 1
+		k += 1
+
+	while i <= mid: 
+		temp_arr[k] = arr[i] 
+		i += 1
+		k += 1
+
+	while j <= right: 
+		temp_arr[k] = arr[j] 
+		j += 1
+		k += 1
+
+	for m in range(left, right + 1): 
+		arr[m] = temp_arr[m] 
+		
+	return inversions
+
+
+def mergeSort(arr, temp_arr, left, right): 
+	inversions = 0
+	if left < right: 
+		mid = (left + right)//2
+		inversions += mergeSort(arr, temp_arr, left, mid) 
+		inversions += mergeSort(arr, temp_arr, mid + 1, right) 
+		inversions += merge(arr, temp_arr, left, mid, right) 
+	return inversions
+
+
+def solve(arr):
+	temp_arr = [0]*len(arr) 
+	return mergeSort(arr, temp_arr, 0, len(arr)-1)",2
+5,"
+
+def solve(arr):
+    count = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                count += 1
+    return count",1

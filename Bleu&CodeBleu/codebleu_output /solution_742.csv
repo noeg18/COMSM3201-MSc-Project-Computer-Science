@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(a):
+    return (math.sqrt(3)/4) * (a**3)",1
+2,"
+
+import math
+
+def solve(a):
+    return (math.sqrt(2)/12) * a**3",2
+3,"
+
+import math
+
+def solve(a):
+    return (a**3 * math.sqrt(2)) / 12",3
+4,"
+
+def solve(a):
+    return (a**3 * pow(3, 0.5)) / 12",4
+5,"
+
+import math
+def solve(a):
+    area = (math.sqrt(3) * a**2) / 4
+    return area",5

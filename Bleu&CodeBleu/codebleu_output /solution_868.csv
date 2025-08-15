@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    string = string.strip()
+    last_word = string.split()[-1]
+    return len(last_word)",1
+2,"
+
+def solve(string):
+    words = string.split()
+    if len(words) == 0:
+        return 0
+    else:
+        return len(words[-1])",2
+3,"
+
+def solve(s):
+    s = s.strip()
+    words = s.split()
+    return len(words[-1])",3
+4,"
+
+def solve(string):
+    words = string.split()
+    if len(words) == 0:
+        return 0
+    else:
+        return len(words[-1])",2
+5,"
+
+def solve(string):
+    words = string.split()
+    if len(words) == 0:
+        return 0
+    else:
+        return len(words[-1])",2

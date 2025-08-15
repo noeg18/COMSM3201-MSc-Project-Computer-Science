@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(lists):
+    min_len = float('inf')
+    min_len_lists = []
+    for lst in lists:
+        if len(lst) < min_len:
+            min_len = len(lst)
+            min_len_lists = [lst]
+        elif len(lst) == min_len:
+            min_len_lists.append(lst)
+    return min_len_lists",1
+2,"
+
+def solve(lists):
+    min_len = float('inf')
+    min_lists = []
+    for lst in lists:
+        if len(lst) < min_len:
+            min_len = len(lst)
+            min_lists = [lst]
+        elif len(lst) == min_len:
+            min_lists.append(lst)
+    return min_lists",2
+3,"
+
+def solve(lists):
+    min_len = len(lists[0])
+    min_lists = [lists[0]]
+    for l in lists[1:]:
+        if len(l) < min_len:
+            min_len = len(l)
+            min_lists = [l]
+        elif len(l) == min_len:
+            min_lists.append(l)
+    return min_lists",3
+4,"
+
+def solve(lists):
+    min_length = min(len(l) for l in lists)
+    return [l for l in lists if len(l) == min_length]",4
+5,"
+
+def solve(lists):
+    min_length = min(len(lst) for lst in lists)
+    return [lst for lst in lists if len(lst) == min_length]",5

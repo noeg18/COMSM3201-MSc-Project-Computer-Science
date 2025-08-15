@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(base_length, slant_height):
+    base_area = base_length ** 2
+    lateral_area = (base_length * slant_height) / 2
+    surface_area = base_area + (4 * lateral_area)
+    return surface_area",1
+2,"
+
+def solve(base_length, height):
+    # calculate the slant height
+    slant_height = (base_length**2 + height**2)**0.5
+    # calculate the lateral surface area
+    lateral_area = base_length * slant_height
+    # calculate the base area
+    base_area = base_length**2
+    # calculate the total surface area
+    surface_area = lateral_area + base_area
+    return surface_area",2
+3,"
+
+def solve(base_length, height):
+    base_area = base_length ** 2
+    lateral_area = base_length * height * 2
+    surface_area = base_area + lateral_area
+    return surface_area",3
+4,"
+
+def solve(base, height):
+    area = base**2 + 2*base*(height/2)
+    return area",4
+5,"
+
+def solve(base_length, height):
+    base_area = base_length ** 2
+    slant_height = (base_length ** 2 + (4 * height ** 2)) ** 0.5
+    lateral_area = base_length * slant_height
+    surface_area = base_area + lateral_area
+    return surface_area",5

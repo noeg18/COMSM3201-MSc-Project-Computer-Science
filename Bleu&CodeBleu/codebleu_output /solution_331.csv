@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    count = 0
+    while n > 0:
+        if n & 1 == 0:
+            count += 1
+        n = n >> 1
+    return count",1
+2,"
+
+def solve(n):
+    count = 0
+    while n > 0:
+        if n % 2 == 0:
+            count += 1
+        n = n // 2
+    return count",2
+3,"
+
+def solve(n):
+    count = 0
+    while n > 0:
+        if n % 2 == 0:
+            count += 1
+        n = n // 2
+    return count",2
+4,"
+
+def solve(num):
+    count = 0
+    while num > 0:
+        if num & 1 == 0:
+            count += 1
+        num = num >> 1
+    return count
+",3
+5,"
+
+def solve(n):
+    count = 0
+    while n > 0:
+        if n % 2 == 0:
+            count += 1
+        n = n // 2
+    return count",2

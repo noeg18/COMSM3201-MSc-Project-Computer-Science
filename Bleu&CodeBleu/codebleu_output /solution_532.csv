@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(string1, string2):
+    if len(string1) != len(string2):
+        return False
+    
+    count1 = {}
+    count2 = {}
+    
+    for char in string1:
+        count1[char] = count1.get(char, 0) + 1
+        
+    for char in string2:
+        count2[char] = count2.get(char, 0) + 1
+        
+    return count1 == count2",1
+2,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    else:
+        sorted_str1 = sorted(str1)
+        sorted_str2 = sorted(str2)
+        if sorted_str1 == sorted_str2:
+            return True
+        else:
+            return False",2
+3,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    else:
+        return sorted(str1) == sorted(str2)",3
+4,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    else:
+        count1 = {}
+        count2 = {}
+        for i in range(len(str1)):
+            if str1[i] in count1:
+                count1[str1[i]] += 1
+            else:
+                count1[str1[i]] = 1
+            if str2[i] in count2:
+                count2[str2[i]] += 1
+            else:
+                count2[str2[i]] = 1
+        if count1 == count2:
+            return True
+        else:
+            return False",4
+5,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    
+    str1_list = list(str1)
+    str2_list = list(str2)
+    
+    str1_list.sort()
+    str2_list.sort()
+    
+    for i in range(len(str1)):
+        if str1_list[i] != str2_list[i]:
+            return False
+    
+    return True",5

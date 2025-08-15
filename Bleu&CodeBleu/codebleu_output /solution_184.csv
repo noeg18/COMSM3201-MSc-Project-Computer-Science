@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, num):
+    result = []
+    for i in lst:
+        if i > num:
+            result.append(i)
+    return result",1
+2,"
+
+def solve(lst, num):
+    return [i for i in lst if i > num]",2
+3,"
+
+def solve(lst, num):
+    result = []
+    for i in lst:
+        if i > num:
+            result.append(i)
+    return result",1
+4,"
+
+def solve(lst, num):
+    result = []
+    for item in lst:
+        if item > num:
+            result.append(item)
+    return result",3
+5,"
+
+def solve(lst, num):
+    return [x for x in lst if x > num]",4

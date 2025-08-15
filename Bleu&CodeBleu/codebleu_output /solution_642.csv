@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(matrix):
+    unique_rows = []
+    for row in matrix:
+        if row not in unique_rows:
+            unique_rows.append(row)
+    return unique_rows",1
+2,"
+
+def solve(matrix):
+    unique_rows = []
+    for row in matrix:
+        if row not in unique_rows:
+            unique_rows.append(row)
+    return unique_rows",1
+3,"
+
+def solve(tuple_matrix):
+    unique_rows = []
+    for row in tuple_matrix:
+        if row not in unique_rows:
+            unique_rows.append(row)
+    return unique_rows",2
+4,"
+
+def solve(matrix):
+    unique_rows = []
+    for row in matrix:
+        if row not in unique_rows:
+            unique_rows.append(row)
+    return unique_rows",1
+5,"
+
+def solve(matrix):
+    unique_rows = []
+    for row in matrix:
+        if row not in unique_rows:
+            unique_rows.append(row)
+    return unique_rows",1

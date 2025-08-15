@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, *indices):
+    return [lst[i] for i in indices]",1
+2,"
+
+def solve(lst, indices):
+    return [lst[i] for i in indices]",2
+3,"
+
+def solve(lst, indices):
+    return [lst[i] for i in indices]",2
+4,"
+
+def solve(lst, indices):
+    return [lst[i] for i in indices]",2
+5,"
+
+def solve(lst, indices):
+    return [lst[i] for i in indices]",2

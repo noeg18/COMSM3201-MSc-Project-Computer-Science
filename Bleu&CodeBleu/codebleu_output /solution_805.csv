@@ -1,0 +1,63 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    highest_sum = 0
+    highest_list = []
+    for sub_list in lst:
+        if sum(sub_list) > highest_sum:
+            highest_sum = sum(sub_list)
+            highest_list = sub_list
+    return highest_list",1
+2,"
+
+def solve(list_of_lists):
+    max_sum = float(""-inf"")
+    max_list = None
+    
+    for list in list_of_lists:
+        sum = 0
+        for element in list:
+            sum += element
+        if sum > max_sum:
+            max_sum = sum
+            max_list = list
+    
+    return max_list",2
+3,"
+
+def solve(lst):
+  max_sum = 0
+  result = []
+  for sublst in lst:
+    sum = 0
+    for num in sublst:
+      sum += num
+    if sum > max_sum:
+      max_sum = sum
+      result = sublst
+  return result",3
+4,"
+
+def solve(list_of_lists):
+    max_sum = 0
+    max_list = []
+    for lst in list_of_lists:
+        curr_sum = sum(lst)
+        if curr_sum > max_sum:
+            max_sum = curr_sum
+            max_list = lst
+    return max_list",4
+5,"
+
+def solve(list_of_lists):
+    max_sum = 0
+    max_list = []
+    
+    for lst in list_of_lists:
+        sum_lst = sum(lst)
+        if sum_lst > max_sum:
+            max_sum = sum_lst
+            max_list = lst
+    
+    return max_list",5

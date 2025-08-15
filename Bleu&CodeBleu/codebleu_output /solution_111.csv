@@ -1,0 +1,40 @@
+response_num,response,cluster
+1,"
+
+def solve(lists):
+    common = set(lists[0])
+    for lst in lists[1:]:
+        common = common.intersection(set(lst))
+    return list(common)",1
+2,"
+
+def solve(lists):
+    result = []
+    for i in range(len(lists[0])):
+        for j in range(len(lists)):
+            if lists[0][i] not in lists[j]:
+                break
+        else:
+            result.append(lists[0][i])
+    return result",2
+3,"
+
+def solve(nested_lists):
+    common_elements = set(nested_lists[0])
+    for i in range(1, len(nested_lists)):
+        common_elements = common_elements.intersection(set(nested_lists[i]))
+    return list(common_elements)",3
+4,"
+
+def solve(nested_lists):
+    common_elements = set(nested_lists[0])
+    for lst in nested_lists[1:]:
+        common_elements.intersection_update(lst)
+    return list(common_elements)",4
+5,"
+
+def solve(lists):
+    common = lists[0]
+    for lst in lists[1:]:
+        common = [elem for elem in common if elem in lst]
+    return common",5

@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    return re.search(r'a{1}b{3}', string)",1
+2,"
+
+def solve(string):
+    import re
+    pattern = ""ab{3}""
+    if re.search(pattern, string):
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(string):
+    import re
+    regex = r""a(b{3})""
+    matches = re.findall(regex, string)
+    return bool(matches)",3
+4,"
+
+def solve(string):
+    if 'a' in string:
+        if string.count('b') == 3:
+            return True
+        else:
+            return False
+    else:
+        return False",4
+5,"
+
+def solve(string):
+    return re.search(""a{1}b{3}"", string) is not None",5

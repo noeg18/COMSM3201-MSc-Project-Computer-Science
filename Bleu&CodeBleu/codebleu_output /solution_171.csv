@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(side):
+    return side * 5",1
+2,"
+
+def solve(side):
+    return side * 5",1
+3,"
+
+def solve(side):
+    perimeter = 5 * side
+    return perimeter",2
+4,"
+
+def solve(side_length):
+    return side_length * 5",3
+5,"
+
+def solve(side):
+    return side * 5",1

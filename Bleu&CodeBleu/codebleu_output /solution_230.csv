@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(string, char):
+    new_string = """"
+    for i in string:
+        if i == "" "":
+            new_string += char
+        else:
+            new_string += i
+    return new_string",1
+2,"
+
+def solve(string, char):
+    return string.replace("" "", char)",2
+3,"
+
+def solve(string, char):
+    new_string = """"
+    for i in string:
+        if i == "" "":
+            new_string += char
+        else:
+            new_string += i
+    return new_string",1
+4,"
+
+def solve(string, character):
+    new_string = """"
+    for letter in string:
+        if letter == "" "":
+            new_string += character
+        else:
+            new_string += letter
+    return new_string",3
+5,"
+
+def solve(string, char):
+    return string.replace(' ', char)",4

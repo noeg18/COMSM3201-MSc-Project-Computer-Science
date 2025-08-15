@@ -1,0 +1,88 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, target):
+    for i in range(len(arr)-2):
+        for j in range(i+1, len(arr)-1):
+            for k in range(j+1, len(arr)):
+                if arr[i] + arr[j] + arr[k] == target:
+                    return [arr[i], arr[j], arr[k]]
+    return ""No triplet found with given sum.""",1
+2,"
+
+def solve(arr):
+    n = len(arr)
+    # Sort the array in ascending order
+    arr.sort()
+    # Loop through the array from index 0 to n-2
+    for i in range(n-2):
+        # Initialize two pointers, one at i+1 and the other at n-1
+        left = i+1
+        right = n-1
+        # Loop while left pointer is less than or equal to right pointer
+        while left < right:
+            # Calculate the sum of the triplet
+            triplet_sum = arr[i] + arr[left] + arr[right]
+            # If the sum is 0, then we have found the triplet
+            if triplet_sum == 0:
+                return [arr[i], arr[left], arr[right]]
+            # If sum is less than 0, move the left pointer to the right
+            elif triplet_sum < 0:
+                left += 1
+            # If sum is greater than 0, move the right pointer to the left
+            else:
+                right -= 1
+    # If no triplet is found, return an empty list
+    return []",2
+3,"
+
+def solve(arr, target):
+    arr.sort()
+    for i in range(len(arr)-2):
+        left = i + 1
+        right = len(arr) - 1
+        
+        while left < right:
+            current_sum = arr[i] + arr[left] + arr[right]
+            if current_sum == target:
+                return (arr[i], arr[left], arr[right])
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
+    return None",3
+4,"
+
+def solve(arr):
+    # sort the array in ascending order
+    arr.sort()
+    # loop through the array
+    for i in range(len(arr)-2):
+        # initialize two pointers, one at i+1 and the other at the end of the array
+        left = i+1
+        right = len(arr)-1
+        # loop while the two pointers do not overlap
+        while left < right:
+            # calculate the sum of the current triplet
+            triplet_sum = arr[i] + arr[left] + arr[right]
+            # if the sum is equal to the given value, return the triplet
+            if triplet_sum == sum:
+                return [arr[i], arr[left], arr[right]]
+            # if the sum is less than the given value, move the left pointer to the right
+            elif triplet_sum < sum:
+                left += 1
+            # if the sum is greater than the given value, move the right pointer to the left
+            else:
+                right -= 1
+    # if no triplet is found, return an empty list
+    return []",4
+5,"
+
+def solve(arr):
+    n = len(arr)
+    for i in range(n-2):
+        for j in range(i+1, n-1):
+            for k in range(j+1, n):
+                if arr[i] + arr[j] + arr[k] == 0:
+                    return [arr[i], arr[j], arr[k]]
+    return None",5

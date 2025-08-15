@@ -1,0 +1,56 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(n, p, k):
+    return (math.factorial(n) / (math.factorial(k) * math.factorial(n - k))) * (p ** k) * ((1 - p) ** (n - k))",1
+2,"
+
+from math import factorial
+
+def solve(n, k, p):
+    """"""
+    n: total number of trials
+    k: number of successes
+    p: probability of success
+    """"""
+    # calculate the binomial coefficient
+    coeff = factorial(n) / (factorial(k) * factorial(n-k))
+    
+    # calculate the probability
+    prob = coeff * (p**k) * ((1-p)**(n-k))
+    
+    return prob",2
+3,"
+
+from math import factorial
+
+def solve(n, k, p):
+    # n: total number of trials
+    # k: number of successful trials
+    # p: probability of success in each trial
+    
+    # Compute binomial coefficient
+    coeff = factorial(n) / (factorial(k) * factorial(n-k))
+    
+    # Compute binomial probability
+    prob = coeff * (p**k) * ((1-p)**(n-k))
+    
+    return prob",3
+4,"
+
+def solve(n, k, p):
+    def factorial(x):
+        if x == 0:
+            return 1
+        else:
+            return x * factorial(x - 1)
+
+    return (factorial(n) / (factorial(k) * factorial(n - k))) * (p ** k) * ((1 - p) ** (n - k))",4
+5,"
+
+from math import factorial
+
+def solve(n, k, p):
+    return (factorial(n) / (factorial(k) * factorial(n-k))) * (p**k) * ((1-p)**(n-k))",5

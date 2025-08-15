@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    power = 0
+    while 2**power <= n:
+        power += 1
+    return 2**(power-1)",1
+2,"
+
+def solve(num):
+    power = 0
+    while 2**power <= num:
+        power += 1
+    return 2**(power-1)",2
+3,"
+
+def solve(n):
+    power = 0
+    while 2**power <= n:
+        power += 1
+    return 2**(power-1)",1
+4,"
+
+def solve(num):
+    power = 0
+    while 2**power <= num:
+        power += 1
+    return 2**(power-1)",2
+5,"
+
+def solve(num):
+    power = 0
+    while 2**power <= num:
+        power += 1
+    return 2**(power-1)",2

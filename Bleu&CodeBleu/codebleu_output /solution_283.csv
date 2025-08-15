@@ -1,0 +1,55 @@
+response_num,response,cluster
+1,"
+def solve(n):
+    freq = [0] * 10
+
+    while n > 0:
+        digit = n % 10
+        freq[digit] += 1
+        n //= 10
+
+    for i in range(10):
+        if freq[i] > i:
+            return False
+    return True",1
+2,"
+
+def solve(num):
+    str_num = str(num)
+    for digit in str_num:
+        if str_num.count(digit) > int(digit):
+            return False
+    return True",2
+3,"
+
+def solve(number):
+    digits = [int(d) for d in str(number)]
+    for digit in digits:
+        if digits.count(digit) > digit:
+            return False
+    return True",3
+4,"
+
+def solve(num):
+    freq = {}
+    for digit in str(num):
+        freq[digit] = freq.get(digit, 0) + 1
+    
+    for digit in freq:
+        if int(digit) < freq[digit]:
+            return False
+    return True",4
+5,"
+
+def solve(num):
+    freq = {} 
+    for i in str(num):
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    
+    for key, value in freq.items():
+        if int(key) < value:
+            return False
+    return True",5

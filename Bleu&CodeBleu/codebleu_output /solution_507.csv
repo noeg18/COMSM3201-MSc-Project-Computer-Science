@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(word_list, remove_list):
+    for word in remove_list:
+        while word in word_list:
+            word_list.remove(word)
+    return word_list",1
+2,"
+
+def solve(word_list, words_to_remove):
+    for word in words_to_remove:
+        if word in word_list:
+            word_list.remove(word)
+    return word_list",2
+3,"
+
+def solve(word_list, words_to_remove):
+    for word in words_to_remove:
+        if word in word_list:
+            word_list.remove(word)
+    return word_list",2
+4,"
+
+def solve(word_list, remove_list):
+    for word in remove_list:
+        while word in word_list:
+            word_list.remove(word)
+    return word_list",1
+5,"
+
+def solve(words, to_remove):
+    for word in to_remove:
+        if word in words:
+            words.remove(word)
+    return words",3

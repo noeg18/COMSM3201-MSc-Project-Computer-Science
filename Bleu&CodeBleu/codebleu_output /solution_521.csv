@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    if a != b and a != c and b != c:
+        print(""The triangle is scalene."")
+    else:
+        print(""The triangle is not scalene."")",1
+2,"
+
+def solve(a, b, c):
+    if a == b or b == c or a == c:
+        return ""Triangle is not scalene""
+    else:
+        return ""Triangle is scalene""",2
+3,"
+
+def solve(side1, side2, side3):
+    if side1 == side2 or side1 == side3 or side2 == side3:
+        return False
+    else:
+        return True",3
+4,"
+
+def solve(a,b,c):
+    if a!=b and b!=c and a!=c:
+        print(""The triangle is scalene"")
+    else:
+        print(""The triangle is not scalene"")",4
+5,"
+
+def solve(side1, side2, side3):
+    if side1 == side2 or side1 == side3 or side2 == side3:
+        return False
+    else:
+        return True",3

@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple):
+    result = 0
+    for i in range(len(tuple)):
+        result = result * 10 + tuple[i]
+    return result",1
+2,"
+
+def solve(tup):
+    result = 0
+    for num in tup:
+        result = result*10 + num
+    return result",2
+3,"
+
+def solve(tuple):
+    result = 0
+    for i in range(len(tuple)):
+        result = result*10 + tuple[i]
+    return result",3
+4,"
+
+def solve(tup):
+    result = 0
+    for num in tup:
+        result = result * 10 + num
+    return result",4
+5,"
+def solve(tup):
+    result = 0
+    for num in tup:
+        result = result * 10 + num
+    return result",4

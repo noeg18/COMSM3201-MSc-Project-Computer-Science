@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(n, a1, d):
+    sum = (n/2) * (2 * a1 + (n-1) * d)
+    return sum",1
+2,"
+
+def solve(a, d, n):
+    return (n/2) * (2*a + (n-1)*d)",2
+3,"
+
+def solve(a, d, n):
+    return (n/2)*(2*a + (n-1)*d)",3
+4,"
+
+def solve(a, d, n):
+    return (n/2) * (2*a + (n-1)*d)",2
+5,"
+
+def solve(first_term, common_difference, n):
+    sum = (n / 2) * (2 * first_term + (n - 1) * common_difference)
+    return sum",4

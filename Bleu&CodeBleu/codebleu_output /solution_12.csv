@@ -1,0 +1,60 @@
+response_num,response,cluster
+1,"
+
+def solve(matrix):
+    sums = [sum(row) for row in matrix]
+    sorted_matrix = [x for _, x in sorted(zip(sums, matrix))]
+    return sorted_matrix",1
+2,"
+
+def solve(matrix):
+    # Create a new list to store the sums of each row
+    row_sums = []
+    
+    # Loop through the matrix and calculate the sum of each row
+    for row in matrix:
+        # Use the sum() function to calculate the sum of the current row
+        row_sum = sum(row)
+        # Append the sum to the row_sums list
+        row_sums.append(row_sum)
+        
+    # Create a new list to store the sorted rows
+    sorted_rows = []
+    
+    # Sort the row_sums list in ascending order
+    sorted_sums = sorted(row_sums)
+    
+    # Loop through the sorted_sums list
+    for sum in sorted_sums:
+        # Find the index of the current sum in the row_sums list
+        index = row_sums.index(sum)
+        # Use the index to get the corresponding row from the matrix
+        sorted_rows.append(matrix[index])
+        # Remove the current sum from the row_sums list to avoid duplicates
+        row_sums.remove(sum)
+    
+    # Return the sorted matrix
+    return sorted_rows",2
+3,"
+
+def solve(matrix):
+    for row in matrix:
+        row_sum = sum(row)
+        row.insert(0, row_sum)
+    
+    sorted_matrix = sorted(matrix)
+    
+    for row in sorted_matrix:
+        del row[0]
+    
+    return sorted_matrix",3
+4,"
+
+def solve(matrix):
+    sorted_matrix = sorted(matrix, key=lambda x: sum(x))
+    return sorted_matrix",4
+5,"
+
+def solve(matrix):
+    sorted_matrix = sorted(matrix, key=lambda x: sum(x))
+    return sorted_matrix",4

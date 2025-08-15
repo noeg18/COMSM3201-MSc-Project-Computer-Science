@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(period):
+    return -period/2",1
+2,"
+
+def solve(A, B, C):
+    if A == 0:
+        return 0
+    elif B == 0:
+        return C
+    else:
+        return min(abs(A), abs(B)) + C",2
+3,"
+
+def solve(periodic_func):
+    min_value = periodic_func(0)
+    for i in range(1, 1001):
+        value = periodic_func(i)
+        if value < min_value:
+            min_value = value
+    return min_value",3
+4,"
+
+def solve(function, lower_bound, upper_bound, step):
+    min_value = function(lower_bound)
+    current_value = function(lower_bound)
+    while lower_bound < upper_bound:
+        current_value = function(lower_bound)
+        if current_value < min_value:
+            min_value = current_value
+        lower_bound += step
+    return min_value",4
+5,"
+
+def solve(period, coefficients):
+    min_val = coefficients[0]
+    for i in range(1, period):
+        val = coefficients[i]
+        for j in range(i, len(coefficients), period):
+            val += coefficients[j]
+        if val < min_val:
+            min_val = val
+    return min_val",5

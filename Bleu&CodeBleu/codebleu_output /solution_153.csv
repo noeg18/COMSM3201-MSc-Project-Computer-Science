@@ -1,0 +1,31 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    x = -b / (2 * a)
+    y = (a * x**2) + (b * x) + c
+    return (x, y)",1
+2,"
+
+def solve(a, b, c):
+    x = -b / (2 * a)
+    y = a * x ** 2 + b * x + c
+    return (x, y)",2
+3,"
+
+def solve(a, b, c):
+    x = -b / (2 * a)
+    y = a * x ** 2 + b * x + c
+    return (x, y)",2
+4,"
+
+def solve(a, b, c):
+    x = -b / (2 * a)
+    y = a * (x ** 2) + b * x + c
+    return (x, y)",3
+5,"
+
+def solve(a, b, c):
+    x = -b / (2 * a)
+    y = a * x ** 2 + b * x + c
+    return (x, y)",2

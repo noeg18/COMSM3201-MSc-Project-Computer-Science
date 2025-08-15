@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    for element in list2:
+        if element in list1:
+            list1.remove(element)
+    return list1",1
+2,"
+
+def solve(list1, list2):
+    for item in list2:
+        if item in list1:
+            list1.remove(item)
+    return list1",2
+3,"
+
+def solve(list1, list2):
+    for element in list2:
+        if element in list1:
+            list1.remove(element)
+    return list1",1
+4,"
+
+def solve(list1, list2):
+    for element in list2:
+        if element in list1:
+            list1.remove(element)
+    return list1",1
+5,"
+
+def solve(list1, list2):
+    for element in list2:
+        if element in list1:
+            list1.remove(element)
+    return list1",1

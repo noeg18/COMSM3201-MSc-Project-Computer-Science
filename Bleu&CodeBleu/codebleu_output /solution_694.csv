@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(dict):
+    unique_set = set()
+    for value in dict.values():
+        unique_set.update(value)
+    return unique_set",1
+2,"
+
+def solve(dict_values):
+    unique_values = set()
+    for values in dict_values.values():
+        for val in values:
+            unique_values.add(val)
+    return unique_values",2
+3,"
+
+def solve(dictionary):
+    unique_values = set()
+    for value_list in dictionary.values():
+        for value in value_list:
+            unique_values.add(value)
+    return unique_values",3
+4,"
+
+def solve(dictionary):
+
+    unique_values = []
+
+    for key in dictionary:
+        if dictionary[key] not in unique_values:
+            unique_values.append(dictionary[key])
+
+    return unique_values",4
+5,"
+
+def solve(dictionary):
+    unique_values = []
+    for values in dictionary.values():
+        for value in values:
+            if value not in unique_values:
+                unique_values.append(value)
+    return unique_values",5

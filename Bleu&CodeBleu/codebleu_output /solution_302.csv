@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    else:
+        msb = 0
+        while num > 0:
+            msb += 1
+            num = num // 2
+        return pow(2, msb-1)",1
+2,"
+
+def solve(num):
+    return int(math.log2(num & -num)) + 1",2
+3,"
+
+def solve(n):
+    msb = 0
+    while n > 0:
+        msb = max(msb, n & -n)
+        n = n >> 1
+    return msb",3
+4,"
+
+def solve(n):
+    msb = n & -n
+    return msb",4
+5,"
+
+def solve(n):
+    msb = 0
+    while n > 1:
+        n = n >> 1
+        msb += 1
+    return msb",5

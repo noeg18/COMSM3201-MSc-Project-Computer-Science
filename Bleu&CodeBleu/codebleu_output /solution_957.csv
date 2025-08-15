@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    return n & -n",1
+2,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    else:
+        return int(math.log2(n & -n) + 1)",2
+3,"
+
+def solve(n):
+    return (n & -n).bit_length()",3
+4,"
+
+def solve(n):
+    pos = 0
+    while n > 0:
+        if n & 1 == 1:
+            return pos
+        n = n >> 1
+        pos += 1
+    return -1",4
+5,"
+
+def solve(n):
+    if n == 0:
+        return 0
+    position = 1
+    while (n & 1) == 0:
+        n = n >> 1
+        position += 1
+    return position",5

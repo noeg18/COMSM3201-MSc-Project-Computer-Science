@@ -1,0 +1,49 @@
+response_num,response,cluster
+1,"
+
+def solve(root):
+    if root is None:
+        return 0
+    else:
+        return max(solve(root.left), solve(root.right)) + 1",1
+2,"
+
+def solve(root):
+    if root is None:
+        return 0
+    else:
+        return max(solve(root.left), solve(root.right)) + 1",1
+3,"
+
+def solve(root):
+    if root is None:
+        return 0
+    else:
+        left_height = solve(root.left)
+        right_height = solve(root.right)
+        return max(left_height, right_height) + 1",2
+4,"
+
+def solve(root):
+    if root is None:
+        return 0
+    else:
+        left_height = solve(root.left)
+        right_height = solve(root.right)
+        
+        if left_height > right_height:
+            return left_height + 1
+        else:
+            return right_height + 1",3
+5,"
+
+def solve(root):
+    if root is None:
+        return 0
+    else:
+        left_height = solve(root.left)
+        right_height = solve(root.right)
+        if left_height > right_height:
+            return left_height + 1
+        else:
+            return right_height + 1",3

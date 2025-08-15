@@ -1,0 +1,69 @@
+response_num,response,cluster
+1,"
+
+def solve(n, grid):
+    if n == 0:
+        return 0
+    if n == 1:
+        return max(grid[0][0], grid[1][0])
+    dp = [0] * (n + 1)
+    dp[1] = max(grid[0][0], grid[1][0])
+    for i in range(2, n + 1):
+        dp[i] = max(dp[i - 1], dp[i - 2] + max(grid[0][i - 1], grid[1][i - 1]))
+    return dp[n]",1
+2,"
+
+def solve(grid):
+    n = len(grid[0])
+    dp = [0] * (n + 1)
+    for i in range(1, n + 1):
+        dp[i] = max(dp[i - 1], grid[0][i - 1] + dp[i - 2])
+    return dp[n]",2
+3,"
+
+def solve(grid):
+    if len(grid) == 0:
+        return 0
+    elif len(grid) == 1:
+        return max(grid[0])
+    else:
+        dp = [0] * len(grid[0])
+        dp[0] = max(grid[0][0], grid[1][0])
+        for i in range(1, len(grid[0])):
+            dp[i] = max(dp[i-1], dp[i-2] + max(grid[0][i], grid[1][i]))
+        return dp[-1]",3
+4,"
+
+def solve(grid):
+    # initialize variables to keep track of the maximum sum at each position
+    # and the previous maximum sums at adjacent positions
+    max_sum = [0] * len(grid[0])
+    prev_max_sum = [0] * len(grid[0])
+
+    # loop through each row in the grid
+    for row in grid:
+        # loop through each column in the row
+        for i in range(len(row)):
+            # calculate the current maximum sum by adding the value at the current position
+            # to the previous maximum sum at the non-adjacent position
+            current_max_sum = row[i] + max(prev_max_sum[:i-1] + prev_max_sum[i+2:])
+
+            # update the previous maximum sum at the current position
+            prev_max_sum[i] = max_sum[i]
+
+            # update the maximum sum at the current position
+            max_sum[i] = current_max_sum
+
+    # return the maximum sum at the last position
+    return max_sum[-1]",4
+5,"
+
+def solve(grid):
+    n = len(grid[0])
+    prev_max = 0
+    curr_max = max(grid[0][0], grid[1][0])
+    for i in range(1, n):
+        temp = curr_max
+        curr_max = max(prev_max + max(grid[0][i], grid[1][i]), curr_max)
+        prev_max = temp
+    return curr_max",5

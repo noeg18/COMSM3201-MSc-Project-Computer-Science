@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+  even = None
+  odd = None
+  for num in lst:
+    if num % 2 == 0:
+      even = num
+      break
+  for num in lst:
+    if num % 2 == 1:
+      odd = num
+      break
+  return even - odd",1
+2,"
+
+def solve(lst):
+    even = None
+    odd = None
+    for num in lst:
+        if num % 2 == 0 and even == None:
+            even = num
+        elif num % 2 != 0 and odd == None:
+            odd = num
+        if even != None and odd != None:
+            break
+    return even - odd",2
+3,"
+
+def solve(lst):
+    even = None
+    odd = None
+    for num in lst:
+        if num % 2 == 0:
+            even = num
+            break
+    for num in lst:
+        if num % 2 == 1:
+            odd = num
+            break
+    return even - odd",1
+4,"
+
+def solve(lst):
+    even = 0
+    odd = 0
+    
+    for num in lst:
+        if num % 2 == 0:
+            even = num
+            break
+    
+    for num in lst:
+        if num % 2 != 0:
+            odd = num
+            break
+    
+    return even - odd",3
+5,"
+
+def solve(lst):
+    even = None
+    odd = None
+
+    for num in lst:
+        if num % 2 == 0 and even is None:
+            even = num
+        elif num % 2 != 0 and odd is None:
+            odd = num
+        if even is not None and odd is not None:
+            break
+
+    return even - odd",4

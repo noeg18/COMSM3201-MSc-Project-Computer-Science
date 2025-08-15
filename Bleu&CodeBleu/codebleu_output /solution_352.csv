@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    unique = True
+    for i in range(len(string)):
+        for j in range(i+1, len(string)):
+            if string[i] == string[j]:
+                unique = False
+                break
+    return unique",1
+2,"
+
+def solve(string):
+    unique = set(string)
+    if len(unique) == len(string):
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(string):
+    unique_chars = set()
+    for char in string:
+        if char in unique_chars:
+            return False
+        else:
+            unique_chars.add(char)
+    return True",3
+4,"
+
+def solve(string):
+    if len(string) == len(set(string)):
+        return True
+    else:
+        return False",4
+5,"
+
+def solve(string):
+    char_set = set()
+    for char in string:
+        if char in char_set:
+            return False
+        else:
+            char_set.add(char)
+    return True",5

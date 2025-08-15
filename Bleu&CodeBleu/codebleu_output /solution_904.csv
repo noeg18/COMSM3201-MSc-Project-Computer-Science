@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False",1
+3,"
+
+def solve(n):
+    return n % 2 == 0",2
+4,"
+
+def solve(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False",3
+5,"
+
+def solve(n):
+  if n % 2 == 0:
+    return True
+  else:
+    return False",3

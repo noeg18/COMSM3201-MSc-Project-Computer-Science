@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    new_string = """"
+    for i in range(len(string)):
+        if i % 2 != 0:
+            new_string += string[i]
+    return new_string",1
+2,"
+
+def solve(string):
+    new_string = """"
+    for i in range(len(string)):
+        if i % 2 == 0:
+            new_string += string[i]
+    return new_string",1
+3,"
+
+def solve(s):
+    return s[::2]",2
+4,"
+
+def solve(string):
+    return ''.join([char for index, char in enumerate(string) if index % 2 == 0])",3
+5,"
+
+def solve(string):
+    return string[::2]",4

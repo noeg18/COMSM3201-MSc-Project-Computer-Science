@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(list):
+    smallest = float('inf')
+    second_smallest = float('inf')
+    for num in list:
+        if num < smallest:
+            second_smallest = smallest
+            smallest = num
+        elif num < second_smallest and num != smallest:
+            second_smallest = num
+    return second_smallest",1
+2,"
+
+def solve(lst):
+    smallest = float('inf')
+    second_smallest = float('inf')
+    for num in lst:
+        if num < smallest:
+            smallest = num
+        elif num < second_smallest:
+            second_smallest = num
+    return second_smallest",2
+3,"
+
+def solve(lst):
+    smallest = float('inf')
+    second_smallest = float('inf')
+    
+    for num in lst:
+        if num < smallest:
+            second_smallest = smallest
+            smallest = num
+        elif num < second_smallest and num != smallest:
+            second_smallest = num
+    
+    return second_smallest",1
+4,"
+
+def solve(numbers):
+    smallest = float('inf')
+    second_smallest = float('inf')
+    for num in numbers:
+        if num < smallest:
+            second_smallest = smallest
+            smallest = num
+        elif num < second_smallest:
+            second_smallest = num
+    return second_smallest",3
+5,"
+
+def solve(lst):
+    smallest = min(lst)
+    second_smallest = float('inf')
+    for num in lst:
+        if num > smallest and num < second_smallest:
+            second_smallest = num
+    return second_smallest",4

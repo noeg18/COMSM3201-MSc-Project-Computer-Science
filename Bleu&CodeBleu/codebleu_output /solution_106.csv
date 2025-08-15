@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples, lst):
+    new_tuples = []
+    for tup in tuples:
+        new_tuples.append(tup + tuple(lst))
+    return new_tuples",1
+2,"
+
+def solve(list, tuples):
+    for t in tuples:
+        t += list
+    return tuples",2
+3,"
+
+def solve(tuples, lst):
+    for tup in tuples:
+        tup = list(tup)
+        tup.extend(lst)
+        tup = tuple(tup)
+        print(tup)
+    return tuples",3
+4,"
+
+def solve(tuples, lst):
+    for i in range(len(tuples)):
+        tuples[i] = tuples[i] + (lst[i],)
+    
+    return tuples",4
+5,"
+
+def solve(tuples, lst):
+    new_tuples = []
+    for tup in tuples:
+        new_tuples.append(tup + (lst,))
+    return new_tuples",5

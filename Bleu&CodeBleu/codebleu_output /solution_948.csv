@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(tup, index):
+    return tup[index]",1
+2,"
+
+def solve(tup, n):
+    return tup[n]",2
+3,"
+
+def solve(tup, index):
+    return tup[index]",1
+4,"
+
+def solve(tuple, index):
+    return tuple[index]",3
+5,"
+
+def solve(tuple, index):
+    return tuple[index]",3

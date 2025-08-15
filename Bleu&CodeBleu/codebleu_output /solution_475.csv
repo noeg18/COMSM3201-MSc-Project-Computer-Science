@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(counter):
+    sorted_counter = dict(sorted(counter.items(), key=lambda x: x[1], reverse=True))
+    return sorted_counter",1
+2,"
+
+def solve(counter):
+    sorted_counter = {k: v for k, v in sorted(counter.items(), key=lambda item: item[1], reverse=True)}
+    return sorted_counter",2
+3,"
+
+def solve(counter):
+    sorted_counter = sorted(counter.items(), key=lambda x: x[1], reverse=True)
+    return sorted_counter",3
+4,"
+
+def solve(counter):
+    sorted_counter = {k: v for k, v in sorted(counter.items(), key=lambda item: item[1])}
+    return sorted_counter",4
+5,"
+
+def solve(counter):
+    sorted_counter = {k: v for k, v in sorted(counter.items(), key=lambda item: item[1], reverse=True)}
+    return sorted_counter",2

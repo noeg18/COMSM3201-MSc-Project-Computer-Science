@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1",1
+2,"
+
+def solve(arr, element):
+    for i in range(len(arr)):
+        if arr[i] == element:
+            return i
+    return -1 ",2
+3,"
+
+def solve(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1",1
+4,"
+
+def solve(arr, target):
+    for i in range(len(arr)): 
+        if arr[i] == target: 
+            return i 
+    return -1",1
+5,"
+
+def solve(array, element):
+    for i in range(len(array)):
+        if array[i] == element:
+            return i
+    return -1",3

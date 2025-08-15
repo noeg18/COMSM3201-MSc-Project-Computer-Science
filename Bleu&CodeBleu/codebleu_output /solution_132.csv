@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple):
+    string = ''
+    for i in tuple:
+        string += str(i)
+    return string",1
+2,"
+
+def solve(tup):
+    string = ''.join(str(i) for i in tup)
+    return string",2
+3,"
+
+def solve(tuple):
+    string = ''.join(str(i) for i in tuple)
+    return string",3
+4,"
+
+def solve(tup):
+    result = """"
+    for item in tup:
+        result += str(item)
+    return result",4
+5,"
+
+def solve(tup):
+    res = ''
+    for i in tup:
+        res += str(i)
+    return res",5

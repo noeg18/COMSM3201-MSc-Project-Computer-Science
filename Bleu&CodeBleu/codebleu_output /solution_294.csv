@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    max_val = lst[0]
+    for val in lst:
+        if isinstance(val, int) or isinstance(val, float):
+            if val > max_val:
+                max_val = val
+    return max_val",1
+2,"
+
+def solve(lst):
+    max_val = lst[0]
+    for i in range(len(lst)):
+        if type(lst[i]) == int or type(lst[i]) == float:
+            if lst[i] > max_val:
+                max_val = lst[i]
+        elif type(lst[i]) == list:
+            sub_max = solve(lst[i])
+            if sub_max > max_val:
+                max_val = sub_max
+    return max_val",2
+3,"
+
+def solve(lst):
+    max_val = float('-inf')
+    for item in lst:
+        if type(item) == int or type(item) == float:
+            if item > max_val:
+                max_val = item
+    return max_val",3
+4,"
+
+def solve(lst):
+    max_val = None
+    for val in lst:
+        if max_val is None or val > max_val:
+            max_val = val
+    return max_val",4
+5,"
+
+def solve(lst):
+    return max(lst)",5

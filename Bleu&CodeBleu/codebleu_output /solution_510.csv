@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, k):
+
+    count = 0
+    n = len(arr)
+
+    for i in range(1, (1 << n)):
+        product = 1
+
+        for j in range(n):
+            if i & (1 << j):
+                product *= arr[j]
+
+        if product < k:
+            count += 1
+
+    return count",1
+2,"
+
+def solve(arr, k):
+    n = len(arr)
+    dp = [[1 for i in range(k + 1)] for j in range(n + 1)]
+
+    for i in range(1, n + 1):
+        for j in range(1, k + 1):
+            if arr[i - 1] > j:
+                dp[i][j] = dp[i - 1][j]
+            else:
+                dp[i][j] = dp[i - 1][j] + dp[i - 1][j // arr[i - 1]]
+
+    return dp[n][k]",2
+3,"
+
+def solve(arr, k):
+    count = 0
+    n = len(arr)
+    
+    for i in range(1, (1 << n)):
+        prod = 1
+        for j in range(n):
+            if i & (1 << j):
+                prod *= arr[j]
+        if prod < k:
+            count += 1
+    
+    return count",1
+4,"
+
+def solve(arr, k):
+    count = 0
+    n = len(arr)
+    for i in range(1, 2**n):
+        product = 1
+        for j in range(n):
+            if i & (1 << j):
+                product *= arr[j]
+        if product < k:
+            count += 1
+    return count",3
+5,"
+
+def solve(arr, k):
+    count = 0
+    n = len(arr)
+    for i in range(1 << n):
+        product = 1
+        for j in range(n):
+            if i & (1 << j):
+                product *= arr[j]
+        if product < k:
+            count += 1
+    return count",4

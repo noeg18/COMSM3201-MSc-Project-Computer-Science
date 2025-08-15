@@ -1,0 +1,102 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    max_count = 0
+    max_char = ''
+    # create a dictionary to store the count of each character
+    char_count = {}
+
+    # loop through the string and update the count of each character in the dictionary
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    # loop through the dictionary to find the character with the maximum count
+    for char in char_count:
+        if char_count[char] > max_count:
+            max_count = char_count[char]
+            max_char = char
+
+    # return the character with the maximum count
+    return max_char",1
+2,"
+def solve(string):
+    char_count = {}
+    max_char = ''
+    max_count = 0
+    
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    
+    for char, count in char_count.items():
+        if count > max_count:
+            max_count = count
+            max_char = char
+    
+    return max_char",2
+3,"
+
+def solve(string):
+    char_count = {}
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    max_count = 0
+    max_char = ''
+    for char in char_count:
+        if char_count[char] > max_count:
+            max_count = char_count[char]
+            max_char = char
+    return max_char",3
+4,"
+
+def solve(string):
+    # convert string to lowercase for case-insensitive comparison
+    string = string.lower()
+
+    # create a dictionary to store character counts
+    char_counts = {}
+
+    # loop through the string and update the character counts
+    for char in string:
+        if char in char_counts:
+            char_counts[char] += 1
+        else:
+            char_counts[char] = 1
+
+    # initialize variables to store the maximum occurring character and its count
+    max_char = None
+    max_count = 0
+
+    # loop through the dictionary to find the maximum occurring character
+    for char, count in char_counts.items():
+        if count > max_count:
+            max_char = char
+            max_count = count
+    
+    # return the maximum occurring character
+    return max_char",4
+5,"
+
+def solve(string):
+    char_dict = {}
+    for char in string:
+        if char in char_dict:
+            char_dict[char] += 1
+        else:
+            char_dict[char] = 1
+    max_count = 0
+    max_char = ''
+    for key, value in char_dict.items():
+        if value > max_count:
+            max_count = value
+            max_char = key
+    return max_char",5

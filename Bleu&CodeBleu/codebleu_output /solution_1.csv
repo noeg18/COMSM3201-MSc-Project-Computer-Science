@@ -1,0 +1,103 @@
+response_num,response,cluster
+1,"
+
+def solve(cost, m, n):
+    # initialize dp matrix with 0s
+    dp = [[0 for i in range(n+1)] for j in range(m+1)]
+    
+    # fill first row and column with cumulative costs
+    for i in range(1, m+1):
+        dp[i][0] = dp[i-1][0] + cost[i][0]
+    for j in range(1, n+1):
+        dp[0][j] = dp[0][j-1] + cost[0][j]
+    
+    # fill rest of dp matrix with minimum cost path to reach each position
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + cost[i][j]
+    
+    # return minimum cost to reach (m, n)
+    return dp[m][n]",1
+2,"
+
+def solve(cost, m, n):
+
+    # initialize a 2D array to store the minimum cost path
+    path = [[0 for i in range(n+1)] for j in range(m+1)]
+
+    # base case for starting position (0,0)
+    path[0][0] = cost[0][0]
+
+    # fill the first row
+    for j in range(1, n+1):
+        path[0][j] = path[0][j-1] + cost[0][j]
+
+    # fill the first column
+    for i in range(1, m+1):
+        path[i][0] = path[i-1][0] + cost[i][0]
+
+    # fill the rest of the path
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            path[i][j] = min(path[i-1][j], path[i][j-1]) + cost[i][j]
+
+    # return the minimum cost path to reach (m,n)
+    return path[m][n]",2
+3,"
+
+def solve(cost, m, n):
+    # initialize a 2d array to store the minimum cost path
+    dp = [[0 for i in range(n+1)] for j in range(m+1)]
+    
+    # fill the first row and column of the dp array with cumulative sum
+    for i in range(1, m+1):
+        dp[i][0] = dp[i-1][0] + cost[i][0]
+    for j in range(1, n+1):
+        dp[0][j] = dp[0][j-1] + cost[0][j]
+    
+    # fill the rest of the dp array by finding the minimum cost path
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            dp[i][j] = cost[i][j] + min(dp[i-1][j], dp[i][j-1])
+    
+    # return the minimum cost path to reach (m, n)
+    return dp[m][n]",3
+4,"
+
+def solve(cost, m, n):
+    # Initialize a 2D array to store the minimum cost to reach each position
+    min_cost = [[0 for i in range(n+1)] for j in range(m+1)]
+    
+    # Initialize the first row and column with the cumulative sum of the cost matrix
+    for i in range(1, m+1):
+        min_cost[i][0] = min_cost[i-1][0] + cost[i][0]
+    for j in range(1, n+1):
+        min_cost[0][j] = min_cost[0][j-1] + cost[0][j]
+        
+    # Fill in the rest of the 2D array using dynamic programming
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            min_cost[i][j] = min(min_cost[i-1][j], min_cost[i][j-1]) + cost[i][j]
+            
+    # Return the minimum cost to reach the given position
+    return min_cost[m][n]",4
+5,"
+
+def solve(cost, m, n):
+    # Initialize a 2D array to store the minimum cost at each position
+    min_cost = [[0 for i in range(n+1)] for j in range(m+1)]
+    
+    # Fill the first row and column of the min_cost array with cumulative sum of cost array
+    min_cost[0][0] = cost[0][0]
+    for i in range(1, m+1):
+        min_cost[i][0] = min_cost[i-1][0] + cost[i][0]
+    for j in range(1, n+1):
+        min_cost[0][j] = min_cost[0][j-1] + cost[0][j]
+        
+    # Fill the rest of the min_cost array by choosing the minimum cost from the top and left positions
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            min_cost[i][j] = min(min_cost[i-1][j], min_cost[i][j-1]) + cost[i][j]
+            
+    # Return the minimum cost at the given position (m, n)
+    return min_cost[m][n]",5

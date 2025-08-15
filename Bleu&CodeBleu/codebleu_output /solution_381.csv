@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(lists, index):
+    return sorted(lists, key = lambda x: x[index])",1
+2,"
+
+def solve(list, index):
+    list.sort(key=lambda x: x[index])
+    return list",2
+3,"
+
+def solve(lists, index):
+    return sorted(lists, key=lambda x: x[index])",3
+4,"
+
+def solve(lists, index):
+    sorted_lists = sorted(lists, key=lambda x: x[index])
+    return sorted_lists",4
+5,"
+
+def solve(list_of_lists, index):
+    list_of_lists.sort(key=lambda x: x[index])
+    return list_of_lists",5

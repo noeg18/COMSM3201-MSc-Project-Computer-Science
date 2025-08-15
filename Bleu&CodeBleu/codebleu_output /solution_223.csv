@@ -1,0 +1,95 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    n = len(arr)
+    mid = n // 2
+    if arr[mid] == arr[mid - 1]:
+        return arr[mid]
+    elif arr[mid] == arr[mid + 1]:
+        return arr[mid]
+    else:
+        return ""No majority element""",1
+2,"
+
+def solve(nums):
+    if len(nums) == 0:
+        return -1
+    majority = nums[0]
+    count = 1
+    for i in range(1, len(nums)):
+        if nums[i] == majority:
+            count += 1
+        else:
+            count -= 1
+        if count == 0:
+            majority = nums[i]
+            count = 1
+    count = 0
+    for num in nums:
+        if num == majority:
+            count += 1
+    if count > len(nums) // 2:
+        return majority
+    else:
+        return -1",2
+3,"
+
+def solve(arr):
+    n = len(arr)
+    if n == 0:
+        return None
+    
+    majority = arr[n//2]
+    count = 0
+    for num in arr:
+        if num == majority:
+            count += 1
+    
+    if count > n//2:
+        return majority
+    else:
+        return None",3
+4,"
+
+def solve(arr):
+    n = len(arr)
+    if n == 0:
+        return -1
+    curr = arr[0]
+    count = 1
+    for i in range(1, n):
+        if arr[i] == curr:
+            count += 1
+        else:
+            count -= 1
+        if count == 0:
+            curr = arr[i]
+            count = 1
+    count = 0
+    for i in range(n):
+        if arr[i] == curr:
+            count += 1
+    if count > n//2:
+        return curr
+    else:
+        return -1",4
+5,"
+
+def solve(arr):
+    n = len(arr)
+    if n == 0:
+        return -1
+    elif n == 1:
+        return arr[0]
+    else:
+        majority = n // 2
+        count = 1
+        for i in range(1,n):
+            if arr[i] == arr[i-1]:
+                count += 1
+            else:
+                count = 1
+            if count > majority:
+                return arr[i]
+        return -1",5

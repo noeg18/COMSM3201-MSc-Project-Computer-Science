@@ -1,0 +1,105 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    pos = [num for num in arr if num >= 0]
+    neg = [num for num in arr if num < 0]
+    result = []
+    for i in range(min(len(pos), len(neg))):
+        result.append(pos[i])
+        result.append(neg[i])
+    if len(pos) > len(neg):
+        result.extend(pos[len(neg):])
+    elif len(neg) > len(pos):
+        result.extend(neg[len(pos):])
+    return result",1
+2,"
+
+def solve(arr):
+    # separate positive and negative items
+    pos = []
+    neg = []
+    for num in arr:
+        if num < 0:
+            neg.append(num)
+        else:
+            pos.append(num)
+    
+    # determine the length of the smaller list
+    size = min(len(pos), len(neg))
+    
+    # create output list by alternating between positive and negative items
+    output = []
+    for i in range(size):
+        output.append(pos[i])
+        output.append(neg[i])
+    
+    # add remaining items from larger list
+    if len(pos) > len(neg):
+        output.extend(pos[size:])
+    else:
+        output.extend(neg[size:])
+    
+    return output",2
+3,"
+
+def solve(arr):
+  pos = []
+  neg = []
+  result = []
+  for num in arr:
+    if num >= 0:
+      pos.append(num)
+    else:
+      neg.append(num)
+  while len(pos) > 0 and len(neg) > 0:
+    result.append(pos.pop(0))
+    result.append(neg.pop(0))
+  if len(pos) > 0:
+    result.extend(pos)
+  else:
+    result.extend(neg)
+  return result",3
+4,"
+
+def solve(arr):
+    pos = []
+    neg = []
+    for num in arr:
+        if num >= 0:
+            pos.append(num)
+        else:
+            neg.append(num)
+    
+    result = []
+    i = 0
+    j = 0
+    while i < len(pos) and j < len(neg):
+        result.append(pos[i])
+        result.append(neg[j])
+        i += 1
+        j += 1
+    
+    if i < len(pos):
+        result.extend(pos[i:])
+    if j < len(neg):
+        result.extend(neg[j:])
+    
+    return result",4
+5,"
+
+def solve(arr):
+    pos = []
+    neg = []
+    for num in arr:
+        if num >= 0:
+            pos.append(num)
+        else:
+            neg.append(num)
+    result = []
+    for i in range(max(len(pos), len(neg))):
+        if i < len(pos):
+            result.append(pos[i])
+        if i < len(neg):
+            result.append(neg[i])
+    return result",5

@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    arr.sort()
+    smallest = 1
+    for num in arr:
+        if num == smallest:
+            smallest += 1
+        elif num > smallest:
+            return smallest
+    return smallest",1
+2,"
+
+def solve(nums):
+    nums.sort()
+    smallest = 1
+    for num in nums:
+        if num == smallest:
+            smallest += 1
+    return smallest",2
+3,"
+
+def solve(arr):
+    smallest = 1
+    for num in sorted(arr):
+        if num == smallest:
+            smallest += 1
+    return smallest",3
+4,"
+
+def solve(arr):
+    n = len(arr)
+    for i in range(n):
+        if arr[i] != i + 1:
+            return i + 1
+    return n + 1",4
+5,"
+
+def solve(arr):
+    n = len(arr)
+    for i in range(n):
+        if arr[i] != i + 1:
+            return i + 1
+    return n + 1",4

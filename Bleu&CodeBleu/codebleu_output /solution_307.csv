@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    return tup[1]",1
+2,"
+
+def solve(tuple):
+    colon = tuple[1]
+    return colon",2
+3,"
+
+def solve(tup):
+    return tup[1]",1
+4,"
+
+def solve(tup):
+    col = tup[1]
+    return col",3
+5,"
+
+def solve(tup):
+    colon = tup[1]
+    return colon",4

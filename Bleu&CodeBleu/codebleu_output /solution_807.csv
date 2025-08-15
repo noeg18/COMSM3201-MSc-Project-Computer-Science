@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(numbers):
+    for num in numbers:
+        if num % 2 != 0:
+            return num",1
+2,"
+
+def solve(nums):
+    for num in nums:
+        if num % 2 == 1:
+            return num
+    return None",2
+3,"
+
+def solve(numbers):
+    for num in numbers:
+        if num % 2 != 0:
+            return num",1
+4,"
+
+def solve(lst):
+    for num in lst:
+        if num % 2 != 0:
+            return num",3
+5,"
+
+def solve(numbers):
+    for num in numbers:
+        if num % 2 != 0:
+            return num",1

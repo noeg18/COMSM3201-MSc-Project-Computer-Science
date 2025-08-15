@@ -1,0 +1,59 @@
+response_num,response,cluster
+1,"
+
+def solve(arr):
+    count = {}
+    for element in arr:
+        if element in count:
+            count[element] += 1
+        else:
+            count[element] = 1
+    
+    for key, value in count.items():
+        if value % 2 != 0:
+            return key",1
+2,"
+
+def solve(arr):
+    freq = {}
+    for num in arr:
+        freq[num] = freq.get(num, 0) + 1
+    for key, value in freq.items():
+        if value % 2 != 0:
+            return key",2
+3,"
+
+def solve(arr):
+    count = {}
+    for num in arr:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
+    for key, value in count.items():
+        if value % 2 == 1:
+            return key",3
+4,"
+
+def solve(lst):
+    count = {}
+    for num in lst:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
+    for key, value in count.items():
+        if value % 2 == 1:
+            return key",3
+5,"
+
+def solve(arr):
+    counts = {}
+    for num in arr:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+    for key, value in counts.items():
+        if value % 2 == 1:
+            return key",4

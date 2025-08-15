@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(month):
+    if month in [""February""]:
+        return ""Contains 28 days""
+    else:
+        return ""Does not contain 28 days""",1
+2,"
+
+def solve(month_name):
+  thirty_days = ['April', 'June', 'September', 'November']
+  thirty_one_days = ['January', 'March', 'May', 'July', 'August', 'October', 'December']
+  if month_name in thirty_days:
+    return False
+  elif month_name in thirty_one_days:
+    return False
+  else:
+    return True",2
+3,"
+
+def solve(month_name):
+    if month_name in ['February']:
+        return ""28 days""
+    else:
+        return ""Not 28 days""",3
+4,"
+
+def solve(month):
+    thirty_one_day_months = [""January"", ""March"", ""May"", ""July"", ""August"", ""October"", ""December""]
+    thirty_day_months = [""April"", ""June"", ""September"", ""November""]
+    
+    if month == ""February"":
+        return False
+    elif month in thirty_one_day_months:
+        return True
+    elif month in thirty_day_months:
+        return False",4
+5,"
+
+def solve(month):
+    months_28_days = ['February']
+    if month in months_28_days:
+        return True
+    else:
+        return False",5

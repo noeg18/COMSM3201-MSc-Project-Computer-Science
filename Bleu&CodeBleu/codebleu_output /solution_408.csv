@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(arr1, arr2, k):
+    pairs = []
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            pairs.append((arr1[i], arr2[j]))
+    return pairs[:k]",1
+2,"
+
+def solve(arr1, arr2, k):
+    pairs = []
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            pairs.append((arr1[i], arr2[j]))
+    return pairs[:k]",1
+3,"
+
+def solve(arr1, arr2, k):
+    pairs = []
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            pairs.append((arr1[i], arr2[j]))
+    return pairs[:k]",1
+4,"
+
+def solve(arr1, arr2, k):
+    pairs = []
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            pairs.append((arr1[i], arr2[j]))
+    pairs = sorted(pairs, key=lambda x: x[0] + x[1], reverse=True)
+    return pairs[:k]",2
+5,"
+
+def solve(arr1, arr2, k):
+    pairs = []
+    for i in range(len(arr1)):
+        for j in range(len(arr2)):
+            pairs.append((arr1[i], arr2[j]))
+            if len(pairs) == k:
+                return pairs
+    return pairs",3

@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(l, element):
+    new_list = []
+    for i in l:
+        new_list.append(element)
+        new_list.append(i)
+    return new_list",1
+2,"
+
+def solve(list, element):
+  result = []
+  for item in list:
+    result.append(element)
+    result.append(item)
+  return result",2
+3,"
+
+def solve(lst, el):
+    new_lst = []
+    for item in lst:
+        new_lst.append(el)
+        new_lst.append(item)
+    return new_lst",3
+4,"
+
+def solve(lst, element):
+    new_lst = []
+    for i in lst:
+        new_lst.append(element)
+        new_lst.append(i)
+    return new_lst",4
+5,"
+
+def solve(lst, element):
+    new_list = []
+    for i in range(len(lst)):
+        new_list.append(element)
+        new_list.append(lst[i])
+    return new_list",5

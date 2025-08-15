@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    groups = {}
+    for t in tuples:
+        if t[1] in groups:
+            groups[t[1]].append(t[0])
+        else:
+            groups[t[1]] = [t[0]]
+    return groups",1
+2,"
+
+def solve(tuples):
+    groups = {}
+    for tup in tuples:
+        if tup[1] not in groups:
+            groups[tup[1]] = [tup[0]]
+        else:
+            groups[tup[1]].append(tup[0])
+    return groups",2
+3,"
+
+def solve(tup_list):
+    result = {}
+    for tup in tup_list:
+        if tup[1] not in result:
+            result[tup[1]] = [tup[0]]
+        else:
+            result[tup[1]].append(tup[0])
+    return result",3
+4,"
+
+def solve(tup_list):
+    result = {}
+    for tup in tup_list:
+        if tup[1] in result:
+            result[tup[1]].append(tup[0])
+        else:
+            result[tup[1]] = [tup[0]]
+    return result",4
+5,"
+
+def solve(tuples): 
+    result = {} 
+    for tup in tuples: 
+        if tup[1] in result: 
+            result[tup[1]].append(tup[0]) 
+        else: 
+            result[tup[1]] = [tup[0]] 
+    return result",5

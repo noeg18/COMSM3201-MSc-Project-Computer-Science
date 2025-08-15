@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(ip_address):
+    parts = ip_address.split(""."")
+    new_parts = []
+    for part in parts:
+        if part != ""0"":
+            new_parts.append(str(int(part)))
+    return ""."".join(new_parts)",1
+2,"
+
+def solve(ip):
+    ip_parts = ip.split('.')
+    for i in range(len(ip_parts)):
+        ip_parts[i] = str(int(ip_parts[i]))
+    return '.'.join(ip_parts)",2
+3,"
+
+def solve(ip_address):
+    parts = ip_address.split('.')
+    new_address = []
+    for part in parts:
+        if part == '0':
+            new_address.append('0')
+        else:
+            new_address.append(str(int(part)))
+    return ""."".join(new_address)",3
+4,"
+
+def solve(ip):
+    return '.'.join(str(int(x)) for x in ip.split('.'))",4
+5,"
+
+def solve(ip):
+    parts = ip.split('.')
+    new_ip = []
+    for part in parts:
+        if part != '0':
+            new_ip.append(str(int(part)))
+    return '.'.join(new_ip)",5

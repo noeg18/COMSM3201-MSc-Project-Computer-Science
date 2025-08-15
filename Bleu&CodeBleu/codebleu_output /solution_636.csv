@@ -1,0 +1,75 @@
+response_num,response,cluster
+1,"
+
+def solve(a,b,c):
+    D = (b**2) - (4*a*c)
+    if D < 0:
+        return ""No real roots""
+    else:
+        x1 = (-b + (D**0.5)) / (2*a)
+        x2 = (-b - (D**0.5)) / (2*a)
+        if x1 == 1/x2 or x2 == 1/x1:
+            return ""Roots are reciprocal of each other""
+        else:
+            return ""Roots are not reciprocal of each other""",1
+2,"
+
+def solve(a,b,c):
+    d = (b**2) - (4*a*c)
+    x1 = (-b + d**0.5)/(2*a)
+    x2 = (-b - d**0.5)/(2*a)
+    if x1 * x2 == 1:
+        print(""The roots are reciprocal of each other"")
+    else:
+        print(""The roots are not reciprocal of each other"")",2
+3,"
+
+
+def solve(a,b,c):
+    #Calculating discriminant
+    d = (b**2) - (4*a*c)
+    
+    #Checking if discriminant is less than 0
+    if d < 0:
+      return ""No real roots""
+    
+    #Calculating roots
+    root1 = (-b + (d**0.5)) / (2*a)
+    root2 = (-b - (d**0.5)) / (2*a)
+    
+    #Checking if roots are reciprocal of each other
+    if root1 == 1/root2:
+      return ""Roots are reciprocal of each other""
+    else:
+      return ""Roots are not reciprocal of each other""",3
+4,"
+
+def solve(a,b,c):
+    if a == 0:
+        print(""Not a quadratic equation"")
+    else:
+        d = (b**2) - (4*a*c)
+        if d < 0:
+            print(""No real roots"")
+        else:
+            root1 = (-b + (d**0.5)) / (2*a)
+            root2 = (-b - (d**0.5)) / (2*a)
+            if root1*root2 == 1:
+                print(""Roots are reciprocal of each other"")
+            else:
+                print(""Roots are not reciprocal of each other"")",4
+5,"
+
+def solve(a, b, c):
+    discriminant = (b**2) - (4*a*c)
+    
+    if discriminant < 0:
+        return ""Imaginary roots""
+    else:
+        root1 = (-b + (discriminant**(1/2))) / (2*a)
+        root2 = (-b - (discriminant**(1/2))) / (2*a)
+        
+        if root1 * root2 == 1:
+            return ""Roots are reciprocal of each other""
+        else:
+            return ""Roots are not reciprocal of each other""",5

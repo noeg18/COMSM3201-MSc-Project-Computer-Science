@@ -1,0 +1,113 @@
+response_num,response,cluster
+1,"
+
+import heapq
+
+def solve(lists, k):
+    heap = []
+    for lst in lists:
+        for num in lst:
+            heapq.heappush(heap, (-lst.count(num), num))
+    top_k = heapq.nsmallest(k, heap)
+    return [num for _, num in top_k]",1
+2,"
+
+import heapq
+
+def solve(lists, k):
+    
+    #create a dictionary to store the count of each integer
+    count_dict = {}
+    #loop through each list
+    for l in lists:
+        #loop through each integer in the list
+        for num in l:
+            #if the integer is already in the dictionary, increment its count
+            if num in count_dict:
+                count_dict[num] += 1
+            #else, add the integer to the dictionary with a count of 1
+            else:
+                count_dict[num] = 1
+    
+    #create a heap with the counts as the key and the integers as the value
+    heap = [(-count, num) for num, count in count_dict.items()]
+    #use heapq to turn the list into a heap
+    heapq.heapify(heap)
+    
+    #create a list to store the top k integers
+    top_k = []
+    #loop k times
+    for i in range(k):
+        #pop the top element from the heap
+        count, num = heapq.heappop(heap)
+        #add the integer to the top_k list
+        top_k.append(num)
+    
+    #return the top_k list
+    return top_k",2
+3,"
+
+def solve(lst, k):
+    freq = {}
+    heap = []
+    for num in lst:
+        if num not in freq:
+            freq[num] = 0
+        freq[num] += 1
+    for key, value in freq.items():
+        heapq.heappush(heap, (-value, key))
+    res = []
+    for i in range(k):
+        res.append(heapq.heappop(heap)[1])
+    return res",3
+4,"
+
+from heapq import heappush, heappop
+
+def solve(arr, k):
+    freq_map = {}
+    heap = []
+
+    # build frequency map
+    for num in arr:
+        freq_map[num] = freq_map.get(num, 0) + 1
+
+    # build heap
+    for num, freq in freq_map.items():
+        heappush(heap, (-freq, num))
+
+    # extract top k elements from heap
+    top_k = []
+    for _ in range(k):
+        freq, num = heappop(heap)
+        top_k.append(num)
+
+    return top_k",4
+5,"
+
+def solve(arr, k):
+    from collections import Counter
+    import heapq
+    
+    # create a counter to keep track of the frequency of each integer
+    freq = Counter(arr)
+    
+    # create a heap queue
+    heap = []
+    
+    # loop through the unique integers in the counter
+    for num in freq:
+        # push the tuple (frequency, integer) into the heap
+        heapq.heappush(heap, (-freq[num], num))
+    
+    # create a list to store the top k integers
+    top_k = []
+    
+    # pop the first k elements from the heap
+    for i in range(k):
+        # pop the tuple with the highest frequency
+        freq_num = heapq.heappop(heap)
+        # append the integer to the top_k list
+        top_k.append(freq_num[1])
+    
+    return top_k",5

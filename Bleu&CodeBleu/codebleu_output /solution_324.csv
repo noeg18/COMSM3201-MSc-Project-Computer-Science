@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    chain1 = []
+    chain2 = []
+    for i in range(len(tuples)):
+        if i % 2 == 0:
+            chain1.append(tuples[i])
+        else:
+            chain2.append(tuples[i])
+    sum1 = sum(chain1)
+    sum2 = sum(chain2)
+    return sum1 + sum2",1
+2,"
+
+def solve(tuples):
+    result = 0
+    for i in range(0, len(tuples), 2):
+        result += sum(tuples[i])
+    return result",2
+3,"
+
+def solve(tuples):
+    sum = 0
+    for i in range(0, len(tuples), 2):
+        sum += tuples[i][0]
+        sum += tuples[i+1][1]
+    return sum",3
+4,"
+
+def solve(tuples):
+    sum = 0
+    for i in range(0, len(tuples), 2):
+        for j in range(len(tuples[i])):
+            sum += tuples[i][j]
+    return sum",4
+5,"
+
+def solve(tuples):
+    result = 0
+    for i in range(0, len(tuples), 2):
+        result += sum(tuples[i])
+    return result",2

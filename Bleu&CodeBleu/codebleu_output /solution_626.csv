@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+import math
+
+def solve(radius):
+    base = radius
+    height = radius / 2
+    area = (base * height) / 2
+    return area",1
+2,"
+
+import math
+
+def solve(radius):
+    side = math.sqrt(radius**2 - (radius/2)**2)
+    area = (side * (radius/2)) / 2
+    return area",2
+3,"
+
+import math
+
+def solve(radius):
+    side = math.sqrt(3) * radius
+    area = (side**2)/4
+    return area",3
+4,"
+def solve(radius):
+    # calculate the base of the triangle using Pythagorean theorem
+    base = (2 * radius) / math.sqrt(2)
+    
+    # calculate the height of the triangle
+    height = radius
+    
+    # calculate the area of the triangle
+    area = (base * height) / 2
+    
+    # return the maximum area of the triangle
+    return area",4
+5,"
+import math
+
+def solve(semi_circle_radius):
+    base = semi_circle_radius * 2
+    height = semi_circle_radius
+    area = (base * height)/2
+    return area",5

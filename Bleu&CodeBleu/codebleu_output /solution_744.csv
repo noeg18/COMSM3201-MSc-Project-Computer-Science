@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    for i in tup:
+        if i is None:
+            return True
+    return False",1
+2,"
+
+def solve(tup):
+    for item in tup:
+        if item is None:
+            return True
+    return False",2
+3,"
+
+def solve(tuple):
+    for i in tuple:
+        if i is None:
+            return True
+    return False",3
+4,"
+
+def solve(tup):
+    for i in tup:
+        if i is None:
+            return True
+    return False",1
+5,"
+
+def solve(tuple):
+    for element in tuple:
+        if element is None:
+            return True
+    return False",4

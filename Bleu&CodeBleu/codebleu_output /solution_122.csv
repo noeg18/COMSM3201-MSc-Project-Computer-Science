@@ -1,0 +1,68 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    smart_numbers = [1]
+    index = 0
+    while len(smart_numbers) < n:
+        new_number = smart_numbers[index] * 2 + 1
+        if new_number not in smart_numbers:
+            smart_numbers.append(new_number)
+        new_number = smart_numbers[index] * 3 + 1
+        if new_number not in smart_numbers:
+            smart_numbers.append(new_number)
+        index += 1
+    return smart_numbers[n-1]",1
+2,"
+
+def solve(n):
+    smart_nums = [1]
+    i = 2
+    while len(smart_nums) < n:
+        if i % 3 == 0 and i % 5 == 0:
+            smart_nums.append(i)
+        elif i % 3 == 0:
+            if i % 5 not in smart_nums:
+                smart_nums.append(i)
+        elif i % 5 == 0:
+            if i % 3 not in smart_nums:
+                smart_nums.append(i)
+        i += 1
+    return smart_nums[-1]",2
+3,"
+
+def solve(n):
+    i = 1
+    count = 1
+    while count < n:
+        i += 1
+        if i % 2 == 0 or i % 3 == 0 or i % 5 == 0:
+            count += 1
+    return i",3
+4,"
+
+def solve(n):
+
+    smart_numbers = [1]
+    current_number = 2
+    
+    while len(smart_numbers) < n:
+        if current_number % 2 == 0:
+            if current_number // 2 in smart_numbers:
+                smart_numbers.append(current_number)
+        else:
+            if current_number // 3 in smart_numbers or current_number // 5 in smart_numbers:
+                smart_numbers.append(current_number)
+        current_number += 1
+        
+    return smart_numbers[-1]",4
+5,"
+
+def solve(n):
+    smart_nums = [1]
+    i = 1
+    while len(smart_nums) < n:
+        if i % 2 == 0 or i % 3 == 0 or i % 5 == 0:
+            smart_nums.append(i)
+        i += 1
+    return smart_nums[-1]",5

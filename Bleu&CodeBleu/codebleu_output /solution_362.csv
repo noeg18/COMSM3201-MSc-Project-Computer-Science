@@ -1,0 +1,77 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    count_dict = {}
+    for item in lst:
+        if item not in count_dict:
+            count_dict[item] = 1
+        else:
+            count_dict[item] += 1
+    max_count = 0
+    max_item = None
+    for item, count in count_dict.items():
+        if count > max_count:
+            max_count = count
+            max_item = item
+    return max_item",1
+2,"
+
+def solve(lst):
+    count_dict = {}
+    for item in lst:
+        if item in count_dict:
+            count_dict[item] += 1
+        else:
+            count_dict[item] = 1
+    
+    max_count = 0
+    max_item = None
+    for item, count in count_dict.items():
+        if count > max_count:
+            max_count = count
+            max_item = item
+    
+    return max_item",2
+3,"
+
+def solve(lst):
+    counts = {}
+    for item in lst:
+        counts[item] = counts.get(item, 0) + 1
+    max_count = 0
+    max_item = None
+    for key, value in counts.items():
+        if value > max_count:
+            max_count = value
+            max_item = key
+    return max_item",3
+4,"
+
+def solve(lst):
+    max_count = 0
+    max_item = None
+    
+    for item in lst:
+        count = lst.count(item)
+        if count > max_count:
+            max_count = count
+            max_item = item
+    
+    return max_item",4
+5,"
+
+def solve(lst):
+    count_dict = {}
+
+    for item in lst:
+        if item in count_dict:
+            count_dict[item] += 1
+        else:
+            count_dict[item] = 1
+
+    max_count = max(count_dict.values())
+
+    for key, value in count_dict.items():
+        if value == max_count:
+            return key",5

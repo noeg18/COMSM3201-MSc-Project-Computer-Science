@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, tpl):
+    lst.append(tpl)
+    return lst",1
+2,"
+
+def solve(input_list, input_tuple):
+    input_list.append(input_tuple)
+    return input_list",2
+3,"
+
+def solve(tup, lst):
+    lst.append(tup)
+    return lst",3
+4,"
+
+def solve(lst, tup):
+    lst.append(tup)
+    return lst",4
+5,"
+
+def solve(tup, lst):
+    lst.append(tup)
+    return lst",3

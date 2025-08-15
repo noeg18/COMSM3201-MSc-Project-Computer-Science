@@ -1,0 +1,38 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    if len(tup) == 0:
+        return True
+    first_type = type(tup[0])
+    for i in tup:
+        if type(i) != first_type:
+            return False
+    return True",1
+2,"
+
+def solve(tup):
+    return all(isinstance(element, type(tup[0])) for element in tup)",2
+3,"
+
+def solve(tup):
+    data_type = type(tup[0])
+    for i in tup:
+        if type(i) != data_type:
+            return False
+    return True",3
+4,"
+
+def solve(tup):
+    if len(tup) == 0:
+        return False
+    else:
+        first_type = type(tup[0])
+        for x in tup:
+            if type(x) != first_type:
+                return False
+        return True",4
+5,"
+
+def solve(tup):
+    return all(type(elem) == type(tup[0]) for elem in tup)",5

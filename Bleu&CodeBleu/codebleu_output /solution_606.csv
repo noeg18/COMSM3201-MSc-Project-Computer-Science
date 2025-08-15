@@ -1,0 +1,23 @@
+response_num,response,cluster
+1,"
+
+def solve(deg):
+    return deg * (3.141592653589793 / 180)",1
+2,"
+
+def solve(degrees):
+    radians = degrees * (3.14159/180)
+    return radians",2
+3,"
+
+def solve(degrees):
+    return (degrees * (3.141592653589793 / 180))",3
+4,"
+
+def solve(degrees):
+    radians = degrees * (math.pi / 180)
+    return radians",4
+5,"
+
+def solve(degrees):
+    return degrees * (3.14159/180)",5

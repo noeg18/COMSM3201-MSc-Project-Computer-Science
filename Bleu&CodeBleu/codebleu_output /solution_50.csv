@@ -1,0 +1,22 @@
+response_num,response,cluster
+1,"
+
+def solve(lists):
+    return min(lists, key=lambda x: len(x))",1
+2,"
+
+def solve(lst):
+    return min(lst, key=lambda x: len(x))
+",2
+3,"
+
+def solve(lists):
+    return min(lists, key=lambda x: len(x))",1
+4,"
+
+def solve(lists):
+    return min(lists, key=lambda x: len(x))",1
+5,"
+
+def solve(lists):
+    return min(lists, key=lambda x: len(x))",1

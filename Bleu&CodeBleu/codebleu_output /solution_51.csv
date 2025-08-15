@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    if a == b and b == c:
+        print(""The triangle is equilateral."")
+    else:
+        print(""The triangle is not equilateral."")",1
+2,"
+
+def solve(a, b, c):
+    if a == b == c:
+        print(""The triangle is equilateral."")
+    else:
+        print(""The triangle is not equilateral."")",2
+3,"
+
+def solve(side1, side2, side3):
+    if side1 == side2 and side1 == side3:
+        print(""Equilateral Triangle"")
+    else:
+        print(""Not an Equilateral Triangle"")",3
+4,"
+
+def solve(a,b,c):
+    if a == b == c:
+        print(""The triangle is equilateral."")
+    else:
+        print(""The triangle is not equilateral."")",2
+5,"
+
+def solve(a,b,c):
+    if a == b and b == c:
+        return ""Equilateral triangle""
+    else:
+        return ""Not an equilateral triangle""",4

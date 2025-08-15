@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(x, y, z):
+    return min(x, y, z)",1
+2,"
+
+def solve(a, b, c):
+    if a <= b and a <= c:
+        return a
+    elif b <= a and b <= c:
+        return b
+    else:
+        return c",2
+3,"
+
+def solve(a, b, c):
+    return min(a, b, c)",3
+4,"
+
+def solve(num1, num2, num3):
+    min_num = num1
+    if num2 < min_num:
+        min_num = num2
+    if num3 < min_num:
+        min_num = num3
+    return min_num",4
+5,"
+
+def solve(a, b, c):
+    min_num = a
+    if b < min_num:
+        min_num = b
+    if c < min_num:
+        min_num = c
+    return min_num",5

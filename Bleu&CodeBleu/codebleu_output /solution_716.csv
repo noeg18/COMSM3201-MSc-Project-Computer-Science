@@ -1,0 +1,24 @@
+response_num,response,cluster
+1,"
+
+def solve(side1, side2):
+    perimeter = 2 * (side1 + side2)
+    return perimeter",1
+2,"
+
+def solve(side, diagonal):
+    perimeter = side*4
+    return perimeter",2
+3,"
+
+def solve(side, diag):
+    return 2 * side + 2 * diag",3
+4,"
+
+def solve(side, diag):
+    perimeter = 2 * (side + diag)
+    return perimeter",4
+5,"
+
+def solve(a, b):
+    return 2 * (a + b)",5

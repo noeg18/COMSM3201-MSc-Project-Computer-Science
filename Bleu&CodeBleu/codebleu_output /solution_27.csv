@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(str_list):
+    return [s for s in str_list if not any(c.isdigit() for c in s)]",1
+2,"
+
+def solve(lst):
+    res = []
+    for string in lst:
+        new_str = """"
+        for char in string:
+            if char.isdigit():
+                continue
+            else:
+                new_str += char
+        res.append(new_str)
+    return res",2
+3,"
+
+def solve(strings):
+    result = []
+    for string in strings:
+        new_string = """"
+        for letter in string:
+            if not letter.isdigit():
+                new_string += letter
+        result.append(new_string)
+    return result",3
+4,"
+
+def solve(lst):
+    new_lst = []
+    for string in lst:
+        new_string = """"
+        for char in string:
+            if not char.isdigit():
+                new_string += char
+        new_lst.append(new_string)
+    return new_lst",4
+5,"
+
+def solve(lst):
+    result = []
+    for string in lst:
+        new_string = ''
+        for char in string:
+            if not char.isdigit():
+                new_string += char
+        result.append(new_string)
+    return result",5

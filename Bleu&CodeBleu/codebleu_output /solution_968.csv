@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(period, coeff, power):
+    max_value = -float('inf')
+    for x in range(period):
+        value = coeff * (x ** power)
+        if value > max_value:
+            max_value = value
+    return max_value",1
+2,"
+
+def solve(period, amplitude):
+    max_value = amplitude
+    for i in range(period):
+        x = i * (2 * amplitude) / period
+        if x > amplitude:
+            x = (2 * amplitude) - x
+        if x > max_value:
+            max_value = x
+    return max_value",2
+3,"
+
+def solve(period):
+    x = 0
+    max_val = 0
+    while x < period:
+        curr_val = abs(period - x)
+        if curr_val > max_val:
+            max_val = curr_val
+        x += 0.01
+    return max_val",3
+4,"
+
+def solve(a, b):
+    if a == b:
+        return a
+    else:
+        return max(a, b)",4
+5,"
+
+def solve(A, B, C, D):
+    x = (B - A) / 2
+    y = (D - C) / 2
+    return abs(A + C + x - y)",5

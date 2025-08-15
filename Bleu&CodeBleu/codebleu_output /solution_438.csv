@@ -1,0 +1,44 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples):
+    count = 0
+    for tup in tuples:
+        if (tup[1], tup[0]) in tuples:
+            count += 1
+    return count",1
+2,"
+
+def solve(tuples):
+    count = 0
+    for i in range(len(tuples)):
+        for j in range(i+1, len(tuples)):
+            if tuples[i][0] == tuples[j][1] and tuples[i][1] == tuples[j][0]:
+                count += 1
+    return count",2
+3,"
+
+def solve(tuples):
+    count = 0
+    for tup in tuples:
+        if tup[::-1] in tuples:
+            count += 1
+    return count",3
+4,"
+
+def solve(tuples):
+    count = 0
+    for i in range(len(tuples)):
+        for j in range(i+1, len(tuples)):
+            if tuples[i][0] == tuples[j][1] and tuples[i][1] == tuples[j][0]:
+                count += 1
+    return count",2
+5,"
+
+def solve(tuples):
+    count = 0
+    for i in range(len(tuples)):
+        for j in range(i+1, len(tuples)):
+            if tuples[i] == tuples[j][::-1]:
+                count += 1
+    return count",4

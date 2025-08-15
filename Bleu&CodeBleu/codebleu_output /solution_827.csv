@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lists, column):
+    total = 0
+    for lst in lists:
+        total += lst[column]
+    return total",1
+2,"
+
+def solve(list_of_lists, column):
+    total = 0
+    for lst in list_of_lists:
+        total += lst[column]
+    return total",2
+3,"
+
+def solve(list_of_lists, column_index):
+    total_sum = 0
+    for l in list_of_lists:
+        total_sum += l[column_index]
+    return total_sum",3
+4,"
+
+def solve(list_of_lists, column):
+    sum = 0
+    for list in list_of_lists:
+        sum += list[column]
+    return sum",4
+5,"
+
+def solve(lst, col):
+    total = 0
+    for row in lst:
+        total += row[col]
+    return total",5

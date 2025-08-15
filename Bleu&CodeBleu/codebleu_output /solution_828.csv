@@ -1,0 +1,79 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    alpha = 0
+    digit = 0
+    special = 0
+    for char in string:
+        if char.isalpha():
+            alpha += 1
+        elif char.isdigit():
+            digit += 1
+        else:
+            special += 1
+    return alpha, digit, special",1
+2,"
+
+def solve(string):
+    alphabets = 0
+    digits = 0
+    special = 0
+
+    for char in string:
+        if char.isalpha():
+            alphabets += 1
+        elif char.isdigit():
+            digits += 1
+        else:
+            special += 1
+
+    return alphabets, digits, special",2
+3,"
+
+def solve(s):
+    alphabets = 0
+    digits = 0
+    special_chars = 0
+    
+    for char in s:
+        if char.isalpha():
+            alphabets += 1
+        elif char.isdigit():
+            digits += 1
+        else:
+            special_chars += 1
+    
+    return alphabets, digits, special_chars",3
+4,"
+
+def solve(string):
+    alpha = 0
+    digit = 0
+    special = 0
+    
+    for char in string:
+        if char.isalpha():
+            alpha += 1
+        elif char.isdigit():
+            digit += 1
+        else:
+            special += 1
+    
+    return alpha, digit, special",1
+5,"
+
+def solve(string):
+    alphabet_count = 0
+    digit_count = 0
+    special_char_count = 0
+    
+    for char in string:
+        if char.isalpha():
+            alphabet_count += 1
+        elif char.isdigit():
+            digit_count += 1
+        else:
+            special_char_count += 1
+    
+    return alphabet_count, digit_count, special_char_count",4

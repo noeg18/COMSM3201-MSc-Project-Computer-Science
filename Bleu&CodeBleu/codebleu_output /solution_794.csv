@@ -1,0 +1,43 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    import re
+    pattern = r'a.*b$'
+    match = re.search(pattern, string)
+    if match:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(string):
+    if 'a' in string and 'b' in string:
+        index_a = string.index('a')
+        index_b = string.index('b')
+        if index_a < index_b:
+            return True
+    return False",2
+3,"
+
+def solve(string):
+    import re
+    pattern = r'a.*b$'
+    if re.search(pattern, string):
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(string):
+    import re
+    return re.match('a.*b$', string) is not None",4
+5,"
+
+def solve(string):
+    import re
+    pattern = ""a.*b$""
+    if re.match(pattern, string):
+        return True
+    else:
+        return False",5

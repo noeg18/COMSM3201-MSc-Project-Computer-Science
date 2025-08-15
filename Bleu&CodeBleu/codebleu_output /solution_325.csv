@@ -1,0 +1,91 @@
+response_num,response,cluster
+1,"
+
+def solve(n):
+    # initialize a list to store the squares
+    squares = []
+    # initialize a counter to keep track of the number of squares
+    count = 0
+    # iterate through numbers from 1 to n
+    for i in range(1, n+1):
+        # check if the square of the number is less than or equal to n
+        if i*i <= n:
+            # if yes, add the square to the list of squares
+            squares.append(i*i)
+        else:
+            # if not, break out of the loop
+            break
+    # reverse the list of squares to start from the largest square
+    squares.reverse()
+    # iterate through the squares
+    for square in squares:
+        # check if the square is less than or equal to n
+        if square <= n:
+            # if yes, subtract the square from n
+            n = n - square
+            # increase the counter by 1
+            count += 1
+        # if the square is greater than n, continue to the next square
+        else:
+            continue
+    # return the counter
+    return count",1
+2,"
+
+def solve(num):
+    dp = [0] * (num + 1)
+    for i in range(1, num + 1):
+        dp[i] = i
+        for j in range(1, i):
+            if j * j > i:
+                break
+            dp[i] = min(dp[i], 1 + dp[i - j * j])
+    return dp[num]",2
+3,"
+
+def solve(n):
+
+    # base case
+    if n == 0:
+        return 0
+
+    # initialize minimum number of squares
+    min_squares = n
+
+    # loop through all possible squares
+    for i in range(1, int(n**0.5) + 1):
+        
+        # recursive call
+        temp = 1 + solve(n - i**2)
+
+        # update minimum number of squares
+        if temp < min_squares:
+            min_squares = temp
+
+    return min_squares",3
+4,"
+
+def solve(n):
+    dp = [0] * (n+1)
+    dp[0] = 0
+    dp[1] = 1
+    for i in range(2, n+1):
+        dp[i] = i
+        for j in range(1, i+1):
+            temp = j*j
+            if temp > i:
+                break
+            else:
+                dp[i] = min(dp[i], 1+dp[i-temp])
+    return dp[n]",4
+5,"
+
+def solve(n):
+    dp = [0] * (n + 1)
+    for i in range(1, n + 1):
+        dp[i] = i
+        for j in range(1, i + 1):
+            if j * j > i:
+                break
+            dp[i] = min(dp[i], 1 + dp[i - j * j])
+    return dp[n]",5

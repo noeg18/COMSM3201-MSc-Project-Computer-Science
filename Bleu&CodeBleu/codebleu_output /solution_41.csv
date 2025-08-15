@@ -1,0 +1,20 @@
+response_num,response,cluster
+1,"
+def solve(numbers):
+    return list(filter(lambda x: x % 2 == 0, numbers))",1
+2,"
+
+def solve(nums):
+    return list(filter(lambda x: x % 2 == 0, nums))",2
+3,"
+
+def solve(nums):
+    return list(filter(lambda x: x%2 == 0, nums))",3
+4,"
+
+def solve(nums):
+    return list(filter(lambda x: x % 2 == 0, nums))",2
+5,"
+
+def solve(nums):
+    return list(filter(lambda x: x % 2 == 0, nums))",2

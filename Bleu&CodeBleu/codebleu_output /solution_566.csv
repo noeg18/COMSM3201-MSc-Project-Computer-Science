@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    return sum(int(i) for i in str(num))",1
+2,"
+
+def solve(num):
+    sum = 0
+    while num > 0:
+        sum += num % 10
+        num //= 10
+    return sum",2
+3,"
+
+def solve(num):
+    result = 0
+    while num > 0:
+        result += num % 10
+        num = num // 10
+    return result",3
+4,"
+
+def solve(n):
+    sum = 0
+    while n > 0:
+        sum += n % 10
+        n = n // 10
+    return sum",4
+5,"
+
+def solve(num):
+    sum = 0
+    while num > 0:
+        sum += num % 10
+        num = num // 10
+    return sum",5

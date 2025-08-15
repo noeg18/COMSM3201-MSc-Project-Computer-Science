@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(string, char):
+    new_string = """"
+    for letter in string:
+        if letter != char:
+            new_string += letter
+    return new_string",1
+2,"
+
+def solve(string, char):
+    new_string = string.replace(char, """")
+    return new_string",2
+3,"
+
+def solve(string, char):
+    new_string = string.replace(char, """")
+    return new_string",2
+4,"
+
+def solve(string, char):
+    new_string = """"
+    for c in string:
+        if c != char:
+            new_string += c
+    return new_string",3
+5,"
+
+def solve(string, char):
+    result = """"
+    for c in string:
+        if c != char:
+            result += c
+    return result",4

@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(sequence, value):
+    if value in sequence:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(sequence, value):
+    if value in sequence:
+        return True
+    else:
+        return False",1
+3,"
+
+def solve(sequence, value):
+    if value in sequence:
+        return True
+    else:
+        return False",1
+4,"
+
+def solve(value, sequence):
+    if value in sequence:
+        return True
+    else:
+        return False",2
+5,"
+
+def solve(value, sequence):
+    if value in sequence:
+        return True
+    else:
+        return False",2

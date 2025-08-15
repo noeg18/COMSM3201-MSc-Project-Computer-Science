@@ -1,0 +1,53 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(sentence):
+    adverbs = []
+    positions = []
+    pattern = r'\b\w+ly\b'
+    matches = re.finditer(pattern, sentence)
+    
+    for match in matches:
+        adverbs.append(match.group())
+        positions.append(match.start())
+        
+    return adverbs, positions",1
+2,"
+
+import re
+
+def solve(sentence):
+    adverbs = re.findall(r'\w+ly', sentence)
+    positions = []
+    for adverb in adverbs:
+        positions.append(sentence.find(adverb))
+    return list(zip(adverbs, positions))",2
+3,"
+
+def solve(sentence):
+    adverbs = re.findall(r'\w+ly\b', sentence)
+    positions = [m.start() for m in re.finditer(r'\w+ly\b', sentence)]
+    return adverbs, positions",3
+4,"
+
+import re
+
+def solve(sentence):
+    regex = r'\w+ly'
+    matches = re.finditer(regex, sentence)
+    adverbs = []
+    for match in matches:
+        adverbs.append((match.group(0), match.start()))
+    return adverbs",4
+5,"
+
+import re
+
+def solve(sentence):
+    adverb_positions = []
+    pattern = r""\b\w+ly\b""
+    for match in re.finditer(pattern, sentence):
+        adverb_positions.append((match.group(0), match.start()))
+    return adverb_positions",5

@@ -1,0 +1,84 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, num):
+    start = 0
+    end = len(arr) - 1
+    index = -1
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] == num:
+            index = mid
+            start = mid + 1
+        elif arr[mid] < num:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return index",1
+2,"
+
+def solve(arr, num):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == num:
+            if mid == high or arr[mid + 1] != num:
+                return mid
+            else:
+                low = mid + 1
+        elif arr[mid] < num:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1",2
+3,"
+
+def solve(arr, num):
+    start = 0
+    end = len(arr) - 1
+    index = -1
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] == num:
+            index = mid
+            start = mid + 1
+        elif arr[mid] < num:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return index",1
+4,"
+
+def solve(nums, target):
+    low = 0
+    high = len(nums) - 1
+    idx = -1
+    while low <= high:
+        mid = (low + high) // 2
+        if nums[mid] == target:
+            idx = mid
+            low = mid + 1
+        elif nums[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return idx",3
+5,"
+
+def solve(arr, target):
+    low = 0
+    high = len(arr) - 1
+    last_index = -1
+    
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            last_index = mid
+            low = mid + 1
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    
+    return last_index",4

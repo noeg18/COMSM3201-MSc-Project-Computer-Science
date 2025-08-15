@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    count = 0
+    for i in range(len(string)):
+        if string[i].lower() == chr(ord(""a"") + i) or string[i].upper() == chr(ord(""A"") + i):
+            count += 1
+    return count",1
+2,"
+
+def solve(string):
+    count = 0
+    for i in range(len(string)):
+        if string[i].lower() == chr(ord('a') + i) or string[i].upper() == chr(ord('A') + i):
+            count += 1
+    return count",2
+3,"
+
+def solve(string):
+    count = 0
+    for i in range(len(string)):
+        if string[i].lower() == chr(97+i) or string[i].upper() == chr(65+i):
+            count += 1
+    return count",3
+4,"
+
+def solve(str):
+    count = 0
+    for i in range(len(str)):
+        if ord(str[i].lower()) - 97 == i:
+            count += 1
+    return count",4
+5,"
+
+def solve(string):
+    count = 0
+    for index, char in enumerate(string):
+        if char.lower() == chr(97 + index) or char.upper() == chr(97 + index):
+            count += 1
+    return count",5

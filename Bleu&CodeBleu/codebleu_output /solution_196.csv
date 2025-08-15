@@ -1,0 +1,37 @@
+response_num,response,cluster
+1,"
+
+def solve(tuples, k):
+    result = []
+    for tup in tuples:
+        if len(tup) != k:
+            result.append(tup)
+    return result",1
+2,"
+
+def solve(tuples, k):
+    new_tuples = []
+    for tup in tuples:
+        if len(tup) != k:
+            new_tuples.append(tup)
+    return new_tuples",2
+3,"
+
+def solve(lst, k):
+    new_lst = []
+    for tup in lst:
+        if len(tup) != k:
+            new_lst.append(tup)
+    return new_lst",3
+4,"
+
+def solve(tuples, k):
+  result = []
+  for tup in tuples:
+    if len(tup) != k:
+      result.append(tup)
+  return result",1
+5,"
+
+def solve(lst, k):
+    return [tup for tup in lst if len(tup) != k]",4

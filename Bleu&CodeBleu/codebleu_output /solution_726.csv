@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(tup):
+    result = ()
+    for i in range(len(tup)-1):
+        result += (tup[i] * tup[i+1],)
+    return result",1
+2,"
+
+def solve(input_tuple):
+    result = ()
+    for i in range(len(input_tuple)-1):
+        result = result + (input_tuple[i] * input_tuple[i+1],)
+    return result",2
+3,"
+
+def solve(t):
+    res = ()
+    for i in range(len(t)-1):
+        res += (t[i] * t[i+1],)
+    return res",3
+4,"
+
+def solve(tup):
+    result = ()
+    for i in range(len(tup)-1):
+        result += (tup[i] * tup[i+1],)
+    return result",1
+5,"
+
+def solve(tup):
+    result = ()
+    for i in range(len(tup)-1):
+        result += (tup[i]*tup[i+1],)
+    return result",4

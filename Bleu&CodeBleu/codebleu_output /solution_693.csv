@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    return re.sub(r""\s+"", "" "", string)",1
+2,"
+
+def solve(string):
+    return re.sub(r'\s+', ' ', string)",2
+3,"
+
+import re
+
+def solve(string):
+    pattern = r""\s+"" #regex pattern to match one or more spaces
+    string = re.sub(pattern, "" "", string) #replace all matched patterns with a single space
+    return string",3
+4,"
+
+import re
+
+def solve(string):
+    return re.sub(r""\s+"", "" "", string)",1
+5,"
+
+def solve(string):
+    return re.sub('\s+', ' ', string)",4

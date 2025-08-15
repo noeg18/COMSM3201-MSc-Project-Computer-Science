@@ -1,0 +1,42 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    count = 0
+    for char in string:
+        if char.isupper():
+            count += 1
+    return count",1
+2,"
+
+def solve(s):
+    upper_count = 0
+    for char in s:
+        if char.isupper():
+            upper_count += 1
+    return upper_count",2
+3,"
+
+def solve(string):
+    count = 0
+    for character in string:
+        if character.isupper():
+            count += 1
+    return count",3
+4,"
+
+def solve(string):
+    count = 0
+    for char in string:
+        if char.isupper():
+            count += 1
+    return count",1
+5,"
+
+def solve(string):
+    count = 0
+    for char in string:
+        if char.isupper():
+            count += 1
+
+    return count",1

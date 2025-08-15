@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    freq = {}
+    for elem in lst:
+        if elem in freq:
+            freq[elem] += 1
+        else:
+            freq[elem] = 1
+    return freq",1
+2,"
+
+def solve(lst):
+    freq = {}
+    for elem in lst:
+        if elem in freq:
+            freq[elem] += 1
+        else:
+            freq[elem] = 1
+    return freq",1
+3,"
+
+def solve(lst):
+    freq = {}
+    for elem in lst:
+        if elem in freq:
+            freq[elem] += 1
+        else:
+            freq[elem] = 1
+    return freq",1
+4,"
+
+def solve(lst):
+    freq = {}
+    for ele in lst:
+        if ele in freq:
+            freq[ele] += 1
+        else:
+            freq[ele] = 1
+    return freq",2
+5,"
+
+def solve(lst):
+    freq = {}
+    for i in lst:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    return freq",3

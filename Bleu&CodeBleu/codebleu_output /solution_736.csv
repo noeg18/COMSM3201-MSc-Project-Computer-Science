@@ -1,0 +1,66 @@
+response_num,response,cluster
+1,"
+
+def solve(arr, val):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == val:
+            return mid
+        elif arr[mid] < val:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return left",1
+2,"
+
+def solve(arr, val):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        if val <= arr[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return low",2
+3,"
+
+def solve(arr, target):
+    left = 0
+    right = len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return left",3
+4,"
+
+def solve(arr, val):
+    low = 0
+    high = len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < val:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return low",4
+5,"
+
+def solve(arr, val):
+    low = 0
+    high = len(arr)
+    while low < high:
+        mid = (low + high) // 2
+        if arr[mid] < val:
+            low = mid + 1
+        else:
+            high = mid
+    return low ",5

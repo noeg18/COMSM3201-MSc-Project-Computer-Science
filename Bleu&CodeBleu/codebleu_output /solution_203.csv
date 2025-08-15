@@ -1,0 +1,74 @@
+response_num,response,cluster
+1,"
+
+def solve(x, y):
+    # convert integers to binary strings
+    x_bin = bin(x)[2:]
+    y_bin = bin(y)[2:]
+    
+    # make sure both strings have the same length
+    if len(x_bin) < len(y_bin):
+        x_bin = '0' * (len(y_bin) - len(x_bin)) + x_bin
+    elif len(y_bin) < len(x_bin):
+        y_bin = '0' * (len(x_bin) - len(y_bin)) + y_bin
+    
+    # calculate hamming distance
+    distance = 0
+    for i in range(len(x_bin)):
+        if x_bin[i] != y_bin[i]:
+            distance += 1
+    
+    return distance",1
+2,"
+
+def solve(num1, num2):
+    # convert the two numbers to binary strings
+    bin1 = bin(num1)[2:]
+    bin2 = bin(num2)[2:]
+    
+    # pad the shorter string with zeros to make them equal in length
+    if len(bin1) < len(bin2):
+        bin1 = '0' * (len(bin2) - len(bin1)) + bin1
+    elif len(bin2) < len(bin1):
+        bin2 = '0' * (len(bin1) - len(bin2)) + bin2
+    
+    # initialize the hamming distance to 0
+    hamming_dist = 0
+    
+    # loop through the binary strings and count the number of different bits
+    for i in range(len(bin1)):
+        if bin1[i] != bin2[i]:
+            hamming_dist += 1
+    
+    # return the hamming distance
+    return hamming_dist",2
+3,"
+
+def solve(x, y):
+    hamming_dist = 0
+    while x > 0 or y > 0:
+        if (x % 2) != (y % 2):
+            hamming_dist += 1
+        x = x // 2
+        y = y // 2
+    return hamming_dist",3
+4,"
+
+def solve(x, y):
+    dist = 0
+    while x > 0 or y > 0:
+        if x % 2 != y % 2:
+            dist += 1
+        x = x // 2
+        y = y // 2
+    return dist",4
+5,"
+
+def solve(x, y):
+    hamming_distance = 0
+    while x > 0 or y > 0:
+        if x % 2 != y % 2:
+            hamming_distance += 1
+        x //= 2
+        y //= 2
+    return hamming_distance",5

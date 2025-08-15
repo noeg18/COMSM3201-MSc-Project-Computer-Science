@@ -1,0 +1,25 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    return list(set(list1) - set(list2))",1
+2,"
+
+def solve(list1, list2):
+    return list(set(list1) - set(list2)) + list(set(list2) - set(list1))",2
+3,"
+
+def solve(list1, list2):
+    diff = []
+    for item in list1:
+        if item not in list2:
+            diff.append(item)
+    return diff",3
+4,"
+
+def solve(list1, list2):
+    return list(set(list1).difference(set(list2)))",4
+5,"
+
+def solve(list1, list2):
+    return list(set(list1) - set(list2))",1

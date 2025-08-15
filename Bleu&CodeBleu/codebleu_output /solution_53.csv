@@ -1,0 +1,35 @@
+response_num,response,cluster
+1,"
+
+def solve(s):
+    if len(s) < 2:
+        return False
+    elif s[0] == s[-1]:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(str):
+    if str[0] == str[-1]:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(string):
+    if string[0] == string[-1]:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(string):
+  if string[0] == string[-1]:
+    return True
+  else:
+    return False ",3
+5,"
+
+def solve(string):
+    return string[0] == string[-1]",4

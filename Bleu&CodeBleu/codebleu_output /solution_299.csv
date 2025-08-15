@@ -1,0 +1,45 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    max_sum = 0
+    for tup in lst:
+        max_sum = max(max_sum, sum(tup))
+    return max_sum",1
+2,"
+
+def solve(list_of_tuples):
+    max_aggregate = 0
+    for tuple in list_of_tuples:
+        aggregate = tuple[0] + tuple[1]
+        if aggregate > max_aggregate:
+            max_aggregate = aggregate
+    return max_aggregate",2
+3,"
+
+def solve(lst):
+    sum = 0
+    max_sum = 0
+    for tup in lst:
+        sum = tup[0] + tup[1]
+        if sum > max_sum:
+            max_sum = sum
+    return max_sum",3
+4,"
+
+def solve(lst):
+    max_aggregate = 0
+    for tup in lst:
+        aggregate = sum(tup)
+        if aggregate > max_aggregate:
+            max_aggregate = aggregate
+    return max_aggregate",4
+5,"
+
+def solve(lst):
+    max_agg = 0
+    for tpl in lst:
+        curr_agg = tpl[0] + tpl[1] + tpl[2]
+        if curr_agg > max_agg:
+            max_agg = curr_agg
+    return max_agg",5

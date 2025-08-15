@@ -1,0 +1,41 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    interleaved = []
+    for i in range(len(list1)):
+        interleaved.append(list1[i])
+        interleaved.append(list2[i])
+    return interleaved",1
+2,"
+
+def solve(list1, list2):
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i])
+        result.append(list2[i])
+    return result",2
+3,"
+
+def solve(list1, list2):
+    result = []
+    for i in range(len(list1)):
+        result.append(list1[i])
+        result.append(list2[i])
+    return result",2
+4,"
+
+def solve(list1, list2):
+    interleaved = []
+    for i in range(len(list1)):
+        interleaved.append(list1[i])
+        interleaved.append(list2[i])
+    return interleaved",1
+5,"
+
+def solve(list1, list2):
+    interleaved_list = []
+    for i in range(len(list1)):
+        interleaved_list.append(list1[i])
+        interleaved_list.append(list2[i])
+    return interleaved_list",3

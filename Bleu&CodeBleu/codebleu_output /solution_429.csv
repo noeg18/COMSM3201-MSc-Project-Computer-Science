@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(tup1, tup2):
+    elementwise = ()
+    tuples = ()
+    for i in range(len(tup1)):
+        elementwise += (tup1[i], tup2[i])
+        tuples += ((tup1[i], tup2[i]),)
+    return elementwise, tuples",1
+2,"
+
+
+def solve(tuple1, tuple2):
+    elementwise = []
+    for i in range(len(tuple1)):
+        elementwise.append((tuple1[i], tuple2[i]))
+    tuples = [tuple1, tuple2]
+    return elementwise, tuples",2
+3,"
+
+
+def solve(tuple1, tuple2):
+    elementwise = []
+    tuples = []
+    for i in range(min(len(tuple1), len(tuple2))):
+        if type(tuple1[i]) == type(tuple2[i]):
+            if isinstance(tuple1[i], tuple):
+                tuples.append((tuple1[i], tuple2[i]))
+            else:
+                elementwise.append(tuple1[i] + tuple2[i])
+    return (elementwise, tuples)",3
+4,"
+
+def solve(tup1, tup2):
+    elementwise = []
+    tuples = []
+    for i in range(len(tup1)):
+        elementwise.append(tup1[i])
+        elementwise.append(tup2[i])
+        tuples.append((tup1[i], tup2[i]))
+    return elementwise, tuples",4
+5,"
+
+def solve(tup1, tup2):
+    elementwise = []
+    tuples = []
+    for i in range(len(tup1)):
+        elementwise.append(tup1[i] + tup2[i])
+        tuples.append((tup1[i], tup2[i]))
+    return elementwise, tuples",5

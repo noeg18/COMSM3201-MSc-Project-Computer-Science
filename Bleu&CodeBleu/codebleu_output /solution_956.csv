@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+import re
+
+def solve(string):
+    return re.findall('[A-Z][^A-Z]*', string)",1
+2,"
+
+import re
+
+def solve(string):
+    return re.findall('[A-Z][a-z]*',string)",2
+3,"
+
+import re
+
+def solve(string):
+    split_string = re.findall('[A-Z][^A-Z]*', string)
+    return split_string",3
+4,"
+
+import re
+
+def solve(string):
+    return re.findall('[A-Z][^A-Z]*', string)",1
+5,"
+
+import re
+
+def solve(string):
+    return re.findall('[A-Z][^A-Z]*', string)",1

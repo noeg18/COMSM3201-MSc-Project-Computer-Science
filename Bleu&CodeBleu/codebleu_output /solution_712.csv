@@ -1,0 +1,39 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_lists):
+    new_list = []
+    for l in list_of_lists:
+        if l not in new_list:
+            new_list.append(l)
+    return new_list",1
+2,"
+
+def solve(list_of_lists):
+    new_list = []
+    for lst in list_of_lists:
+        if lst not in new_list:
+            new_list.append(lst)
+    return new_list",2
+3,"
+
+def solve(lst):
+    new_lst = []
+    for sublist in lst:
+        if sublist not in new_lst:
+            new_lst.append(sublist)
+    return new_lst",3
+4,"
+
+def solve(lst):
+    seen = set()
+    return [l for l in lst if not (tuple(l) in seen or seen.add(tuple(l)))]
+",4
+5,"
+
+def solve(list_of_lists):
+    new_list = []
+    for lst in list_of_lists:
+        if lst not in new_list:
+            new_list.append(lst)
+    return new_list",2

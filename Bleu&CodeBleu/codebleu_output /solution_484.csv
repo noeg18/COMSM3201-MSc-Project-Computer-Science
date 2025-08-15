@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple1, tuple2):
+    for t in tuple2:
+        if t in tuple1:
+            tuple1 = tuple1[:tuple1.index(t)] + tuple1[tuple1.index(t)+1:]
+    return tuple1",1
+2,"
+
+def solve(tuple1, tuple2):
+    for t1 in tuple1:
+        if t1 in tuple2:
+            tuple1 = tuple1[:tuple1.index(t1)] + tuple1[tuple1.index(t1)+1:]
+    return tuple1",2
+3,"
+
+def solve(tuple1, tuple2):
+    new_tuple = tuple(t for t in tuple1 if t not in tuple2)
+    return new_tuple",3
+4,"
+
+def solve(tup1, tup2):
+    return tuple(x for x in tup1 if x not in tup2)",4
+5,"
+
+def solve(tup1, tup2):
+    new_tup = []
+    for i in tup1:
+        if i not in tup2:
+            new_tup.append(i)
+    return tuple(new_tup)",5

@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+def solve(strings):
+    reversed_strings = []
+    for string in strings:
+        reversed_strings.append(string[::-1])
+    return reversed_strings",1
+2,"
+
+def solve(lst):
+    return [s[::-1] for s in lst]",2
+3,"
+
+def solve(lst):
+    for i in range(len(lst)):
+        lst[i] = lst[i][::-1]
+    return lst",3
+4,"
+
+def solve(lst):
+    return [s[::-1] for s in lst]",2
+5,"
+
+def solve(list_of_strings):
+    reversed_strings = []
+    for string in list_of_strings:
+        reversed_strings.append(string[::-1])
+    return reversed_strings",4

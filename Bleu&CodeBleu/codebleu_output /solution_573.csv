@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    unique_nums = set(lst)
+    product = 1
+    for num in unique_nums:
+        product *= num
+    return product",1
+2,"
+
+def solve(lst):
+    unique_nums = set()
+    product = 1
+    for num in lst:
+        if num not in unique_nums:
+            unique_nums.add(num)
+            product *= num
+    return product",2
+3,"
+
+def solve(nums):
+    unique_nums = set(nums)
+    product = 1
+    for num in unique_nums:
+        product *= num
+    return product",3
+4,"
+
+def solve(lst):
+    unique_nums = set(lst)
+    product = 1
+    for num in unique_nums:
+        product *= num
+    return product",1
+5,"
+
+def solve(lst):
+    unique_nums = []
+    for num in lst:
+        if num not in unique_nums:
+            unique_nums.append(num)
+    product = 1
+    for num in unique_nums:
+        product *= num
+    return product",4

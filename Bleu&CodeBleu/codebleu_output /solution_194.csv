@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(octal):
+    decimal = 0
+    power = 0
+    while(octal != 0):
+        decimal += (octal % 10) * (8 ** power)
+        power += 1
+        octal //= 10
+    return decimal",1
+2,"
+
+def solve(octal_num):
+    decimal_num = 0
+    power = 0
+    while(octal_num != 0):
+        decimal_num = decimal_num + (octal_num % 10) * pow(8,power)
+        power += 1
+        octal_num = int(octal_num/10)
+    return decimal_num",2
+3,"
+
+def solve(octal_num):
+    decimal_num = 0
+    power = 0
+    while(octal_num != 0):
+        decimal_num = decimal_num + (octal_num % 10) * (8 ** power)
+        octal_num = octal_num // 10
+        power += 1
+    return decimal_num",3
+4,"
+
+def solve(octal): 
+    decimal = 0 
+    power = 0 
+    while(octal != 0): 
+        decimal = decimal + (octal % 10) * pow(8, power) 
+        power += 1 
+        octal = int(octal / 10) 
+    return decimal",4
+5,"
+
+def solve(octal):
+    decimal = 0
+    power = 0
+    while octal != 0:
+        decimal += (octal % 10) * (8 ** power)
+        octal //= 10
+        power += 1
+    return decimal",5

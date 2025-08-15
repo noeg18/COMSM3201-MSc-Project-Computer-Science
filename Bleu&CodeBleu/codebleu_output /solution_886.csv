@@ -1,0 +1,36 @@
+response_num,response,cluster
+1,"
+
+def solve(lst):
+    total = sum(lst)
+    length = len(lst)
+    return total / length",1
+2,"
+
+def solve(nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total / len(nums)",2
+3,"
+
+def solve(lst):
+    return sum(lst)/len(lst)
+
+# Example:
+# lst = [1, 2, 3, 4, 5]
+# print(solve(lst)) # Output: 3",3
+4,"
+
+def solve(list):
+    sum = 0
+    for num in list:
+        sum += num
+    return sum/len(list)",4
+5,"
+
+def solve(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total / len(numbers)",5

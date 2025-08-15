@@ -1,0 +1,30 @@
+response_num,response,cluster
+1,"
+
+def solve(dictionary, condition):
+    filtered_dict = {}
+    for key, value in dictionary.items():
+        if condition(value):
+            filtered_dict[key] = value
+    return filtered_dict",1
+2,"
+
+def solve(dictionary, filter_value):
+    filtered_dict = {key: value for key, value in dictionary.items() if value == filter_value}
+    return filtered_dict",2
+3,"
+
+def solve(dictionary, value):
+    return {key: val for key, val in dictionary.items() if val == value}",3
+4,"
+
+def solve(dictionary, value):
+    return {key: val for key, val in dictionary.items() if val == value}",3
+5,"
+
+def solve(dictionary, filter_value):
+    filtered_dict = {}
+    for key, value in dictionary.items():
+        if value == filter_value:
+            filtered_dict[key] = value
+    return filtered_dict",4

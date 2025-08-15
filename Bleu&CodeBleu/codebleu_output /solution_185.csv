@@ -1,0 +1,32 @@
+response_num,response,cluster
+1,"
+
+def solve(a, b, c):
+    if a == 0:
+        return None
+    else:
+        focus = (b / (2*a), (4*a*c - b**2) / (4*a))
+        return focus",1
+2,"
+
+def solve(a, b, c):
+    x = -b/(2*a)
+    y = c - (b**2)/(4*a)
+    return (x,y)",2
+3,"
+
+def solve(a, b, c):
+    focus_x = -b / (2 * a)
+    focus_y = (4 * a * c - b ** 2) / (4 * a)
+    return (focus_x, focus_y)",3
+4,"
+
+def solve(a,b,c):
+    focus = (b**2 - 4*a*c)/(4*a)
+    return focus",4
+5,"
+
+def solve(a, b, c):
+    x = -b / (2 * a)
+    y = c - (b ** 2) / (4 * a)
+    return (x, y)",5

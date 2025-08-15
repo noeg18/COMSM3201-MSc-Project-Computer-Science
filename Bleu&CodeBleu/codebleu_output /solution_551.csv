@@ -1,0 +1,33 @@
+response_num,response,cluster
+1,"
+
+def solve(nested_list, col_index):
+    result = []
+    for row in nested_list:
+        result.append(row[col_index])
+    return result",1
+2,"
+
+def solve(nested_list, column_index):
+    column = []
+    for sublist in nested_list:
+        column.append(sublist[column_index])
+    return column",2
+3,"
+
+def solve(nested_list, column):
+    extracted_column = []
+    for sublist in nested_list:
+        extracted_column.append(sublist[column])
+    return extracted_column",3
+4,"
+
+def solve(nested_list, column_index):
+    result = []
+    for sublist in nested_list:
+        result.append(sublist[column_index])
+    return result",4
+5,"
+
+def solve(nested_list, col):
+    return [row[col] for row in nested_list]",5

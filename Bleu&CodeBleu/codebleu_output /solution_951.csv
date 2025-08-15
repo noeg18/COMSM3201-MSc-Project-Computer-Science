@@ -1,0 +1,52 @@
+response_num,response,cluster
+1,"
+
+def solve(list1, list2):
+    max_count = 0
+    for tup1 in list1:
+        for tup2 in list2:
+            count = 0
+            for i in range(len(tup1)):
+                if tup1[i] == tup2[i]:
+                    count += 1
+            if count > max_count:
+                max_count = count
+    return max_count",1
+2,"
+
+def solve(list1, list2):
+    max_similar_index = 0
+    for tuple1 in list1:
+        for tuple2 in list2:
+            if tuple1[0] == tuple2[0] and tuple1[1] == tuple2[1]:
+                max_similar_index = max(max_similar_index, tuple1[1])
+    return max_similar_index",2
+3,"
+
+def solve(list1, list2):
+    max_index = 0
+    for tuple1 in list1:
+        for tuple2 in list2:
+            if tuple1[0] == tuple2[0]:
+                max_index = max(max_index, tuple1[1], tuple2[1])
+                break
+    return max_index",3
+4,"
+
+def solve(list1, list2):
+    max_idx = 0
+    for t1 in list1:
+        for t2 in list2:
+            if t1[0] == t2[0]:
+                max_idx = max(max_idx, t1[1], t2[1])
+    return max_idx",4
+5,"
+
+def solve(list1, list2):
+    max_similar = 0
+    for tuple1 in list1:
+        for tuple2 in list2:
+            if tuple1[0] == tuple2[0] and tuple1[1] == tuple2[1]:
+                if tuple1[0] + tuple1[1] > max_similar:
+                    max_similar = tuple1[0] + tuple1[1]
+    return max_similar",5

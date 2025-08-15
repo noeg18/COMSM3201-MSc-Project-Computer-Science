@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(s1, s2):
+    count = 0
+    for i in range(len(s1)):
+        if s1[i] != s2[i]:
+            count += 1
+    return count // 2",1
+2,"
+
+def solve(str1, str2):
+    count = 0
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            count += 1
+    return(count//2)",2
+3,"
+
+def solve(str1, str2):
+    swaps = 0
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            swaps += 1
+    return swaps",3
+4,"
+
+def solve(str1, str2):
+    count = 0
+    # check if the lengths of the two strings are equal
+    if len(str1) != len(str2):
+        return -1
+    # loop through the characters in the strings
+    for i in range(len(str1)):
+        # if the characters are not the same, increment the count
+        if str1[i] != str2[i]:
+            count += 1
+    # return half the count as swapping two characters requires one swap
+    return count // 2",4
+5,"
+
+def solve(str1, str2):
+    count = 0
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            count += 1
+    return count//2",2

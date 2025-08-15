@@ -1,0 +1,48 @@
+response_num,response,cluster
+1,"
+
+def solve(string, char):
+  index = string.find(char)
+  last_index = string.rfind(char)
+  if index != -1 and last_index != -1:
+    string = string[:index] + string[index+1:last_index] + string[last_index+1:]
+  return string",1
+2,"
+
+def solve(string, char):
+    first_index = string.find(char)
+    last_index = string.rfind(char)
+    if first_index != -1 and last_index != -1:
+        new_string = string[:first_index] + string[first_index+1:last_index] + string[last_index+1:]
+    else:
+        new_string = string
+    return new_string",2
+3,"
+
+def solve(string, char):
+    first_index = string.find(char)
+    last_index = string.rfind(char)
+    if first_index != -1 and last_index != -1:
+        return string[:first_index] + string[first_index+1:last_index] + string[last_index+1:]
+    else:
+        return string",3
+4,"
+
+def solve(string, char):
+    first_occurrence = string.find(char)
+    last_occurrence = string.rfind(char)
+    if first_occurrence == -1 or last_occurrence == -1:
+        return string
+    elif first_occurrence == last_occurrence:
+        return string[:first_occurrence] + string[first_occurrence + 1:]
+    else:
+        return string[:first_occurrence] + string[first_occurrence + 1:last_occurrence] + string[last_occurrence + 1:]",4
+5,"
+
+def solve(text, char):
+    first_index = text.find(char)
+    last_index = text.rfind(char)
+    if first_index == -1 or last_index == -1:
+        return ""Character not found in string.""
+    else:
+        return text[:first_index] + text[first_index+1:last_index] + text[last_index+1:]",5

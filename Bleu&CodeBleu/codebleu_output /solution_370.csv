@@ -1,0 +1,26 @@
+response_num,response,cluster
+1,"
+def solve(tup):
+    return tuple(sorted(tup, key=lambda x: x[1]))",1
+2,"
+
+def solve(tup):
+    return sorted(tup, key=lambda x: x[1])",2
+3,"
+
+def solve(tuple_lst):
+    return sorted(tuple_lst, key=lambda x: x[1])
+
+# Explanation:
+# The function takes in a tuple as an argument and uses the built-in sorted function to sort the tuple based on the second element (index 1) of each item in the tuple.
+# The key parameter allows us to specify a function to be used for sorting, in this case, we use a lambda function to access the second element of each item in the tuple for comparison.
+# The sorted function returns a new sorted list, without modifying the original tuple.
+# This function can be used to sort tuples containing any type of elements, as long as the second element is a float.",3
+4,"
+
+def solve(tup):
+    return sorted(tup, key=lambda x: float(x[1]))",4
+5,"
+
+def solve(tup):
+    return sorted(tup, key=lambda x: x[1])",2

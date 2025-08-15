@@ -1,0 +1,29 @@
+response_num,response,cluster
+1,"
+
+def solve(string):
+    return re.sub(r'[A-Z]+', '', string)",1
+2,"
+
+import re
+
+def solve(string):
+    return re.sub(r'[A-Z]+', '', string)",2
+3,"
+
+import re
+
+def solve(string):
+    regex = r'[A-Z]+'
+    return re.sub(regex, '', string)",3
+4,"
+import re
+
+def solve(string):
+    return re.sub(r'[A-Z]+', '', string)",2
+5,"
+
+import re
+
+def solve(string):
+  return re.sub(r'[A-Z]+', '', string)",2

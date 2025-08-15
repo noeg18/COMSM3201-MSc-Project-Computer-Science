@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(complex_num):
+    return len(str(complex_num))",1
+2,"
+
+def solve(complex_num):
+    return len(str(complex_num))",1
+3,"
+
+def solve(complex_num):
+    return len(str(complex_num))",1
+4,"
+
+def solve(complex_num):
+    return abs(complex_num)",2
+5,"
+
+def solve(complex_num):
+    return len(str(complex_num))",1

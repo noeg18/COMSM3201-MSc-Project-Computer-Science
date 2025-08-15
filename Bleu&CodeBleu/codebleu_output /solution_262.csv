@@ -1,0 +1,20 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, length):
+    return lst[:length], lst[length:]",1
+2,"
+def solve(lst, length):
+    return [lst[:length], lst[length:]]",2
+3,"
+
+def solve(lst, length):
+    return [lst[:length], lst[length:]]",2
+4,"
+
+def solve(lst, length):
+    return [lst[:length], lst[length:]]",2
+5,"
+
+def solve(lst, length):
+    return lst[:length], lst[length:]",1

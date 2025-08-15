@@ -1,0 +1,21 @@
+response_num,response,cluster
+1,"
+
+def solve(list_of_strings):
+    return list(map(lambda x: x, list_of_strings))",1
+2,"
+
+def solve(strings):
+    return list(map(lambda x: x, strings))",2
+3,"
+
+def solve(strings):
+    return list(map(list, strings))",3
+4,"
+
+def solve(lst):
+    return list(map(lambda x: x, lst))",4
+5,"
+
+def solve(strings):
+    return list(map(list, strings))",3

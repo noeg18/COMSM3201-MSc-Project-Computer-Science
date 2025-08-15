@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(tuple, record):
+    count = 0
+    for item in tuple:
+        if item == record:
+            return count
+        count += 1",1
+2,"
+
+def solve(tuple, record):
+    count = 0
+    for element in tuple:
+        if element == record:
+            return count
+        else:
+            count += 1",2
+3,"
+
+def solve(tup, record):
+    count = 0
+    for i in range(len(tup)):
+        if tup[i] == record:
+            return count
+        else:
+            count += 1",3
+4,"
+
+def solve(tuple, record):
+    count = 0
+    for element in tuple:
+        if element == record:
+            return count
+        else:
+            count += 1
+    return -1",2
+5,"
+
+def solve(tuple, record):
+    count = 0
+    for elem in tuple:
+        if elem == record:
+            return count
+        else:
+            count += 1
+    return 0",4

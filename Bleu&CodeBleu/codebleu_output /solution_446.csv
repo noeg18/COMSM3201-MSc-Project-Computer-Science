@@ -1,0 +1,46 @@
+response_num,response,cluster
+1,"
+
+def solve(lst, tup):
+    counts = {}
+    for item in lst:
+        counts[item] = tup.count(item)
+    return counts",1
+2,"
+
+def solve(lst, tup):
+    count = {}
+    for i in lst:
+        if i in tup:
+            if i in count:
+                count[i] += 1
+            else:
+                count[i] = 1
+    return count",2
+3,"
+
+def solve(lst, tup):
+    result = {}
+    for item in lst:
+        result[item] = tup.count(item)
+    return result",3
+4,"
+
+def solve(lst, tup):
+    count_dict = {}
+
+    for i in lst:
+        count = 0
+        for j in tup:
+            if i == j:
+                count += 1
+        count_dict[i] = count
+
+    return count_dict",4
+5,"
+
+def solve(list, tuple):
+    count_dict = {}
+    for element in list:
+        count_dict[element] = tuple.count(element)
+    return count_dict",5

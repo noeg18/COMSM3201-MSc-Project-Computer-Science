@@ -1,0 +1,51 @@
+response_num,response,cluster
+1,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    temp = str1 + str1
+    if temp.count(str2) > 0:
+        return True
+    else:
+        return False",1
+2,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    temp = str1 + str1
+    if str2 in temp:
+        return True
+    else:
+        return False",2
+3,"
+
+def solve(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    temp = s1 + s1
+    if s2 in temp:
+        return True
+    else:
+        return False",3
+4,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    temp = str1 + str1
+    if temp.count(str2) > 0:
+        return True
+    else:
+        return False",1
+5,"
+
+def solve(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    temp = str1 + str1
+    if str2 in temp:
+        return True
+    else:
+        return False",2

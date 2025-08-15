@@ -1,0 +1,47 @@
+response_num,response,cluster
+1,"
+
+def solve(num):
+    digits = [int(d) for d in str(num)]
+    digits.sort(reverse=True)
+    first_part = []
+    second_part = []
+    for d in digits:
+        if sum(first_part) < sum(second_part):
+            first_part.append(d)
+        else:
+            second_part.append(d)
+    return int("""".join([str(d) for d in first_part])), int("""".join([str(d) for d in second_part]))",1
+2,"
+
+def solve(n):
+    digits = [int(d) for d in str(n)]
+    digits.sort(reverse=True)
+    first_part = int("""".join(str(d) for d in digits[::2]))
+    second_part = int("""".join(str(d) for d in digits[1::2]))
+    return first_part + second_part",2
+3,"
+
+def solve(n):
+    digits = [int(d) for d in str(n)]
+    digits.sort(reverse=True)
+    first_part = int("""".join(str(d) for d in digits[::2]))
+    second_part = int("""".join(str(d) for d in digits[1::2]))
+    return first_part + second_part",2
+4,"
+
+def solve(num):
+    num = str(num)
+    digits = [int(d) for d in num]
+    digits.sort()
+    first_part = int("""".join([str(d) for d in digits[-2:]]))
+    second_part = int("""".join([str(d) for d in digits[:-2]]))
+    return first_part + second_part",3
+5,"
+
+def solve(num):
+    num_str = str(num)
+    mid = len(num_str) // 2
+    left = int(num_str[:mid])
+    right = int(num_str[mid:])
+    return left + right",4
