@@ -1,4 +1,4 @@
-# COMSM3201-MSc-Project-Computer-Science
+# MSc Computer Science Project Proposal
 
 
 
