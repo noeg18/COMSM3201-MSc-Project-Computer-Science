@@ -57,7 +57,9 @@ for file in os.listdir(input_folder):
                   f" 2: {rep2}\n"
                   "Are they semantically equivalent (i.e., they have the same behaviour but may have different syntax)? Answer Yes or No."
                )
+               # add counter here to count num of API calls
                if "yes" in response.output_text.lower():
+                  # add counter here to count num of times clustered 
                   merged[cluster2] = current_cluster
          current_cluster += 1
 

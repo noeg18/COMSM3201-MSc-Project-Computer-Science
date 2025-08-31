@@ -50,7 +50,9 @@ for file in os.listdir(input_folder):
             ref = responses[i]
             pred = responses[j]
             res = calc_codebleu([ref], [pred], "python")
+            # increment a counter here to count total codebleu executions
             if res["codebleu"] >= threshold:
+               # increment a counter here to count codebleu clusters
                cluster_i = get_cluster(clusters, responses[i])
                if cluster_i is None:
                   cluster_i = cluster_num
